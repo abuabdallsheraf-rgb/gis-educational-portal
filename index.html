@@ -1,196 +1,711 @@
-<<!-- ============================================================ -->
-<!-- ===== HOME PAGE (الصفحة الرئيسية المُحدّثة) ===== -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>البوابة التعليمية لنظم المعلومات الجغرافية (GIS) والاستشعار عن بعد</title>
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: #f0f7fa;
+            color: #1a202c;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* ===== Animated Background ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(52, 211, 153, 0.05) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            animation: bgPulse 15s ease-in-out infinite alternate;
+        }
+        @keyframes bgPulse {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(180deg, #2b6cb0, #38a169);
+            border-radius: 10px;
+        }
+
+        /* ===== Premium Header ===== */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 40%, #2f855a 80%, #38a169 100%);
+            color: white;
+            padding: 70px 20px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid rgba(255,255,255,0.1);
+        }
+        .hero::before {
+            content: "🌍";
+            position: absolute;
+            font-size: 350px;
+            opacity: 0.04;
+            top: -120px;
+            right: -80px;
+            transform: rotate(12deg);
+            animation: floatIcon 25s ease-in-out infinite;
+        }
+        .hero::after {
+            content: "🛰️";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.03;
+            bottom: -60px;
+            left: -60px;
+            transform: rotate(-8deg);
+            animation: floatIcon 30s ease-in-out infinite reverse;
+        }
+        @keyframes floatIcon {
+            0%, 100% { transform: rotate(12deg) translateY(0); }
+            50% { transform: rotate(18deg) translateY(-20px); }
+        }
+        .hero .glow-ring {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.05);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ringPulse 10s ease-in-out infinite;
+        }
+        .hero .glow-ring:nth-child(2) {
+            width: 700px;
+            height: 700px;
+            animation-delay: 3s;
+        }
+        @keyframes ringPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.6; }
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            letter-spacing: -0.5px;
+        }
+        .hero h1 span { color: #f6e05e; }
+        .hero h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+            color: #e2e8f0;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.7;
+            position: relative;
+            z-index: 2;
+            color: #bee3f8;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            padding: 10px 32px;
+            border-radius: 50px;
+            margin-top: 18px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            position: relative;
+            z-index: 2;
+            color: #e2e8f0;
+            transition: all 0.3s;
+        }
+        .hero-badge:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+        .hero-badge i { margin-left: 8px; }
+
+        /* ===== Premium Navigation ===== */
+        .navbar {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(24px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            padding: 0 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        .navbar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #2b6cb0;
+            letter-spacing: -0.5px;
+        }
+        .nav-logo i { 
+            color: #38a169;
+            margin-left: 6px;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            list-style: none;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-size: 0.82rem;
+            display: inline-block;
+            position: relative;
+        }
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #2b6cb0, #38a169);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        .nav-links li a:hover::after,
+        .nav-links li a.active::after {
+            width: 50%;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #2b6cb0;
+            background: rgba(43,108,176,0.06);
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            color: #2b6cb0;
+            cursor: pointer;
+        }
+
+        /* ===== Container ===== */
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+        /* ===== Premium Section ===== */
+        .section {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(43,108,176,0.01), rgba(56,189,248,0.01));
+            pointer-events: none;
+        }
+        .section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: #1a202c;
+        }
+        .section-title i { 
+            color: #2b6cb0; 
+            font-size: 1.8rem;
+        }
+
+        /* ===== Premium Cards ===== */
+        .grid-2, .grid-3, .grid-4 {
+            display: grid;
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        .card {
+            background: #f7fafc;
+            border-radius: 18px;
+            padding: 24px;
+            transition: all 0.4s;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(43,108,176,0.03), rgba(56,189,248,0.03));
+            opacity: 0;
+            transition: all 0.4s;
+        }
+        .card:hover::before {
+            opacity: 1;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+            border-color: #2b6cb0;
+        }
+        .card-icon { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        .card h4 { 
+            font-size: 1.15rem; 
+            font-weight: 700; 
+            color: #1a202c; 
+            margin-bottom: 6px;
+        }
+        .card p { color: #4a5568; font-size: 0.9rem; line-height: 1.7; }
+        .card-tag {
+            display: inline-block;
+            background: #2b6cb0;
+            color: white;
+            padding: 3px 14px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .card-tag.green { background: #38a169; }
+        .card-tag.orange { background: #dd6b20; }
+        .card-tag.purple { background: #6b46c1; }
+
+        /* ===== Premium Stats ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin: 28px 0;
+        }
+        .stat-item {
+            background: #f7fafc;
+            border-radius: 18px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #2b6cb0;
+            transition: all 0.4s;
+        }
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+            border-color: #2b6cb0;
+        }
+        .stat-item:nth-child(2) { border-left-color: #38a169; }
+        .stat-item:nth-child(3) { border-left-color: #dd6b20; }
+        .stat-item:nth-child(4) { border-left-color: #6b46c1; }
+        .stat-number {
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: #2b6cb0;
+        }
+        .stat-item:nth-child(2) .stat-number { color: #38a169; }
+        .stat-item:nth-child(3) .stat-number { color: #dd6b20; }
+        .stat-item:nth-child(4) .stat-number { color: #6b46c1; }
+        .stat-label { font-size: 0.95rem; color: #4a5568; font-weight: 600; }
+
+        /* ===== Premium Map ===== */
+        #map {
+            height: 500px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+        }
+        .leaflet-control-zoom {
+            border: none !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+        }
+        .leaflet-control-zoom a {
+            background: white !important;
+            color: #2b6cb0 !important;
+            border: 1px solid #e2e8f0 !important;
+        }
+        .leaflet-control-zoom a:hover {
+            background: #2b6cb0 !important;
+            color: white !important;
+        }
+
+        /* ===== Weather Widget ===== */
+        .weather-widget {
+            background: linear-gradient(135deg, #ebf8ff, #e6fffa);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #bee3f8;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .weather-item {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            border-right: 4px solid #2b6cb0;
+        }
+        .weather-item .temp {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #2b6cb0;
+        }
+        .weather-item .city {
+            font-weight: 700;
+            color: #1a202c;
+        }
+        .weather-item .condition {
+            font-size: 1.5rem;
+        }
+
+        /* ===== Layer Selector ===== */
+        .layer-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .layer-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: #4a5568;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.85rem;
+        }
+        .layer-btn:hover {
+            border-color: #2b6cb0;
+            color: #2b6cb0;
+        }
+        .layer-btn.active {
+            background: #2b6cb0;
+            color: white;
+            border-color: #2b6cb0;
+        }
+        .layer-btn i { margin-left: 6px; }
+
+        /* ===== Resource Link ===== */
+        .resource-link {
+            display: inline-block;
+            background: #ebf8ff;
+            color: #2b6cb0;
+            padding: 6px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.82rem;
+            margin: 3px 6px 3px 0;
+            transition: all 0.3s;
+            border: 1px solid #bee3f8;
+        }
+        .resource-link:hover {
+            background: #2b6cb0;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(43,108,176,0.15);
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: #1a365d;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 40px;
+            border-radius: 30px 30px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .footer h4 { font-size: 1.05rem; margin-bottom: 14px; color: #90cdf4; }
+        .footer a { color: #bee3f8; text-decoration: none; display: block; margin: 4px 0; transition: all 0.3s; font-size: 0.9rem; }
+        .footer a:hover { color: white; padding-right: 6px; }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 28px;
+            margin-top: 28px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #bee3f8;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr 1fr; }
+            .stats-row { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding: 12px 0;
+            }
+            .nav-links.show { display: flex; }
+            .nav-toggle { display: block; }
+            .section { padding: 20px; }
+            #map { height: 320px; }
+            .navbar-inner { flex-wrap: wrap; }
+        }
+        @media (max-width: 480px) {
+            .grid-4 { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
 <!-- ============================================================ -->
-<section class="section" id="home">
-    <div class="section-title"><i class="fas fa-home"></i> الصفحة الرئيسية</div>
-    
-    <!-- Stats -->
-    <div class="stats-row">
-        <div class="stat-item"><div class="stat-number">14</div><div class="stat-label">📚 وحدات تعليمية</div></div>
-        <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">🎥 فيديو تعليمي</div></div>
-        <div class="stat-item"><div class="stat-number">100+</div><div class="stat-label">📄 مصدر علمي</div></div>
-        <div class="stat-item"><div class="stat-number">20+</div><div class="stat-label">🗺️ خريطة تفاعلية</div></div>
+<!-- HEADER / HERO -->
+<!-- ============================================================ -->
+<header class="hero">
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <h1>🌍 نظم المعلومات الجغرافية (GIS) <span>وتطبيقاتها في العلوم الزراعية والبيئية</span></h1>
+    <h2>البوابة التعليمية لنظم المعلومات الجغرافية (GIS) والاستشعار عن بعد (RS)</h2>
+    <p>Educational Portal for GIS, Remote Sensing, Spatial Analysis, and Environmental Applications</p>
+    <div class="hero-badge">
+        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة - قسم التربة والمياه
     </div>
+</header>
 
-    <!-- Quick Links to All Sections (مُحدّث) -->
-    <div style="margin: 20px 0; background: #f7fafc; border-radius: 16px; padding: 20px; border-right: 6px solid #2b6cb0;">
-        <h4 style="color: #2b6cb0; font-size: 1.2rem; margin-bottom: 12px;"><i class="fas fa-link"></i> التنقل السريع للأقسام المتخصصة</h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <!-- الأقسام الأساسية -->
-            <a href="#intro" class="resource-link">📖 مقدمة GIS</a>
-            <a href="#spatial" class="resource-link">📊 تحليل مكاني</a>
-            <a href="#geodatabase" class="resource-link">🗄️ Geodatabase</a>
-            <a href="#rs" class="resource-link">🛰️ استشعار عن بعد</a>
-            <a href="#indices" class="resource-link">🌿 مؤشرات نباتية</a>
-            <a href="#precision" class="resource-link">🌾 زراعة دقيقة</a>
-            <a href="#terrain-hydrology" class="resource-link">⛰️ طبوغرافي وهيدرولوجي</a>
-            
-            <!-- الأقسام المتقدمة -->
-            <a href="#topography" class="resource-link">🏔️ تطبيقات طبوغرافيا</a>
-            <a href="#geology-gis" class="resource-link">💎 تطبيقات جيولوجيا</a>
-            <a href="#soil-gis" class="resource-link">🧪 تطبيقات تربة</a>
-            <a href="#climate-gis" class="resource-link">🌤️ تطبيقات مناخ</a>
-            <a href="#water-resources" class="resource-link">💧 تطبيقات مياه</a>
-            <a href="#soil-erosion" class="resource-link">🌪️ انجراف التربة</a>
-            <a href="#rangeland-forest-gis" class="resource-link">🌳 مراعي وغابات</a>
-            <a href="#crops-horticulture-gis" class="resource-link">🌾 محاصيل وبستنة</a>
-            <a href="#plant-protection-gis" class="resource-link">🛡️ وقاية النبات</a>
-            <a href="#agricultural-engineering-gis" class="resource-link">🚜 هندسة زراعية</a>
-            <a href="#animal-production-gis" class="resource-link">🐄 إنتاج حيواني</a>
-            <a href="#agricultural-economics-gis" class="resource-link">📊 اقتصاد زراعي</a>
-            <a href="#aquaculture-fisheries-gis" class="resource-link">🐟 زراعات مائية</a>
-            
-            <!-- التقنيات الحديثة (جديدة) -->
-            <a href="#geoai-agriculture" class="resource-link" style="background: #faf5ff; border-color: #6b46c1;">🤖 GeoAI</a>
-            <a href="#google-earth-engine" class="resource-link" style="background: #ebf8ff; border-color: #2b6cb0;">🌍 Google Earth Engine</a>
-            <a href="#gnss-systems" class="resource-link" style="background: #f0fff4; border-color: #2f855a;">🛰️ أنظمة GNSS</a>
-            <a href="#ai-iot-gis-integration" class="resource-link" style="background: #faf5ff; border-color: #6b46c1;">🧠 AI + IoT + GIS</a>
-            <a href="#uav-technology" class="resource-link" style="background: #ebf8ff; border-color: #2b6cb0;">🛸 طائرات بدون طيار</a>
+<!-- ============================================================ -->
+<!-- NAVIGATION -->
+<!-- ============================================================ -->
+<nav class="navbar">
+    <div class="navbar-inner">
+        <div class="nav-logo"><i class="fas fa-globe-africa"></i> GIS Portal</div>
+        <button class="nav-toggle" onclick="toggleNav()"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">الرئيسية</a></li>
+            <li><a href="#intro">مقدمة GIS</a></li>
+            <li><a href="#spatial">تحليل مكاني</a></li>
+            <li><a href="#geodatabase">Geodatabase</a></li>
+            <li><a href="#rs">استشعار عن بعد</a></li>
+            <li><a href="#indices">مؤشرات نباتية</a></li>
+            <li><a href="#precision">زراعة دقيقة</a></li>
+            <li><a href="#terrain-hydrology">طبوغرافي وهيدرولوجي</a></li>
+            <li><a href="#topography">تطبيقات طبوغرافيا</a></li>
+            <li><a href="#geology-gis">تطبيقات جيولوجيا</a></li>
+            <li><a href="#soil-gis">تطبيقات تربة</a></li>
+            <li><a href="#climate-gis">تطبيقات مناخ</a></li>
+            <li><a href="#water-resources">تطبيقات مياه</a></li>
+            <li><a href="#soil-erosion">انجراف التربة</a></li>
+            <li><a href="#rangeland-forest-gis">مراعي وغابات</a></li>
+            <li><a href="#crops-horticulture-gis">محاصيل وبستنة</a></li>
+            <li><a href="#plant-protection-gis">وقاية النبات</a></li>
+            <li><a href="#agricultural-engineering-gis">هندسة زراعية</a></li>
+            <li><a href="#animal-production-gis">إنتاج حيواني</a></li>
+            <li><a href="#agricultural-economics-gis">اقتصاد زراعي</a></li>
+            <li><a href="#aquaculture-fisheries-gis">زراعات مائية</a></li>
+            <li><a href="#geoai-agriculture">GeoAI</a></li>
+            <li><a href="#resources">موارد</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- MAIN CONTENT -->
+<!-- ============================================================ -->
+<div class="container">
+
+    <!-- ============================================================ -->
+    <!-- ===== HOME PAGE ===== -->
+    <!-- ============================================================ -->
+    <section class="section" id="home">
+        <div class="section-title"><i class="fas fa-home"></i> الصفحة الرئيسية</div>
+        
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-item"><div class="stat-number">14</div><div class="stat-label">📚 وحدات تعليمية</div></div>
+            <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">🎥 فيديو تعليمي</div></div>
+            <div class="stat-item"><div class="stat-number">100+</div><div class="stat-label">📄 مصدر علمي</div></div>
+            <div class="stat-item"><div class="stat-number">20+</div><div class="stat-label">🗺️ خريطة تفاعلية</div></div>
         </div>
-    </div>
 
-    <!-- Weather Widget -->
-    <div style="margin: 20px 0;">
-        <h4 style="color: #2b6cb0; font-size: 1.2rem;"><i class="fas fa-cloud-sun"></i> حالة الطقس في المدن الليبية</h4>
-        <div class="weather-widget" id="weatherWidget">
-            <div class="weather-item">
-                <div class="city">طرابلس</div>
-                <div class="temp">28°C</div>
-                <div class="condition">☀️</div>
-                <small style="color: #718096;">مشمس</small>
-            </div>
-            <div class="weather-item">
-                <div class="city">بنغازي</div>
-                <div class="temp">26°C</div>
-                <div class="condition">🌤️</div>
-                <small style="color: #718096;">غائم جزئياً</small>
-            </div>
-            <div class="weather-item">
-                <div class="city">مصراتة</div>
-                <div class="temp">27°C</div>
-                <div class="condition">☀️</div>
-                <small style="color: #718096;">مشمس</small>
-            </div>
-            <div class="weather-item">
-                <div class="city">سبها</div>
-                <div class="temp">35°C</div>
-                <div class="condition">🔥</div>
-                <small style="color: #718096;">حار جداً</small>
-            </div>
-            <div class="weather-item">
-                <div class="city">الكفرة</div>
-                <div class="temp">38°C</div>
-                <div class="condition">🏜️</div>
-                <small style="color: #718096;">جاف</small>
-            </div>
-            <div class="weather-item">
-                <div class="city">غريان</div>
-                <div class="temp">24°C</div>
-                <div class="condition">🌤️</div>
-                <small style="color: #718096;">معتدل</small>
+        <!-- Quick Links to New Sections -->
+        <div style="margin: 20px 0; background: #f7fafc; border-radius: 16px; padding: 20px; border-right: 6px solid #2b6cb0;">
+            <h4 style="color: #2b6cb0; font-size: 1.2rem; margin-bottom: 12px;"><i class="fas fa-link"></i> التنقل السريع للأقسام المتخصصة</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <a href="#topography" class="resource-link">🏔️ طبوغرافيا</a>
+                <a href="#geology-gis" class="resource-link">💎 جيولوجيا</a>
+                <a href="#soil-gis" class="resource-link">🧪 تربة</a>
+                <a href="#climate-gis" class="resource-link">🌤️ مناخ</a>
+                <a href="#water-resources" class="resource-link">💧 مياه</a>
+                <a href="#soil-erosion" class="resource-link">🌪️ انجراف التربة</a>
+                <a href="#rangeland-forest-gis" class="resource-link">🌳 مراعي وغابات</a>
+                <a href="#crops-horticulture-gis" class="resource-link">🌾 محاصيل وبستنة</a>
+                <a href="#plant-protection-gis" class="resource-link">🛡️ وقاية النبات</a>
+                <a href="#agricultural-engineering-gis" class="resource-link">🚜 هندسة زراعية</a>
+                <a href="#animal-production-gis" class="resource-link">🐄 إنتاج حيواني</a>
+                <a href="#agricultural-economics-gis" class="resource-link">📊 اقتصاد زراعي</a>
+                <a href="#aquaculture-fisheries-gis" class="resource-link">🐟 زراعات مائية</a>
+                <a href="#geoai-agriculture" class="resource-link">🤖 GeoAI</a>
             </div>
         </div>
-    </div>
 
-    <!-- ===== خريطة الطقس الحية (Live Weather Map) - جديدة ===== -->
-    <div style="margin: 20px 0; background: linear-gradient(135deg, #ebf8ff, #e6fffa); border-radius: 16px; padding: 20px; border: 1px solid #bee3f8;">
-        <h4 style="color: #2b6cb0; font-size: 1.2rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-            <i class="fas fa-map-marked-alt"></i> خريطة الطقس الحية - ليبيا
-            <span style="font-size: 0.75rem; background: #2b6cb0; color: white; padding: 2px 12px; border-radius: 20px;">مباشر</span>
-        </h4>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
-            <iframe 
-                src="https://embed.windy.com/embed2.html?lat=28.0&lon=17.0&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=true&calendar=now&pressure=true&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" 
-                frameborder="0" 
-                allowfullscreen
-                style="position: absolute; width: 100%; height: 100%; border: 1px solid #e2e8f0; border-radius: 12px;">
-            </iframe>
+        <!-- Weather Widget -->
+        <div style="margin: 20px 0;">
+            <h4 style="color: #2b6cb0; font-size: 1.2rem;"><i class="fas fa-cloud-sun"></i> حالة الطقس في المدن الليبية</h4>
+            <div class="weather-widget" id="weatherWidget">
+                <div class="weather-item">
+                    <div class="city">طرابلس</div>
+                    <div class="temp">28°C</div>
+                    <div class="condition">☀️</div>
+                    <small style="color: #718096;">مشمس</small>
+                </div>
+                <div class="weather-item">
+                    <div class="city">بنغازي</div>
+                    <div class="temp">26°C</div>
+                    <div class="condition">🌤️</div>
+                    <small style="color: #718096;">غائم جزئياً</small>
+                </div>
+                <div class="weather-item">
+                    <div class="city">مصراتة</div>
+                    <div class="temp">27°C</div>
+                    <div class="condition">☀️</div>
+                    <small style="color: #718096;">مشمس</small>
+                </div>
+                <div class="weather-item">
+                    <div class="city">سبها</div>
+                    <div class="temp">35°C</div>
+                    <div class="condition">🔥</div>
+                    <small style="color: #718096;">حار جداً</small>
+                </div>
+                <div class="weather-item">
+                    <div class="city">الكفرة</div>
+                    <div class="temp">38°C</div>
+                    <div class="condition">🏜️</div>
+                    <small style="color: #718096;">جاف</small>
+                </div>
+                <div class="weather-item">
+                    <div class="city">غريان</div>
+                    <div class="temp">24°C</div>
+                    <div class="condition">🌤️</div>
+                    <small style="color: #718096;">معتدل</small>
+                </div>
+            </div>
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; justify-content: center;">
-            <span style="background: white; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; border: 1px solid #e2e8f0;">
-                🌡️ <strong>درجة الحرارة</strong>
-            </span>
-            <span style="background: white; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; border: 1px solid #e2e8f0;">
-                💨 <strong>الرياح</strong>
-            </span>
-            <span style="background: white; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; border: 1px solid #e2e8f0;">
-                💧 <strong>الأمطار</strong>
-            </span>
-            <span style="background: white; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; border: 1px solid #e2e8f0;">
-                ☁️ <strong>الغطاء السحابي</strong>
-            </span>
-            <span style="background: white; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; border: 1px solid #e2e8f0;">
-                <i class="fas fa-sync-alt" style="color: #2b6cb0;"></i> <strong>تحديث تلقائي</strong>
-            </span>
-        </div>
-        <p style="font-size: 0.75rem; color: #4a5568; text-align: center; margin-top: 8px;">
-            <i class="fas fa-info-circle"></i> بيانات الطقس من <strong>Windy.com</strong> - تعرض بشكل مباشر درجات الحرارة، الرياح، الأمطار، والغطاء السحابي
-        </p>
-    </div>
 
-    <!-- ===== صور الطقس الحية البديلة (اختيارية) - جديدة ===== -->
-    <div style="margin: 20px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-        <div style="background: white; border-radius: 12px; padding: 15px; border: 1px solid #e2e8f0; text-align: center;">
-            <h5 style="color: #2b6cb0; font-size: 0.95rem; margin-bottom: 8px;">🌡️ درجة حرارة السطح</h5>
-            <img src="https://tile.openweathermap.org/map/temp_new/4/3/5.png?appid=439d4b804bc8187953eb36d2a8c26a02" 
-                 alt="خريطة درجة الحرارة" 
-                 style="width: 100%; border-radius: 8px; border: 1px solid #e2e8f0;"
-                 onerror="this.style.display='none'">
-            <p style="font-size: 0.7rem; color: #718096; margin-top: 5px;">خريطة حرارة سطح الأرض - تحديث كل 3 ساعات</p>
+        <!-- Layer Selector -->
+        <div style="margin: 20px 0;">
+            <h4 style="color: #2b6cb0; font-size: 1.2rem;"><i class="fas fa-layer-group"></i> اختيار الطبقة التفاعلية</h4>
+            <div class="layer-selector">
+                <button class="layer-btn active" data-layer="base" onclick="switchLayer('base')"><i class="fas fa-map"></i> خريطة أساسية</button>
+                <button class="layer-btn" data-layer="satellite" onclick="switchLayer('satellite')"><i class="fas fa-satellite"></i> قمر صناعي</button>
+                <button class="layer-btn" data-layer="vegetation" onclick="switchLayer('vegetation')"><i class="fas fa-leaf"></i> الغطاء النباتي</button>
+                <button class="layer-btn" data-layer="geology" onclick="switchLayer('geology')"><i class="fas fa-gem"></i> جيولوجيا</button>
+                <button class="layer-btn" data-layer="soil" onclick="switchLayer('soil')"><i class="fas fa-ground"></i> تربة</button>
+                <button class="layer-btn" data-layer="weather" onclick="switchLayer('weather')"><i class="fas fa-cloud-sun"></i> طقس</button>
+            </div>
         </div>
-        <div style="background: white; border-radius: 12px; padding: 15px; border: 1px solid #e2e8f0; text-align: center;">
-            <h5 style="color: #2f855a; font-size: 0.95rem; margin-bottom: 8px;">💧 كمية الأمطار</h5>
-            <img src="https://tile.openweathermap.org/map/precipitation_new/4/3/5.png?appid=439d4b804bc8187953eb36d2a8c26a02" 
-                 alt="خريطة الأمطار" 
-                 style="width: 100%; border-radius: 8px; border: 1px solid #e2e8f0;"
-                 onerror="this.style.display='none'">
-            <p style="font-size: 0.7rem; color: #718096; margin-top: 5px;">خريطة هطول الأمطار - تحديث كل 3 ساعات</p>
-        </div>
-    </div>
 
-    <!-- Layer Selector -->
-    <div style="margin: 20px 0;">
-        <h4 style="color: #2b6cb0; font-size: 1.2rem;"><i class="fas fa-layer-group"></i> اختيار الطبقة التفاعلية</h4>
-        <div class="layer-selector">
-            <button class="layer-btn active" data-layer="base" onclick="switchLayer('base')"><i class="fas fa-map"></i> خريطة أساسية</button>
-            <button class="layer-btn" data-layer="satellite" onclick="switchLayer('satellite')"><i class="fas fa-satellite"></i> قمر صناعي</button>
-            <button class="layer-btn" data-layer="vegetation" onclick="switchLayer('vegetation')"><i class="fas fa-leaf"></i> الغطاء النباتي</button>
-            <button class="layer-btn" data-layer="geology" onclick="switchLayer('geology')"><i class="fas fa-gem"></i> جيولوجيا</button>
-            <button class="layer-btn" data-layer="soil" onclick="switchLayer('soil')"><i class="fas fa-ground"></i> تربة</button>
-            <button class="layer-btn" data-layer="weather" onclick="switchLayer('weather')"><i class="fas fa-cloud-sun"></i> طقس</button>
-        </div>
-    </div>
+        <!-- Map -->
+        <h3 style="color: #2b6cb0; font-size: 1.2rem; margin-top: 10px;">
+            <i class="fas fa-map"></i> خريطة تفاعلية - ليبيا
+        </h3>
+        <div id="map"></div>
 
-    <!-- Map -->
-    <h3 style="color: #2b6cb0; font-size: 1.2rem; margin-top: 10px;">
-        <i class="fas fa-map"></i> خريطة تفاعلية - ليبيا
-    </h3>
-    <div id="map"></div>
-
-    <!-- Real-time Data Info -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
-        <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #2b6cb0;">
-            <div style="font-size: 2rem;">🌿</div>
-            <p style="font-weight: 700; color: #2b6cb0;">الغطاء النباتي</p>
-            <p style="font-size: 0.8rem; color: #4a5568;">NDVI متوسط: 0.28</p>
+        <!-- Real-time Data Info -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #2b6cb0;">
+                <div style="font-size: 2rem;">🌿</div>
+                <p style="font-weight: 700; color: #2b6cb0;">الغطاء النباتي</p>
+                <p style="font-size: 0.8rem; color: #4a5568;">NDVI متوسط: 0.28</p>
+            </div>
+            <div style="background: #f0fff4; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #38a169;">
+                <div style="font-size: 2rem;">⛰️</div>
+                <p style="font-weight: 700; color: #38a169;">الجيولوجيا</p>
+                <p style="font-size: 0.8rem; color: #4a5568;">صخر: كلسي - رملي</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #dd6b20;">
+                <div style="font-size: 2rem;">🧪</div>
+                <p style="font-weight: 700; color: #dd6b20;">التربة</p>
+                <p style="font-size: 0.8rem; color: #4a5568;">نوع: كلسية - رملية</p>
+            </div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #6b46c1;">
+                <div style="font-size: 2rem;">🌡️</div>
+                <p style="font-weight: 700; color: #6b46c1;">متوسط الحرارة</p>
+                <p style="font-size: 0.8rem; color: #4a5568;">28°C (يونيو 2026)</p>
+            </div>
         </div>
-        <div style="background: #f0fff4; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #38a169;">
-            <div style="font-size: 2rem;">⛰️</div>
-            <p style="font-weight: 700; color: #38a169;">الجيولوجيا</p>
-            <p style="font-size: 0.8rem; color: #4a5568;">صخر: كلسي - رملي</p>
-        </div>
-        <div style="background: #fffbeb; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #dd6b20;">
-            <div style="font-size: 2rem;">🧪</div>
-            <p style="font-weight: 700; color: #dd6b20;">التربة</p>
-            <p style="font-size: 0.8rem; color: #4a5568;">نوع: كلسية - رملية</p>
-        </div>
-        <div style="background: #faf5ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #6b46c1;">
-            <div style="font-size: 2rem;">🌡️</div>
-            <p style="font-weight: 700; color: #6b46c1;">متوسط الحرارة</p>
-            <p style="font-size: 0.8rem; color: #4a5568;">28°C (يونيو 2026)</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ============================================================ -->
     <!-- ===== الوحدة الأولى: أساسيات نظم المعلومات الجغرافية ===== -->
