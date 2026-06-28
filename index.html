@@ -49,198 +49,6 @@
             border-radius: 10px;
         }
 
-        /* ===== Top Action Boxes ===== */
-        .top-action-boxes {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 1400px;
-            margin: 20px auto 0;
-            padding: 0 20px;
-        }
-        .action-box {
-            background: white;
-            border-radius: 20px;
-            padding: 20px 25px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-            border: 1px solid rgba(0,0,0,0.04);
-            transition: all 0.3s;
-        }
-        .action-box:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-        }
-        .action-box .box-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        .action-box .box-header i {
-            font-size: 1.5rem;
-            padding: 10px;
-            border-radius: 12px;
-        }
-        .action-box .box-header h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #1a202c;
-            margin: 0;
-        }
-        .action-box .box-header .badge {
-            background: #e53e3e;
-            color: white;
-            font-size: 0.6rem;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-weight: 700;
-            margin-right: auto;
-        }
-        .action-box p {
-            color: #4a5568;
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
-        .action-box textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-family: 'Tajawal', sans-serif;
-            font-size: 0.9rem;
-            resize: vertical;
-            min-height: 60px;
-            transition: all 0.3s;
-            background: #f7fafc;
-        }
-        .action-box textarea:focus {
-            outline: none;
-            border-color: #2b6cb0;
-            background: white;
-            box-shadow: 0 0 0 4px rgba(43,108,176,0.1);
-        }
-        .action-box .btn-submit {
-            margin-top: 10px;
-            padding: 10px 28px;
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-family: 'Tajawal', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .action-box .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        .action-box .btn-submit.primary {
-            background: #2b6cb0;
-            color: white;
-        }
-        .action-box .btn-submit.primary:hover {
-            background: #1a4f7a;
-        }
-        .action-box .btn-submit.success {
-            background: #38a169;
-            color: white;
-        }
-        .action-box .btn-submit.success:hover {
-            background: #2f855a;
-        }
-        .action-box .announcement-item {
-            background: #f7fafc;
-            border-radius: 12px;
-            padding: 12px 16px;
-            margin-bottom: 8px;
-            border-right: 4px solid #2b6cb0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .action-box .announcement-item .date {
-            font-size: 0.7rem;
-            color: #718096;
-            background: #edf2f7;
-            padding: 2px 12px;
-            border-radius: 20px;
-        }
-        .action-box .announcement-item .tag {
-            font-size: 0.65rem;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-weight: 700;
-            margin-right: 8px;
-        }
-        .action-box .announcement-item .tag.important {
-            background: #fed7d7;
-            color: #e53e3e;
-        }
-        .action-box .announcement-item .tag.event {
-            background: #fefcbf;
-            color: #d69e2e;
-        }
-        .action-box .announcement-item .tag.workshop {
-            background: #c6f6d5;
-            color: #38a169;
-        }
-        .action-box .announcement-item .tag.webinar {
-            background: #bee3f8;
-            color: #2b6cb0;
-        }
-        .action-box .announcement-list {
-            max-height: 180px;
-            overflow-y: auto;
-        }
-        .action-box .announcement-list::-webkit-scrollbar {
-            width: 4px;
-        }
-        .action-box .announcement-list::-webkit-scrollbar-thumb {
-            background: #cbd5e0;
-            border-radius: 10px;
-        }
-        .action-box .empty-msg {
-            color: #a0aec0;
-            font-size: 0.85rem;
-            text-align: center;
-            padding: 15px 0;
-        }
-        .action-box .note-item {
-            background: #f7fafc;
-            border-radius: 12px;
-            padding: 12px 16px;
-            margin-bottom: 8px;
-            border-right: 4px solid #6b46c1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .action-box .note-item .note-content {
-            flex: 1;
-            font-size: 0.9rem;
-            color: #2d3748;
-        }
-        .action-box .note-item .note-meta {
-            font-size: 0.7rem;
-            color: #718096;
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .action-box .note-item .note-meta .role {
-            background: #e2e8f0;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 0.6rem;
-            font-weight: 700;
-        }
-        .action-box .note-item .note-meta .role.student { background: #bee3f8; color: #2b6cb0; }
-        .action-box .note-item .note-meta .role.researcher { background: #c6f6d5; color: #38a169; }
-        .action-box .note-item .note-meta .role.staff { background: #fefcbf; color: #d69e2e; }
-
         /* ===== Premium Header ===== */
         .hero {
             background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 40%, #2f855a 80%, #38a169 100%);
@@ -699,7 +507,6 @@
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .stats-row { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
-            .top-action-boxes { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
@@ -720,7 +527,6 @@
             #map { height: 320px; }
             .navbar-inner { flex-wrap: wrap; }
             .weather-widget { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-            .top-action-boxes { padding: 0 15px; }
         }
         @media (max-width: 480px) {
             .grid-4 { grid-template-columns: 1fr; }
@@ -733,236 +539,6 @@
 <body>
 
 <!-- ============================================================ -->
-<!-- TOP ACTION BOXES: NOTES & ANNOUNCEMENTS -->
-<!-- ============================================================ -->
-<div class="top-action-boxes">
-
-    <!-- LEFT: Drop Notes / Suggestions -->
-    <div class="action-box">
-        <div class="box-header">
-            <i class="fas fa-pen" style="color: #6b46c1; background: #faf5ff;"></i>
-            <h3>📝 مقترحات وملاحظات</h3>
-            <span class="badge">مفتوح</span>
-        </div>
-        <p>أرسل ملاحظاتك أو مقترحاتك حول المحتوى التعليمي. يسعدنا مشاركتك في تطوير البوابة.</p>
-        <textarea id="noteInput" placeholder="اكتب ملاحظتك أو اقتراحك هنا..." rows="2"></textarea>
-        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
-            <select id="roleSelect" style="padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; background: white; font-size: 0.85rem;">
-                <option value="طالب">🎓 طالب</option>
-               <option value="مهندس">🔬 مهندس</option>
-                <option value="عضو هيئة تدريس">👨‍🏫 عضو هيئة تدريس</option>
-            </select>
-            <button class="btn-submit primary" onclick="addNote()">
-                <i class="fas fa-paper-plane"></i> إرسال
-            </button>
-        </div>
-    </div>
-
-<!-- RIGHT: Active Announcements Box -->
-<div class="action-box">
-    <div class="box-header">
-        <i class="fas fa-bullhorn" style="color: #e53e3e; background: #fff5f5;"></i>
-        <h3>📢 إعلانات الفعاليات العلمية</h3>
-        <span class="badge" id="announcementCount">0</span>
-    </div>
-    <p>آخر الفعاليات العلمية وورش العمل والمؤتمرات في مجال GIS والاستشعار عن بعد.</p>
-    <div id="announcementList" class="announcement-list">
-        
-       <!-- ============================================================ -->
-<!-- GIS DAY ANNOUNCEMENT - HISTORY REMOVED -->
-<!-- ============================================================ -->
-<div class="gis-day-announcement" style="
-    background: linear-gradient(145deg, #0f172a, #1e293b, #0f3460);
-    border-radius: 24px;
-    padding: 30px 35px;
-    margin: 10px 0 15px;
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-">
-    <!-- Glow Effects -->
-    <div style="
-        position: absolute;
-        top: -40%;
-        right: -20%;
-        width: 70%;
-        height: 180%;
-        background: radial-gradient(ellipse, rgba(251, 191, 36, 0.04), transparent 70%);
-        animation: glowRotate1 12s ease-in-out infinite alternate;
-        pointer-events: none;
-    "></div>
-    <div style="
-        position: absolute;
-        bottom: -30%;
-        left: -20%;
-        width: 60%;
-        height: 160%;
-        background: radial-gradient(ellipse, rgba(56, 189, 248, 0.04), transparent 70%);
-        animation: glowRotate2 15s ease-in-out infinite alternate-reverse;
-        pointer-events: none;
-    "></div>
-
-    <style>
-        @keyframes glowRotate1 {
-            0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
-            100% { transform: translate(30px, -20px) scale(1.2) rotate(5deg); opacity: 0.7; }
-        }
-        @keyframes glowRotate2 {
-            0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.2; }
-            100% { transform: translate(-20px, 30px) scale(1.3) rotate(-5deg); opacity: 0.6; }
-        }
-        .gis-day-announcement .main-icon {
-            font-size: 3.5rem;
-            display: inline-block;
-            animation: bounceIcon 3s ease-in-out infinite;
-        }
-        @keyframes bounceIcon {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-8px) scale(1.05); }
-        }
-        .gis-day-announcement .title-text {
-            font-size: 2.6rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #fcd34d, #f59e0b, #fbbf24, #fcd34d);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmerText 4s ease-in-out infinite;
-            letter-spacing: 1px;
-        }
-        @keyframes shimmerText {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        .gis-day-announcement .sub-text {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #93c5fd;
-        }
-        .gis-day-announcement .sub-text .highlight-date {
-            color: #fcd34d;
-            -webkit-text-fill-color: #fcd34d;
-            font-weight: 900;
-            font-size: 1.6rem;
-        }
-        .gis-day-announcement .event-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 12px;
-        }
-        .gis-day-announcement .event-tag {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 30px;
-            padding: 6px 18px;
-            font-size: 0.85rem;
-            color: #94a3b8;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .gis-day-announcement .event-tag:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(251, 191, 36, 0.2);
-            color: #e2e8f0;
-        }
-        .gis-day-announcement .event-tag i {
-            margin-left: 6px;
-            color: #fcd34d;
-        }
-        .gis-day-announcement .cta-btn-outline {
-            display: inline-block;
-            padding: 10px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: #93c5fd;
-            text-decoration: none;
-            border: 2px solid rgba(147, 197, 253, 0.15);
-            transition: all 0.4s;
-            background: rgba(255,255,255,0.02);
-            font-family: 'Tajawal', sans-serif;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .gis-day-announcement .cta-btn-outline:hover {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(147, 197, 253, 0.3);
-            transform: translateY(-3px);
-        }
-        @media (max-width: 768px) {
-            .gis-day-announcement { padding: 22px 18px; }
-            .gis-day-announcement .main-icon { font-size: 2.6rem; }
-            .gis-day-announcement .title-text { font-size: 1.8rem; }
-            .gis-day-announcement .sub-text { font-size: 1.1rem; }
-            .gis-day-announcement .sub-text .highlight-date { font-size: 1.2rem; }
-            .gis-day-announcement .event-tag { font-size: 0.75rem; padding: 4px 14px; }
-            .gis-day-announcement .cta-btn-outline { padding: 8px 22px; font-size: 0.85rem; }
-        }
-        @media (max-width: 480px) {
-            .gis-day-announcement { padding: 16px 12px; border-radius: 18px; }
-            .gis-day-announcement .main-icon { font-size: 2rem; }
-            .gis-day-announcement .title-text { font-size: 1.3rem; }
-            .gis-day-announcement .sub-text { font-size: 0.95rem; }
-            .gis-day-announcement .sub-text .highlight-date { font-size: 1rem; }
-            .gis-day-announcement .event-tag { font-size: 0.7rem; padding: 3px 12px; }
-            .gis-day-announcement .cta-btn-outline { padding: 6px 16px; font-size: 0.8rem; }
-        }
-    </style>
-
-    <!-- ===== MAIN CONTENT ===== -->
-    <div style="position: relative; z-index: 2; text-align: right;">
-
-        <!-- Main Icon & Title -->
-        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-            <span class="main-icon">🌍</span>
-            <div>
-                <span class="title-text">GIS DAY</span>
-                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 2px;">
-                    <span class="sub-text">📅 <span class="highlight-date">الأربعاء</span> ثالث أسبوع من شهر <span class="highlight-date">نوفمبر</span></span>
-                    <span style="background: rgba(251, 191, 36, 0.12); padding: 4px 16px; border-radius: 30px; font-size: 0.85rem; color: #fcd34d; font-weight: 600; border: 1px solid rgba(251, 191, 36, 0.15);">
-                        🗓️ 18 نوفمبر 2026
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Description -->
-        <p style="color: #cbd5e1; font-size: 1rem; margin-top: 12px; line-height: 1.8;">
-            <strong style="color: #fcd34d; -webkit-text-fill-color: #fcd34d;">🎉 احتفالاً بيوم نظم المعلومات الجغرافية العالمي</strong><br>
-            <span style="color: #94a3b8;">ندعوكم لحضور الفعاليات العلمية وورش العمل والمعارض التفاعلية</span><br>
-            <span style="color: #60a5fd; font-weight: 600;">📍 قسم التربة والمياه - كلية الزراعة - جامعة طرابلس</span>
-        </p>
-
-        <!-- Event Tags -->
-        <div class="event-tags">
-            <span class="event-tag"><i class="fas fa-microphone"></i> محاضرات</span>
-            <span class="event-tag"><i class="fas fa-map"></i> معارض خرائط</span>
-            <span class="event-tag"><i class="fas fa-users"></i> لقاءات علمية</span>
-            <span class="event-tag"><i class="fas fa-laptop"></i> ورش عمل</span>
-            <span class="event-tag"><i class="fas fa-trophy"></i> مسابقات</span>
-        </div>
-
-        <!-- Call to Action - Info Only (No Registration, No History) -->
-        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
-            <a href="#" class="cta-btn-outline">
-                <i class="fas fa-info-circle"></i> تفاصيل الفعالية
-            </a>
-            <a href="#" class="cta-btn-outline" style="border-color: rgba(251, 191, 36, 0.15); color: #fcd34d;">
-                <i class="fas fa-calendar-alt"></i> جدول الفعاليات
-            </a>
-        </div>
-
-    </div>
-
-
-</div>
-<!-- ===== END GIS DAY ANNOUNCEMENT ===== -->
-  <!-- ============================================================ -->
 <!-- HEADER / HERO -->
 <!-- ============================================================ -->
 <header class="hero">
@@ -972,7 +548,7 @@
     <h2>البوابة التعليمية لنظم المعلومات الجغرافية (GIS) والاستشعار عن بعد (RS)</h2>
     <p>Educational Portal for GIS, Remote Sensing, Spatial Analysis, and Environmental Applications</p>
     <div class="hero-badge">
-        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة 
+        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة - قسم التربة والمياه
     </div>
 </header>
 
@@ -987,8 +563,11 @@
             <li><a href="#home" class="active">الرئيسية</a></li>
             <li><a href="#intro">مقدمة GIS</a></li>
             <li><a href="#spatial">تحليل مكاني</a></li>
-            <li><a href="#geodatabase">Geodatabase قواعد البيانات </a></li>
-            <li><a href="#rs">استشعار عن بعد</a></li>                    
+            <li><a href="#geodatabase">Geodatabase</a></li>
+            <li><a href="#rs">استشعار عن بعد</a></li>
+            <li><a href="#indices">مؤشرات نباتية</a></li>
+            <li><a href="#precision">زراعة دقيقة</a></li>
+            <li><a href="#terrain-hydrology">طبوغرافي وهيدرولوجي</a></li>
             <li><a href="#topography">تطبيقات طبوغرافيا</a></li>
             <li><a href="#geology-gis">تطبيقات جيولوجيا</a></li>
             <li><a href="#soil-gis">تطبيقات تربة</a></li>
@@ -1149,8 +728,6 @@
             </div>
         </div>
     </section>
-
-    
 
     <!-- ============================================================ -->
     <!-- ===== أساسيات نظم المعلومات الجغرافية ===== -->
