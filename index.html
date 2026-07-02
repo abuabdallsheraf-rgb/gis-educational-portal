@@ -536,126 +536,24 @@
         }
     </style>
 </head>
-<body><!-- ============================================================ -->
-<!-- ===== 3D ACADEMIC HEADER ===== -->
+<body>
+
+<!-- ============================================================ -->
+<!-- HEADER / HERO -->
 <!-- ============================================================ -->
 <header class="hero">
     <div class="glow-ring"></div>
     <div class="glow-ring"></div>
-    <div class="glow-ring"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    
     <h1>🌍 نظم المعلومات الجغرافية (GIS) <span>وتطبيقاتها في العلوم الزراعية والبيئية</span></h1>
     <h2>البوابة التعليمية لنظم المعلومات الجغرافية (GIS) والاستشعار عن بعد (RS)</h2>
     <p>Educational Portal for GIS, Remote Sensing, Spatial Analysis, and Environmental Applications</p>
     <div class="hero-badge">
-        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة - قسم التربة والمياه
+        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة 
     </div>
 </header>
 
 <!-- ============================================================ -->
-<!-- ===== TOP ACTION BOXES ===== -->
-<!-- ============================================================ -->
-<div class="top-action-boxes">
-
-    <!-- ===== BOX 1: SEND FEEDBACK ===== -->
-    <div class="action-box">
-        <div class="box-header">
-            <i class="fas fa-envelope icon-email"></i>
-            <h3>📬 ملاحظات وتطوير الصفحة</h3>
-            <span class="badge green">مفتوح</span>
-        </div>
-        <p>ساعدنا في تحسين البوابة التعليمية من خلال إرسال ملاحظاتك واقتراحاتك.</p>
-        <div class="email-display">
-            📧 AB.Sherif@uot.edu.ly
-        </div>
-        <textarea id="feedbackInput" placeholder="اكتب ملاحظتك أو اقتراحك لتطوير الصفحة..." rows="2"></textarea>
-        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
-            <input type="text" id="senderName" placeholder="اسمك (اختياري)" style="flex:1; padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; font-size: 0.85rem; min-width: 120px; background: #f7fafc;">
-            <button class="btn-submit primary" onclick="sendFeedback()">
-                <i class="fas fa-paper-plane"></i> إرسال
-            </button>
-        </div>
-        <div id="feedbackSuccess" class="success-msg">
-            ✅ تم إرسال ملاحظاتك بنجاح! شكراً لك.
-        </div>
-        <div id="feedbackList" style="margin-top: 12px; max-height: 120px; overflow-y: auto;">
-            <div class="empty-msg" style="color: #a0aec0; font-size: 0.85rem; text-align: center; padding: 10px 0;">📭 لا توجد ملاحظات حالياً</div>
-        </div>
-    </div>
-
-    <!-- ===== BOX 2: ANNOUNCEMENTS ===== -->
-    <div class="action-box">
-        <div class="box-header">
-            <i class="fas fa-calendar-alt icon-event"></i>
-            <h3>📢 إعلانات الفعاليات العلمية</h3>
-            <span class="badge red" id="announcementCount">0</span>
-        </div>
-        <p>آخر الفعاليات العلمية وورش العمل والمؤتمرات في مجال GIS والاستشعار عن بعد.</p>
-        
-        <div class="announcement-list" id="announcementList">
-            
-            <!-- ===== GIS DAY FEATURED ===== -->
-            <div class="gis-day-featured">
-                <div class="glow-bg"></div>
-                <div class="content">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                            <span class="main-icon">🌍</span>
-                            <span class="title-text">GIS DAY</span>
-                            <span style="background: rgba(251, 191, 36, 0.15); padding: 2px 12px; border-radius: 20px; font-size: 0.6rem; color: #fcd34d; font-weight: 700; border: 1px solid rgba(251, 191, 36, 0.15);">⭐ مميز</span>
-                        </div>
-                        <div class="sub-text">
-                            📅 <span class="highlight">الأربعاء</span> - ثالث أسبوع من نوفمبر &nbsp;|&nbsp; 🗓️ 18 نوفمبر 2026
-                        </div>
-                        <div class="tags">
-                            <span class="tag"><i class="fas fa-microphone"></i> محاضرات</span>
-                            <span class="tag"><i class="fas fa-map"></i> معارض</span>
-                            <span class="tag"><i class="fas fa-users"></i> لقاءات</span>
-                            <span class="tag"><i class="fas fa-laptop"></i> ورش عمل</span>
-                            <span class="tag"><i class="fas fa-trophy"></i> مسابقات</span>
-                        </div>
-                        <a href="#" class="btn-details">
-                            <i class="fas fa-info-circle"></i> تفاصيل الفعالية
-                        </a>
-                    </div>
-                    <div style="text-align: left;">
-                        <span style="color: #94a3b8; font-size: 0.8rem;">📍 كلية الزراعة - جامعة طرابلس</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Other announcements will be added here by JavaScript -->
-            <div id="otherAnnouncements" style="color: #a0aec0; font-size: 0.85rem; text-align: center; padding: 10px 0;">
-                📭 سيتم إضافة المزيد من الفعاليات قريباً
-            </div>
-        </div>
-        
-        <!-- Add Announcement Form -->
-        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e8f0;">
-            <input type="text" id="announcementInput" placeholder="إضافة فعالية جديدة..." style="flex:1; padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; font-size: 0.85rem; min-width: 120px;">
-            <input type="date" id="announcementDate" style="padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; font-size: 0.85rem; background: white;">
-            <select id="announcementTag" style="padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; background: white; font-size: 0.8rem;">
-                <option value="مهم">⭐ مهم</option>
-                <option value="فعالية">📅 فعالية</option>
-                <option value="ورشة عمل">🛠️ ورشة عمل</option>
-                <option value="ندوة عبر الإنترنت">💻 ندوة عبر الإنترنت</option>
-                <option value="مؤتمر">🏛️ مؤتمر</option>
-            </select>
-            <button class="btn-submit success" onclick="addAnnouncement()">
-                <i class="fas fa-plus"></i> إضافة
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- ============================================================ -->
-<!-- ===== NAVIGATION ===== -->
+<!-- NAVIGATION -->
 <!-- ============================================================ -->
 <nav class="navbar">
     <div class="navbar-inner">
@@ -687,14 +585,14 @@
             <li><a href="#uav-technology">طائرات بدون طيار</a></li>
             <li><a href="#spatial-modeling">نمذجة</a></li>
             <li><a href="#precision-agriculture">زراعة ذكية</a></li>
-            <li><a href="#vrt-technology">التسميد المتغير VRT</a></li>
+             <li><a href="#vrt-technology">التسميد المتغير VRT</a></li>
             <li><a href="#resources">موارد</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- ============================================================ -->
-<!-- ===== MAIN CONTENT ===== -->
+<!-- MAIN CONTENT -->
 <!-- ============================================================ -->
 <div class="container">
 
@@ -12407,137 +12305,58 @@
     </div>
 </section>
     <!-- ============================================================ -->
-<!-- ===== RESOURCES ===== -->
-<!-- ============================================================ -->
-<section class="section" id="resources">
-    <div class="section-title">
-        <i class="fas fa-link"></i> الموارد العلمية والبيانات
-    </div>
-    
-    <!-- ===== UNIVERSITIES ===== -->
-    <div style="background: linear-gradient(135deg, #f7fafc, #edf2f7); border-radius: 16px; padding: 20px; margin-bottom: 25px; border-right: 4px solid #2b6cb0;">
-        <h3 style="color: #2b6cb0; font-size: 1.3rem; display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-            <i class="fas fa-university" style="color: #2b6cb0;"></i>
-            <span>🏛️ جامعات عالمية متخصصة في GIS</span>
-        </h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="https://gis.mit.edu/" target="_blank" class="resource-link" style="background: #ebf8ff; border-color: #90cdf4;">
-                <i class="fas fa-external-link-alt"></i> MIT GIS Lab
-            </a>
-            <a href="https://cga.harvard.edu/" target="_blank" class="resource-link" style="background: #f0fff4; border-color: #9ae6b4;">
-                <i class="fas fa-external-link-alt"></i> Harvard CGA
-            </a>
-            <a href="https://www.spatial.ucsb.edu/" target="_blank" class="resource-link" style="background: #faf5ff; border-color: #d6bcfa;">
-                <i class="fas fa-external-link-alt"></i> UCSB Spatial
-            </a>
-            <a href="https://www.geog.psu.edu/gis" target="_blank" class="resource-link" style="background: #fffbeb; border-color: #fbd38d;">
-                <i class="fas fa-external-link-alt"></i> Penn State GIS
-            </a>
-            <a href="https://www.itc.nl/" target="_blank" class="resource-link" style="background: #fff5f5; border-color: #feb2b2;">
-                <i class="fas fa-external-link-alt"></i> ITC - Netherlands
-            </a>
+    <!-- ===== RESOURCES ===== -->
+    <!-- ============================================================ -->
+    <section class="section" id="resources">
+        <div class="section-title"><i class="fas fa-link"></i> الموارد العلمية والبيانات</div>
+        
+        <h3 class="section-subtitle"><i class="fas fa-university"></i> جامعات عالمية</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <a href="https://gis.mit.edu/" target="_blank" class="resource-link">MIT GIS Lab</a>
+            <a href="https://cga.harvard.edu/" target="_blank" class="resource-link">Harvard CGA</a>
+            <a href="https://www.spatial.ucsb.edu/" target="_blank" class="resource-link">UCSB Spatial</a>
+            <a href="https://www.geog.psu.edu/gis" target="_blank" class="resource-link">Penn State GIS</a>
+            <a href="https://www.itc.nl/" target="_blank" class="resource-link">ITC - Netherlands</a>
         </div>
-    </div>
 
-    <!-- ===== LIBYA DATA ===== -->
-    <div style="background: linear-gradient(135deg, #f0fff4, #e6fffa); border-radius: 16px; padding: 20px; margin-bottom: 25px; border-right: 4px solid #38a169;">
-        <h3 style="color: #38a169; font-size: 1.3rem; display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-            <i class="fas fa-map-marked-alt" style="color: #38a169;"></i>
-            <span>📍 بيانات ليبيا - مصادر مفتوحة</span>
-        </h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="https://climateknowledgeportal.worldbank.org/country/libya" target="_blank" class="resource-link" style="background: #ebf8ff; border-color: #90cdf4;">
-                <i class="fas fa-cloud-sun"></i> مناخ ليبيا
-            </a>
-            <a href="https://soilgrids.org/explorer/libya" target="_blank" class="resource-link" style="background: #f0fff4; border-color: #9ae6b4;">
-                <i class="fas fa-ground"></i> تربة ليبيا
-            </a>
-            <a href="https://earthexplorer.usgs.gov/" target="_blank" class="resource-link" style="background: #faf5ff; border-color: #d6bcfa;">
-                <i class="fas fa-satellite"></i> صور Landsat
-            </a>
-            <a href="https://scihub.copernicus.eu/" target="_blank" class="resource-link" style="background: #fffbeb; border-color: #fbd38d;">
-                <i class="fas fa-satellite"></i> صور Sentinel
-            </a>
-            <a href="https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm" target="_blank" class="resource-link" style="background: #fff5f5; border-color: #feb2b2;">
-                <i class="fas fa-mountain"></i> SRTM DEM
-            </a>
+        <h3 class="section-subtitle"><i class="fas fa-map-marked-alt"></i> بيانات ليبيا</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <a href="https://climateknowledgeportal.worldbank.org/country/libya" target="_blank" class="resource-link"><i class="fas fa-cloud-sun"></i> مناخ ليبيا</a>
+            <a href="https://soilgrids.org/explorer/libya" target="_blank" class="resource-link"><i class="fas fa-ground"></i> تربة ليبيا</a>
+            <a href="https://earthexplorer.usgs.gov/" target="_blank" class="resource-link"><i class="fas fa-satellite"></i> صور Landsat</a>
+            <a href="https://scihub.copernicus.eu/" target="_blank" class="resource-link"><i class="fas fa-satellite"></i> صور Sentinel</a>
         </div>
-    </div>
 
-    <!-- ===== VIDEO TUTORIALS ===== -->
-    <div style="background: linear-gradient(135deg, #faf5ff, #f3e8ff); border-radius: 16px; padding: 20px; border-right: 4px solid #6b46c1;">
-        <h3 style="color: #6b46c1; font-size: 1.3rem; display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-            <i class="fas fa-video" style="color: #6b46c1;"></i>
-            <span>🎥 فيديوهات تعليمية - قنوات YouTube</span>
-        </h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-            <div style="background: white; border-radius: 14px; padding: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: all 0.3s; border-bottom: 4px solid #2b6cb0;">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                    <div style="background: #ff0000; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div>
-                        <h5 style="font-size: 1rem; font-weight: 700; color: #1a202c;">مقدمة في GIS</h5>
-                        <p style="font-size: 0.75rem; color: #718096;">تعلم أساسيات نظم المعلومات الجغرافية</p>
-                    </div>
+        <h3 class="section-subtitle"><i class="fas fa-video"></i> فيديوهات تعليمية</h3>
+        <div class="grid-3">
+            <div class="video-card">
+                <div class="thumb"><i class="fab fa-youtube" style="color: #ff0000;"></i></div>
+                <div class="info">
+                    <h5>مقدمة في GIS</h5>
+                    <a href="https://www.youtube.com/results?search_query=GIS+Arabic+introduction" target="_blank" style="color: #63b3ed;">شاهد →</a>
                 </div>
-                <a href="https://www.youtube.com/results?search_query=GIS+Arabic+introduction" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #2b6cb0; font-weight: 600; text-decoration: none; font-size: 0.85rem;">
-                    شاهد الآن <i class="fas fa-arrow-left"></i>
-                </a>
             </div>
-            
-            <div style="background: white; border-radius: 14px; padding: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: all 0.3s; border-bottom: 4px solid #2f855a;">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                    <div style="background: #ff0000; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div>
-                        <h5 style="font-size: 1rem; font-weight: 700; color: #1a202c;">ArcGIS Pro - تطبيقات زراعية</h5>
-                        <p style="font-size: 0.75rem; color: #718096;">استخدام ArcGIS في الزراعة الدقيقة</p>
-                    </div>
+            <div class="video-card">
+                <div class="thumb"><i class="fab fa-youtube" style="color: #ff0000;"></i></div>
+                <div class="info">
+                    <h5>ArcGIS Pro - تطبيقات زراعية</h5>
+                    <a href="https://www.youtube.com/results?search_query=ArcGIS+Pro+agriculture+Arabic" target="_blank" style="color: #63b3ed;">شاهد →</a>
                 </div>
-                <a href="https://www.youtube.com/results?search_query=ArcGIS+Pro+agriculture+Arabic" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #2f855a; font-weight: 600; text-decoration: none; font-size: 0.85rem;">
-                    شاهد الآن <i class="fas fa-arrow-left"></i>
-                </a>
             </div>
-            
-            <div style="background: white; border-radius: 14px; padding: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: all 0.3s; border-bottom: 4px solid #6b46c1;">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                    <div style="background: #ff0000; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div>
-                        <h5 style="font-size: 1rem; font-weight: 700; color: #1a202c;">GEE - NDVI</h5>
-                        <p style="font-size: 0.75rem; color: #718096;">تحليل الغطاء النباتي باستخدام Google Earth Engine</p>
-                    </div>
+            <div class="video-card">
+                <div class="thumb"><i class="fab fa-youtube" style="color: #ff0000;"></i></div>
+                <div class="info">
+                    <h5>GEE - NDVI</h5>
+                    <a href="https://www.youtube.com/results?search_query=Google+Earth+Engine+NDVI+Arabic" target="_blank" style="color: #63b3ed;">شاهد →</a>
                 </div>
-                <a href="https://www.youtube.com/results?search_query=Google+Earth+Engine+NDVI+Arabic" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #6b46c1; font-weight: 600; text-decoration: none; font-size: 0.85rem;">
-                    شاهد الآن <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-            
-            <div style="background: white; border-radius: 14px; padding: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: all 0.3s; border-bottom: 4px solid #dd6b20;">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                    <div style="background: #ff0000; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                        <i class="fab fa-youtube"></i>
-                    </div>
-                    <div>
-                        <h5 style="font-size: 1rem; font-weight: 700; color: #1a202c;">الاستشعار عن بعد</h5>
-                        <p style="font-size: 0.75rem; color: #718096;">تحليل الصور الفضائية وتطبيقاتها</p>
-                    </div>
-                </div>
-                <a href="https://www.youtube.com/results?search_query=Remote+Sensing+Arabic" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: #dd6b20; font-weight: 600; text-decoration: none; font-size: 0.85rem;">
-                    شاهد الآن <i class="fas fa-arrow-left"></i>
-                </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 </div><!-- /container -->
 
 <!-- ============================================================ -->
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <!-- ============================================================ -->
 <footer class="footer">
     <div class="footer-grid">
@@ -12570,7 +12389,6 @@
             <a href="#uav-technology">طائرات بدون طيار</a>
             <a href="#spatial-modeling">نمذجة</a>
             <a href="#precision-agriculture">زراعة ذكية</a>
-            <a href="#vrt-technology">التسميد المتغير VRT</a>
         </div>
         <div>
             <h4>🔗 موارد</h4>
@@ -12638,141 +12456,8 @@
 <!-- ============================================================ -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // ============================================================
-    // ===== NAVIGATION TOGGLE =====
-    // ============================================================
-    function toggleNav() { 
-        document.getElementById('navLinks').classList.toggle('show'); 
-    }
-
-    // ============================================================
-    // ===== FEEDBACK SYSTEM =====
-    // ============================================================
-    let feedbacks = [];
-
-    function sendFeedback() {
-        const name = document.getElementById('senderName').value.trim();
-        const text = document.getElementById('feedbackInput').value.trim();
-        
-        if (!text) {
-            alert('الرجاء كتابة ملاحظتك أو اقتراحك.');
-            return;
-        }
-        
-        const feedback = {
-            id: Date.now(),
-            name: name || 'زائر',
-            text: text,
-            date: new Date().toLocaleDateString('ar-EG'),
-            time: new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' })
-        };
-        
-        feedbacks.unshift(feedback);
-        renderFeedbacks();
-        document.getElementById('feedbackInput').value = '';
-        document.getElementById('senderName').value = '';
-        
-        // Show success message
-        const successMsg = document.getElementById('feedbackSuccess');
-        if (successMsg) {
-            successMsg.classList.add('show');
-            setTimeout(() => successMsg.classList.remove('show'), 5000);
-        }
-        
-        try {
-            localStorage.setItem('gis_feedback', JSON.stringify(feedbacks));
-        } catch(e) {}
-    }
-
-    function renderFeedbacks() {
-        const list = document.getElementById('feedbackList');
-        if (!list) return;
-        
-        if (feedbacks.length === 0) {
-            list.innerHTML = '<div class="empty-msg">📭 لا توجد ملاحظات حالياً</div>';
-            return;
-        }
-        
-        list.innerHTML = feedbacks.map(f => `
-            <div style="background: #f7fafc; border-radius: 10px; padding: 8px 12px; margin-bottom: 6px; border-right: 4px solid #6b46c1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
-                <span style="font-size: 0.85rem; color: #2d3748;">${f.text}</span>
-                <span style="font-size: 0.65rem; color: #718096; background: #edf2f7; padding: 2px 10px; border-radius: 15px;">${f.name} · ${f.date}</span>
-            </div>
-        `).join('');
-    }
-
-    // Load feedbacks from localStorage
-    try {
-        const saved = localStorage.getItem('gis_feedback');
-        if (saved) feedbacks = JSON.parse(saved);
-    } catch(e) {}
-
-    // ============================================================
-    // ===== ANNOUNCEMENTS SYSTEM =====
-    // ============================================================
-    let announcements = [];
-
-    function addAnnouncement() {
-        const input = document.getElementById('announcementInput');
-        const date = document.getElementById('announcementDate');
-        const tag = document.getElementById('announcementTag').value;
-        const text = input.value.trim();
-        
-        if (!text) {
-            alert('الرجاء كتابة نص الفعالية.');
-            return;
-        }
-        
-        const announcement = {
-            id: Date.now(),
-            text: text,
-            date: date.value || new Date().toLocaleDateString('ar-EG'),
-            tag: tag,
-            timestamp: new Date().toISOString()
-        };
-        
-        announcements.unshift(announcement);
-        renderAnnouncements();
-        input.value = '';
-        if (date) date.value = '';
-        
-        try {
-            localStorage.setItem('gis_announcements', JSON.stringify(announcements));
-        } catch(e) {}
-    }
-
-    function renderAnnouncements() {
-        const list = document.getElementById('otherAnnouncements');
-        const count = document.getElementById('announcementCount');
-        if (!list) return;
-        
-        const total = announcements.length + 1; // +1 for GIS Day
-        if (count) count.textContent = total;
-        
-        if (announcements.length === 0) {
-            list.innerHTML = '📭 سيتم إضافة المزيد من الفعاليات قريباً';
-        } else {
-            list.innerHTML = announcements.map(a => `
-                <div class="announcement-item">
-                    <span class="ann-text">${a.text}</span>
-                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
-                        <span class="ann-tag ${a.tag === 'مهم' ? 'important' : a.tag === 'فعالية' ? 'event' : a.tag === 'ورشة عمل' ? 'workshop' : a.tag === 'ندوة عبر الإنترنت' ? 'webinar' : 'conference'}">${a.tag}</span>
-                        <span class="ann-date">📅 ${a.date}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-    }
-
-    // Load announcements from localStorage
-    try {
-        const saved = localStorage.getItem('gis_announcements');
-        if (saved) announcements = JSON.parse(saved);
-    } catch(e) {}
-
-    // ============================================================
-    // ===== MAP =====
-    // ============================================================
+    function toggleNav() { document.getElementById('navLinks').classList.toggle('show'); }
+    
     var map = L.map('map').setView([32.5, 13.0], 6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
     
@@ -12809,19 +12494,7 @@
             })
         }).addTo(map).bindPopup('<b>' + c.name + '</b><br>منطقة زراعية');
     });
-
-    // ============================================================
-    // ===== LAYER SWITCHER =====
-    // ============================================================
-    function switchLayer(layer) {
-        document.querySelectorAll('.layer-btn').forEach(btn => btn.classList.remove('active'));
-        document.querySelector(`.layer-btn[data-layer="${layer}"]`)?.classList.add('active');
-        console.log('🔁 Switching to layer:', layer);
-    }
-
-    // ============================================================
-    // ===== NAVIGATION SMOOTH SCROLL =====
-    // ============================================================
+    
     document.querySelectorAll('.nav-links a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -12834,16 +12507,9 @@
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) { document.getElementById('navLinks').classList.remove('show'); }
     });
-
-    // ============================================================
-    // ===== INIT =====
-    // ============================================================
-    renderFeedbacks();
-    renderAnnouncements();
     
     console.log('🌍 GIS Educational Portal loaded successfully!');
     console.log('📚 جامعة طرابلس - كلية الزراعة - قسم التربة والمياه');
-    console.log('📝 نظام الملاحظات والإعلانات يعمل بنجاح');
 </script>
 
 </body>
