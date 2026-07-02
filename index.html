@@ -705,49 +705,180 @@
             </div>
         </div>
 
-        <!-- Layer Selector -->
-        <div style="margin: 20px 0;">
-            <h4 style="color: #2b6cb0; font-size: 1.2rem;"><i class="fas fa-layer-group"></i> اختيار الطبقة التفاعلية</h4>
-            <div class="layer-selector">
-                <button class="layer-btn active" data-layer="base" onclick="switchLayer('base')"><i class="fas fa-map"></i> خريطة أساسية</button>
-                <button class="layer-btn" data-layer="satellite" onclick="switchLayer('satellite')"><i class="fas fa-satellite"></i> قمر صناعي</button>
-                <button class="layer-btn" data-layer="vegetation" onclick="switchLayer('vegetation')"><i class="fas fa-leaf"></i> الغطاء النباتي</button>
-                <button class="layer-btn" data-layer="geology" onclick="switchLayer('geology')"><i class="fas fa-gem"></i> جيولوجيا</button>
-                <button class="layer-btn" data-layer="soil" onclick="switchLayer('soil')"><i class="fas fa-ground"></i> تربة</button>
-                <button class="layer-btn" data-layer="weather" onclick="switchLayer('weather')"><i class="fas fa-cloud-sun"></i> طقس</button>
-            </div>
-        </div>
+      <!-- ===== LAYER SELECTOR ===== -->
+<div style="margin: 20px 0;">
+    <h4 style="color: #2b6cb0; font-size: 1.2rem;"><i class="fas fa-layer-group"></i> اختيار الطبقة التفاعلية</h4>
+    <div class="layer-selector">
+        <button class="layer-btn active" data-layer="base" onclick="switchLayer('base')"><i class="fas fa-map"></i> خريطة أساسية</button>
+        <button class="layer-btn" data-layer="satellite" onclick="switchLayer('satellite')"><i class="fas fa-satellite"></i> قمر صناعي</button>
+        <button class="layer-btn" data-layer="vegetation" onclick="switchLayer('vegetation')"><i class="fas fa-leaf"></i> الغطاء النباتي</button>
+        <button class="layer-btn" data-layer="geology" onclick="switchLayer('geology')"><i class="fas fa-gem"></i> جيولوجيا</button>
+        <button class="layer-btn" data-layer="soil" onclick="switchLayer('soil')"><i class="fas fa-ground"></i> تربة</button>
+        <button class="layer-btn" data-layer="weather" onclick="switchLayer('weather')"><i class="fas fa-cloud-sun"></i> طقس</button>
+    </div>
+</div>
 
-        <!-- Map -->
-        <h3 style="color: #2b6cb0; font-size: 1.2rem; margin-top: 10px;">
-            <i class="fas fa-map"></i> خريطة تفاعلية - ليبيا
-        </h3>
-        <div id="map"></div>
+<!-- ===== MAP ===== -->
+<h3 style="color: #2b6cb0; font-size: 1.2rem; margin-top: 10px;">
+    <i class="fas fa-map"></i> خريطة تفاعلية - ليبيا
+</h3>
+<div id="map"></div>
 
-        <!-- Real-time Data Info -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
-            <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #2b6cb0;">
-                <div style="font-size: 2rem;">🌿</div>
-                <p style="font-weight: 700; color: #2b6cb0;">الغطاء النباتي</p>
-                <p style="font-size: 0.8rem; color: #4a5568;">NDVI متوسط: 0.28</p>
-            </div>
-            <div style="background: #f0fff4; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #38a169;">
-                <div style="font-size: 2rem;">⛰️</div>
-                <p style="font-weight: 700; color: #38a169;">الجيولوجيا</p>
-                <p style="font-size: 0.8rem; color: #4a5568;">صخر: حجر جيري - حجر رملي</p>
-            </div>
-            <div style="background: #fffbeb; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #dd6b20;">
-                <div style="font-size: 2rem;">🧪</div>
-                <p style="font-weight: 700; color: #dd6b20;">التربة</p>
-                <p style="font-size: 0.8rem; color: #4a5568;"> ترنوع: تربة جيرية -تربة طينية - تربة ملحية - تربة رملية</p>
-            </div>
-            <div style="background: #faf5ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #6b46c1;">
-                <div style="font-size: 2rem;">🌡️</div>
-                <p style="font-weight: 700; color: #6b46c1;">متوسط الحرارة</p>
-                <p style="font-size: 0.8rem; color: #4a5568;">28°C (يونيو 2026)</p>
-            </div>
-        </div>
-    </section>
+<!-- ===== REAL-TIME DATA INFO ===== -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+    
+    <!-- الغطاء النباتي -->
+    <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #2b6cb0; transition: all 0.3s; cursor: pointer;" onclick="switchLayer('vegetation')">
+        <div style="font-size: 2rem;">🌿</div>
+        <p style="font-weight: 700; color: #2b6cb0;">الغطاء النباتي</p>
+        <p style="font-size: 0.8rem; color: #4a5568;">NDVI متوسط: 0.28</p>
+        <small style="color: #718096; font-size: 0.7rem;">اضغط لعرض الطبقة</small>
+    </div>
+    
+    <!-- الجيولوجيا -->
+    <div style="background: #f0fff4; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #38a169; transition: all 0.3s; cursor: pointer;" onclick="switchLayer('geology')">
+        <div style="font-size: 2rem;">⛰️</div>
+        <p style="font-weight: 700; color: #38a169;">الجيولوجيا</p>
+        <p style="font-size: 0.8rem; color: #4a5568;">صخر: حجر جيري - حجر رملي</p>
+        <small style="color: #718096; font-size: 0.7rem;">اضغط لعرض الطبقة</small>
+    </div>
+    
+    <!-- التربة -->
+    <div style="background: #fffbeb; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #dd6b20; transition: all 0.3s; cursor: pointer;" onclick="switchLayer('soil')">
+        <div style="font-size: 2rem;">🧪</div>
+        <p style="font-weight: 700; color: #dd6b20;">التربة</p>
+        <p style="font-size: 0.8rem; color: #4a5568;">تربة جيرية - طينية - ملحية - رملية</p>
+        <small style="color: #718096; font-size: 0.7rem;">اضغط لعرض الطبقة</small>
+    </div>
+    
+    <!-- الطقس -->
+    <div style="background: #faf5ff; border-radius: 12px; padding: 15px; text-align: center; border-right: 4px solid #6b46c1; transition: all 0.3s; cursor: pointer;" onclick="switchLayer('weather')">
+        <div style="font-size: 2rem;">🌡️</div>
+        <p style="font-weight: 700; color: #6b46c1;">متوسط الحرارة</p>
+        <p style="font-size: 0.8rem; color: #4a5568;">28°C (يونيو 2026)</p>
+        <small style="color: #718096; font-size: 0.7rem;">اضغط لعرض الطبقة</small>
+    </div>
+    
+</div>
+
+<!-- ============================================================ -->
+<!-- ===== SCRIPTS FOR LAYER SWITCHING ===== -->
+<!-- ============================================================ -->
+<script>
+    // ============================================================
+    // ===== MAP LAYERS =====
+    // ============================================================
+    
+    // Base layers
+    var baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    });
+    
+    var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri'
+    });
+    
+    // Vegetation Layer (using OpenStreetMap with green overlay)
+    var vegetationLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap',
+        className: 'vegetation-layer'
+    });
+    
+    // Geology Layer (using OpenStreetMap)
+    var geologyLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    });
+    
+    // Soil Layer (using OpenStreetMap)
+    var soilLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    });
+    
+    // Weather Layer (using OpenWeatherMap or alternative)
+    var weatherLayer = L.tileLayer('https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=YOUR_API_KEY', {
+        attribution: '&copy; OpenWeatherMap',
+        maxZoom: 18
+    });
+    
+    // Initialize map with base layer
+    var map = L.map('map').setView([32.5, 13.0], 6);
+    baseLayer.addTo(map);
+    
+    // Layer control
+    var layerControl = L.control.layers({
+        "🗺️ خريطة أساسية": baseLayer,
+        "🛰️ قمر صناعي": satelliteLayer,
+        "🌿 الغطاء النباتي": vegetationLayer,
+        "💎 جيولوجيا": geologyLayer,
+        "🧪 تربة": soilLayer,
+        "🌤️ طقس": weatherLayer
+    }).addTo(map);
+    
+    // ============================================================
+    // ===== SWITCH LAYER FUNCTION =====
+    // ============================================================
+    function switchLayer(layerName) {
+        // Update active button
+        document.querySelectorAll('.layer-btn').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        document.querySelector(`.layer-btn[data-layer="${layerName}"]`)?.classList.add('active');
+        
+        // Switch map layer
+        var layers = {
+            'base': baseLayer,
+            'satellite': satelliteLayer,
+            'vegetation': vegetationLayer,
+            'geology': geologyLayer,
+            'soil': soilLayer,
+            'weather': weatherLayer
+        };
+        
+        // Remove all layers
+        map.eachLayer(function(layer) {
+            map.removeLayer(layer);
+        });
+        
+        // Add selected layer
+        if (layers[layerName]) {
+            layers[layerName].addTo(map);
+        } else {
+            baseLayer.addTo(map);
+        }
+        
+        console.log('🔁 Switching to layer:', layerName);
+    }
+
+    // ============================================================
+    // ===== MAP MARKERS =====
+    // ============================================================
+    L.marker([32.5, 13.0], {
+        icon: L.divIcon({
+            className: 'custom-div-icon',
+            html: '<div style="background:#2b6cb0;color:white;border-radius:50%;padding:10px;font-size:20px;border:3px solid #f6ad55;">🇱🇾</div>',
+            iconSize: [40, 40], iconAnchor: [20, 40]
+        })
+    }).addTo(map).bindPopup('<b>🌍 ليبيا - شمال غرب</b><br>منطقة تطبيقات GIS').openPopup();
+    
+    var cities = [
+        { name: "طرابلس", lat: 32.8872, lng: 13.1913 },
+        { name: "مصراتة", lat: 32.3759, lng: 15.0925 },
+        { name: "الزاوية", lat: 32.7591, lng: 12.7279 },
+        { name: "صبراتة", lat: 32.7933, lng: 12.4885 },
+        { name: "غريان", lat: 32.0056, lng: 13.0093 },
+        { name: "ترهونة", lat: 32.5356, lng: 13.6345 }
+    ];
+    
+    cities.forEach(function(c) {
+        L.marker([c.lat, c.lng], {
+            icon: L.divIcon({
+                className: 'city-marker',
+                html: '<div style="background:#2f855a;color:white;border-radius:50%;padding:4px 8px;font-size:10px;font-weight:bold;border:2px solid #f6ad55;">' + c.name[0] + '</div>',
+                iconSize: [20, 20], iconAnchor: [10, 10]
+            })
+        }).addTo(map).bindPopup('<b>' + c.name + '</b><br>منطقة زراعية');
+    });
+</script>
 
     <!-- ============================================================ -->
     <!-- ===== أساسيات نظم المعلومات الجغرافية ===== -->
