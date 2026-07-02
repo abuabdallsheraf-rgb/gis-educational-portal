@@ -49,107 +49,524 @@
             border-radius: 10px;
         }
 
-        /* ===== Premium Header ===== */
+        /* ============================================================ */
+        /* =====  3D ACADEMIC HEADER ===== */
+        /* ============================================================ */
         .hero {
-            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 40%, #2f855a 80%, #38a169 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1a365d 30%, #2b6cb0 60%, #2f855a 85%, #38a169 100%);
             color: white;
-            padding: 70px 20px 50px;
+            padding: 80px 20px 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
             border-bottom: 4px solid rgba(255,255,255,0.1);
+            perspective: 1200px;
         }
         .hero::before {
             content: "🌍";
             position: absolute;
-            font-size: 350px;
+            font-size: 400px;
             opacity: 0.04;
-            top: -120px;
-            right: -80px;
-            transform: rotate(12deg);
-            animation: floatIcon 25s ease-in-out infinite;
+            top: -150px;
+            right: -100px;
+            transform: rotate(15deg) translateZ(-200px);
+            animation: floatIcon3D 30s ease-in-out infinite;
+            transform-style: preserve-3d;
         }
         .hero::after {
             content: "🛰️";
             position: absolute;
-            font-size: 200px;
+            font-size: 250px;
             opacity: 0.03;
-            bottom: -60px;
-            left: -60px;
-            transform: rotate(-8deg);
-            animation: floatIcon 30s ease-in-out infinite reverse;
+            bottom: -80px;
+            left: -80px;
+            transform: rotate(-10deg) translateZ(-150px);
+            animation: floatIcon3D 35s ease-in-out infinite reverse;
+            transform-style: preserve-3d;
         }
-        @keyframes floatIcon {
-            0%, 100% { transform: rotate(12deg) translateY(0); }
-            50% { transform: rotate(18deg) translateY(-20px); }
+        @keyframes floatIcon3D {
+            0%, 100% { transform: rotate(12deg) translateY(0) translateZ(-100px); }
+            50% { transform: rotate(20deg) translateY(-30px) translateZ(100px); }
         }
+        
         .hero .glow-ring {
             position: absolute;
-            width: 500px;
-            height: 500px;
             border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.06);
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            animation: ringPulse 10s ease-in-out infinite;
+            transform: translate(-50%, -50%) rotateX(45deg) rotateZ(0deg);
+            transform-style: preserve-3d;
+            animation: ringPulse3D 12s ease-in-out infinite;
         }
-        .hero .glow-ring:nth-child(2) {
-            width: 700px;
-            height: 700px;
-            animation-delay: 3s;
+        .hero .glow-ring:nth-child(1) { width: 400px; height: 400px; animation-delay: 0s; }
+        .hero .glow-ring:nth-child(2) { width: 600px; height: 600px; animation-delay: 3s; }
+        .hero .glow-ring:nth-child(3) { width: 800px; height: 800px; animation-delay: 6s; border-color: rgba(56, 189, 248, 0.08); }
+        @keyframes ringPulse3D {
+            0%, 100% { transform: translate(-50%, -50%) rotateX(45deg) rotateZ(0deg) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) rotateX(45deg) rotateZ(180deg) scale(1.05); opacity: 0.7; }
         }
-        @keyframes ringPulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
-            50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.6; }
+
+        .hero .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: particleFloat 20s ease-in-out infinite;
+            transform-style: preserve-3d;
         }
+        .hero .particle:nth-child(4) { top: 20%; left: 10%; animation-delay: 0s; width: 8px; height: 8px; }
+        .hero .particle:nth-child(5) { top: 70%; left: 85%; animation-delay: 3s; width: 10px; height: 10px; background: rgba(56, 189, 248, 0.2); }
+        .hero .particle:nth-child(6) { top: 40%; left: 90%; animation-delay: 6s; width: 6px; height: 6px; }
+        .hero .particle:nth-child(7) { top: 80%; left: 15%; animation-delay: 9s; width: 12px; height: 12px; background: rgba(251, 191, 36, 0.15); }
+        .hero .particle:nth-child(8) { top: 15%; left: 80%; animation-delay: 12s; width: 7px; height: 7px; }
+        .hero .particle:nth-child(9) { top: 55%; left: 5%; animation-delay: 15s; width: 9px; height: 9px; background: rgba(52, 211, 153, 0.15); }
+        @keyframes particleFloat {
+            0%, 100% { transform: translateY(0) translateZ(0) scale(1); opacity: 0.3; }
+            25% { transform: translateY(-30px) translateZ(50px) scale(1.2); opacity: 0.8; }
+            50% { transform: translateY(-60px) translateZ(100px) scale(1.5); opacity: 0.5; }
+            75% { transform: translateY(-30px) translateZ(50px) scale(1.2); opacity: 0.8; }
+        }
+
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 12px;
             position: relative;
             z-index: 2;
-            text-shadow: 0 4px 30px rgba(0,0,0,0.15);
+            text-shadow: 0 4px 40px rgba(0,0,0,0.2), 0 0 80px rgba(56, 189, 248, 0.05);
             letter-spacing: -0.5px;
+            transform: translateZ(50px);
+            animation: title3D 8s ease-in-out infinite;
         }
-        .hero h1 span { color: #f6e05e; }
+        @keyframes title3D {
+            0%, 100% { transform: translateZ(50px) rotateX(0deg); }
+            50% { transform: translateZ(80px) rotateX(2deg); }
+        }
+        .hero h1 span { 
+            color: #f6e05e; 
+            text-shadow: 0 0 40px rgba(251, 191, 36, 0.2);
+        }
         .hero h2 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 400;
-            opacity: 0.9;
+            opacity: 0.95;
             margin-bottom: 8px;
             position: relative;
             z-index: 2;
             color: #e2e8f0;
+            transform: translateZ(30px);
+            text-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
         .hero p {
-            font-size: 1.1rem;
-            opacity: 0.7;
+            font-size: 1.15rem;
+            opacity: 0.8;
             position: relative;
             z-index: 2;
             color: #bee3f8;
+            transform: translateZ(20px);
         }
         .hero-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             backdrop-filter: blur(20px);
-            padding: 10px 32px;
+            padding: 12px 36px;
             border-radius: 50px;
             margin-top: 18px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.95rem;
+            border: 1px solid rgba(255,255,255,0.12);
             position: relative;
             z-index: 2;
             color: #e2e8f0;
-            transition: all 0.3s;
+            transition: all 0.4s;
+            transform: translateZ(20px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
         }
         .hero-badge:hover {
             background: rgba(255,255,255,0.15);
-            transform: translateY(-2px);
+            transform: translateY(-3px) translateZ(40px);
+            box-shadow: 0 12px 50px rgba(0,0,0,0.2);
         }
         .hero-badge i { margin-left: 8px; }
 
-        /* ===== Premium Navigation ===== */
+        /* ============================================================ */
+        /* =====  TOP ACTION BOXES ===== */
+        /* ============================================================ */
+        .top-action-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 1400px;
+            margin: -35px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .action-box {
+            background: white;
+            border-radius: 24px;
+            padding: 25px 30px;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.08),
+                0 0 0 1px rgba(0,0,0,0.02),
+                inset 0 -4px 0 rgba(0,0,0,0.02);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 6px solid #2b6cb0;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(800px) rotateX(0deg) translateY(0);
+        }
+        .action-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(43,108,176,0.02), rgba(56,189,248,0.01));
+            pointer-events: none;
+        }
+        .action-box:hover {
+            transform: perspective(800px) rotateX(2deg) translateY(-8px);
+            box-shadow: 
+                0 30px 80px rgba(0,0,0,0.12),
+                0 0 0 1px rgba(43,108,176,0.05);
+        }
+        .action-box:last-child {
+            border-top-color: #e53e3e;
+        }
+        .action-box:last-child::before {
+            background: linear-gradient(135deg, rgba(229,62,62,0.02), rgba(245,101,101,0.01));
+        }
+        .action-box:last-child:hover {
+            box-shadow: 
+                0 30px 80px rgba(0,0,0,0.12),
+                0 0 0 1px rgba(229,62,62,0.05);
+        }
+        .action-box .box-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+        .action-box .box-header i {
+            font-size: 1.5rem;
+            padding: 12px;
+            border-radius: 16px;
+            transition: all 0.4s;
+            transform: perspective(400px) rotateY(0deg);
+        }
+        .action-box:hover .box-header i {
+            transform: perspective(400px) rotateY(10deg) scale(1.05);
+        }
+        .action-box .box-header .icon-email {
+            background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+            color: #6b46c1;
+            box-shadow: 0 4px 15px rgba(107,70,193,0.1);
+        }
+        .action-box .box-header .icon-event {
+            background: linear-gradient(135deg, #fff5f5, #fed7d7);
+            color: #e53e3e;
+            box-shadow: 0 4px 15px rgba(229,62,62,0.1);
+        }
+        .action-box .box-header h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin: 0;
+        }
+        .action-box .box-header .badge {
+            font-size: 0.6rem;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-right: auto;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        .action-box .box-header .badge.green { 
+            background: linear-gradient(135deg, #c6f6d5, #9ae6b4); 
+            color: #2f855a; 
+        }
+        .action-box .box-header .badge.red { 
+            background: linear-gradient(135deg, #fed7d7, #feb2b2); 
+            color: #e53e3e; 
+        }
+        .action-box p {
+            color: #4a5568;
+            font-size: 0.92rem;
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+        .action-box .email-display {
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border-radius: 12px;
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            color: #2b6cb0;
+            direction: ltr;
+            text-align: center;
+            font-weight: 700;
+            border: 2px dashed #bee3f8;
+            margin-bottom: 12px;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s;
+        }
+        .action-box .email-display:hover {
+            border-color: #2b6cb0;
+            background: white;
+        }
+        .action-box textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 14px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.9rem;
+            resize: vertical;
+            min-height: 60px;
+            transition: all 0.3s;
+            background: #f7fafc;
+        }
+        .action-box textarea:focus {
+            outline: none;
+            border-color: #2b6cb0;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(43,108,176,0.06);
+            transform: scale(1.01);
+        }
+        .action-box .btn-submit {
+            margin-top: 12px;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 700;
+            font-family: 'Tajawal', sans-serif;
+            cursor: pointer;
+            transition: all 0.4s;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .action-box .btn-submit::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .action-box .btn-submit:hover::after {
+            opacity: 1;
+        }
+        .action-box .btn-submit:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+        .action-box .btn-submit:active {
+            transform: scale(0.97);
+        }
+        .action-box .btn-submit.primary {
+            background: linear-gradient(135deg, #2b6cb0, #1a4f7a);
+            color: white;
+            box-shadow: 0 6px 25px rgba(43,108,176,0.2);
+        }
+        .action-box .btn-submit.primary:hover {
+            background: linear-gradient(135deg, #1a4f7a, #0f3a5a);
+            box-shadow: 0 10px 40px rgba(43,108,176,0.3);
+        }
+        .action-box .btn-submit.success {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            color: white;
+            box-shadow: 0 6px 25px rgba(56,161,105,0.2);
+        }
+        .action-box .btn-submit.success:hover {
+            background: linear-gradient(135deg, #2f855a, #1f6a45);
+            box-shadow: 0 10px 40px rgba(56,161,105,0.3);
+        }
+        .action-box .success-msg {
+            color: #38a169;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: none;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #f0fff4;
+            border-radius: 10px;
+            border-right: 4px solid #38a169;
+        }
+        .action-box .success-msg.show { display: block; }
+
+        /* Announcement Items */
+        .announcement-item {
+            background: #f7fafc;
+            border-radius: 14px;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            border-right: 4px solid #2b6cb0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .announcement-item:hover {
+            background: #edf2f7;
+            transform: translateX(-4px);
+        }
+        .announcement-item .ann-text {
+            font-size: 0.9rem;
+            color: #2d3748;
+            flex: 1;
+        }
+        .announcement-item .ann-date {
+            font-size: 0.7rem;
+            color: #718096;
+            background: #edf2f7;
+            padding: 2px 12px;
+            border-radius: 20px;
+        }
+        .announcement-item .ann-tag {
+            font-size: 0.65rem;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+        .announcement-item .ann-tag.important { background: #fed7d7; color: #e53e3e; }
+        .announcement-item .ann-tag.event { background: #fefcbf; color: #d69e2e; }
+        .announcement-item .ann-tag.workshop { background: #c6f6d5; color: #38a169; }
+        .announcement-item .ann-tag.webinar { background: #bee3f8; color: #2b6cb0; }
+        .announcement-item .ann-tag.conference { background: #e9d5ff; color: #6b46c1; }
+        
+        .announcement-list {
+            max-height: 220px;
+            overflow-y: auto;
+        }
+        .announcement-list::-webkit-scrollbar { width: 4px; }
+        .announcement-list::-webkit-scrollbar-thumb { background: #cbd5e0; border-radius: 10px; }
+
+        /* GIS Day Featured Announcement */
+        .gis-day-featured {
+            background: linear-gradient(145deg, #0f172a, #1e293b, #0f3460);
+            border-radius: 18px;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            border-right: 6px solid #fcd34d;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.03);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: perspective(600px) rotateX(0deg);
+        }
+        .gis-day-featured:hover {
+            transform: perspective(600px) rotateX(2deg) translateY(-4px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+        .gis-day-featured .glow-bg {
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 50%;
+            height: 160%;
+            background: radial-gradient(ellipse, rgba(251, 191, 36, 0.06), transparent 70%);
+            pointer-events: none;
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+        .gis-day-featured .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .gis-day-featured .main-icon {
+            font-size: 2.4rem;
+            animation: bounceIcon 3s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 4px 20px rgba(251, 191, 36, 0.15));
+        }
+        @keyframes bounceIcon {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.05); }
+        }
+        .gis-day-featured .title-text {
+            font-size: 1.6rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fcd34d, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(251, 191, 36, 0.1);
+        }
+        .gis-day-featured .sub-text {
+            color: #93c5fd;
+            font-size: 0.95rem;
+        }
+        .gis-day-featured .sub-text .highlight {
+            color: #fcd34d;
+            -webkit-text-fill-color: #fcd34d;
+            font-weight: 700;
+        }
+        .gis-day-featured .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .gis-day-featured .tag {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 30px;
+            padding: 4px 16px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            transition: all 0.3s;
+        }
+        .gis-day-featured .tag:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(251, 191, 36, 0.1);
+            color: #e2e8f0;
+        }
+        .gis-day-featured .tag i { color: #fcd34d; margin-left: 6px; }
+        .gis-day-featured .btn-details {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #0f172a;
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            text-decoration: none;
+            transition: all 0.4s;
+            box-shadow: 0 6px 25px rgba(251, 191, 36, 0.15);
+            margin-top: 8px;
+            border: none;
+            cursor: pointer;
+        }
+        .gis-day-featured .btn-details:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(251, 191, 36, 0.25);
+        }
+
+        /* ============================================================ */
+        /* =====  PREMIUM NAVIGATION ===== */
+        /* ============================================================ */
         .navbar {
             background: rgba(255,255,255,0.92);
             backdrop-filter: blur(24px);
@@ -226,10 +643,11 @@
             cursor: pointer;
         }
 
-        /* ===== Container ===== */
+        /* ============================================================ */
+        /* ===== CONTAINER, SECTION, STATS, MAP, WEATHER, ETC. ===== */
+        /* ============================================================ */
         .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
 
-        /* ===== Premium Section ===== */
         .section {
             background: white;
             border-radius: 24px;
@@ -271,67 +689,6 @@
             font-size: 1.8rem;
         }
 
-        /* ===== Premium Cards ===== */
-        .grid-2, .grid-3, .grid-4 {
-            display: grid;
-            gap: 24px;
-            margin-top: 20px;
-        }
-        .grid-2 { grid-template-columns: repeat(2, 1fr); }
-        .grid-3 { grid-template-columns: repeat(3, 1fr); }
-        .grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-        .card {
-            background: #f7fafc;
-            border-radius: 18px;
-            padding: 24px;
-            transition: all 0.4s;
-            border: 1px solid #e2e8f0;
-            position: relative;
-            overflow: hidden;
-        }
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(43,108,176,0.03), rgba(56,189,248,0.03));
-            opacity: 0;
-            transition: all 0.4s;
-        }
-        .card:hover::before {
-            opacity: 1;
-        }
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-            border-color: #2b6cb0;
-        }
-        .card-icon { font-size: 2.5rem; margin-bottom: 10px; display: block; }
-        .card h4 { 
-            font-size: 1.15rem; 
-            font-weight: 700; 
-            color: #1a202c; 
-            margin-bottom: 6px;
-        }
-        .card p { color: #4a5568; font-size: 0.9rem; line-height: 1.7; }
-        .card-tag {
-            display: inline-block;
-            background: #2b6cb0;
-            color: white;
-            padding: 3px 14px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            margin-top: 10px;
-        }
-        .card-tag.green { background: #38a169; }
-        .card-tag.orange { background: #dd6b20; }
-        .card-tag.purple { background: #6b46c1; }
-
-        /* ===== Premium Stats ===== */
         .stats-row {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -365,7 +722,6 @@
         .stat-item:nth-child(4) .stat-number { color: #6b46c1; }
         .stat-label { font-size: 0.95rem; color: #4a5568; font-weight: 600; }
 
-        /* ===== Premium Map ===== */
         #map {
             height: 500px;
             border-radius: 20px;
@@ -387,7 +743,6 @@
             color: white !important;
         }
 
-        /* ===== Weather Widget ===== */
         .weather-widget {
             background: linear-gradient(135deg, #ebf8ff, #e6fffa);
             border-radius: 16px;
@@ -424,7 +779,6 @@
             font-size: 1.5rem;
         }
 
-        /* ===== Layer Selector ===== */
         .layer-selector {
             display: flex;
             flex-wrap: wrap;
@@ -454,7 +808,6 @@
         }
         .layer-btn i { margin-left: 6px; }
 
-        /* ===== Resource Link ===== */
         .resource-link {
             display: inline-block;
             background: #ebf8ff;
@@ -475,7 +828,6 @@
             box-shadow: 0 10px 30px rgba(43,108,176,0.15);
         }
 
-        /* ===== Footer ===== */
         .footer {
             background: #1a365d;
             color: white;
@@ -502,15 +854,29 @@
             color: #bee3f8;
         }
 
-        /* ===== Responsive ===== */
+        /* ============================================================ */
+        /* ===== RESPONSIVE ===== */
+        /* ============================================================ */
         @media (max-width: 1024px) {
+            .top-action-boxes { grid-template-columns: 1fr; margin-top: -25px; }
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .stats-row { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero h2 { font-size: 1.2rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero h2 { font-size: 1.3rem; }
+            .hero { padding: 60px 20px 40px; }
+            .top-action-boxes { padding: 0 15px; margin-top: -20px; }
+            .action-box { padding: 18px 20px; border-radius: 20px; }
+            .action-box .box-header h3 { font-size: 1rem; }
+            .gis-day-featured { padding: 16px 18px; }
+            .gis-day-featured .title-text { font-size: 1.2rem; }
+            .gis-day-featured .main-icon { font-size: 1.8rem; }
+            .hero .glow-ring { display: none; }
+            .hero .particle { display: none; }
+            .hero::before { font-size: 200px; }
+            .hero::after { font-size: 150px; }
             .grid-2, .grid-3 { grid-template-columns: 1fr; }
             .grid-4 { grid-template-columns: 1fr 1fr; }
             .stats-row { grid-template-columns: 1fr 1fr; }
@@ -529,9 +895,27 @@
             .weather-widget { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
         }
         @media (max-width: 480px) {
+            .hero h1 { font-size: 1.7rem; }
+            .hero h2 { font-size: 1.1rem; }
+            .hero p { font-size: 0.95rem; }
+            .hero-badge { font-size: 0.8rem; padding: 8px 20px; }
+            .top-action-boxes { padding: 0 10px; margin-top: -15px; }
+            .action-box { padding: 14px 14px; border-radius: 16px; }
+            .action-box .box-header h3 { font-size: 0.9rem; }
+            .action-box .box-header i { font-size: 1.2rem; padding: 8px; }
+            .action-box textarea { font-size: 0.8rem; min-height: 45px; }
+            .action-box .btn-submit { padding: 8px 20px; font-size: 0.8rem; }
+            .action-box .email-display { font-size: 0.7rem; padding: 6px 10px; }
+            .gis-day-featured { padding: 12px 14px; border-radius: 14px; }
+            .gis-day-featured .title-text { font-size: 1rem; }
+            .gis-day-featured .main-icon { font-size: 1.5rem; }
+            .gis-day-featured .sub-text { font-size: 0.8rem; }
+            .gis-day-featured .tag { font-size: 0.65rem; padding: 2px 10px; }
+            .gis-day-featured .btn-details { padding: 6px 16px; font-size: 0.75rem; }
+            .hero::before { font-size: 120px; }
+            .hero::after { font-size: 100px; }
             .grid-4 { grid-template-columns: 1fr; }
             .stats-row { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 1.6rem; }
             .weather-widget { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -539,21 +923,125 @@
 <body>
 
 <!-- ============================================================ -->
-<!-- HEADER / HERO -->
+<!-- ===== PART 1: 3D ACADEMIC HEADER ===== -->
 <!-- ============================================================ -->
 <header class="hero">
     <div class="glow-ring"></div>
     <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    
     <h1>🌍 نظم المعلومات الجغرافية (GIS) <span>وتطبيقاتها في العلوم الزراعية والبيئية</span></h1>
     <h2>البوابة التعليمية لنظم المعلومات الجغرافية (GIS) والاستشعار عن بعد (RS)</h2>
     <p>Educational Portal for GIS, Remote Sensing, Spatial Analysis, and Environmental Applications</p>
     <div class="hero-badge">
-        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة 
+        <i class="fas fa-graduation-cap"></i> جامعة طرابلس - كلية الزراعة - قسم التربة والمياه
     </div>
 </header>
 
 <!-- ============================================================ -->
-<!-- NAVIGATION -->
+<!-- ===== PART 2: TOP ACTION BOXES ===== -->
+<!-- ============================================================ -->
+<div class="top-action-boxes">
+
+    <!-- ===== BOX 1: SEND FEEDBACK ===== -->
+    <div class="action-box">
+        <div class="box-header">
+            <i class="fas fa-envelope icon-email"></i>
+            <h3>📬 ملاحظات وتطوير الصفحة</h3>
+            <span class="badge green">مفتوح</span>
+        </div>
+        <p>ساعدنا في تحسين البوابة التعليمية من خلال إرسال ملاحظاتك واقتراحاتك.</p>
+        <div class="email-display">
+            📧 AB.Sherif@uot.edu.ly
+        </div>
+        <textarea id="feedbackInput" placeholder="اكتب ملاحظتك أو اقتراحك لتطوير الصفحة..." rows="2"></textarea>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+            <input type="text" id="senderName" placeholder="اسمك (اختياري)" style="flex:1; padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; font-size: 0.85rem; min-width: 120px; background: #f7fafc;">
+            <button class="btn-submit primary" onclick="sendFeedback()">
+                <i class="fas fa-paper-plane"></i> إرسال
+            </button>
+        </div>
+        <div id="feedbackSuccess" class="success-msg">
+            ✅ تم إرسال ملاحظاتك بنجاح! شكراً لك.
+        </div>
+        <div id="feedbackList" style="margin-top: 12px; max-height: 120px; overflow-y: auto;">
+            <div class="empty-msg" style="color: #a0aec0; font-size: 0.85rem; text-align: center; padding: 10px 0;">📭 لا توجد ملاحظات حالياً</div>
+        </div>
+    </div>
+
+    <!-- ===== BOX 2: ANNOUNCEMENTS ===== -->
+    <div class="action-box">
+        <div class="box-header">
+            <i class="fas fa-calendar-alt icon-event"></i>
+            <h3>📢 إعلانات الفعاليات العلمية</h3>
+            <span class="badge red" id="announcementCount">0</span>
+        </div>
+        <p>آخر الفعاليات العلمية وورش العمل والمؤتمرات في مجال GIS والاستشعار عن بعد.</p>
+        
+        <div class="announcement-list" id="announcementList">
+            
+            <!-- ===== GIS DAY FEATURED ===== -->
+            <div class="gis-day-featured">
+                <div class="glow-bg"></div>
+                <div class="content">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                            <span class="main-icon">🌍</span>
+                            <span class="title-text">GIS DAY</span>
+                            <span style="background: rgba(251, 191, 36, 0.15); padding: 2px 12px; border-radius: 20px; font-size: 0.6rem; color: #fcd34d; font-weight: 700; border: 1px solid rgba(251, 191, 36, 0.15);">⭐ مميز</span>
+                        </div>
+                        <div class="sub-text">
+                            📅 <span class="highlight">الأربعاء</span> - ثالث أسبوع من نوفمبر &nbsp;|&nbsp; 🗓️ 18 نوفمبر 2026
+                        </div>
+                        <div class="tags">
+                            <span class="tag"><i class="fas fa-microphone"></i> محاضرات</span>
+                            <span class="tag"><i class="fas fa-map"></i> معارض</span>
+                            <span class="tag"><i class="fas fa-users"></i> لقاءات</span>
+                            <span class="tag"><i class="fas fa-laptop"></i> ورش عمل</span>
+                            <span class="tag"><i class="fas fa-trophy"></i> مسابقات</span>
+                        </div>
+                        <a href="#" class="btn-details">
+                            <i class="fas fa-info-circle"></i> تفاصيل الفعالية
+                        </a>
+                    </div>
+                    <div style="text-align: left;">
+                        <span style="color: #94a3b8; font-size: 0.8rem;">📍 كلية الزراعة - جامعة طرابلس</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other announcements will be added here by JavaScript -->
+            <div id="otherAnnouncements" style="color: #a0aec0; font-size: 0.85rem; text-align: center; padding: 10px 0;">
+                📭 سيتم إضافة المزيد من الفعاليات قريباً
+            </div>
+        </div>
+        
+        <!-- Add Announcement Form -->
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e8f0;">
+            <input type="text" id="announcementInput" placeholder="إضافة فعالية جديدة..." style="flex:1; padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; font-size: 0.85rem; min-width: 120px;">
+            <input type="date" id="announcementDate" style="padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; font-size: 0.85rem; background: white;">
+            <select id="announcementTag" style="padding: 8px 14px; border-radius: 10px; border: 2px solid #e2e8f0; font-family: 'Tajawal', sans-serif; background: white; font-size: 0.8rem;">
+                <option value="مهم">⭐ مهم</option>
+                <option value="فعالية">📅 فعالية</option>
+                <option value="ورشة عمل">🛠️ ورشة عمل</option>
+                <option value="ندوة عبر الإنترنت">💻 ندوة عبر الإنترنت</option>
+                <option value="مؤتمر">🏛️ مؤتمر</option>
+            </select>
+            <button class="btn-submit success" onclick="addAnnouncement()">
+                <i class="fas fa-plus"></i> إضافة
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ===== PART 3: NAVIGATION ===== -->
 <!-- ============================================================ -->
 <nav class="navbar">
     <div class="navbar-inner">
@@ -585,14 +1073,14 @@
             <li><a href="#uav-technology">طائرات بدون طيار</a></li>
             <li><a href="#spatial-modeling">نمذجة</a></li>
             <li><a href="#precision-agriculture">زراعة ذكية</a></li>
-             <li><a href="#vrt-technology">التسميد المتغير VRT</a></li>
+            <li><a href="#vrt-technology">التسميد المتغير VRT</a></li>
             <li><a href="#resources">موارد</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- ============================================================ -->
-<!-- MAIN CONTENT -->
+<!-- ===== MAIN CONTENT ===== -->
 <!-- ============================================================ -->
 <div class="container">
 
@@ -727,7 +1215,6 @@
             </div>
         </div>
     </section>
-
     <!-- ============================================================ -->
     <!-- ===== أساسيات نظم المعلومات الجغرافية ===== -->
     <!-- ============================================================ -->
@@ -12452,12 +12939,144 @@
 </footer>
 
 <!-- ============================================================ -->
-<!-- SCRIPTS -->
+<!-- ===== SCRIPTS ===== -->
 <!-- ============================================================ -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    function toggleNav() { document.getElementById('navLinks').classList.toggle('show'); }
-    
+    // ============================================================
+    // ===== NAVIGATION TOGGLE =====
+    // ============================================================
+    function toggleNav() { 
+        document.getElementById('navLinks').classList.toggle('show'); 
+    }
+
+    // ============================================================
+    // ===== FEEDBACK SYSTEM =====
+    // ============================================================
+    let feedbacks = [];
+
+    function sendFeedback() {
+        const name = document.getElementById('senderName').value.trim();
+        const text = document.getElementById('feedbackInput').value.trim();
+        
+        if (!text) {
+            alert('الرجاء كتابة ملاحظتك أو اقتراحك.');
+            return;
+        }
+        
+        const feedback = {
+            id: Date.now(),
+            name: name || 'زائر',
+            text: text,
+            date: new Date().toLocaleDateString('ar-EG'),
+            time: new Date().toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' })
+        };
+        
+        feedbacks.unshift(feedback);
+        renderFeedbacks();
+        document.getElementById('feedbackInput').value = '';
+        document.getElementById('senderName').value = '';
+        
+        const successMsg = document.getElementById('feedbackSuccess');
+        if (successMsg) {
+            successMsg.classList.add('show');
+            setTimeout(() => successMsg.classList.remove('show'), 5000);
+        }
+        
+        try {
+            localStorage.setItem('gis_feedback', JSON.stringify(feedbacks));
+        } catch(e) {}
+    }
+
+    function renderFeedbacks() {
+        const list = document.getElementById('feedbackList');
+        if (!list) return;
+        
+        if (feedbacks.length === 0) {
+            list.innerHTML = '<div class="empty-msg">📭 لا توجد ملاحظات حالياً</div>';
+            return;
+        }
+        
+        list.innerHTML = feedbacks.map(f => `
+            <div style="background: #f7fafc; border-radius: 10px; padding: 8px 12px; margin-bottom: 6px; border-right: 4px solid #6b46c1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+                <span style="font-size: 0.85rem; color: #2d3748;">${f.text}</span>
+                <span style="font-size: 0.65rem; color: #718096; background: #edf2f7; padding: 2px 10px; border-radius: 15px;">${f.name} · ${f.date}</span>
+            </div>
+        `).join('');
+    }
+
+    // Load feedbacks from localStorage
+    try {
+        const saved = localStorage.getItem('gis_feedback');
+        if (saved) feedbacks = JSON.parse(saved);
+    } catch(e) {}
+
+    // ============================================================
+    // ===== ANNOUNCEMENTS SYSTEM =====
+    // ============================================================
+    let announcements = [];
+
+    function addAnnouncement() {
+        const input = document.getElementById('announcementInput');
+        const date = document.getElementById('announcementDate');
+        const tag = document.getElementById('announcementTag').value;
+        const text = input.value.trim();
+        
+        if (!text) {
+            alert('الرجاء كتابة نص الفعالية.');
+            return;
+        }
+        
+        const announcement = {
+            id: Date.now(),
+            text: text,
+            date: date.value || new Date().toLocaleDateString('ar-EG'),
+            tag: tag,
+            timestamp: new Date().toISOString()
+        };
+        
+        announcements.unshift(announcement);
+        renderAnnouncements();
+        input.value = '';
+        if (date) date.value = '';
+        
+        try {
+            localStorage.setItem('gis_announcements', JSON.stringify(announcements));
+        } catch(e) {}
+    }
+
+    function renderAnnouncements() {
+        const list = document.getElementById('otherAnnouncements');
+        const count = document.getElementById('announcementCount');
+        if (!list) return;
+        
+        const total = announcements.length + 1; // +1 for GIS Day
+        if (count) count.textContent = total;
+        
+        if (announcements.length === 0) {
+            list.innerHTML = '📭 سيتم إضافة المزيد من الفعاليات قريباً';
+        } else {
+            list.innerHTML = announcements.map(a => `
+                <div class="announcement-item">
+                    <span class="ann-text">${a.text}</span>
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                        <span class="ann-tag ${a.tag === 'مهم' ? 'important' : a.tag === 'فعالية' ? 'event' : a.tag === 'ورشة عمل' ? 'workshop' : a.tag === 'ندوة عبر الإنترنت' ? 'webinar' : 'conference'}">${a.tag}</span>
+                        <span class="ann-date">📅 ${a.date}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+
+    // Load announcements from localStorage
+    try {
+        const saved = localStorage.getItem('gis_announcements');
+        if (saved) announcements = JSON.parse(saved);
+    } catch(e) {}
+
+    // ============================================================
+    // ===== MAP =====
+    // ============================================================
     var map = L.map('map').setView([32.5, 13.0], 6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
     
@@ -12494,7 +13113,19 @@
             })
         }).addTo(map).bindPopup('<b>' + c.name + '</b><br>منطقة زراعية');
     });
-    
+
+    // ============================================================
+    // ===== LAYER SWITCHER =====
+    // ============================================================
+    function switchLayer(layer) {
+        document.querySelectorAll('.layer-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`.layer-btn[data-layer="${layer}"]`)?.classList.add('active');
+        console.log('🔁 Switching to layer:', layer);
+    }
+
+    // ============================================================
+    // ===== NAVIGATION SMOOTH SCROLL =====
+    // ============================================================
     document.querySelectorAll('.nav-links a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -12507,9 +13138,16 @@
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) { document.getElementById('navLinks').classList.remove('show'); }
     });
+
+    // ============================================================
+    // ===== INIT =====
+    // ============================================================
+    renderFeedbacks();
+    renderAnnouncements();
     
     console.log('🌍 GIS Educational Portal loaded successfully!');
     console.log('📚 جامعة طرابلس - كلية الزراعة - قسم التربة والمياه');
+    console.log('📝 نظام الملاحظات والإعلانات يعمل بنجاح');
 </script>
 
 </body>
