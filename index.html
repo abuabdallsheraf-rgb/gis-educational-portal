@@ -1757,88 +1757,577 @@
 
 </section>
 <!-- ===== END TOPOGRAPHY APPLICATIONS SECTION ===== -->
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 5: GEOLOGY APPLICATIONS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="geology-applications">
-        <div class="section-title"><i class="fas fa-gem"></i> تطبيقات GIS في الجيولوجيا</div>
-        <div class="info-box purple">
-            <h4 style="color: #6b46c1;">⛰️ مقدمة في الجيولوجيا</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>الجيولوجيا (Geology)</strong> هي علم <strong>دراسة الأرض</strong>، مكوناتها، بنيتها، تاريخها، 
-                والعمليات التي تشكلها.
-            </p>
+<!-- ============================================================ -->
+<!-- ===== SECTION 5: GEOLOGY APPLICATIONS (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="geology-applications">
+    <div class="section-title"><i class="fas fa-gem" style="color: #6b46c1;"></i> تطبيقات GIS في الجيولوجيا</div>
+
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); border-color: #805ad5;">
+        <h4 style="color: #6b46c1;">⛰️ مقدمة في الجيولوجيا</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>الجيولوجيا (Geology)</strong> هي علم <strong>دراسة الأرض</strong>، مكوناتها، بنيتها، تاريخها، 
+            والعمليات التي تشكلها. وتشمل <strong>الصخور، المعادن، الأحافير، والتراكيب الجيولوجية</strong> 
+            مثل الطيات والصدوع. تلعب <strong>نظم المعلومات الجغرافية</strong> دورًا محوريًا في 
+            <strong>تحليل وتفسير</strong> الظواهر الجيولوجية من خلال <strong>الخرائط الجيولوجية الرقمية</strong> 
+            والنمذجة المكانية.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🪨 صخور</span>
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">⛏️ معادن</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📐 تراكيب</span>
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🗺️ خرائط جيولوجية</span>
         </div>
-        <div class="info-box">
-            <h4 style="color: #2b6cb0;">🪨 أنواع الصخور</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
-                <div style="background: #fffbeb; border-radius: 12px; padding: 15px; border-bottom: 4px solid #dd6b20;">
-                    <h5 style="color: #dd6b20; text-align: center;">🔥 النارية (Igneous)</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 جرانيت</li>
-                        <li>🔹 بازلت</li>
-                    </ul>
+    </div>
+
+    <!-- ===== أنواع الصخور مع رسوم بيانية ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">🪨 أنواع الصخور والتصنيف الجيولوجي</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-fire" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">🔥 الصخور النارية</h5>
                 </div>
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; border-bottom: 4px solid #2b6cb0;">
-                    <h5 style="color: #2b6cb0; text-align: center;">🌊 الرسوبية (Sedimentary)</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 حجر جيري</li>
-                        <li>🔹 حجر رملي</li>
-                    </ul>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>جرانيت</strong> – صخبري (متداخل)</li>
+                    <li>🔹 <strong>بازلت</strong> – بركاني (سطح)</li>
+                    <li>🔹 <strong>ريوليت</strong> – بركاني</li>
+                    <li>🔹 <strong>ديوريت</strong> – صخبري</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-water" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">🌊 الصخور الرسوبية</h5>
                 </div>
-                <div style="background: #faf5ff; border-radius: 12px; padding: 15px; border-bottom: 4px solid #6b46c1;">
-                    <h5 style="color: #6b46c1; text-align: center;">⚡ المتحولة (Metamorphic)</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 الشيست</li>
-                        <li>🔹 الرخام</li>
-                    </ul>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>حجر جيري</strong> – كربونات الكالسيوم</li>
+                    <li>🔹 <strong>حجر رملي</strong> – حبيبات رملية</li>
+                    <li>🔹 <strong>طفل (Shale)</strong> – طيني</li>
+                    <li>🔹 <strong>كونجلوميرات</strong> – حصوية</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #faf5ff, #ede9fe); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #6b46c1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-bolt" style="font-size: 2rem; color: #6b46c1;"></i>
+                    <h5 style="color: #6b46c1; margin: 0;">⚡ الصخور المتحولة</h5>
                 </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>شيست</strong> – متحول من طفل</li>
+                    <li>🔹 <strong>رخام</strong> – متحول من حجر جيري</li>
+                    <li>🔹 <strong>كوارتزيت</strong> – متحول من حجر رملي</li>
+                    <li>🔹 <strong>نايس</strong> – متحول من جرانيت</li>
+                </ul>
+                <div style="background: #6b46c1; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
             </div>
         </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 6: SOIL APPLICATIONS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="soil-applications">
-        <div class="section-title"><i class="fas fa-ground"></i> تطبيقات GIS في علوم التربة</div>
-        <div class="info-box green">
-            <h4 style="color: #2f855a;">🧪 مقدمة في علوم التربة</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>علم التربة (Soil Science)</strong> هو العلم الذي يدرس <strong>التربة</strong> كوسيط طبيعي 
-                لنمو النباتات، ويهتم بدراسة <strong>خواصها الفيزيائية</strong>، <strong>الكيميائية</strong>، و<strong>البيولوجية</strong>.
-            </p>
-        </div>
-        <div class="info-box">
-            <h4 style="color: #2b6cb0;">📊 خواص التربة التي يمكن تحليلها باستخدام GIS</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; border-bottom: 4px solid #2b6cb0;">
-                    <h5 style="color: #2b6cb0; text-align: center;">🧪 الخواص الفيزيائية</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 قوام التربة</li>
-                        <li>🔹 كثافة التربة</li>
-                        <li>🔹 رطوبة التربة</li>
-                    </ul>
-                </div>
-                <div style="background: #f0fff4; border-radius: 12px; padding: 15px; border-bottom: 4px solid #2f855a;">
-                    <h5 style="color: #2f855a; text-align: center;">⚗️ الخواص الكيميائية</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 pH</li>
-                        <li>🔹 الملوحة (EC)</li>
-                        <li>🔹 المادة العضوية</li>
-                    </ul>
-                </div>
-                <div style="background: #faf5ff; border-radius: 12px; padding: 15px; border-bottom: 4px solid #6b46c1;">
-                    <h5 style="color: #6b46c1; text-align: center;">🦠 الخواص البيولوجية</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 الميكروبات</li>
-                        <li>🔹 النشاط الأنزيمي</li>
-                    </ul>
-                </div>
+        <!-- رسم بياني لتوزيع الصخور -->
+        <div style="margin-top: 1.5rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-pie" style="color: #6b46c1;"></i> توزيع أنواع الصخور في القشرة الأرضية</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#dd6b20; border-radius:50%;"></span> نارية 25%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#2b6cb0; border-radius:50%;"></span> رسوبية 65%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#6b46c1; border-radius:50%;"></span> متحولة 10%</div>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:22px; width:100%; margin-top:6px; display:flex; overflow:hidden;">
+                <div style="background:#dd6b20; width:25%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">نارية</div>
+                <div style="background:#2b6cb0; width:65%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">رسوبية</div>
+                <div style="background:#6b46c1; width:10%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">متحولة</div>
             </div>
         </div>
-    </section>
+    </div>
 
+    <!-- ===== دورة الصخور مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">🔄 دورة الصخور (Rock Cycle)</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">🔥 نارية</span>
+            <i class="fas fa-arrow-right" style="color: #d69e2e; font-size:1.4rem;"></i>
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">🌊 رسوبية</span>
+            <i class="fas fa-arrow-right" style="color: #d69e2e; font-size:1.4rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">⚡ متحولة</span>
+            <i class="fas fa-arrow-right" style="color: #d69e2e; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">🔥 ذوبان</span>
+            <i class="fas fa-arrow-left" style="color: #d69e2e; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">🌋 بركان</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#d69e2e;"><i class="fas fa-check-circle" style="color:#38a169;"></i> التجوية</span>
+            <span style="font-weight:600; color:#d69e2e;"><i class="fas fa-check-circle" style="color:#38a169;"></i> الترسيب</span>
+            <span style="font-weight:600; color:#d69e2e;"><i class="fas fa-check-circle" style="color:#38a169;"></i> التحول</span>
+            <span style="font-weight:600; color:#d69e2e;"><i class="fas fa-check-circle" style="color:#38a169;"></i> الانصهار</span>
+            <span style="font-weight:600; color:#d69e2e;"><i class="fas fa-check-circle" style="color:#38a169;"></i> التبريد</span>
+        </div>
+    </div>
+
+    <!-- ===== التراكيب الجيولوجية مع رسوم بيانية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #e0edff); border-color: #3182ce;">
+        <h4 style="color: #2b6cb0;">🏗️ التراكيب الجيولوجية (Geological Structures)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #bee3f8; transition: 0.2s;">
+                <i class="fas fa-wave-square" style="font-size: 2rem; color: #2b6cb0;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الطيات (Folds)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">محدبة / مقعرة</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#2b6cb0; width:80%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #bee3f8;">
+                <i class="fas fa-arrows-alt-h" style="font-size: 2rem; color: #38a169;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الصدوع (Faults)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">عادي / عكسي</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#38a169; width:75%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #bee3f8;">
+                <i class="fas fa-arrows-alt" style="font-size: 2rem; color: #dd6b20;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الفواصل (Joints)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">كسور بدون إزاحة</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#dd6b20; width:60%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #bee3f8;">
+                <i class="fas fa-mountain" style="font-size: 2rem; color: #6b46c1;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">التطفلات (Intrusions)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">قواطع / عروق</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#6b46c1; width:50%; height:6px; border-radius:20px;"></div></div>
+            </div>
+        </div>
+        <!-- رسم بياني لتوزيع التراكيب -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #3182ce;"></i> تكرار التراكيب الجيولوجية في الطبيعة</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الصدوع (Faults)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:70%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الطيات (Folds)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:55%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الفواصل (Joints)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:40%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">التطفلات (Intrusions)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#b794f4); width:25%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات GIS في الجيولوجيا ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🗺️ تطبيقات GIS في الجيولوجيا</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-map" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الخرائط الجيولوجية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geological Mapping</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-gem" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">استكشاف المعادن</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Mineral Exploration</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-exclamation-triangle" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">المخاطر الجيولوجية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geohazards</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-water" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الجيولوجيا المائية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Hydrogeology</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-ruler-combined" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الجيومورفولوجيا</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geomorphology</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-bolt" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الجيوفيزياء</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geophysics</span>
+            </div>
+        </div>
+        <!-- رسم بياني لاستخدامات GIS -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #38a169;"></i> استخدامات GIS في العلوم الجيولوجية</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الخرائط الجيولوجية</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:35%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">استكشاف المعادن</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:25%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">المخاطر الجيولوجية</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:20%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الجيولوجيا المائية</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#b794f4); width:12%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الجيومورفولوجيا</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:8%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== أدوات وتقنيات الجيولوجيا ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #805ad5;">
+        <h4 style="color: #6b46c1;">🔬 أدوات وتقنيات الجيولوجيا</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #c4b5d4; flex:1; min-width:120px;">
+                <i class="fas fa-satellite" style="color: #2b6cb0; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">الاستشعار عن بعد</div>
+                <span style="font-size:0.6rem; color:#4a5568;">Remote Sensing</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #c4b5d4; flex:1; min-width:120px;">
+                <i class="fas fa-gps" style="color: #38a169; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">GNSS/GPS</div>
+                <span style="font-size:0.6rem; color:#4a5568;">Field Mapping</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #c4b5d4; flex:1; min-width:120px;">
+                <i class="fas fa-magnet" style="color: #dd6b20; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">الجيوفيزياء</div>
+                <span style="font-size:0.6rem; color:#4a5568;">Geophysics</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #c4b5d4; flex:1; min-width:120px;">
+                <i class="fas fa-flask" style="color: #6b46c1; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">الجيوكيمياء</div>
+                <span style="font-size:0.6rem; color:#4a5568;">Geochemistry</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #c4b5d4; flex:1; min-width:120px;">
+                <i class="fas fa-ruler-combined" style="color: #e53e3e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">LiDAR</div>
+                <span style="font-size:0.6rem; color:#4a5568;">3D Terrain</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #ede9fe; border-radius: 30px; padding: 0.6rem 1.2rem; text-align: center; font-size:0.9rem; border: 1px dashed #6b46c1;">
+            <i class="fas fa-info-circle" style="color:#6b46c1;"></i> تكامل التقنيات الحديثة يوفر <strong>نماذج جيولوجية ثلاثية الأبعاد</strong> دقيقة للتنقيب عن المعادن وتقييم المخاطر
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في الجيولوجيا</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Stratigraphy</span> <span style="font-size:0.8rem; color:#4a5568;">طباقية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Tectonics</span> <span style="font-size:0.8rem; color:#4a5568;">تكتونية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Petrology</span> <span style="font-size:0.8rem; color:#4a5568;">علم الصخور</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Mineralogy</span> <span style="font-size:0.8rem; color:#4a5568;">علم المعادن</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Geochronology</span> <span style="font-size:0.8rem; color:#4a5568;">علم الزمن الجيولوجي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Seismology</span> <span style="font-size:0.8rem; color:#4a5568;">علم الزلازل</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Geothermal</span> <span style="font-size:0.8rem; color:#4a5568;">حرارة أرضية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Sedimentology</span> <span style="font-size:0.8rem; color:#4a5568;">علم الرسوبيات</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END GEOLOGY APPLICATIONS SECTION ===== -->
+   <!-- ============================================================ -->
+<!-- ===== SECTION 6: SOIL APPLICATIONS (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="soil-applications">
+    <div class="section-title"><i class="fas fa-ground" style="color: #8B4513;"></i> تطبيقات GIS في علوم التربة</div>
+
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0f7f0 0%, #d4edda 100%); border-color: #2f855a;">
+        <h4 style="color: #2f855a;">🧪 مقدمة في علوم التربة</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>علم التربة (Soil Science)</strong> هو العلم الذي يدرس <strong>التربة</strong> كوسيط طبيعي 
+            لنمو النباتات، ويهتم بدراسة <strong>خواصها الفيزيائية</strong>، <strong>الكيميائية</strong>، و<strong>البيولوجية</strong>.
+            تلعب <strong>نظم المعلومات الجغرافية</strong> دورًا محوريًا في <strong>رسم خرائط التربة</strong>، 
+            <strong>تحليل خصائصها</strong> مكانيًا، و<strong>تقييم مدى صلاحيتها</strong> للاستخدامات المختلفة.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #2f855a; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🧪 فيزياء</span>
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">⚗️ كيمياء</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🦠 بيولوجيا</span>
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🗺️ خرائط التربة</span>
+        </div>
+    </div>
+
+    <!-- ===== MORPHOLOGY & SURVEY ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffaf0, #feebc8); border-color: #dd6b20;">
+        <h4 style="color: #c05621;">🔬 مورفولوجيا التربة والمسح الحقلي</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-layer-group" style="color: #dd6b20; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">القطاعات الأفقية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Horizons (O, A, B, C)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-palette" style="color: #2b6cb0; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">لون التربة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Munsell Color Chart</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-hand-sparkles" style="color: #38a169; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">قوام التربة الحقلي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Field Texture</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-draw-polygon" style="color: #6b46c1; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">وحدات رسم التربة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Soil Mapping Units</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #feebc8; border-radius: 16px; padding: 0.8rem 1.2rem; border: 1px dashed #dd6b20;">
+            <span style="font-weight: 600;">📋 مراحل المسح الحقلي:</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 6px;">
+                <span style="background: #dd6b20; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">1. تحضير الخرائط</span>
+                <span style="background: #2b6cb0; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">2. حفر الشقوق</span>
+                <span style="background: #38a169; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">3. وصف القطاعات</span>
+                <span style="background: #6b46c1; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">4. أخذ العينات</span>
+                <span style="background: #e53e3e; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">5. رسم الخرائط</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SOIL CLASSIFICATION ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">📊 تصنيف التربة (Soil Classification)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 2px solid #bee3f8;">
+                <i class="fas fa-globe" style="color: #2b6cb0; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">USDA Soil Taxonomy</div>
+                <span style="font-size:0.65rem; color: #4a5568;">12 Orders</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:4px;"><div style="background:#2b6cb0; width:90%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 2px solid #bee3f8;">
+                <i class="fas fa-globe-africa" style="color: #38a169; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">WRB</div>
+                <span style="font-size:0.65rem; color: #4a5568;">World Reference Base</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:4px;"><div style="background:#38a169; width:80%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 2px solid #bee3f8;">
+                <i class="fas fa-layer-group" style="color: #dd6b20; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">مستويات التصنيف</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Order → Series</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:4px;"><div style="background:#dd6b20; width:70%; height:6px; border-radius:20px;"></div></div>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #bee3f8; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; font-size:0.85rem;">
+            <i class="fas fa-info-circle" style="color:#2b6cb0;"></i> <strong>أكثر الأنظمة استخدامًا:</strong> Soil Taxonomy (USDA) و World Reference Base (WRB)
+        </div>
+    </div>
+
+    <!-- ===== SOIL PHYSICS ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🧪 فيزياء التربة (Soil Physics)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-circle" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">قوام التربة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Sand / Silt / Clay</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-weight-hanging" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الكثافة الظاهرية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Bulk Density</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-tint" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">رطوبة التربة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Soil Moisture</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-water" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التوصيل الهيدروليكي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Hydraulic Conductivity</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-arrows-alt-v" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الإنكشاف الحيوي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Bioturbation</span>
+            </div>
+        </div>
+        <!-- Triangle de texture -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-triangle" style="color: #38a169;"></i> مثلث قوام التربة (Soil Texture Triangle)</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">USDA</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <span style="background: #f6ad55; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.75rem;">🟧 طينية (Clay)</span>
+                <span style="background: #68d391; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.75rem;">🟩 طميية (Silt)</span>
+                <span style="background: #fc8181; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.75rem;">🟥 رملية (Sand)</span>
+                <span style="background: #b794f4; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.75rem;">🟪 طينية رملية</span>
+                <span style="background: #63b3ed; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.75rem;">🟦 طميية طينية</span>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:18px; width:100%; margin-top:6px; display:flex; overflow:hidden;">
+                <div style="background:#fc8181; width:40%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">رمل</div>
+                <div style="background:#68d391; width:33%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">طمي</div>
+                <div style="background:#f6ad55; width:27%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">طين</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SOIL CHEMISTRY ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">⚗️ كيمياء التربة (Soil Chemistry)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-flask" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">درجة الحموضة (pH)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">حمضية / قلوية</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-bolt" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الملوحة (EC)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Electrical Conductivity</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-seedling" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">المادة العضوية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Organic Matter</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-cubes" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">العناصر الغذائية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">N, P, K, Ca, Mg</span>
+            </div>
+        </div>
+        <!-- رسم بياني لتوزيع pH -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #d69e2e;"></i> توزيع درجة حموضة التربة (pH)</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">حمضية (4.5-5.5)</span><div style="background:#e2e8f0; height:12px; border-radius:20px; width:100%;"><div style="background:#fc8181; width:15%; height:12px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">حمضية معتدلة (5.5-6.5)</span><div style="background:#e2e8f0; height:12px; border-radius:20px; width:100%;"><div style="background:#f6ad55; width:25%; height:12px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">متعادلة (6.5-7.5)</span><div style="background:#e2e8f0; height:12px; border-radius:20px; width:100%;"><div style="background:#68d391; width:40%; height:12px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">قلوية (7.5-8.5)</span><div style="background:#e2e8f0; height:12px; border-radius:20px; width:100%;"><div style="background:#63b3ed; width:15%; height:12px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">قلوية عالية (8.5-10)</span><div style="background:#e2e8f0; height:12px; border-radius:20px; width:100%;"><div style="background:#6b46c1; width:5%; height:12px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SOIL FERTILITY ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">🌱 خصوبة التربة (Soil Fertility)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-leaf" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">النيتروجين (N)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">نمو خضري</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-flower" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الفوسفور (P)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">جذور وأزهار</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-seedling" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">البوتاسيوم (K)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">جودة المحصول</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-microscope" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">العناصر الصغرى</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Fe, Zn, Mn, Cu</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #ede9fe; border-radius: 16px; padding: 0.8rem 1.2rem; border: 1px dashed #6b46c1;">
+            <span style="font-weight: 600;">📊 مؤشرات الخصوبة:</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 6px;">
+                <span style="background: #6b46c1; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">N:P:K النسبة</span>
+                <span style="background: #2b6cb0; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">المواد العضوية</span>
+                <span style="background: #38a169; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">CEC</span>
+                <span style="background: #dd6b20; color: white; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.75rem;">قاعدة التشبع</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SOIL CONSERVATION ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🛡️ صيانة التربة وحمايتها (Soil Conservation)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-tree" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">مصاطب زراعية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Terracing</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-leaf" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الزراعة الكنتورية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Contour Farming</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-seedling" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الأغطية النباتية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Cover Crops</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-dragon" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">مصدات الرياح</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Windbreaks</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-undo-alt" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التناوب الزراعي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Crop Rotation</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #c6f6d5; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; border: 1px dashed #38a169;">
+            <i class="fas fa-exclamation-triangle" style="color:#2f855a;"></i> <strong>أهمية الصيانة:</strong> تقليل التعرية، تحسين البنية، زيادة الإنتاجية المستدامة
+        </div>
+    </div>
+
+    <!-- ===== SOIL MICROBIOLOGY ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">🦠 ميكروبيولوجيا التربة (Soil Microbiology)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-bacteria" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">البكتيريا</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تثبيت النيتروجين</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-seedling" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الفطريات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Mycorrhizae</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-dragon" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الديدان</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Earthworms</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-flask" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">النشاط الأنزيمي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Enzyme Activity</span>
+            </div>
+        </div>
+        <!-- رسم بياني للكائنات الدقيقة -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-pie" style="color: #e53e3e;"></i> توزيع الكائنات الدقيقة في التربة</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#e53e3e; border-radius:50%;"></span> بكتيريا 60%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#2b6cb0; border-radius:50%;"></span> فطريات 25%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#38a169; border-radius:50%;"></span> ديدان 10%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#dd6b20; border-radius:50%;"></span> أخرى 5%</div>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:18px; width:100%; margin-top:4px; display:flex; overflow:hidden;">
+                <div style="background:#e53e3e; width:60%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">بكتيريا</div>
+                <div style="background:#2b6cb0; width:25%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">فطريات</div>
+                <div style="background:#38a169; width:10%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">ديدان</div>
+                <div style="background:#dd6b20; width:5%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">أخرى</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f7fafc, #edf2f7); border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📌 مصطلحات علمية في علوم التربة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#2d3748;">Pedology</span> <span style="font-size:0.8rem; color:#4a5568;">علم تكوين التربة</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">Edaphology</span> <span style="font-size:0.8rem; color:#4a5568;">علم بيئة التربة</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">CEC</span> <span style="font-size:0.8rem; color:#4a5568;">سعة التبادل الكاتيوني</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">SAR</span> <span style="font-size:0.8rem; color:#4a5568;">نسبة امتصاص الصوديوم</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">ESP</span> <span style="font-size:0.8rem; color:#4a5568;">نسبة الصوديوم المتبادل</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">OM</span> <span style="font-size:0.8rem; color:#4a5568;">المادة العضوية</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">Bulk Density</span> <span style="font-size:0.8rem; color:#4a5568;">الكثافة الظاهرية</span></div>
+            <div><span style="font-weight:700; color:#2d3748;">Field Capacity</span> <span style="font-size:0.8rem; color:#4a5568;">السعة الحقلية</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END SOIL APPLICATIONS SECTION ===== -->
     <!-- ============================================================ -->
     <!-- ===== SECTION 7: WATER APPLICATIONS ===== -->
     <!-- ============================================================ -->
