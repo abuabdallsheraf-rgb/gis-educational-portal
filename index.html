@@ -760,36 +760,201 @@
         </div>
     </div>
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 1: GIS FUNDAMENTALS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="gis-fundamentals">
-        <div class="section-title"><i class="fas fa-book-open"></i> أساسيات نظم المعلومات الجغرافية (GIS)</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">📖 التعريفات العلمية لنظم المعلومات الجغرافية</h4>
-            <p style="font-size: 1.1rem; line-height: 2;">
-                <strong>نظم المعلومات الجغرافية (Geographic Information Systems - GIS)</strong> هي <strong>أنظمة حاسوبية متكاملة</strong> 
-                تُستخدم <strong>لجمع، تخزين، تحليل، إدارة، وعرض</strong> البيانات والمعلومات المرتبطة بمواقع جغرافية على سطح الأرض.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                <span style="background: #2b6cb0; color: white; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size:0.85rem;">🗺️ نظم معلومات</span>
-                <span style="background: #2f855a; color: white; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size:0.85rem;">📍 مكانية</span>
-                <span style="background: #dd6b20; color: white; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size:0.85rem;">📊 تحليل</span>
+   <!-- ============================================================ -->
+<!-- ===== SECTION 1: GIS FUNDAMENTALS ===== -->
+<!-- ============================================================ -->
+<section class="section" id="gis-fundamentals">
+    <div class="section-title"><i class="fas fa-book-open"></i> أساسيات نظم المعلومات الجغرافية (GIS)</div>
+    
+    <!-- التعريفات العلمية -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;">📖 التعريفات العلمية لنظم المعلومات الجغرافية</h4>
+        <p style="font-size: 1.1rem; line-height: 2;">
+            <strong>نظم المعلومات الجغرافية (Geographic Information Systems - GIS)</strong> هي <strong>أنظمة حاسوبية متكاملة</strong> 
+            تُستخدم <strong>لجمع، تخزين، تحليل، إدارة، وعرض</strong> البيانات والمعلومات المرتبطة بمواقع جغرافية على سطح الأرض.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+            <span style="background: #2b6cb0; color: white; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size:0.85rem;">🗺️ نظم معلومات</span>
+            <span style="background: #2f855a; color: white; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size:0.85rem;">📍 مكانية</span>
+            <span style="background: #dd6b20; color: white; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size:0.85rem;">📊 تحليل</span>
+        </div>
+    </div>
+
+    <!-- تاريخ التطور -->
+    <div class="info-box">
+        <h4 style="color: #dd6b20;">⏳ تاريخ تطور نظم المعلومات الجغرافية</h4>
+        <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 2.2;">
+            <li>🔹 <strong>قبل 1960:</strong> الخرائط الورقية والمسوحات الميدانية</li>
+            <li>🔹 <strong>1960s:</strong> أولى تطبيقات GIS في كندا (CGIS)</li>
+            <li>🔹 <strong>1970s:</strong> إطلاق أول أقمار Landsat (الاستشعار عن بعد)</li>
+            <li>🔹 <strong>1980s:</strong> ظهور ArcInfo وانتشار GIS في الجامعات</li>
+            <li>🔹 <strong>1990s:</strong> ظهور Web GIS وخرائط Google</li>
+            <li>🔹 <strong>2000s:</strong> دمج GPS والطائرات بدون طيار</li>
+            <li>🔹 <strong>2020s:</strong> الذكاء الاصطناعي والتعلم العميق في GIS</li>
+        </ul>
+    </div>
+
+    <!-- ===== مكونات GIS الأساسية (Diagram) ===== -->
+    <div class="info-box" style="background: #f0f7ff; border-color: #3182ce;">
+        <h4 style="color: #2b6cb0;">🧩 المكونات الأساسية لنظم المعلومات الجغرافية</h4>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.8rem 3rem; padding: 1.2rem 0;">
+            <div style="text-align: center;"><i class="fas fa-desktop" style="font-size: 2.8rem; color: #2b6cb0;"></i><br><strong>الأجهزة</strong><br><span style="font-size:0.8rem;">Hardware</span></div>
+            <div style="text-align: center;"><i class="fas fa-code" style="font-size: 2.8rem; color: #2f855a;"></i><br><strong>البرمجيات</strong><br><span style="font-size:0.8rem;">Software</span></div>
+            <div style="text-align: center;"><i class="fas fa-database" style="font-size: 2.8rem; color: #dd6b20;"></i><br><strong>البيانات</strong><br><span style="font-size:0.8rem;">Data</span></div>
+            <div style="text-align: center;"><i class="fas fa-users" style="font-size: 2.8rem; color: #9f7aea;"></i><br><strong>الكوادر البشرية</strong><br><span style="font-size:0.8rem;">People</span></div>
+            <div style="text-align: center;"><i class="fas fa-tasks" style="font-size: 2.8rem; color: #e53e3e;"></i><br><strong>الأساليب</strong><br><span style="font-size:0.8rem;">Methods</span></div>
+        </div>
+        <div style="background: #e2edf7; border-radius: 20px; padding: 0.8rem 1.5rem; text-align: center; font-weight: 500; color: #1a365d;">
+            <i class="fas fa-arrow-right"></i> تتفاعل هذه المكونات معًا لتشكل نظام GIS متكامل <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <!-- ===== أنواع البيانات المكانية (with graph-like cards) ===== -->
+    <div class="info-box" style="background: #faf5ff; border-color: #9f7aea;">
+        <h4 style="color: #6b46c1;">📊 أنواع البيانات المكانية في GIS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 6px solid #3182ce;">
+                <i class="fas fa-vector-square" style="font-size: 2rem; color: #3182ce;"></i>
+                <h5 style="margin: 6px 0 2px;">البيانات المتجهية</h5>
+                <p style="font-size:0.8rem; color: #2d3748;">نقاط، خطوط، مضلعات</p>
+                <span style="background: #bee3f8; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Vector</span>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 6px solid #38a169;">
+                <i class="fas fa-th" style="font-size: 2rem; color: #38a169;"></i>
+                <h5 style="margin: 6px 0 2px;">البيانات النقطية</h5>
+                <p style="font-size:0.8rem; color: #2d3748;">صور الأقمار، DEM</p>
+                <span style="background: #c6f6d5; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Raster</span>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 6px solid #dd6b20;">
+                <i class="fas fa-table" style="font-size: 2rem; color: #dd6b20;"></i>
+                <h5 style="margin: 6px 0 2px;">البيانات الجدولية</h5>
+                <p style="font-size:0.8rem; color: #2d3748;">وصفية، إحصائية</p>
+                <span style="background: #fefcbf; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Attribute</span>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 6px solid #e53e3e;">
+                <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: #e53e3e;"></i>
+                <h5 style="margin: 6px 0 2px;">البيانات السحابية</h5>
+                <p style="font-size:0.8rem; color: #2d3748;">GEE، ArcGIS Online</p>
+                <span style="background: #fed7d7; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Cloud</span>
             </div>
         </div>
-        <div class="info-box">
-            <h4 style="color: #dd6b20;">⏳ تاريخ تطور نظم المعلومات الجغرافية</h4>
-            <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 2.2;">
-                <li>🔹 <strong>قبل 1960:</strong> الخرائط الورقية والمسوحات الميدانية</li>
-                <li>🔹 <strong>1960s:</strong> أولى تطبيقات GIS في كندا (CGIS)</li>
-                <li>🔹 <strong>1970s:</strong> إطلاق أول أقمار Landsat (الاستشعار عن بعد)</li>
-                <li>🔹 <strong>1980s:</strong> ظهور ArcInfo وانتشار GIS في الجامعات</li>
-                <li>🔹 <strong>1990s:</strong> ظهور Web GIS وخرائط Google</li>
-                <li>🔹 <strong>2000s:</strong> دمج GPS والطائرات بدون طيار</li>
-                <li>🔹 <strong>2020s:</strong> الذكاء الاصطناعي والتعلم العميق في GIS</li>
-            </ul>
+    </div>
+
+    <!-- ===== نظم الإحداثيات والإسقاطات (scientific flow) ===== -->
+    <div class="info-box" style="background: #ebf8ff; border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🌐 نظم الإحداثيات والإسقاطات الخرائطية</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: center;">
+            <div style="flex: 1; min-width: 160px; background: white; border-radius: 20px; padding: 1rem; text-align: center;">
+                <i class="fas fa-globe" style="font-size: 2.5rem; color: #2b6cb0;"></i>
+                <h5>الإحداثيات الجغرافية</h5>
+                <p style="font-size:0.8rem;">خطوط الطول والعرض (درجات)</p>
+                <span style="background: #bee3f8; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Lat/Long</span>
+            </div>
+            <div style="font-size: 2rem; color: #718096;">→</div>
+            <div style="flex: 1; min-width: 160px; background: white; border-radius: 20px; padding: 1rem; text-align: center;">
+                <i class="fas fa-arrow-right" style="font-size: 2.5rem; color: #dd6b20;"></i>
+                <h5>الإسقاط الخرائطي</h5>
+                <p style="font-size:0.8rem;">تحويل كروي إلى مستوي</p>
+                <span style="background: #fefcbf; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Projection</span>
+            </div>
+            <div style="font-size: 2rem; color: #718096;">→</div>
+            <div style="flex: 1; min-width: 160px; background: white; border-radius: 20px; padding: 1rem; text-align: center;">
+                <i class="fas fa-map" style="font-size: 2.5rem; color: #38a169;"></i>
+                <h5>الخرائط الرقمية</h5>
+                <p style="font-size:0.8rem;">UTM، Web Mercator</p>
+                <span style="background: #c6f6d5; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Coordinate System</span>
+            </div>
         </div>
-    </section>
+        <div style="margin-top: 1rem; background: #dbeafe; border-radius: 40px; padding: 0.5rem 1.2rem; text-align: center; font-size: 0.9rem;">
+            <i class="fas fa-info-circle"></i> نظام الإحداثيات العالمي WGS84 هو الأساس لمعظم تطبيقات GPS و GIS الحديثة
+        </div>
+    </div>
+
+    <!-- ===== أدوات التحليل المكاني مع رسم بياني ===== -->
+    <div class="info-box" style="background: #fffaf0; border-color: #dd6b20;">
+        <h4 style="color: #dd6b20;">📈 أدوات التحليل المكاني في GIS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 1px solid #f6e0c8;">
+                <i class="fas fa-merge" style="color: #3182ce; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">التحليل التراكبي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Overlay</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 1px solid #f6e0c8;">
+                <i class="fas fa-arrows-alt-h" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">التحليل الجيوديسي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Distance/Network</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 1px solid #f6e0c8;">
+                <i class="fas fa-chart-pie" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الإحصاء المكاني</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geostatistics</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 1px solid #f6e0c8;">
+                <i class="fas fa-ruler-combined" style="color: #9f7aea; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">تحليل التضاريس</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Terrain/Slope</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border: 1px solid #f6e0c8;">
+                <i class="fas fa-satellite" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">كشف التغيرات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Change Detection</span>
+            </div>
+        </div>
+        <!-- رسم بياني (مخطط) لاستخدامات التحليل المكاني -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 24px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar"></i> استخدامات التحليل المكاني في الدراسات البيئية</span>
+                <span style="font-size:0.75rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">تغير المناخ</span><div style="background:#e2e8f0; height:10px; border-radius:20px; width:100%;"><div style="background:#2b6cb0; width:85%; height:10px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الزراعة الدقيقة</span><div style="background:#e2e8f0; height:10px; border-radius:20px; width:100%;"><div style="background:#38a169; width:72%; height:10px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الموارد المائية</span><div style="background:#e2e8f0; height:10px; border-radius:20px; width:100%;"><div style="background:#dd6b20; width:68%; height:10px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">إدارة الكوارث</span><div style="background:#e2e8f0; height:10px; border-radius:20px; width:100%;"><div style="background:#e53e3e; width:55%; height:10px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات GIS مع Flow ===== -->
+    <div class="info-box" style="background: #f0fff4; border-color: #38a169;">
+        <h4 style="color: #2f855a;">🌍 تطبيقات نظم المعلومات الجغرافية (تدفق العمليات)</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem 0.8rem;">
+            <span style="background: #2f855a; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem;">جمع البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #718096;"></i>
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem;">تخزين وإدارة</span>
+            <i class="fas fa-arrow-right" style="color: #718096;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem;">تحليل ومعالجة</span>
+            <i class="fas fa-arrow-right" style="color: #718096;"></i>
+            <span style="background: #9f7aea; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem;">عرض وتصور</span>
+            <i class="fas fa-arrow-right" style="color: #718096;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem;">اتخاذ القرار</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center;">
+            <span style="background: #e2e8f0; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.8rem;">🛰️ استشعار عن بعد</span>
+            <span style="background: #e2e8f0; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.8rem;">📡 GPS</span>
+            <span style="background: #e2e8f0; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.8rem;">🚁 طائرات بدون طيار</span>
+            <span style="background: #e2e8f0; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.8rem;">🤖 GeoAI</span>
+            <span style="background: #e2e8f0; padding: 0.2rem 1.2rem; border-radius: 30px; font-size:0.8rem;">☁️ حوسبة سحابية</span>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: #ebf4ff; border-color: #3182ce;">
+        <h4 style="color: #2b6cb0;">📌 المصطلحات العلمية الأساسية في GIS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.6rem 1.2rem;">
+            <div><span style="font-weight:700;">Spatial Data</span> <span style="font-size:0.8rem; color:#4a5568;">بيانات مكانية</span></div>
+            <div><span style="font-weight:700;">Attribute Data</span> <span style="font-size:0.8rem; color:#4a5568;">بيانات وصفية</span></div>
+            <div><span style="font-weight:700;">Georeferencing</span> <span style="font-size:0.8rem; color:#4a5568;">تحديد الإحداثيات</span></div>
+            <div><span style="font-weight:700;">Topology</span> <span style="font-size:0.8rem; color:#4a5568;">العلاقات الطوبولوجية</span></div>
+            <div><span style="font-weight:700;">Buffer</span> <span style="font-size:0.8rem; color:#4a5568;">نطاق عازل</span></div>
+            <div><span style="font-weight:700;">Interpolation</span> <span style="font-size:0.8rem; color:#4a5568;">استيفاء مكاني</span></div>
+            <div><span style="font-weight:700;">Geocoding</span> <span style="font-size:0.8rem; color:#4a5568;">ترميز جغرافي</span></div>
+            <div><span style="font-weight:700;">Metadata</span> <span style="font-size:0.8rem; color:#4a5568;">بيانات وصفية</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END GIS FUNDAMENTALS ===== -->
 
     <!-- ============================================================ -->
     <!-- ===== SECTION 2: GEODATABASE ===== -->
