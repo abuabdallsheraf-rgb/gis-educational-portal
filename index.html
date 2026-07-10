@@ -815,7 +815,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
             <div style="background: white; border-radius: 20px; padding: 1rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 6px solid #3182ce;">
                 <i class="fas fa-vector-square" style="font-size: 2rem; color: #3182ce;"></i>
-                <h5 style="margin: 6px 0 2px;">البيانات المتجهية</h5>
+                <h5 style="margin: 6px 0 2px;">البيانات الخطية</h5>
                 <p style="font-size:0.8rem; color: #2d3748;">نقاط، خطوط، مضلعات</p>
                 <span style="background: #bee3f8; padding: 0.2rem 1rem; border-radius: 20px; font-size:0.7rem;">Vector</span>
             </div>
@@ -956,91 +956,807 @@
 </section>
 <!-- ===== END GIS FUNDAMENTALS ===== -->
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 2: GEODATABASE ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="geodatabase">
-        <div class="section-title"><i class="fas fa-database"></i> قواعد البيانات الجغرافية (Geodatabases)</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">🗄️ مقدمة في قواعد البيانات الجغرافية</h4>
-            <p style="font-size: 1.05rem; line-height: 2;">
-                <strong>قواعد البيانات الجغرافية (Geodatabases)</strong> هي <strong>أنظمة تخزين متطورة</strong> تُستخدم لإدارة 
-                <strong>البيانات المكانية والوصفية</strong> بشكل <strong>مركزي ومنظم</strong>.
-            </p>
+   <!-- ============================================================ -->
+<!-- ===== SECTION 2: GEODATABASE (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="geodatabase">
+    <div class="section-title"><i class="fas fa-database" style="color: #805ad5;"></i> قواعد البيانات الجغرافية (Geodatabases)</div>
+    
+    <!-- مقدمة مع رسم بياني -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); border-color: #805ad5;">
+        <h4 style="color: #6b46c1;">🗄️ مقدمة في قواعد البيانات الجغرافية</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>قواعد البيانات الجغرافية (Geodatabases)</strong> هي <strong>أنظمة تخزين متطورة</strong> تُستخدم لإدارة 
+            <strong>البيانات المكانية والوصفية</strong> بشكل <strong>مركزي ومنظم</strong>، وتوفر <strong>بنية تحتية</strong> 
+            لتخزين واسترجاع وتحليل البيانات الجغرافية بكفاءة عالية.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🗄️ تخزين مركزي</span>
+            <span style="background: #3182ce; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🔗 علاقات مكانية</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">⚡ استرجاع سريع</span>
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🔒 أمان البيانات</span>
         </div>
-        <div class="info-box">
-            <h4 style="color: #2f855a;">📂 أنواع الجيوداتابيس</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; border-bottom: 4px solid #2b6cb0;">
-                    <h5 style="color: #2b6cb0; text-align: center;">File Geodatabase</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>✅ السعة: غير محدودة</li>
-                        <li>✅ مستخدم واحد</li>
-                    </ul>
+    </div>
+
+    <!-- ===== أنواع الجيوداتابيس مع رسوم بيانية ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📂 أنواع قواعد البيانات الجغرافية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0; text-align: center;">
+                <i class="fas fa-file" style="font-size: 2.5rem; color: #2b6cb0;"></i>
+                <h5 style="color: #2b6cb0; margin: 8px 0 4px;">File Geodatabase</h5>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2; text-align: right;">
+                    <li>✅ <strong>السعة:</strong> غير محدودة</li>
+                    <li>👤 <strong>المستخدمين:</strong> فردي</li>
+                    <li>📁 <strong>ملفات:</strong> .gdb</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 6px; border-radius: 10px; width: 80%; margin: 8px auto 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169; text-align: center;">
+                <i class="fas fa-user" style="font-size: 2.5rem; color: #38a169;"></i>
+                <h5 style="color: #38a169; margin: 8px 0 4px;">Personal Geodatabase</h5>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2; text-align: right;">
+                    <li>⚠️ <strong>السعة:</strong> 2GB</li>
+                    <li>👤 <strong>المستخدمين:</strong> فردي</li>
+                    <li>📁 <strong>ملفات:</strong> .mdb</li>
+                </ul>
+                <div style="background: #38a169; height: 6px; border-radius: 10px; width: 40%; margin: 8px auto 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20; text-align: center;">
+                <i class="fas fa-server" style="font-size: 2.5rem; color: #dd6b20;"></i>
+                <h5 style="color: #dd6b20; margin: 8px 0 4px;">Enterprise Geodatabase</h5>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2; text-align: right;">
+                    <li>✅ <strong>السعة:</strong> غير محدودة</li>
+                    <li>👥 <strong>المستخدمين:</strong> متعدد</li>
+                    <li>🌐 <strong>خادم:</strong> SQL / Oracle</li>
+                </ul>
+                <div style="background: #dd6b20; height: 6px; border-radius: 10px; width: 100%; margin: 8px auto 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fef2f2, #fed7d7); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #e53e3e; text-align: center;">
+                <i class="fas fa-cloud" style="font-size: 2.5rem; color: #e53e3e;"></i>
+                <h5 style="color: #e53e3e; margin: 8px 0 4px;">Cloud Geodatabase</h5>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2; text-align: right;">
+                    <li>✅ <strong>السعة:</strong> مرنة</li>
+                    <li>👥 <strong>المستخدمين:</strong> متعدد</li>
+                    <li>☁️ <strong>منصة:</strong> AWS / Azure</li>
+                </ul>
+                <div style="background: #e53e3e; height: 6px; border-radius: 10px; width: 90%; margin: 8px auto 0;"></div>
+            </div>
+        </div>
+        <!-- رسم بياني مقارن -->
+        <div style="margin-top: 1.5rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #805ad5;"></i> مقارنة سعة التخزين (جيجابايت)</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">سعة نسبية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 0.8rem; justify-content: center;">
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">File GDB</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:95%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; color:white; font-size:0.6rem; font-weight:700;">∞</div></div>
                 </div>
-                <div style="background: #f0fff4; border-radius: 12px; padding: 15px; border-bottom: 4px solid #2f855a;">
-                    <h5 style="color: #2f855a; text-align: center;">Personal Geodatabase</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>⚠️ السعة: 2GB</li>
-                        <li>✅ مستخدم واحد</li>
-                    </ul>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">Personal GDB</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:20%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; color:white; font-size:0.6rem; font-weight:700;">2GB</div></div>
                 </div>
-                <div style="background: #fffbeb; border-radius: 12px; padding: 15px; border-bottom: 4px solid #dd6b20;">
-                    <h5 style="color: #dd6b20; text-align: center;">Enterprise Geodatabase</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>✅ السعة: غير محدودة</li>
-                        <li>✅ متعدد المستخدمين</li>
-                    </ul>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">Enterprise GDB</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:100%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; color:white; font-size:0.6rem; font-weight:700;">∞</div></div>
+                </div>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">Cloud GDB</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:100%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; color:white; font-size:0.6rem; font-weight:700;">مرن</div></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 3: SPATIAL ANALYSIS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="spatial-analysis">
-        <div class="section-title"><i class="fas fa-chart-pie"></i> التحليل المكاني في GIS</div>
-        <div class="info-box">
-            <h4 style="color: #2f855a;">📊 أنواع التحليل المكاني</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; border-right: 4px solid #2b6cb0;">
-                    <h5 style="color: #2b6cb0;">📍 التحليل الخطي (Vector)</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
-                        <li>🔹 <strong>Buffer:</strong> مناطق عازلة حول المعالم</li>
-                        <li>🔹 <strong>Overlay:</strong> دمج طبقات متعددة</li>
-                        <li>🔹 <strong>Spatial Join:</strong> ربط البيانات الوصفية</li>
-                    </ul>
+    <!-- ===== تصميم قواعد البيانات مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #e0edff); border-color: #3182ce;">
+        <h4 style="color: #2b6cb0;">🏗️ تصميم قواعد البيانات الجغرافية</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">تحليل الاحتياجات</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">نموذج البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">هيكلة الجداول</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #805ad5; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(128,90,213,0.3);">علاقات مكانية</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">تطبيق ونشر</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> ER Diagram</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Normalization</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Spatial Indexing</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Topology Rules</span>
+        </div>
+    </div>
+
+    <!-- ===== العلاقات المكانية مع رسم بياني ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #805ad5;">
+        <h4 style="color: #6b46c1;">🔗 العلاقات المكانية في الجيوداتابيس</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-arrows-alt-h" style="font-size: 2rem; color: #6b46c1;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الاتجاه</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Direction</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-merge" style="font-size: 2rem; color: #3182ce;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">التداخل</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Overlap</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-vector-square" style="font-size: 2rem; color: #38a169;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الاحتوائية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Containment</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-ruler" style="font-size: 2rem; color: #dd6b20;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">المسافة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Distance</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-arrows-alt" style="font-size: 2rem; color: #e53e3e;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الاتصال</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Connectivity</span>
+            </div>
+        </div>
+        <!-- رسم بياني للعلاقات -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-project-diagram" style="color: #805ad5;"></i> أنواع العلاقات المكانية الأكثر استخدامًا</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة الاستخدام</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">التداخل (Overlay)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#9f7aea); width:85%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">المسافة (Buffer)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#3182ce,#63b3ed); width:78%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الاتصال (Network)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:62%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الاحتوائية (Contain)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:55%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== إدارة البيانات وجودتها ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">📋 إدارة البيانات وجودتها في الجيوداتابيس</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-check-circle" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">صحة البيانات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Data Validity</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-check-circle" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">اكتمال البيانات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Completeness</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-check-circle" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">دقة المواقع</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Positional Accuracy</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #805ad5;">
+                <i class="fas fa-check-circle" style="color: #805ad5; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">تحديث البيانات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Data Freshness</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-check-circle" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التوثيق</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Metadata</span>
+            </div>
+        </div>
+        <!-- جودة البيانات - رسم بياني دائري -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-pie" style="color: #38a169;"></i> معايير جودة البيانات الجغرافية</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">ISO 19157</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#2b6cb0; border-radius:50%;"></span> دقة 40%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#38a169; border-radius:50%;"></span> اكتمال 25%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#dd6b20; border-radius:50%;"></span> اتساق 20%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#805ad5; border-radius:50%;"></span> تحديث 15%</div>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:22px; width:100%; margin-top:6px; display:flex; overflow:hidden;">
+                <div style="background:#2b6cb0; width:40%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">الدقة</div>
+                <div style="background:#38a169; width:25%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">الاكتمال</div>
+                <div style="background:#dd6b20; width:20%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">الاتساق</div>
+                <div style="background:#805ad5; width:15%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">التحديث</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Enterprise GIS مع رسم بياني ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">🏢 Enterprise GIS وإدارة البيانات المؤسسية</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-database" style="color: #d69e2e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">قاعدة بيانات مركزية</div>
+            </div>
+            <div style="font-size:1.6rem; color:#d69e2e;">⟷</div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-users" style="color: #d69e2e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">مستخدمين متعددين</div>
+            </div>
+            <div style="font-size:1.6rem; color:#d69e2e;">⟷</div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-globe" style="color: #d69e2e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">نشر على الويب</div>
+            </div>
+            <div style="font-size:1.6rem; color:#d69e2e;">⟷</div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-chart-line" style="color: #d69e2e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">تحليل متقدم</div>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #fefcbf; border-radius: 30px; padding: 0.6rem 1.2rem; text-align: center; font-size:0.9rem; border: 1px dashed #d69e2e;">
+            <i class="fas fa-info-circle" style="color:#d69e2e;"></i> Enterprise GIS يوفر بيئة متكاملة لإدارة البيانات المكانية على مستوى المؤسسة مع دعم <strong>سير العمل</strong> و <strong>صلاحيات المستخدمين</strong>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في قواعد البيانات الجغرافية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Feature Class</span> <span style="font-size:0.8rem; color:#4a5568;">فئة المعالم</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Feature Dataset</span> <span style="font-size:0.8rem; color:#4a5568;">مجموعة معالم</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Spatial Index</span> <span style="font-size:0.8rem; color:#4a5568;">فهرس مكاني</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Topology</span> <span style="font-size:0.8rem; color:#4a5568;">طوبولوجيا</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Domain</span> <span style="font-size:0.8rem; color:#4a5568;">نطاق قيم</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Relationship Class</span> <span style="font-size:0.8rem; color:#4a5568;">فئة العلاقات</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Versioning</span> <span style="font-size:0.8rem; color:#4a5568;">إصدارات</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Replication</span> <span style="font-size:0.8rem; color:#4a5568;">نسخ متماثلة</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END GEODATABASE SECTION ===== -->
+<!-- ============================================================ -->
+<!-- ===== SECTION 3: SPATIAL ANALYSIS (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="spatial-analysis">
+    <div class="section-title"><i class="fas fa-chart-pie" style="color: #e53e3e;"></i> التحليل المكاني في GIS</div>
+    
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📊 مفهوم التحليل المكاني</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>التحليل المكاني (Spatial Analysis)</strong> هو <strong>جوهر نظم المعلومات الجغرافية</strong>، 
+            حيث يهدف إلى <strong>استخراج المعلومات والمعرفة</strong> من البيانات المكانية من خلال 
+            <strong>تطبيق تقنيات رياضية وإحصائية وهندسية</strong> لفهم الأنماط والعلاقات والاتجاهات 
+            على سطح الأرض.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #e53e3e; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📐 رياضيات</span>
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📊 إحصاء</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🧮 خوارزميات</span>
+            <span style="background: #805ad5; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🤖 ذكاء اصطناعي</span>
+        </div>
+    </div>
+
+    <!-- ===== أنواع التحليل المكاني مع رسوم بيانية ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📂 أنواع التحليل المكاني</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-vector-square" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">📍 التحليل الخطي (Vector)</h5>
                 </div>
-                <div style="background: #f0fff4; border-radius: 12px; padding: 15px; border-right: 4px solid #2f855a;">
-                    <h5 style="color: #2f855a;">🖼️ التحليل الشبكي (Raster)</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
-                        <li>🔹 <strong>Surface Analysis:</strong> Slope, Aspect</li>
-                        <li>🔹 <strong>Hydrological Analysis:</strong> Watershed</li>
-                        <li>🔹 <strong>Spectral Analysis:</strong> NDVI, EVI</li>
-                    </ul>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>Buffer:</strong> مناطق عازلة حول المعالم</li>
+                    <li>🔹 <strong>Overlay:</strong> دمج طبقات متعددة</li>
+                    <li>🔹 <strong>Spatial Join:</strong> ربط البيانات الوصفية</li>
+                    <li>🔹 <strong>Network Analysis:</strong> تحليل الشبكات</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 60%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-th" style="font-size: 2rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">🖼️ التحليل الشبكي (Raster)</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>Surface Analysis:</strong> Slope, Aspect</li>
+                    <li>🔹 <strong>Hydrological Analysis:</strong> Watershed</li>
+                    <li>🔹 <strong>Spectral Analysis:</strong> NDVI, EVI</li>
+                    <li>🔹 <strong>Interpolation:</strong> Kriging, IDW</li>
+                </ul>
+                <div style="background: #38a169; height: 4px; border-radius: 10px; width: 60%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-chart-line" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">📈 التحليل الإحصائي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>Geostatistics:</strong> Kriging, IDW</li>
+                    <li>🔹 <strong>Spatial Autocorrelation:</strong> Moran's I</li>
+                    <li>🔹 <strong>Hot Spot Analysis:</strong> Getis-Ord</li>
+                    <li>🔹 <strong>Regression Analysis:</strong> GWR</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 60%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #faf5ff, #ede9fe); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #805ad5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-brain" style="font-size: 2rem; color: #805ad5;"></i>
+                    <h5 style="color: #805ad5; margin: 0;">🤖 التحليل الذكي (GeoAI)</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>Machine Learning:</strong> Classification</li>
+                    <li>🔹 <strong>Deep Learning:</strong> Object Detection</li>
+                    <li>🔹 <strong>Pattern Recognition:</strong> Clustering</li>
+                    <li>🔹 <strong>Predictive Modeling:</strong> Time Series</li>
+                </ul>
+                <div style="background: #805ad5; height: 4px; border-radius: 10px; width: 60%; margin: 8px 0 0;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== أدوات التحليل المكاني مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #e0edff); border-color: #3182ce;">
+        <h4 style="color: #2b6cb0;">🛠️ أدوات التحليل المكاني وتدفق العمل</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📥 استيراد البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">🔍 تنظيف البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">⚙️ تطبيق الأدوات</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #805ad5; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(128,90,213,0.3);">📊 تحليل النتائج</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📈 التصور والنشر</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> ArcGIS Toolbox</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> QGIS Processing</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Python (GeoPandas)</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> R (sp, raster)</span>
+        </div>
+    </div>
+
+    <!-- ===== تقنيات التحليل المكاني مع رسم بياني ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #805ad5;">
+        <h4 style="color: #6b46c1;">🔬 تقنيات التحليل المكاني المتقدمة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4; transition: 0.2s;">
+                <i class="fas fa-merge" style="font-size: 2rem; color: #6b46c1;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">التحليل التراكبي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Overlay Analysis</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#6b46c1; width:90%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-arrows-alt-h" style="font-size: 2rem; color: #3182ce;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">تحليل المسافات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Distance Analysis</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#3182ce; width:75%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-chart-pie" style="font-size: 2rem; color: #38a169;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الإحصاء المكاني</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geostatistics</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#38a169; width:70%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-ruler-combined" style="font-size: 2rem; color: #dd6b20;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">تحليل التضاريس</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Terrain Analysis</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#dd6b20; width:65%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-satellite" style="font-size: 2rem; color: #e53e3e;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">كشف التغيرات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Change Detection</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#e53e3e; width:55%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-network-wired" style="font-size: 2rem; color: #d69e2e;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">تحليل الشبكات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Network Analysis</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#d69e2e; width:50%; height:6px; border-radius:20px;"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات التحليل المكاني مع رسم بياني ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🌍 تطبيقات التحليل المكاني في المجالات العلمية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-seedling" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الزراعة الدقيقة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Precision Agriculture</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-water" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الموارد المائية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Water Resources</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-cloud-sun" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">تغير المناخ</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Climate Change</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #805ad5;">
+                <i class="fas fa-city" style="color: #805ad5; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التخطيط العمراني</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Urban Planning</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-exclamation-triangle" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">إدارة الكوارث</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Disaster Management</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-leaf" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">البيئة والتنوع الحيوي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Ecology & Biodiversity</span>
+            </div>
+        </div>
+        <!-- رسم بياني لاستخدامات التحليل المكاني -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #38a169;"></i> توزيع استخدامات التحليل المكاني</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الزراعة</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:30%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الموارد المائية</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:25%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">البيئة والمناخ</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:20%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">التخطيط العمراني</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#805ad5,#b794f4); width:15%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">إدارة الكوارث</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:10%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== أدوات البرمجيات مع رسم بياني ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">💻 أدوات البرمجيات للتحليل المكاني</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:100px;">
+                <i class="fas fa-map" style="color: #2b6cb0; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">ArcGIS Pro</div>
+                <span style="font-size:0.6rem; color:#4a5568;">متقدم</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:100px;">
+                <i class="fas fa-globe" style="color: #38a169; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">QGIS</div>
+                <span style="font-size:0.6rem; color:#4a5568;">مفتوح المصدر</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:100px;">
+                <i class="fab fa-python" style="color: #dd6b20; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">Python (GeoPandas)</div>
+                <span style="font-size:0.6rem; color:#4a5568;">برمجي</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:100px;">
+                <i class="fab fa-r-project" style="color: #805ad5; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">R (sp, raster)</div>
+                <span style="font-size:0.6rem; color:#4a5568;">إحصائي</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:100px;">
+                <i class="fas fa-cloud" style="color: #e53e3e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">Google Earth Engine</div>
+                <span style="font-size:0.6rem; color:#4a5568;">سحابي</span>
+            </div>
+        </div>
+        <!-- شريط استخدام البرمجيات -->
+        <div style="margin-top: 1rem; background: white; border-radius: 30px; padding: 0.6rem 1.2rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center;">
+                <span style="display:flex; align-items:center; gap:4px; font-size:0.8rem;"><span style="display:inline-block; width:14px; height:14px; background:#2b6cb0; border-radius:4px;"></span> ArcGIS 35%</span>
+                <span style="display:flex; align-items:center; gap:4px; font-size:0.8rem;"><span style="display:inline-block; width:14px; height:14px; background:#38a169; border-radius:4px;"></span> QGIS 28%</span>
+                <span style="display:flex; align-items:center; gap:4px; font-size:0.8rem;"><span style="display:inline-block; width:14px; height:14px; background:#dd6b20; border-radius:4px;"></span> Python 20%</span>
+                <span style="display:flex; align-items:center; gap:4px; font-size:0.8rem;"><span style="display:inline-block; width:14px; height:14px; background:#805ad5; border-radius:4px;"></span> R 10%</span>
+                <span style="display:flex; align-items:center; gap:4px; font-size:0.8rem;"><span style="display:inline-block; width:14px; height:14px; background:#e53e3e; border-radius:4px;"></span> GEE 7%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في التحليل المكاني</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Spatial Autocorrelation</span> <span style="font-size:0.8rem; color:#4a5568;">ارتباط مكاني ذاتي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Interpolation</span> <span style="font-size:0.8rem; color:#4a5568;">استيفاء مكاني</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Geostatistics</span> <span style="font-size:0.8rem; color:#4a5568;">إحصاء جيولوجي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Kriging</span> <span style="font-size:0.8rem; color:#4a5568;">تقنية Kriging</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Hot Spot</span> <span style="font-size:0.8rem; color:#4a5568;">نقاط ساخنة</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Spatial Regression</span> <span style="font-size:0.8rem; color:#4a5568;">انحدار مكاني</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Focal Statistics</span> <span style="font-size:0.8rem; color:#4a5568;">إحصاء محلي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Zonal Statistics</span> <span style="font-size:0.8rem; color:#4a5568;">إحصاء نطاقي</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END SPATIAL ANALYSIS SECTION ===== -->
+   <!-- ============================================================ -->
+<!-- ===== SECTION 4: TOPOGRAPHY APPLICATIONS (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="topography-applications">
+    <div class="section-title"><i class="fas fa-mountain" style="color: #dd6b20;"></i> تطبيقات GIS في الطبوغرافيا</div>
+
+    <!-- مقدمة علمية عن DEM -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%); border-color: #dd6b20;">
+        <h4 style="color: #c05621;">📐 نموذج الارتفاع الرقمي (DEM)</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>نموذج الارتفاع الرقمي (Digital Elevation Model - DEM)</strong> هو <strong>تمثيل رقمي</strong> 
+            للتضاريس السطحية للأرض، حيث يتم تخزين <strong>قيم الارتفاع</strong> في شبكة منتظمة من الخلايا 
+            (Raster Grid) أو كنقاط غير منتظمة (TIN). يُعد DEM <strong>العمود الفقري</strong> للعديد من 
+            التطبيقات الجيومكانية في مجالات الهيدرولوجيا والجيولوجيا والبيئة.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📊 شبكة منتظمة</span>
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📐 قياسات ارتفاع</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🗺️ تمثيل تضاريس</span>
+        </div>
+        <div class="formula-box" style="font-size: 0.95rem; background: rgba(255,255,255,0.7); border-radius: 16px; padding: 0.8rem 1.5rem; margin-top: 10px; text-align: center; border: 1px dashed #dd6b20;">
+            <strong>معادلة حساب الانحدار:</strong> Slope = tan⁻¹(Δz / Δd) &nbsp; | &nbsp; 
+            <strong>معادلة حساب الاتجاه:</strong> Aspect = 57.29578 * atan2(Δz_x, Δz_y)
+        </div>
+    </div>
+
+    <!-- ===== أنواع نماذج الارتفاع ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📂 أنواع نماذج الارتفاع الرقمية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-th" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">DEM (Grid)</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>✅ <strong>نوع:</strong> شبكي (Raster)</li>
+                    <li>📏 <strong>دقة:</strong> 1m – 1000m</li>
+                    <li>📊 <strong>حجم:</strong> بيانات كبيرة</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-triangle" style="font-size: 2rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">TIN</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>✅ <strong>نوع:</strong> شبكي (Vector)</li>
+                    <li>📏 <strong>دقة:</strong> متغيرة</li>
+                    <li>📊 <strong>حجم:</strong> بيانات أقل</li>
+                </ul>
+                <div style="background: #38a169; height: 4px; border-radius: 10px; width: 60%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-cloud" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">DSM / DTM</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>✅ <strong>DSM:</strong> مع العوائق</li>
+                    <li>✅ <strong>DTM:</strong> سطح الأرض فقط</li>
+                    <li>📊 <strong>استخدام:</strong> مسح LiDAR</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 80%; margin: 8px 0 0;"></div>
+            </div>
+        </div>
+        <!-- رسم بياني مقارن للدقة المكانية -->
+        <div style="margin-top: 1.5rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #dd6b20;"></i> دقة نماذج الارتفاع (متر / بكسل)</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">كلما قل الرقم زادت الدقة</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 0.8rem; justify-content: center;">
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">LiDAR (1m)</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:10%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">1m</div></div>
+                </div>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">SRTM (30m)</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:30%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">30m</div></div>
+                </div>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">ASTER (30m)</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:35%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">30m</div></div>
+                </div>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">ALOS (12.5m)</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#805ad5,#b794f4); width:20%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">12.5m</div></div>
+                </div>
+                <div style="flex:1; min-width:120px; text-align:center;">
+                    <span style="font-size:0.75rem; font-weight:600;">GDEM (90m)</span>
+                    <div style="background:#e2e8f0; height:20px; border-radius:20px; width:100%; max-width:200px; margin:0 auto;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:45%; height:20px; border-radius:20px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">90m</div></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 4: TOPOGRAPHY APPLICATIONS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="topography-applications">
-        <div class="section-title"><i class="fas fa-mountain"></i> تطبيقات GIS في الطبوغرافيا</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">📐 نموذج الارتفاع الرقمي (DEM)</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>نموذج الارتفاع الرقمي (DEM)</strong> هو <strong>تمثيل رقمي</strong> للتضاريس السطحية للأرض، 
-                حيث يتم تخزين <strong>قيم الارتفاع</strong> في شبكة منتظمة من الخلايا.
-            </p>
-            <div class="formula-box" style="font-size: 0.9rem;">
-                Slope = tan⁻¹(Δz / Δd)
+    <!-- ===== تحليل التضاريس مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #e0edff); border-color: #3182ce;">
+        <h4 style="color: #2b6cb0;">🏔️ تحليل التضاريس (Terrain Analysis)</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📥 DEM</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">📐 الانحدار (Slope)</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">🧭 الاتجاه (Aspect)</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #805ad5; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(128,90,213,0.3);">🌊 الشبكة المائية</span>
+            <i class="fas fa-arrow-right" style="color: #3182ce; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📊 خرائط موضوعية</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Slope Map</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Aspect Map</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Hillshade</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Curvature</span>
+        </div>
+    </div>
+
+    <!-- ===== مشتقات DEM مع رسوم بيانية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #805ad5;">
+        <h4 style="color: #6b46c1;">📊 مشتقات نموذج الارتفاع الرقمي (DEM Derivatives)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4; transition: 0.2s;">
+                <i class="fas fa-arrow-up" style="font-size: 2rem; color: #2b6cb0;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الانحدار (Slope)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">درجة الميل</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#2b6cb0; width:85%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-compass" style="font-size: 2rem; color: #38a169;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الاتجاه (Aspect)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">اتجاه الميل</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#38a169; width:75%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-sun" style="font-size: 2rem; color: #dd6b20;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">التظليل (Hillshade)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تضاريس ثلاثية</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#dd6b20; width:70%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-water" style="font-size: 2rem; color: #805ad5;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">شبكة التصريف</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Drainage Network</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#805ad5; width:65%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-layer-group" style="font-size: 2rem; color: #e53e3e;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الانحناء (Curvature)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تحدب / تقعر</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#e53e3e; width:50%; height:6px; border-radius:20px;"></div></div>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid #c4b5d4;">
+                <i class="fas fa-arrows-alt-v" style="font-size: 2rem; color: #d69e2e;"></i>
+                <div style="font-weight: 700; font-size: 0.9rem;">الخشونة (Roughness)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تضرس التضاريس</span>
+                <div style="background:#edf2f7; border-radius:20px; height:6px; width:100%; margin-top:6px;"><div style="background:#d69e2e; width:45%; height:6px; border-radius:20px;"></div></div>
             </div>
         </div>
-    </section>
+        <!-- رسم بياني لاستخدامات مشتقات DEM -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #805ad5;"></i> توزيع استخدامات مشتقات DEM</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة الاستخدام</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الانحدار (Slope)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:90%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">الاتجاه (Aspect)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:75%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">التظليل (Hillshade)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:70%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:120px;"><span style="font-size:0.75rem;">شبكة التصريف</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#805ad5,#b794f4); width:55%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- ===== تطبيقات الطبوغرافيا مع رسم بياني ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🌍 تطبيقات الطبوغرافيا في المجالات العلمية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-water" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الهيدرولوجيا</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Hydrology</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-mountain" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الجيولوجيا</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Geology</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-tree" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">البيئة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Environment</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #805ad5;">
+                <i class="fas fa-city" style="color: #805ad5; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التخطيط العمراني</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Urban Planning</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-exclamation-triangle" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">المخاطر الطبيعية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Natural Hazards</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-seedling" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الزراعة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Agriculture</span>
+            </div>
+        </div>
+        <!-- رسم بياني دائري للتطبيقات -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-pie" style="color: #38a169;"></i> توزيع تطبيقات الطبوغرافيا</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#2b6cb0; border-radius:50%;"></span> هيدرولوجيا 30%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#38a169; border-radius:50%;"></span> جيولوجيا 25%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#dd6b20; border-radius:50%;"></span> بيئة 20%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#805ad5; border-radius:50%;"></span> تخطيط 15%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#e53e3e; border-radius:50%;"></span> مخاطر 10%</div>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:22px; width:100%; margin-top:6px; display:flex; overflow:hidden;">
+                <div style="background:#2b6cb0; width:30%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">هيدرولوجيا</div>
+                <div style="background:#38a169; width:25%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">جيولوجيا</div>
+                <div style="background:#dd6b20; width:20%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">بيئة</div>
+                <div style="background:#805ad5; width:15%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">تخطيط</div>
+                <div style="background:#e53e3e; width:10%; height:22px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.6rem; font-weight:700;">مخاطر</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مصادر بيانات DEM ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">🛰️ مصادر بيانات نماذج الارتفاع الرقمية</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-satellite" style="color: #2b6cb0; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">SRTM</div>
+                <span style="font-size:0.6rem; color:#4a5568;">30m (مجاني)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-satellite" style="color: #38a169; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">ASTER GDEM</div>
+                <span style="font-size:0.6rem; color:#4a5568;">30m (مجاني)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-satellite" style="color: #dd6b20; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">ALOS PALSAR</div>
+                <span style="font-size:0.6rem; color:#4a5568;">12.5m (مجاني)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-satellite" style="color: #805ad5; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">LiDAR</div>
+                <span style="font-size:0.6rem; color:#4a5568;">1-5m (مدفوع)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem 1.2rem; text-align: center; border: 1px solid #f6e0c8; flex:1; min-width:120px;">
+                <i class="fas fa-satellite" style="color: #e53e3e; font-size: 1.8rem;"></i>
+                <div style="font-weight: 700; font-size: 0.8rem;">Copernicus</div>
+                <span style="font-size:0.6rem; color:#4a5568;">DEM 30m</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #fefcbf; border-radius: 30px; padding: 0.6rem 1.2rem; text-align: center; font-size:0.9rem; border: 1px dashed #d69e2e;">
+            <i class="fas fa-info-circle" style="color:#d69e2e;"></i> يمكن تحميل معظم بيانات DEM مجانًا عبر منصات مثل <strong>USGS Earth Explorer</strong> و <strong>OpenTopography</strong>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في الطبوغرافيا</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Elevation</span> <span style="font-size:0.8rem; color:#4a5568;">ارتفاع</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Slope</span> <span style="font-size:0.8rem; color:#4a5568;">انحدار</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Aspect</span> <span style="font-size:0.8rem; color:#4a5568;">اتجاه</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Hillshade</span> <span style="font-size:0.8rem; color:#4a5568;">تظليل</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Watershed</span> <span style="font-size:0.8rem; color:#4a5568;">حوض مائي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Flow Accumulation</span> <span style="font-size:0.8rem; color:#4a5568;">تراكم التدفق</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Stream Order</span> <span style="font-size:0.8rem; color:#4a5568;">رتبة المجرى</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Contour</span> <span style="font-size:0.8rem; color:#4a5568;">خط كنتوري</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END TOPOGRAPHY APPLICATIONS SECTION ===== -->
     <!-- ============================================================ -->
     <!-- ===== SECTION 5: GEOLOGY APPLICATIONS ===== -->
     <!-- ============================================================ -->
