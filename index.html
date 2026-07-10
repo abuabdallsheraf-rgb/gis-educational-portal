@@ -2930,110 +2930,1272 @@
             </div>
         </div>
     </section>
+<!-- ============================================================ -->
+<!-- ===== SECTION 9: RS FUNDAMENTALS (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="rs-fundamentals">
+    <div class="section-title"><i class="fas fa-satellite" style="color: #2b6cb0;"></i> أساسيات الاستشعار عن بعد (Remote Sensing)</div>
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 10: RS APPLICATIONS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="rs-applications">
-        <div class="section-title"><i class="fas fa-globe-africa"></i> تطبيقات الاستشعار عن بعد</div>
-        <div class="info-box green">
-            <h4 style="color: #2f855a;">🌾 تطبيقات الاستشعار عن بعد في الزراعة</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div>
-                    <h5 style="color: #2f855a;">🌱 مراقبة صحة المحاصيل</h5>
-                    <div class="formula-box" style="font-size: 0.9rem;">
-                        NDVI = (NIR - Red) / (NIR + Red)
-                    </div>
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🛰️ مقدمة في الاستشعار عن بعد</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>الاستشعار عن بعد (Remote Sensing)</strong> هو علم <strong>الحصول على المعلومات</strong> عن سطح الأرض أو الأجسام الموجودة عليه 
+            <strong>دون اتصال مباشر</strong> معها، وذلك من خلال <strong>تسجيل</strong> و<strong>تحليل</strong> 
+            <strong>الإشعاع الكهرومغناطيسي</strong> المنبعث أو المنعكس من الأجسام. يُعد الاستشعار عن بعد 
+            <strong>أداة قوية</strong> لمراقبة البيئة، الزراعة، الموارد الطبيعية، والمناخ.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🛰️ أقمار صناعية</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📡 مستشعرات</span>
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🌐 طيف كهرومغناطيسي</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📊 معالجة صور</span>
+        </div>
+    </div>
+
+    <!-- ===== الطيف الكهرومغناطيسي ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f7fafc, #edf2f7); border-color: #4a5568;">
+        <h4 style="color: #2d3748;">🌐 الطيف الكهرومغناطيسي (Electromagnetic Spectrum)</h4>
+        <div style="background: linear-gradient(to right, #fc8181, #f6ad55, #68d391, #63b3ed, #9f7aea, #e53e3e); height: 30px; border-radius: 20px; margin: 10px 0; display: flex; align-items: center; justify-content: space-around; padding: 0 10px; color: white; font-weight: 700; font-size: 0.7rem;">
+            <span>γ</span><span>X</span><span>UV</span><span>مرئي</span><span>IR</span><span>ميكروويف</span><span>راديو</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.8rem; margin-top: 0.8rem;">
+            <div style="background: #fc8181; border-radius: 12px; padding: 0.5rem; text-align: center; color: white; font-weight: 600;">0.4-0.7 µm<br><span style="font-weight:300;">مرئي (VIS)</span></div>
+            <div style="background: #f6ad55; border-radius: 12px; padding: 0.5rem; text-align: center; color: white; font-weight: 600;">0.7-1.4 µm<br><span style="font-weight:300;">تحت الحمراء (NIR)</span></div>
+            <div style="background: #68d391; border-radius: 12px; padding: 0.5rem; text-align: center; color: white; font-weight: 600;">1.4-3 µm<br><span style="font-weight:300;">موجة قصيرة (SWIR)</span></div>
+            <div style="background: #63b3ed; border-radius: 12px; padding: 0.5rem; text-align: center; color: white; font-weight: 600;">8-14 µm<br><span style="font-weight:300;">حرارية (TIR)</span></div>
+            <div style="background: #9f7aea; border-radius: 12px; padding: 0.5rem; text-align: center; color: white; font-weight: 600;">1-100 cm<br><span style="font-weight:300;">ميكروويف (MW)</span></div>
+        </div>
+        <div style="margin-top: 0.8rem; background: #edf2f7; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; font-size:0.85rem;">
+            <i class="fas fa-info-circle" style="color:#2b6cb0;"></i> <strong>معادلة الطاقة:</strong> E = h × ν &nbsp; | &nbsp; <strong>حيث:</strong> h = ثابت بلانك, ν = التردد
+        </div>
+    </div>
+
+    <!-- ===== قانون ستيفان-بولتزمان و Wien ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">📐 القوانين الفيزيائية الأساسية في الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #d69e2e;">قانون ستيفان-بولتزمان</h5>
+                <div class="formula-box" style="font-size: 1.2rem; background: #fffbeb; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    M = σ × T⁴
                 </div>
-                <div>
-                    <h5 style="color: #2b6cb0;">💧 إدارة الري</h5>
-                    <div class="formula-box" style="font-size: 0.9rem;">
-                        ET = Kc × ETo
-                    </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>M:</strong> شدة الإشعاع (W/m²)</li>
+                    <li>🔹 <strong>σ:</strong> ثابت ستيفان-بولتزمان (5.67×10⁻⁸)</li>
+                    <li>🔹 <strong>T:</strong> درجة الحرارة (كلفن)</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #2b6cb0;">قانون فين للإزاحة</h5>
+                <div class="formula-box" style="font-size: 1.2rem; background: #ebf8ff; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    λₘₐₓ = b / T
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>λₘₐₓ:</strong> الطول الموجي الأقصى (µm)</li>
+                    <li>🔹 <strong>b:</strong> ثابت فين (2898 µm·K)</li>
+                    <li>🔹 <strong>T:</strong> درجة الحرارة (كلفن)</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #38a169;">قانون الانعكاسية</h5>
+                <div class="formula-box" style="font-size: 1.2rem; background: #f0fff4; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    ρ = E_ref / E_inc
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>ρ:</strong> الانعكاسية (0-1)</li>
+                    <li>🔹 <strong>E_ref:</strong> الطاقة المنعكسة</li>
+                    <li>🔹 <strong>E_inc:</strong> الطاقة الساقطة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== الأجهزة والمستشعرات ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📡 الأجهزة والمستشعرات</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-satellite" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">🛰️ مستشعرات سلبية</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>Landsat</strong> – MSS, TM, OLI</li>
+                    <li>🔹 <strong>Sentinel-2</strong> – MSI</li>
+                    <li>🔹 <strong>MODIS</strong> – 36 قناة</li>
+                    <li>🔹 <strong>SPOT</strong> – HRV</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-radar" style="font-size: 2rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">📡 مستشعرات نشطة</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>Sentinel-1</strong> – SAR</li>
+                    <li>🔹 <strong>LiDAR</strong> – نبضات ليزر</li>
+                    <li>🔹 <strong>Radar</strong> – موجات ميكروويف</li>
+                    <li>🔹 <strong>Radar</strong> – رادار فتحة اصطناعية</li>
+                </ul>
+                <div style="background: #38a169; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-drone" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">🚁 أنظمة جوية</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>طائرات بدون طيار</strong> – UAV</li>
+                    <li>🔹 <strong>طائرات مأهولة</strong> – Aerial</li>
+                    <li>🔹 <strong>بالونات</strong> – Balloons</li>
+                    <li>🔹 <strong>مروحيات</strong> – Helicopters</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== الأقمار الصناعية المهمة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🛰️ الأقمار الصناعية المهمة في الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-satellite" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">Landsat</div>
+                <span style="font-size:0.65rem; color: #4a5568;">30m, 16 يوم</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-satellite" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">Sentinel-2</div>
+                <span style="font-size:0.65rem; color: #4a5568;">10m, 5 أيام</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-satellite" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">MODIS</div>
+                <span style="font-size:0.65rem; color: #4a5568;">250m, يومي</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-satellite" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">Sentinel-1</div>
+                <span style="font-size:0.65rem; color: #4a5568;">SAR, 6 أيام</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-satellite" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">Planet</div>
+                <span style="font-size:0.65rem; color: #4a5568;">3m, يومي</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-satellite" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">ASTER</div>
+                <span style="font-size:0.65rem; color: #4a5568;">15m, 16 يوم</span>
+            </div>
+        </div>
+        <!-- رسم بياني لدقة الأقمار -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #2b6cb0;"></i> مقارنة الدقة المكانية للأقمار (متر)</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">كلما قل الرقم زادت الدقة</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">Planet (3m)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:10%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">Sentinel-2 (10m)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:20%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">ASTER (15m)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#d69e2e,#f6e05e); width:30%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">Landsat (30m)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:50%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">MODIS (250m)</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#b794f4); width:80%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== خطوات معالجة الصور مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">🔄 خطوات معالجة صور الاستشعار عن بعد</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📥 استقبال البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">🔧 معالجة مسبقة</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">📊 تحليل</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">🗺️ تصنيف</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📈 خرائط</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> تصحيح هندسي</span>
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> تصحيح إشعاعي</span>
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> تصنيف (Supervised)</span>
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> كشف تغيرات</span>
+        </div>
+    </div>
+
+    <!-- ===== المؤشرات الطيفية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">📊 المؤشرات الطيفية (Spectral Indices)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-leaf" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">NDVI</div>
+                <div class="formula-box" style="font-size: 0.9rem; background: #f0fff4; padding: 0.3rem; border-radius: 8px;">(NIR - R) / (NIR + R)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">الغطاء النباتي</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-water" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">NDWI</div>
+                <div class="formula-box" style="font-size: 0.9rem; background: #ebf8ff; padding: 0.3rem; border-radius: 8px;">(G - NIR) / (G + NIR)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">المسطحات المائية</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-fire" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">NBR</div>
+                <div class="formula-box" style="font-size: 0.9rem; background: #fffbeb; padding: 0.3rem; border-radius: 8px;">(NIR - SWIR) / (NIR + SWIR)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">الحرائق</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-city" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">NDBI</div>
+                <div class="formula-box" style="font-size: 0.9rem; background: #faf5ff; padding: 0.3rem; border-radius: 8px;">(SWIR - NIR) / (SWIR + NIR)</div>
+                <span style="font-size:0.65rem; color: #4a5568;">المناطق الحضرية</span>
+            </div>
+        </div>
+        <!-- رسم بياني لتوزيع استخدام المؤشرات -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #38a169;"></i> توزيع استخدام المؤشرات الطيفية</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">NDVI</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:45%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">NDWI</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:25%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">NBR</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:15%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">NDBI</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#b794f4); width:10%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">أخرى</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:5%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات الاستشعار عن بعد ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">🌍 تطبيقات الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-seedling" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الزراعة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">مراقبة المحاصيل</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-water" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الموارد المائية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">رصد البحيرات</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-tree" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الغابات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">إزالة الغابات</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-city" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التخطيط الحضري</div>
+                <span style="font-size:0.65rem; color: #4a5568;">نمو المدن</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-fire" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الكوارث</div>
+                <span style="font-size:0.65rem; color: #4a5568;">حرائق، فيضانات</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-cloud-sun" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">المناخ</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تغير المناخ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Spectral Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة طيفية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Spatial Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة مكانية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Temporal Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة زمنية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Radiometric Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة إشعاعية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Atmospheric Correction</span> <span style="font-size:0.8rem; color:#4a5568;">تصحيح جوي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Geometric Correction</span> <span style="font-size:0.8rem; color:#4a5568;">تصحيح هندسي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Supervised Classification</span> <span style="font-size:0.8rem; color:#4a5568;">تصنيف موجه</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Unsupervised Classification</span> <span style="font-size:0.8rem; color:#4a5568;">تصنيف غير موجه</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END RS FUNDAMENTALS SECTION ===== -->
+  <!-- ============================================================ -->
+<!-- ===== SECTION 11: DROUGHT INDEXES (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="drought-indexes">
+    <div class="section-title"><i class="fas fa-water" style="color: #dd6b20;"></i> مؤشرات الجفاف (Drought Indexes)</div>
+
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%); border-color: #dd6b20;">
+        <h4 style="color: #c05621;">📖 مقدمة في مؤشرات الجفاف</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>مؤشرات الجفاف (Drought Indexes)</strong> هي <strong>قيم رقمية محسوبة</strong> تعتمد على 
+            <strong>البيانات المناخية والهيدرولوجية والزراعية</strong>، تستخدم <strong>لتحديد وقياس شدة الجفاف</strong> 
+            ومدة حدوثه وانتشاره المكاني. تُعد هذه المؤشرات <strong>أدوات أساسية</strong> في <strong>إدارة الموارد المائية</strong>، 
+            <strong>التخطيط الزراعي</strong>، و<strong>الإنذار المبكر</strong> للجفاف.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🌧️ هطول</span>
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">💧 تبخر-نتح</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🌾 رطوبة التربة</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📊 تدفق الأنهار</span>
+        </div>
+    </div>
+
+    <!-- ===== أنواع الجفاف ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📂 أنواع الجفاف (Types of Drought)</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-cloud-rain" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">🌧️ جفاف جوي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نقص الهطول</strong> عن المعدل</li>
+                    <li>🔹 <strong>فترة زمنية</strong> طويلة</li>
+                    <li>🔹 <strong>مؤشرات:</strong> SPI, SPEI</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-tint" style="font-size: 2rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">💧 جفاف هيدرولوجي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نقص التدفق</strong> في الأنهار</li>
+                    <li>🔹 <strong>انخفاض</strong> منسوب المياه الجوفية</li>
+                    <li>🔹 <strong>مؤشرات:</strong> SRI, SSI</li>
+                </ul>
+                <div style="background: #38a169; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-seedling" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">🌾 جفاف زراعي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نقص رطوبة</strong> التربة</li>
+                    <li>🔹 <strong>تأثير</strong> على نمو المحاصيل</li>
+                    <li>🔹 <strong>مؤشرات:</strong> PDSI, SM</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #faf5ff, #ede9fe); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #6b46c1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-globe" style="font-size: 2rem; color: #6b46c1;"></i>
+                    <h5 style="color: #6b46c1; margin: 0;">🌍 جفاف اجتماعي اقتصادي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>تأثير</strong> على الاقتصاد</li>
+                    <li>🔹 <strong>نقص</strong> المياه للاستخدامات</li>
+                    <li>🔹 <strong>مؤشرات:</strong> متعددة</li>
+                </ul>
+                <div style="background: #6b46c1; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+        </div>
+        <!-- رسم بياني للعلاقة بين أنواع الجفاف -->
+        <div style="margin-top: 1.5rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #dd6b20;"></i> التسلسل الزمني لأنواع الجفاف</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">تدريجي</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">جوي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:25%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">زراعي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:45%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">هيدرولوجي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:70%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">اجتماعي اقتصادي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:95%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مؤشر SPI ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">📊 مؤشر SPI (Standardized Precipitation Index)</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+                <div class="formula-box" style="font-size: 1.4rem; background: #bee3f8; padding: 0.8rem; border-radius: 20px; text-align: center; border: 3px solid #2b6cb0; font-weight: 700;">
+                    SPI = φ⁻¹(F(x))
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2;">
+                    <li>🔹 <strong>المطور:</strong> McKee et al. (1993)</li>
+                    <li>🔹 <strong>المدى:</strong> -2.0 إلى +2.0</li>
+                    <li>🔹 <strong>البيانات:</strong> هطول الأمطار فقط</li>
+                    <li>🔹 <strong>مميزات:</strong> بسيط، يستخدم عالميًا</li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="color: #2b6cb0;">📋 تصنيف شدة الجفاف حسب SPI</h5>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2;">
+                    <li>✅ <strong>≥ 2.0</strong> – رطب جدًا (Extremely Wet)</li>
+                    <li>✅ <strong>1.5 – 1.99</strong> – رطب (Very Wet)</li>
+                    <li>✅ <strong>1.0 – 1.49</strong> – رطب معتدل (Moderately Wet)</li>
+                    <li>✅ <strong>-0.99 – 0.99</strong> – طبيعي (Near Normal)</li>
+                    <li>⚠️ <strong>-1.0 – -1.49</strong> – جفاف معتدل (Moderate)</li>
+                    <li>⚠️ <strong>-1.5 – -1.99</strong> – جفاف شديد (Severe)</li>
+                    <li>⚠️ <strong>≤ -2.0</strong> – جفاف استثنائي (Extreme)</li>
+                </ul>
+            </div>
+        </div>
+        <!-- رسم بياني لتوزيع SPI -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #2b6cb0;"></i> توزيع قيم SPI عبر الزمن</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">محاكاة</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 0.8rem; margin-top: 0.6rem; justify-content: center;">
+                <span style="background: #fc8181; padding: 0.2rem 0.8rem; border-radius: 20px; font-size:0.7rem;">جفاف شديد (-2.0)</span>
+                <span style="background: #f6ad55; padding: 0.2rem 0.8rem; border-radius: 20px; font-size:0.7rem;">جفاف معتدل (-1.0)</span>
+                <span style="background: #68d391; padding: 0.2rem 0.8rem; border-radius: 20px; font-size:0.7rem;">طبيعي (0.0)</span>
+                <span style="background: #63b3ed; padding: 0.2rem 0.8rem; border-radius: 20px; font-size:0.7rem;">رطب معتدل (1.0)</span>
+                <span style="background: #9f7aea; padding: 0.2rem 0.8rem; border-radius: 20px; font-size:0.7rem;">رطب جدًا (2.0)</span>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:18px; width:100%; margin-top:6px; display:flex; overflow:hidden;">
+                <div style="background:#fc8181; width:15%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">جفاف</div>
+                <div style="background:#f6ad55; width:20%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">جفاف</div>
+                <div style="background:#68d391; width:35%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">طبيعي</div>
+                <div style="background:#63b3ed; width:20%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">رطب</div>
+                <div style="background:#9f7aea; width:10%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">رطب</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مؤشر SPEI ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">📊 مؤشر SPEI (Standardized Precipitation Evapotranspiration Index)</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+                <div class="formula-box" style="font-size: 1.2rem; background: #c6f6d5; padding: 0.8rem; border-radius: 20px; text-align: center; border: 3px solid #38a169; font-weight: 700;">
+                    D = P - PET<br>
+                    SPEI = φ⁻¹(F(D))
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2;">
+                    <li>🔹 <strong>المطور:</strong> Vicente-Serrano et al. (2010)</li>
+                    <li>🔹 <strong>المدى:</strong> -2.0 إلى +2.0</li>
+                    <li>🔹 <strong>البيانات:</strong> هطول + تبخر-نتح</li>
+                    <li>🔹 <strong>مميزات:</strong> حساس لتغير المناخ</li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="color: #2f855a;">📋 مقارنة SPI و SPEI</h5>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2;">
+                    <li>✅ <strong>SPI:</strong> يعتمد فقط على الهطول</li>
+                    <li>✅ <strong>SPEI:</strong> يعتمد على الهطول والتبخر-نتح</li>
+                    <li>⚠️ <strong>SPEI:</strong> أكثر دقة في ظل تغير المناخ</li>
+                    <li>⚠️ <strong>SPI:</strong> يستخدم للجفاف قصير المدى</li>
+                </ul>
+                <div style="background: #c6f6d5; border-radius: 16px; padding: 0.5rem 1rem; margin-top: 0.5rem; border: 1px dashed #38a169;">
+                    <i class="fas fa-info-circle" style="color:#2f855a;"></i> <strong>PET:</strong> التبخر-نتح المحتمل يحسب باستخدام معادلة <strong>Thornthwaite</strong> أو <strong>Hargreaves</strong>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 11: DROUGHT INDEXES ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="drought-indexes">
-        <div class="section-title"><i class="fas fa-water"></i> مؤشرات الجفاف (Drought Indexes)</div>
-        <div class="info-box orange">
-            <h4 style="color: #dd6b20;">📖 مقدمة في مؤشرات الجفاف</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>مؤشرات الجفاف (Drought Indexes)</strong> هي <strong>قيم رقمية محسوبة</strong> تعتمد على 
-                <strong>البيانات المناخية والهيدرولوجية والزراعية</strong>، تستخدم <strong>لتحديد وقياس شدة الجفاف</strong>.
-            </p>
-        </div>
-        <div class="info-box">
-            <h4 style="color: #2b6cb0;">📊 مؤشر SPI</h4>
-            <div class="formula-box" style="font-size: 1rem;">
-                SPI = φ⁻¹(F(x))
+        <!-- رسم بياني لمقارنة SPI و SPEI -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-line" style="color: #38a169;"></i> مقارنة SPI و SPEI في ظل تغير المناخ</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">محاكاة</span>
             </div>
-            <p style="font-size: 0.85rem; color: #4a5568;">المطور: McKee et al. (1993) | المدى: -2.0 إلى +2.0</p>
-        </div>
-        <div class="info-box">
-            <h4 style="color: #2f855a;">📊 مؤشر SPEI</h4>
-            <div class="formula-box" style="font-size: 1rem;">
-                D = P - PET<br>
-                SPEI = φ⁻¹(F(D))
-            </div>
-            <p style="font-size: 0.85rem; color: #4a5568;">المطور: Vicente-Serrano et al. (2010)</p>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 12: LIDAR ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="lidar">
-        <div class="section-title"><i class="fas fa-satellite"></i> بيانات LiDAR والتصوير باستخدام الليزر</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">🔬 التعريف والمبدأ الفيزيائي</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>LiDAR</strong> (Light Detection and Ranging) هو تقنية استشعار عن بعد تعتمد على 
-                قياس المسافة عبر حساب <strong>زمن طيران (Time-of-Flight)</strong> نبضة ليزرية.
-            </p>
-            <div class="formula-box" style="font-size: 1.2rem;">
-                R = (c × Δt) / 2
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">SPI</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:70%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">SPEI</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:60%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">الفرق</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:10%; height:14px; border-radius:20px;"></div></div></div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 13: UAV TECHNOLOGY ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="uav-technology">
-        <div class="section-title"><i class="fas fa-drone"></i> الطائرات بدون طيار (UAVs)</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">🛸 مقدمة في الطائرات بدون طيار</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>الطائرات بدون طيار (UAVs)</strong> هي <strong>طائرات تعمل بدون طيار بشري</strong> على متنها، 
-                وتُدار <strong>عن بعد</strong> أو <strong>بشكل ذاتي</strong>.
-            </p>
-        </div>
-        <div class="info-box">
-            <h4 style="color: #2f855a;">🌾 تطبيقات UAV في الزراعة</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div style="background: #f0fff4; border-radius: 12px; padding: 15px; border-right: 4px solid #2f855a;">
-                    <h5 style="color: #2f855a;">🌱 الزراعة الدقيقة</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 مراقبة صحة المحاصيل</li>
-                        <li>🔹 كشف الإجهاد المائي</li>
-                    </ul>
+    <!-- ===== مؤشرات أخرى ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">📊 مؤشرات الجفاف الأخرى</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c4b5d4;">
+                <h5 style="color: #6b46c1;">PDSI</h5>
+                <div class="formula-box" style="font-size: 0.9rem; background: #faf5ff; padding: 0.3rem; border-radius: 8px; text-align: center;">
+                    PDSI = f(P, T, SM, PET)
                 </div>
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; border-right: 4px solid #2b6cb0;">
-                    <h5 style="color: #2b6cb0;">🐛 كشف الآفات</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 كشف الآفات والأمراض</li>
-                        <li>🔹 المكافحة الموجهة</li>
-                    </ul>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>المطور:</strong> Palmer (1965)</li>
+                    <li>🔹 <strong>المدى:</strong> -4.0 إلى +4.0</li>
+                    <li>🔹 <strong>بيانات:</strong> متعددة</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c4b5d4;">
+                <h5 style="color: #2b6cb0;">SRI</h5>
+                <div class="formula-box" style="font-size: 0.9rem; background: #ebf8ff; padding: 0.3rem; border-radius: 8px; text-align: center;">
+                    SRI = φ⁻¹(F(Q))
                 </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>Standardized Runoff Index</strong></li>
+                    <li>🔹 <strong>المدى:</strong> -2.0 إلى +2.0</li>
+                    <li>🔹 <strong>بيانات:</strong> تدفق الأنهار</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c4b5d4;">
+                <h5 style="color: #38a169;">SSI</h5>
+                <div class="formula-box" style="font-size: 0.9rem; background: #f0fff4; padding: 0.3rem; border-radius: 8px; text-align: center;">
+                    SSI = φ⁻¹(F(GW))
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>Standardized Storage Index</strong></li>
+                    <li>🔹 <strong>المدى:</strong> -2.0 إلى +2.0</li>
+                    <li>🔹 <strong>بيانات:</strong> المياه الجوفية</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
+    <!-- ===== مؤشرات الجفاف في الاستشعار عن بعد ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🛰️ مؤشرات الجفاف باستخدام الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-leaf" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">VCI</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Vegetation Condition Index</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-temperature-high" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">TCI</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Temperature Condition Index</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-water" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">VHI</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Vegetation Health Index</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-tint" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">SMI</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Soil Moisture Index</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #c6f6d5; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; border: 1px dashed #38a169;">
+            <i class="fas fa-info-circle" style="color:#2f855a;"></i> <strong>مصادر البيانات:</strong> MODIS, Landsat, Sentinel-2 لمراقبة الجفاف في الوقت الفعلي
+        </div>
+    </div>
+
+    <!-- ===== تدفق العمل لحساب مؤشرات الجفاف ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🔄 تدفق العمل لحساب مؤشرات الجفاف</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📊 جمع البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">🔧 معالجة مسبقة</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">📐 حساب المؤشر</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">🗺️ تحليل مكاني</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📈 خرائط الجفاف</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> بيانات مناخية</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> سلسلة زمنية</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> إحصاء</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> GIS</span>
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في مؤشرات الجفاف</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Drought</span> <span style="font-size:0.8rem; color:#4a5568;">جفاف</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Precipitation</span> <span style="font-size:0.8rem; color:#4a5568;">هطول</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Evapotranspiration</span> <span style="font-size:0.8rem; color:#4a5568;">تبخر-نتح</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Soil Moisture</span> <span style="font-size:0.8rem; color:#4a5568;">رطوبة التربة</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Streamflow</span> <span style="font-size:0.8rem; color:#4a5568;">تدفق النهر</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Groundwater</span> <span style="font-size:0.8rem; color:#4a5568;">مياه جوفية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Standardized</span> <span style="font-size:0.8rem; color:#4a5568;">معياري</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Percentile</span> <span style="font-size:0.8rem; color:#4a5568;">نسبة مئوية</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END DROUGHT INDEXES SECTION ===== -->
+   <!-- ============================================================ -->
+<!-- ===== SECTION 12: LIDAR (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="lidar">
+    <div class="section-title"><i class="fas fa-satellite" style="color: #2b6cb0;"></i> بيانات LiDAR والتصوير باستخدام الليزر</div>
+
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🔬 التعريف والمبدأ الفيزيائي</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>LiDAR</strong> (Light Detection and Ranging) هو تقنية استشعار عن بعد تعتمد على 
+            قياس المسافة عبر حساب <strong>زمن طيران (Time-of-Flight)</strong> نبضة ليزرية. 
+            تُستخدم تقنية LiDAR لإنشاء <strong>نماذج ارتفاع دقيقة</strong> و<strong>سحب نقطية ثلاثية الأبعاد</strong> 
+            تمثل سطح الأرض والتضاريس والعوائق بدقة عالية. تعتبر LiDAR <strong>أداة ثورية</strong> في مجالات 
+            <strong>الجيوماتكس</strong>، <strong>الغابات</strong>، <strong>الهندسة المدنية</strong>، و<strong>البيئة</strong>.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🔦 نبضات ليزر</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📏 قياس مسافة</span>
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">☁️ سحب نقطية</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🗺️ نماذج ثلاثية</span>
+        </div>
+        <div class="formula-box" style="font-size: 1.4rem; background: rgba(255,255,255,0.7); padding: 0.8rem; border-radius: 20px; text-align: center; border: 3px solid #2b6cb0; font-weight: 700; margin-top: 10px;">
+            R = (c × Δt) / 2
+        </div>
+        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; text-align: center;">
+            <li>🔹 <strong>R:</strong> المسافة (متر) &nbsp; | &nbsp; <strong>c:</strong> سرعة الضوء (3×10⁸ م/ث) &nbsp; | &nbsp; <strong>Δt:</strong> زمن الطيران (ثانية)</li>
+        </ul>
+    </div>
+
+    <!-- ===== مكونات نظام LiDAR ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">🧩 مكونات نظام LiDAR</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-lightbulb" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">🔦 جهاز الليزر</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>مصدر الليزر</strong> – نبضات ضوئية</li>
+                    <li>🔹 <strong>طول موجي</strong> – 1064 nm (NIR)</li>
+                    <li>🔹 <strong>معدل النبض</strong> – kHz إلى MHz</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-arrows-alt-h" style="font-size: 2rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">🔄 نظام المسح</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>مرآة دوارة</strong> – Oscillating</li>
+                    <li>🔹 <strong>زاوية المسح</strong> – 0-45 درجة</li>
+                    <li>🔹 <strong>نمط المسح</strong> – Zigzag</li>
+                </ul>
+                <div style="background: #38a169; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-gps" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">📡 نظام الملاحة</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>GPS</strong> – تحديد الموقع</li>
+                    <li>🔹 <strong>IMU</strong> – اتجاه الطيران</li>
+                    <li>🔹 <strong>INS</strong> – نظام ملاحة</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #faf5ff, #ede9fe); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #6b46c1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-database" style="font-size: 2rem; color: #6b46c1;"></i>
+                    <h5 style="color: #6b46c1; margin: 0;">💾 وحدة التسجيل</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>تسجيل النبضات</strong> – Echo</li>
+                    <li>🔹 <strong>شدة الإشارة</strong> – Intensity</li>
+                    <li>🔹 <strong>سحابة نقاط</strong> – LAS/LAZ</li>
+                </ul>
+                <div style="background: #6b46c1; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== أنواع LiDAR ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">📊 أنواع أنظمة LiDAR</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c6f6d5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-plane" style="font-size: 1.8rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">✈️ LiDAR المحمول جويًا</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>منصة:</strong> طائرات / مروحيات</li>
+                    <li>🔹 <strong>تطبيقات:</strong> خرائط طبوغرافية</li>
+                    <li>🔹 <strong>كثافة:</strong> 1-20 نقطة/م²</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c6f6d5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-car" style="font-size: 1.8rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">🚗 LiDAR الأرضي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>منصة:</strong> مركبات / ثابت</li>
+                    <li>🔹 <strong>تطبيقات:</strong> نمذجة المباني</li>
+                    <li>🔹 <strong>كثافة:</strong> 100-1000 نقطة/م²</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c6f6d5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-drone" style="font-size: 1.8rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">🚁 LiDAR بالطائرات بدون طيار</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>منصة:</strong> UAV/Drone</li>
+                    <li>🔹 <strong>تطبيقات:</strong> مزارع / غابات</li>
+                    <li>🔹 <strong>كثافة:</strong> 50-500 نقطة/م²</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #c6f6d5;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-satellite" style="font-size: 1.8rem; color: #6b46c1;"></i>
+                    <h5 style="color: #6b46c1; margin: 0;">🛰️ LiDAR الفضائي</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>منصة:</strong> أقمار صناعية</li>
+                    <li>🔹 <strong>تطبيقات:</strong> تغير المناخ</li>
+                    <li>🔹 <strong>كثافة:</strong> 0.1-1 نقطة/م²</li>
+                </ul>
+            </div>
+        </div>
+        <!-- رسم بياني لمقارنة الكثافة -->
+        <div style="margin-top: 1.5rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #38a169;"></i> كثافة النقاط لأنظمة LiDAR المختلفة (نقطة/م²)</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">لوغاريتمي</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">فضائي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#b794f4); width:5%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">جوي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:15%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">UAV</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:40%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">أرضي</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:70%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== معادلات LiDAR الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">📐 المعادلات الأساسية في LiDAR</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #d69e2e;">معادلة المسافة</h5>
+                <div class="formula-box" style="font-size: 1.2rem; background: #fffbeb; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    R = (c × Δt) / 2
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>R:</strong> المسافة (م)</li>
+                    <li>🔹 <strong>c:</strong> سرعة الضوء (3×10⁸ م/ث)</li>
+                    <li>🔹 <strong>Δt:</strong> زمن الطيران (ث)</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #2b6cb0;">معادلة الطاقة المستقبلة</h5>
+                <div class="formula-box" style="font-size: 1.1rem; background: #ebf8ff; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    P_r = P_t × (ρ × A_r) / (π × R⁴)
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>P_r:</strong> الطاقة المستقبلة</li>
+                    <li>🔹 <strong>P_t:</strong> الطاقة المرسلة</li>
+                    <li>🔹 <strong>ρ:</strong> الانعكاسية</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #38a169;">معادلة دقة الارتفاع</h5>
+                <div class="formula-box" style="font-size: 1.1rem; background: #f0fff4; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    σ_z = σ_range / (2 × sin(θ))
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>σ_z:</strong> دقة الارتفاع</li>
+                    <li>🔹 <strong>σ_range:</strong> دقة المدى</li>
+                    <li>🔹 <strong>θ:</strong> زاوية السقوط</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== منتجات LiDAR ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">📊 منتجات بيانات LiDAR</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-cloud" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">سحابة النقاط</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Point Cloud (LAS)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-layer-group" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">نموذج الارتفاع</div>
+                <span style="font-size:0.65rem; color: #4a5568;">DEM / DTM</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-city" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">نموذج الأسطح</div>
+                <span style="font-size:0.65rem; color: #4a5568;">DSM</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-chart-bar" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">شدة الإشارة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Intensity Image</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-cubes" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">نموذج ثلاثي الأبعاد</div>
+                <span style="font-size:0.65rem; color: #4a5568;">3D Model</span>
+            </div>
+        </div>
+        <!-- رسم بياني لإنتاجية البيانات -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-pie" style="color: #6b46c1;"></i> توزيع استخدام منتجات LiDAR</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#6b46c1; border-radius:50%;"></span> سحابة نقاط 35%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#2b6cb0; border-radius:50%;"></span> DEM/DTM 25%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#38a169; border-radius:50%;"></span> DSM 20%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#dd6b20; border-radius:50%;"></span> كثافة 12%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#e53e3e; border-radius:50%;"></span> 3D Model 8%</div>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:18px; width:100%; margin-top:4px; display:flex; overflow:hidden;">
+                <div style="background:#6b46c1; width:35%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">سحابة</div>
+                <div style="background:#2b6cb0; width:25%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">DEM</div>
+                <div style="background:#38a169; width:20%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">DSM</div>
+                <div style="background:#dd6b20; width:12%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">كثافة</div>
+                <div style="background:#e53e3e; width:8%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">3D</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== خطوات معالجة LiDAR مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🔄 خطوات معالجة بيانات LiDAR</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📥 استقبال البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">🔧 تصحيح GPS/IMU</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">📊 تصنيف النقاط</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">🗺️ إنشاء النماذج</span>
+            <i class="fas fa-arrow-right" style="color: #2b6cb0; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📈 تحليل وتطبيقات</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> تصفية الضوضاء</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> تصنيف الأرض/المباني</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> استيفاء DEM</span>
+            <span style="font-weight:600; color:#2b6cb0;"><i class="fas fa-check-circle" style="color:#38a169;"></i> تحليل الغطاء النباتي</span>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات LiDAR ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🌍 تطبيقات LiDAR</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-mountain" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">طبوغرافيا</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Topography</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-tree" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">غابات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Forestry</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-city" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">تخطيط حضري</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Urban Planning</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-water" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">هيدرولوجيا</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Hydrology</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-exclamation-triangle" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">مخاطر طبيعية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Natural Hazards</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-road" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">هندسة مدنية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Civil Engineering</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مقارنة LiDAR مع تقنيات أخرى ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">📊 مقارنة LiDAR مع تقنيات الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-satellite" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">LiDAR</div>
+                <span style="font-size:0.65rem; color: #4a5568;">دقة عالية، 3D</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-camera" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">صور جوية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">لون، نسيج</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-radar" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">SAR</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تغطية واسعة</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-microscope" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">فيزيائي</div>
+                <span style="font-size:0.65rem; color: #4a5568;">قياس مباشر</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #ede9fe; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; border: 1px dashed #6b46c1;">
+            <i class="fas fa-info-circle" style="color:#6b46c1;"></i> <strong>ميزة LiDAR:</strong> قدرة اختراق الغطاء النباتي للحصول على نموذج دقيق للأرض (DTM) بعكس الصور الجوية
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في LiDAR</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Point Cloud</span> <span style="font-size:0.8rem; color:#4a5568;">سحابة نقاط</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Echo</span> <span style="font-size:0.8rem; color:#4a5568;">صدى</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Intensity</span> <span style="font-size:0.8rem; color:#4a5568;">شدة</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Return</span> <span style="font-size:0.8rem; color:#4a5568;">انعكاس</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Pulse Rate</span> <span style="font-size:0.8rem; color:#4a5568;">معدل النبض</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Scan Angle</span> <span style="font-size:0.8rem; color:#4a5568;">زاوية المسح</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Ground</span> <span style="font-size:0.8rem; color:#4a5568;">أرض</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Non-ground</span> <span style="font-size:0.8rem; color:#4a5568;">غير أرض</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END LIDAR SECTION ===== -->
+
+    <!--<!-- ============================================================ -->
+<!-- ===== SECTION 13: UAV TECHNOLOGY (EXTENDED & COLORFUL) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="uav-technology">
+    <div class="section-title"><i class="fas fa-drone" style="color: #2b6cb0;"></i> الطائرات بدون طيار (UAVs) وتطبيقاتها</div>
+
+    <!-- مقدمة علمية -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🛸 مقدمة في الطائرات بدون طيار</h4>
+        <p style="font-size: 1.05rem; line-height: 2;">
+            <strong>الطائرات بدون طيار (Unmanned Aerial Vehicles - UAVs)</strong> هي <strong>طائرات تعمل بدون طيار بشري</strong> على متنها، 
+            وتُدار <strong>عن بعد</strong> أو <strong>بشكل ذاتي</strong> باستخدام أنظمة تحكم متطورة. 
+            تُعد تقنية UAV <strong>ثورة في مجال الاستشعار عن بعد</strong>، حيث تتيح <strong>جمع بيانات عالية الدقة</strong> 
+            بتكلفة منخفضة ومرونة عالية في التطبيقات البيئية والزراعية والهندسية.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+            <span style="background: #2b6cb0; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🚁 طائرات</span>
+            <span style="background: #38a169; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">📡 استشعار عن بعد</span>
+            <span style="background: #dd6b20; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🤖 تحكم ذاتي</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-weight: 600; font-size:0.8rem;">🗺️ نمذجة ثلاثية</span>
+        </div>
+    </div>
+
+    <!-- ===== أنواع الطائرات بدون طيار ===== -->
+    <div class="info-box" style="background: #f7fafc; border-color: #4a5568;">
+        <h4 style="color: #2d3748;">📂 أنواع الطائرات بدون طيار</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 0.8rem;">
+            <div style="background: linear-gradient(145deg, #ebf8ff, #bee3f8); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #2b6cb0;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-helicopter" style="font-size: 2rem; color: #2b6cb0;"></i>
+                    <h5 style="color: #2b6cb0; margin: 0;">🚁 طائرات عمودية</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نوع:</strong> Multirotor</li>
+                    <li>🔹 <strong>مزايا:</strong> إقلاع رأسي، تحليق ثابت</li>
+                    <li>🔹 <strong>تطبيقات:</strong> تصوير، مسح صغير</li>
+                </ul>
+                <div style="background: #2b6cb0; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #f0fff4, #c6f6d5); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #38a169;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-plane" style="font-size: 2rem; color: #38a169;"></i>
+                    <h5 style="color: #38a169; margin: 0;">✈️ طائرات ثابتة الجناح</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نوع:</strong> Fixed-wing</li>
+                    <li>🔹 <strong>مزايا:</strong> مدى طويل، سرعة عالية</li>
+                    <li>🔹 <strong>تطبيقات:</strong> مسح كبير، زراعة</li>
+                </ul>
+                <div style="background: #38a169; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #fffbeb, #fefcbf); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #dd6b20;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-arrow-right" style="font-size: 2rem; color: #dd6b20;"></i>
+                    <h5 style="color: #dd6b20; margin: 0;">🔄 طائرات هجينة</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نوع:</strong> VTOL</li>
+                    <li>🔹 <strong>مزايا:</strong> إقلاع رأسي + مدى طويل</li>
+                    <li>🔹 <strong>تطبيقات:</strong> مسح متقدم</li>
+                </ul>
+                <div style="background: #dd6b20; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+            <div style="background: linear-gradient(145deg, #faf5ff, #ede9fe); border-radius: 20px; padding: 1.2rem; border-bottom: 6px solid #6b46c1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-microchip" style="font-size: 2rem; color: #6b46c1;"></i>
+                    <h5 style="color: #6b46c1; margin: 0;">🤖 طائرات ذكية</h5>
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; margin-top: 6px;">
+                    <li>🔹 <strong>نوع:</strong> AI-powered</li>
+                    <li>🔹 <strong>مزايا:</strong> معالجة بيانات فورية</li>
+                    <li>🔹 <strong>تطبيقات:</strong> ذكاء اصطناعي</li>
+                </ul>
+                <div style="background: #6b46c1; height: 4px; border-radius: 10px; width: 70%; margin: 8px 0 0;"></div>
+            </div>
+        </div>
+        <!-- رسم بياني لتوزيع استخدام الأنواع -->
+        <div style="margin-top: 1.5rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-pie" style="color: #2b6cb0;"></i> توزيع استخدام أنواع UAV</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.6rem; justify-content: center;">
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#2b6cb0; border-radius:50%;"></span> عمودية 45%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#38a169; border-radius:50%;"></span> ثابتة 35%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#dd6b20; border-radius:50%;"></span> هجينة 15%</div>
+                <div style="display:flex; align-items:center; gap:4px;"><span style="display:inline-block; width:16px; height:16px; background:#6b46c1; border-radius:50%;"></span> ذكية 5%</div>
+            </div>
+            <div style="background:#edf2f7; border-radius:40px; height:18px; width:100%; margin-top:4px; display:flex; overflow:hidden;">
+                <div style="background:#2b6cb0; width:45%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">عمودية</div>
+                <div style="background:#38a169; width:35%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">ثابتة</div>
+                <div style="background:#dd6b20; width:15%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.5rem; font-weight:700;">هجينة</div>
+                <div style="background:#6b46c1; width:5%; height:18px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.4rem; font-weight:700;">ذكية</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مكونات نظام UAV ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🧩 مكونات نظام الطائرات بدون طيار</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-microchip" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">وحدة التحكم</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Flight Controller</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-gps" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">نظام الملاحة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">GPS/IMU</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-camera" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">أجهزة الاستشعار</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Sensors</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-battery-full" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">نظام الطاقة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Battery</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-wifi" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">نظام الاتصال</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Communication</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #c6f6d5; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; border: 1px dashed #38a169;">
+            <i class="fas fa-info-circle" style="color:#2f855a;"></i> <strong>أنظمة الاستشعار:</strong> RGB, Multispectral, Thermal, LiDAR, Hyperspectral
+        </div>
+    </div>
+
+    <!-- ===== معادلات الطيران الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fffbeb, #fefcbf); border-color: #d69e2e;">
+        <h4 style="color: #d69e2e;">📐 المعادلات الأساسية في UAV</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem;">
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #d69e2e;">معادلة زمن الطيران</h5>
+                <div class="formula-box" style="font-size: 1.2rem; background: #fffbeb; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    T = E / P
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>T:</strong> زمن الطيران (دقائق)</li>
+                    <li>🔹 <strong>E:</strong> سعة البطارية (Wh)</li>
+                    <li>🔹 <strong>P:</strong> استهلاك الطاقة (W)</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #2b6cb0;">معادلة المساحة المغطاة</h5>
+                <div class="formula-box" style="font-size: 1.1rem; background: #ebf8ff; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    A = W × V × T
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>A:</strong> المساحة المغطاة (م²)</li>
+                    <li>🔹 <strong>W:</strong> عرض الممر (م)</li>
+                    <li>🔹 <strong>V:</strong> سرعة الطيران (م/ث)</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 1rem; border: 2px solid #f6e0c8;">
+                <h5 style="color: #38a169;">معادلة التداخل الجانبي</h5>
+                <div class="formula-box" style="font-size: 1.1rem; background: #f0fff4; padding: 0.5rem; border-radius: 12px; text-align: center; font-weight: 700;">
+                    S = (1 - (D / (F × H))) × 100
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.8;">
+                    <li>🔹 <strong>S:</strong> نسبة التداخل (%)</li>
+                    <li>🔹 <strong>D:</strong> المسافة بين الممرات</li>
+                    <li>🔹 <strong>F:</strong> البعد البؤري</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات UAV في الزراعة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
+        <h4 style="color: #2f855a;">🌾 تطبيقات UAV في الزراعة الدقيقة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-seedling" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">مراقبة المحاصيل</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Crop Monitoring</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-tint" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">إدارة الري</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Irrigation</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-bug" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">كشف الآفات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Pest Detection</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-chart-bar" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">خرائط المحصول</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Yield Mapping</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-spray-can" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الرش الموجه</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Spraying</span>
+            </div>
+        </div>
+        <!-- رسم بياني لتطبيقات UAV في الزراعة -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border: 1px solid #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; color: #2d3748;"><i class="fas fa-chart-bar" style="color: #38a169;"></i> توزيع استخدامات UAV في الزراعة</span>
+                <span style="font-size:0.7rem; background: #edf2f7; padding: 0.2rem 1rem; border-radius: 30px;">نسبة مئوية</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin-top: 0.6rem;">
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">مراقبة المحاصيل</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#38a169,#68d391); width:40%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">إدارة الري</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#2b6cb0,#63b3ed); width:25%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">كشف الآفات</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#dd6b20,#f6ad55); width:20%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">الرش الموجه</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#e53e3e,#fc8181); width:10%; height:14px; border-radius:20px;"></div></div></div>
+                <div style="flex:1; min-width:100px;"><span style="font-size:0.7rem;">خرائط المحصول</span><div style="background:#e2e8f0; height:14px; border-radius:20px; width:100%;"><div style="background:linear-gradient(90deg,#6b46c1,#b794f4); width:5%; height:14px; border-radius:20px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== خطوات تخطيط الطيران مع Flow ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">🔄 خطوات تخطيط الطيران وجمع البيانات</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1rem; padding: 0.8rem 0;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">🗺️ تخطيط المسار</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">📡 جمع البيانات</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">📥 معالجة مسبقة</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">🗺️ إنشاء النماذج</span>
+            <i class="fas fa-arrow-right" style="color: #6b46c1; font-size:1.4rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.5rem 1.4rem; border-radius: 40px; font-weight:600; font-size:0.85rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📊 تحليل وتطبيقات</span>
+        </div>
+        <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; background: white; border-radius: 30px; padding: 0.6rem 1.5rem;">
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Photogrammetry</span>
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> Orthomosaic</span>
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> DEM/DSM</span>
+            <span style="font-weight:600; color:#553c9a;"><i class="fas fa-check-circle" style="color:#38a169;"></i> NDVI</span>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات UAV الأخرى ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🌍 تطبيقات UAV في المجالات الأخرى</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-city" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التخطيط الحضري</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Urban Planning</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-tree" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الغابات</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Forestry</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-fire" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">إدارة الكوارث</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Disasters</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #6b46c1;">
+                <i class="fas fa-road" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الهندسة المدنية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Civil Engineering</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-water" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الموارد المائية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Water Resources</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #d69e2e;">
+                <i class="fas fa-leaf" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">البيئة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">Environment</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مقارنة UAV مع الأقمار الصناعية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">📊 مقارنة UAV مع الأقمار الصناعية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem;">
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #2b6cb0;">
+                <i class="fas fa-drone" style="color: #2b6cb0; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">UAV</div>
+                <span style="font-size:0.65rem; color: #4a5568;">دقة عالية، مرونة</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #38a169;">
+                <i class="fas fa-satellite" style="color: #38a169; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">الأقمار الصناعية</div>
+                <span style="font-size:0.65rem; color: #4a5568;">تغطية واسعة</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #dd6b20;">
+                <i class="fas fa-hourglass-half" style="color: #dd6b20; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التكرار الزمني</div>
+                <span style="font-size:0.65rem; color: #4a5568;">مرن (UAV) / ثابت (Sat)</span>
+            </div>
+            <div style="background: white; border-radius: 16px; padding: 0.8rem; text-align: center; border-left: 5px solid #e53e3e;">
+                <i class="fas fa-dollar-sign" style="color: #e53e3e; font-size: 1.6rem;"></i>
+                <div style="font-weight: 700; font-size: 0.85rem;">التكلفة</div>
+                <span style="font-size:0.65rem; color: #4a5568;">منخفضة (UAV) / عالية (Sat)</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; background: #ede9fe; border-radius: 16px; padding: 0.6rem 1.2rem; text-align: center; border: 1px dashed #6b46c1;">
+            <i class="fas fa-info-circle" style="color:#6b46c1;"></i> <strong>التكامل:</strong> يمكن دمج بيانات UAV مع بيانات الأقمار الصناعية للحصول على تغطية شاملة
+        </div>
+    </div>
+
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في تقنية UAV</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">UAV</span> <span style="font-size:0.8rem; color:#4a5568;">طائرة بدون طيار</span></div>
+            <div><span style="font-weight:700; color:#c53030;">UAS</span> <span style="font-size:0.8rem; color:#4a5568;">نظام الطائرات بدون طيار</span></div>
+            <div><span style="font-weight:700; color:#c53030;">VTOL</span> <span style="font-size:0.8rem; color:#4a5568;">إقلاع وهبوط عمودي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">GSD</span> <span style="font-size:0.8rem; color:#4a5568;">حجم بكسل الأرض</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Waypoint</span> <span style="font-size:0.8rem; color:#4a5568;">نقطة مسار</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Payload</span> <span style="font-size:0.8rem; color:#4a5568;">الحمولة</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Autonomous</span> <span style="font-size:0.8rem; color:#4a5568;">ذاتي التحكم</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Telemetry</span> <span style="font-size:0.8rem; color:#4a5568;">قياس عن بعد</span></div>
+        </div>
+    </div>
+
+</section>
+<!-- ===== END UAV TECHNOLOGY SECTION ===== -->
     <!-- ============================================================ -->
     <!-- ===== SECTION 14: PRECISION AGRICULTURE ===== -->
     <!-- ============================================================ -->
