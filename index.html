@@ -1134,102 +1134,538 @@
             </div>
         </div>
 
-        <!-- ============================================================ -->
-        <!-- ===== 7. أنواع التحليل المكاني (بالتفصيل الأكاديمي) ===== -->
-        <!-- ============================================================ -->
-        <div style="background: white; padding: 25px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-right: 6px solid #2f855a;">
-            <h4 style="color: #2f855a; font-size: 1.4rem; display: flex; align-items: center; gap: 12px;">
-                <span style="background: #f0fff4; padding: 8px 15px; border-radius: 12px;">📊</span> أنواع التحليل المكاني في GIS
-            </h4>
+       <!-- ============================================================ -->
+<!-- ===== 7. أنواع التحليل المكاني (بالتفصيل الأكاديمي) ===== -->
+<!-- ============================================================ -->
+<div style="background: white; padding: 25px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-right: 6px solid #2f855a;">
+    <h4 style="color: #2f855a; font-size: 1.4rem; display: flex; align-items: center; gap: 12px;">
+        <span style="background: #f0fff4; padding: 8px 15px; border-radius: 12px;">📊</span> أنواع التحليل المكاني في GIS
+    </h4>
 
-            <!-- 7.1 التحليل الخطي -->
-            <div style="margin-top: 15px;">
-                <h5 style="color: #2b6cb0; font-size: 1.1rem;">📍 التحليل الخطي (Vector Analysis)</h5>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
-                    <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2b6cb0;">
-                        <p style="font-weight: 700; color: #2b6cb0;">📏 Buffer</p>
-                        <p style="font-size: 0.85rem;">إنشاء مناطق عازلة حول المعالم</p>
-                        <p style="font-size: 0.75rem; color: #4a5568;">مثال: مناطق حماية الآبار في وادي المجنين</p>
-                    </div>
-                    <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2f855a;">
-                        <p style="font-weight: 700; color: #2f855a;">🔀 Overlay</p>
-                        <p style="font-size: 0.85rem;">دمج طبقات متعددة (Intersect, Union, Clip)</p>
-                        <p style="font-size: 0.75rem; color: #4a5568;">مثال: دمج خرائط التربة والغطاء النباتي</p>
-                    </div>
-                    <div style="background: #faf5ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #6b46c1;">
-                        <p style="font-weight: 700; color: #6b46c1;">🔗 Spatial Join</p>
-                        <p style="font-size: 0.85rem;">ربط البيانات الوصفية مكانياً</p>
-                        <p style="font-size: 0.75rem; color: #4a5568;">مثال: ربط الآبار بمناطق الدراسة</p>
-                    </div>
+    <!-- 7.1 التحليل الخطي -->
+    <div style="margin-top: 15px;">
+        <h5 style="color: #2b6cb0; font-size: 1.1rem;">📍 التحليل الخطي (Vector Analysis)</h5>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2b6cb0;">
+                <p style="font-weight: 700; color: #2b6cb0;">📏 Buffer (النطاق العازل)</p>
+                <p style="font-size: 0.85rem;">إنشاء مناطق عازلة حول المعالم بنصف قطر محدد</p>
+                <div style="background: #f7fafc; padding: 8px; border-radius: 8px; margin-top: 6px; font-size: 0.8rem;">
+                    <strong>المعادلة:</strong> P(x) = { y : d(x,y) ≤ r }
+                </div>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 6px;">
+                    <strong>مثال ليبي:</strong> مناطق حماية بمسافة 500 متر حول الآبار في <strong>وادي المجنين</strong> لحماية مصادر المياه الجوفية من التلوث.
+                </p>
+                <div style="background: #e2edf7; border-radius: 6px; padding: 4px 8px; margin-top: 4px; font-size: 0.7rem; direction:ltr; text-align:left;">
+                    <code>arcpy.Buffer_analysis("Wells", "Wells_Buffer", "500 Meters")</code>
                 </div>
             </div>
-
-            <!-- 7.2 التحليل النقطي -->
-            <div style="margin-top: 20px;">
-                <h5 style="color: #2f855a; font-size: 1.1rem;">🖼️ التحليل الشبكي أو النقطي (Raster Analysis)</h5>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
-                    <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2b6cb0;">
-                        <p style="font-weight: 700; color: #2b6cb0;">📐 Surface Analysis</p>
-                        <p style="font-size: 0.85rem;">تحليل الأسطح (Slope, Aspect, Hillshade)</p>
-                        <p style="font-size: 0.75rem; color: #4a5568;">مثال: تحليل تضاريس الجبل الغربي</p>
-                    </div>
-                    <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2f855a;">
-                        <p style="font-weight: 700; color: #2f855a;">🌊 Hydrological Analysis</p>
-                        <p style="font-size: 0.85rem;">تحليل هيدرولوجي (Watershed, Flow Accumulation)</p>
-                        <p style="font-size: 0.75rem; color: #4a5568;">مثال: تحديد أحواض وادي المجنين</p>
-                    </div>
-                    <div style="background: #fffbeb; border-radius: 12px; padding: 12px; border-bottom: 4px solid #dd6b20;">
-                        <p style="font-weight: 700; color: #dd6b20;">🌿 Spectral Analysis</p>
-                        <p style="font-size: 0.85rem;">تحليل طيفي (NDVI, EVI, مؤشرات)</p>
-                        <p style="font-size: 0.75rem; color: #4a5568;">مثال: تقييم الغطاء النباتي في السهل الساحلي</p>
-                    </div>
+            <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2f855a;">
+                <p style="font-weight: 700; color: #2f855a;">🔀 Overlay (التراكب)</p>
+                <p style="font-size: 0.85rem;">دمج طبقات متعددة (Intersect, Union, Clip, Erase)</p>
+                <div style="background: #f7fafc; padding: 8px; border-radius: 8px; margin-top: 6px; font-size: 0.8rem;">
+                    <strong>المعادلة:</strong> S = Σ(wᵢ × fᵢ) (للتراكب الموزون)
+                </div>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 6px;">
+                    <strong>مثال ليبي:</strong> دمج خرائط التربة والغطاء النباتي والانحدار لتحديد المناسب لزراعة الزيتون في <strong>المنطقة الساحلية</strong>.
+                </p>
+                <div style="background: #e6f2ea; border-radius: 6px; padding: 4px 8px; margin-top: 4px; font-size: 0.7rem; direction:ltr; text-align:left;">
+                    <code>arcpy.Intersect_analysis(["Soil", "Vegetation", "Slope"], "Suitable_Areas")</code>
                 </div>
             </div>
-
-            <!-- 7.3 التحليل الإحصائي -->
-            <div style="margin-top: 20px;">
-                <h5 style="color: #6b46c1; font-size: 1.1rem;">📈 التحليل الإحصائي (Statistical Analysis)</h5>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
-                    <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-right: 4px solid #2b6cb0;">
-                        <p style="font-weight: 700; color: #2b6cb0;">📊 الإحصاء الوصفي</p>
-                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
-                            <li>🔹 <strong>المتوسط</strong> (Mean)</li>
-                            <li>🔹 <strong>الانحراف المعياري</strong> (Standard Deviation)</li>
-                            <li>🔹 <strong>الحد الأدنى والأقصى</strong> (Min/Max)</li>
-                        </ul>
-                    </div>
-                    <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-right: 4px solid #2f855a;">
-                        <p style="font-weight: 700; color: #2f855a;">📈 الإحصاء المكاني</p>
-                        <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
-                            <li>🔹 <strong>تحليل العنقودية</strong> (Cluster Analysis)</li>
-                            <li>🔹 <strong>الارتباط المكاني</strong> (Spatial Correlation)</li>
-                            <li>🔹 <strong>الانحدار المكاني</strong> (Spatial Regression)</li>
-                        </ul>
-                    </div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #6b46c1;">
+                <p style="font-weight: 700; color: #6b46c1;">🔗 Spatial Join (الربط المكاني)</p>
+                <p style="font-size: 0.85rem;">ربط البيانات الوصفية من طبقة إلى أخرى بناءً على الموقع المكاني</p>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 6px;">
+                    <strong>مثال ليبي:</strong> ربط بيانات جودة المياه بالآبار في <strong>وادي الشاطئ</strong> لتقييم توزيع الملوحة.
+                </p>
+                <div style="background: #ede7f5; border-radius: 6px; padding: 4px 8px; margin-top: 4px; font-size: 0.7rem; direction:ltr; text-align:left;">
+                    <code>arcpy.SpatialJoin_analysis("Wells", "WaterQuality", "Wells_Quality")</code>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- الفروقات بين أنواع التحليل -->
-            <div style="background: #fffbeb; padding: 15px; border-radius: 12px; margin-top: 15px; border-right: 4px solid #dd6b20;">
-                <p style="font-weight: 700; color: #dd6b20;">📋 الفروقات بين أنواع التحليل:</p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 8px;">
-                    <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #2b6cb0;">
-                        <strong>Vector</strong>
-                        <p style="font-size: 0.75rem;">يتعامل مع المعالم المنفصلة</p>
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #2f855a;">
-                        <strong>Raster</strong>
-                        <p style="font-size: 0.75rem;">يتعامل مع الأسطح المستمرة</p>
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #6b46c1;">
-                        <strong>Statistical</strong>
-                        <p style="font-size: 0.75rem;">يتعامل مع الأنماط والاتجاهات</p>
-                    </div>
+    <!-- 7.2 التحليل النقطي -->
+    <div style="margin-top: 20px;">
+        <h5 style="color: #2f855a; font-size: 1.1rem;">🖼️ التحليل الشبكي أو النقطي (Raster Analysis)</h5>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2b6cb0;">
+                <p style="font-weight: 700; color: #2b6cb0;">📐 Surface Analysis (تحليل الأسطح)</p>
+                <p style="font-size: 0.85rem;">اشتقاق معلومات تضاريسية من DEM</p>
+                <div style="background: #f7fafc; padding: 8px; border-radius: 8px; margin-top: 6px; font-size: 0.8rem; direction:ltr; text-align:left;">
+                    <strong>معادلة الانحدار:</strong> Slope = arctan(√((dz/dx)² + (dz/dy)²)) × (180/π)<br>
+                    <strong>معادلة الاتجاه:</strong> Aspect = 180 - arctan((dz/dy)/(dz/dx)) + 90 × (dz/dx/|dz/dx|)
                 </div>
-                <p style="font-size: 0.85rem; margin-top: 8px;">
-                    <strong>مثال من ليبيا:</strong> تحليل توزيع الآبار (Vector) + تحليل رطوبة التربة (Raster) + تحليل اتجاهات الجفاف (Statistical)
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 6px;">
+                    <strong>مثال ليبي:</strong> تحليل تضاريس <strong>الجبل الغربي</strong> لتحديد المناطق المناسبة للبناء أو الزراعة.
+                </p>
+                <div style="background: #e2edf7; border-radius: 6px; padding: 4px 8px; margin-top: 4px; font-size: 0.7rem; direction:ltr; text-align:left;">
+                    <code>arcpy.sa.Slope("DEM.tif", "DEGREE")</code>
+                </div>
+            </div>
+            <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2f855a;">
+                <p style="font-weight: 700; color: #2f855a;">🌊 Hydrological Analysis (تحليل هيدرولوجي)</p>
+                <p style="font-size: 0.85rem;">تحليل أنماط تدفق المياه وشبكات الأنهار</p>
+                <div style="background: #f7fafc; padding: 8px; border-radius: 8px; margin-top: 6px; font-size: 0.8rem; direction:ltr; text-align:left;">
+                    <strong>تراكم التدفق:</strong> FA(i,j) = Σ FA(neighbors) + weight(i,j)<br>
+                    <strong>التدفق الأساسي:</strong> Q = A × R × C
+                </div>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 6px;">
+                    <strong>مثال ليبي:</strong> تحديد أحواض التصريف المائي في <strong>وادي المجنين</strong> لحماية المناطق من الفيضانات.
+                </p>
+                <div style="background: #e6f2ea; border-radius: 6px; padding: 4px 8px; margin-top: 4px; font-size: 0.7rem; direction:ltr; text-align:left;">
+                    <code>arcpy.sa.FlowAccumulation(arcpy.sa.FlowDirection("DEM.tif"))</code>
+                </div>
+            </div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 12px; border-bottom: 4px solid #dd6b20;">
+                <p style="font-weight: 700; color: #dd6b20;">🌿 Spectral Analysis (التحليل الطيفي)</p>
+                <p style="font-size: 0.85rem;">تحليل الصور الفضائية باستخدام المؤشرات الطيفية</p>
+                <div style="background: #f7fafc; padding: 8px; border-radius: 8px; margin-top: 6px; font-size: 0.8rem; direction:ltr; text-align:left;">
+                    <strong>NDVI:</strong> = (NIR - RED) / (NIR + RED)<br>
+                    <strong>EVI:</strong> = 2.5 × ((NIR - RED) / (NIR + 6×RED - 7.5×BLUE + 1))
+                </div>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 6px;">
+                    <strong>مثال ليبي:</strong> تقييم الغطاء النباتي في <strong>السهل الساحلي</strong> ومراقبة التصحر في <strong>منطقة الجفارة</strong>.
+                </p>
+                <div style="background: #fef0e0; border-radius: 6px; padding: 4px 8px; margin-top: 4px; font-size: 0.7rem; direction:ltr; text-align:left;">
+                    <code>ndvi = (nir - red) / (nir + red)</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7.3 التحليل الإحصائي -->
+    <div style="margin-top: 20px;">
+        <h5 style="color: #6b46c1; font-size: 1.1rem;">📈 التحليل الإحصائي (Statistical Analysis)</h5>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
+            <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-right: 4px solid #2b6cb0;">
+                <p style="font-weight: 700; color: #2b6cb0;">📊 الإحصاء الوصفي</p>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
+                    <li>🔹 <strong>المتوسط</strong> (Mean): μ = Σx / n</li>
+                    <li>🔹 <strong>الانحراف المعياري</strong>: σ = √(Σ(x-μ)² / n)</li>
+                    <li>🔹 <strong>الحد الأدنى والأقصى</strong> (Min/Max)</li>
+                    <li>🔹 <strong>الوسيط</strong> (Median): القيمة الوسطى</li>
+                </ul>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 4px;">
+                    <strong>مثال ليبي:</strong> حساب متوسط درجات الحرارة في <strong>سبها</strong> وتحليل التغيرات المناخية.
                 </p>
             </div>
+            <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-right: 4px solid #2f855a;">
+                <p style="font-weight: 700; color: #2f855a;">📈 الإحصاء المكاني</p>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
+                    <li>🔹 <strong>مؤشر موران</strong> (Moran's I): I = n/Σw · Σw(x−x̄)(x−x̄)/Σ(x−x̄)²</li>
+                    <li>🔹 <strong>تحليل العنقودية</strong> (Cluster Analysis)</li>
+                    <li>🔹 <strong>الارتباط المكاني</strong> (Spatial Correlation)</li>
+                    <li>🔹 <strong>الانحدار المكاني</strong> (Spatial Regression)</li>
+                </ul>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 4px;">
+                    <strong>مثال ليبي:</strong> تحليل توزيع حالات الأمراض في <strong>طرابلس</strong> لتحديد المناطق الأكثر تضرراً.
+                </p>
+            </div>
+            <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-right: 4px solid #dd6b20;">
+                <p style="font-weight: 700; color: #dd6b20;">🔮 التحليل التنبؤي</p>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
+                    <li>🔹 <strong>الاستيفاء المكاني</strong> (IDW, Kriging)</li>
+                    <li>🔹 <strong>نمذجة الملاءمة</strong> (Suitability Modeling)</li>
+                    <li>🔹 <strong>تحليل الاتجاهات</strong> (Trend Analysis)</li>
+                </ul>
+                <div style="background: #fef0e0; padding: 6px; border-radius: 6px; font-size: 0.8rem; direction:ltr; text-align:left;">
+                    IDW: ẑ(x₀) = Σᵢ z(xᵢ)·wᵢ / Σᵢ wᵢ , wᵢ = 1/dᵢᵖ
+                </div>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 4px;">
+                    <strong>مثال ليبي:</strong> التنبؤ بتوزيع الملوحة في المياه الجوفية <strong>بمنطقة الكفرة</strong> باستخدام Kriging.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7.4 التحليل المتقدم (التكامل مع AI) -->
+    <div style="margin-top: 20px;">
+        <h5 style="color: #e53e3e; font-size: 1.1rem;">🧠 التحليل المتقدم (التكامل مع الذكاء الاصطناعي)</h5>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+            <div style="background: #fff5f5; border-radius: 12px; padding: 12px; border-right: 4px solid #e53e3e;">
+                <p style="font-weight: 700; color: #e53e3e;">🤖 التعلم الآلي (Machine Learning)</p>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
+                    <li>🔹 <strong>Random Forest</strong> – تصنيف الصور الفضائية</li>
+                    <li>🔹 <strong>CNN</strong> – كشف المعالم (مباني، طرق)</li>
+                    <li>🔹 <strong>SVM</strong> – تصنيف الغطاء الأرضي</li>
+                    <li>🔹 <strong>K-Means</strong> – تجميع البيانات المكانية</li>
+                </ul>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 4px;">
+                    <strong>مثال ليبي:</strong> استخدام Random Forest لتصنيف الغطاء الأرضي في <strong>منطقة الجبل الأخضر</strong> وتحديد مناطق التصحر.
+                </p>
+            </div>
+            <div style="background: #f0f7ff; border-radius: 12px; padding: 12px; border-right: 4px solid #3182ce;">
+                <p style="font-weight: 700; color: #3182ce;">🌐 التكامل مع إنترنت الأشياء (IoT)</p>
+                <ul style="list-style: none; padding: 0; font-size: 0.85rem; line-height: 2;">
+                    <li>🔹 <strong>مراقبة جودة الهواء</strong> – مستشعرات في المدن</li>
+                    <li>🔹 <strong>الزراعة الذكية</strong> – مراقبة رطوبة التربة</li>
+                    <li>🔹 <strong>إدارة المياه</strong> – مراقبة التسربات</li>
+                    <li>🔹 <strong>المدن الذكية</strong> – مراقبة المرور</li>
+                </ul>
+                <p style="font-size: 0.75rem; color: #4a5568; margin-top: 4px;">
+                    <strong>مثال ليبي:</strong> نظام مراقبة جودة الهواء في <strong>طرابلس</strong> باستخدام مستشعرات IoT متصلة بمنصة GIS.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفروقات بين أنواع التحليل -->
+    <div style="background: #fffbeb; padding: 15px; border-radius: 12px; margin-top: 15px; border-right: 4px solid #dd6b20;">
+        <p style="font-weight: 700; color: #dd6b20;">📋 الفروقات بين أنواع التحليل:</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin-top: 8px;">
+            <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #2b6cb0;">
+                <strong>Vector</strong>
+                <p style="font-size: 0.75rem;">يتعامل مع المعالم المنفصلة (نقاط، خطوط، مضلعات)</p>
+                <p style="font-size: 0.7rem; color: #4a5568;">مثال: الطرق، المباني، الحدود</p>
+            </div>
+            <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #2f855a;">
+                <strong>Raster</strong>
+                <p style="font-size: 0.75rem;">يتعامل مع الأسطح المستمرة (شبكة من الخلايا)</p>
+                <p style="font-size: 0.7rem; color: #4a5568;">مثال: DEM، الصور الفضائية</p>
+            </div>
+            <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #6b46c1;">
+                <strong>Statistical</strong>
+                <p style="font-size: 0.75rem;">يتعامل مع الأنماط والاتجاهات الإحصائية</p>
+                <p style="font-size: 0.7rem; color: #4a5568;">مثال: التوزيع، الارتباط، التجميع</p>
+            </div>
+            <div style="background: white; padding: 8px; border-radius: 8px; text-align: center; border-bottom: 3px solid #e53e3e;">
+                <strong>AI / ML</strong>
+                <p style="font-size: 0.75rem;">يتعامل مع التعلم من البيانات والتنبؤ</p>
+                <p style="font-size: 0.7rem; color: #4a5568;">مثال: التصنيف، الكشف، التجميع</p>
+            </div>
+        </div>
+        <div style="background: white; padding: 12px; border-radius: 10px; margin-top: 10px; border: 1px solid #f6e0c8;">
+            <p style="font-size: 0.9rem; font-weight: 600; color: #2f855a;">🌍 مثال متكامل من ليبيا:</p>
+            <p style="font-size: 0.85rem; line-height: 1.8;">
+                <strong>تقييم الموارد المائية في وادي المجنين:</strong><br>
+                1. <strong>Vector:</strong> تحديد مواقع الآبار والنقاط المائية (نقاط)<br>
+                2. <strong>Raster:</strong> تحليل تضاريس الوادي (DEM) لتحديد مسارات التدفق<br>
+                3. <strong>Statistical:</strong> تحليل توزيع الملوحة في المياه الجوفية (Moran's I)<br>
+                4. <strong>AI:</strong> التنبؤ بمناطق الجفاف المستقبلية باستخدام نماذج التعلم الآلي<br>
+                5. <strong>التكامل:</strong> إنشاء خريطة شاملة لتحديد المناطق المناسبة لحفر آبار جديدة
+            </p>
+        </div>
+    </div>
+
+    <!-- معادلات التحليل المكاني -->
+    <div style="margin-top: 20px; background: #f0f7ff; padding: 15px; border-radius: 12px; border-right: 4px solid #3182ce;">
+        <p style="font-weight: 700; color: #2b6cb0; font-size: 1.1rem;">📐 ملخص المعادلات الرياضية للتحليل المكاني</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; font-size: 0.85rem;">
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>المسافة الإقليدية:</strong><br>
+                d = √[(x₂−x₁)² + (y₂−y₁)²]
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>NDVI:</strong><br>
+                NDVI = (NIR − RED) / (NIR + RED)
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>الانحدار:</strong><br>
+                Slope = arctan(√((dz/dx)² + (dz/dy)²)) × (180/π)
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>IDW:</strong><br>
+                ẑ(x₀) = Σᵢ z(xᵢ)·wᵢ / Σᵢ wᵢ , wᵢ = 1/dᵢᵖ
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>Moran's I:</strong><br>
+                I = (n/Σw) · (Σw(x−x̄)(x−x̄)/Σ(x−x̄)²)
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>التدفق:</strong><br>
+                Q = A × R × C
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>تراكم التدفق:</strong><br>
+                FA(i,j) = Σ FA(neighbors) + weight(i,j)
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 8px; direction:ltr; text-align:left;">
+                <strong>التراكب الموزون:</strong><br>
+                S = Σ(wᵢ × fᵢ)
+            </div>
+        </div>
+    </div>
+
+    <!-- أمثلة تطبيقية من ليبيا -->
+    <div style="margin-top: 20px; background: linear-gradient(135deg, #f0fff4 0%, #ebf8ff 100%); padding: 15px; border-radius: 12px; border-right: 4px solid #2f855a;">
+        <p style="font-weight: 700; color: #2f855a; font-size: 1.1rem;">🇱🇾 أمثلة تطبيقية من ليبيا</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 8px;">
+            <div style="background: white; padding: 10px; border-radius: 10px; border-bottom: 3px solid #2b6cb0;">
+                <strong style="color: #2b6cb0;">💧 إدارة الموارد المائية</strong>
+                <ul style="font-size: 0.8rem; line-height: 1.8; padding-right: 15px;">
+                    <li>تحليل أحواض وادي المجنين</li>
+                    <li>مراقبة منسوب المياه الجوفية</li>
+                    <li>تقييم جودة المياه في الكفرة</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 10px; border-bottom: 3px solid #2f855a;">
+                <strong style="color: #2f855a;">🌾 الزراعة والتصحر</strong>
+                <ul style="font-size: 0.8rem; line-height: 1.8; padding-right: 15px;">
+                    <li>مراقبة NDVI في الجبل الأخضر</li>
+                    <li>تحليل تدهور الأراضي في الجفارة</li>
+                    <li>تخطيط المحاصيل في السهل الساحلي</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 10px; border-bottom: 3px solid #e53e3e;">
+                <strong style="color: #e53e3e;">🏙️ التخطيط العمراني</strong>
+                <ul style="font-size: 0.8rem; line-height: 1.8; padding-right: 15px;">
+                    <li>توسع مدن طرابلس وبنغازي</li>
+                    <li>تحديد مناطق الخدمات العامة</li>
+                    <li>تحليل النقل والمواصلات</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 10px; border-bottom: 3px solid #dd6b20;">
+                <strong style="color: #dd6b20;">🌍 البيئة والمناخ</strong>
+                <ul style="font-size: 0.8rem; line-height: 1.8; padding-right: 15px;">
+                    <li>رصد التغيرات المناخية في سبها</li>
+                    <li>تحليل العواصف الترابية</li>
+                    <li>تقييم الكوارث الطبيعية</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 10px; border-bottom: 3px solid #6b46c1;">
+                <strong style="color: #6b46c1;">🛢️ النفط والغاز</strong>
+                <ul style="font-size: 0.8rem; line-height: 1.8; padding-right: 15px;">
+                    <li>تخطيط مسارات الأنابيب</li>
+                    <li>تقييم الأثر البيئي</li>
+                    <li>إدارة مواقع الحفر</li>
+                </ul>
+            </div>
+            <div style="background: white; padding: 10px; border-radius: 10px; border-bottom: 3px solid #3182ce;">
+                <strong style="color: #3182ce;">🏥 الصحة العامة</strong>
+                <ul style="font-size: 0.8rem; line-height: 1.8; padding-right: 15px;">
+                    <li>توزيع المرافق الصحية</li>
+                    <li>تحليل انتشار الأمراض</li>
+                    <li>التخطيط للاستجابة للطوارئ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- شيفرة Python لتطبيق التحليل المكاني -->
+    <div style="margin-top: 20px; background: #1a1a2e; padding: 15px; border-radius: 12px; direction:ltr; text-align:left; color: #e0e0e0;">
+        <p style="color: #f0c040; font-weight: 700; direction:rtl; text-align:right;">🐍 شيفرة Python متكاملة لتطبيق التحليل المكاني على بيانات ليبية</p>
+        <pre style="font-size: 0.75rem; overflow-x: auto; font-family: 'Courier New', monospace; line-height: 1.6; margin-top: 8px;">
+import arcpy
+from arcpy.sa import *
+import numpy as np
+
+# ============================================================
+# 1. تحليل التضاريس لمنطقة الجبل الغربي
+# ============================================================
+def terrain_analysis(dem_path, output_folder):
+    """
+    تحليل تضاريس الجبل الغربي - ليبيا
+    """
+    # حساب الانحدار والاتجاه
+    slope = Slope(dem_path, "DEGREE")
+    slope.save(f"{output_folder}/Slope.tif")
+    
+    aspect = Aspect(dem_path)
+    aspect.save(f"{output_folder}/Aspect.tif")
+    
+    # حساب التضاريس المظللة
+    hillshade = Hillshade(dem_path, 315, 45)
+    hillshade.save(f"{output_folder}/Hillshade.tif")
+    
+    print("✅ تم إكمال تحليل التضاريس")
+    return {"slope": slope, "aspect": aspect, "hillshade": hillshade}
+
+# ============================================================
+# 2. التحليل الهيدرولوجي لوادي المجنين
+# ============================================================
+def hydrological_analysis(dem_path, output_folder):
+    """
+    تحليل هيدرولوجي لوادي المجنين - ليبيا
+    """
+    # اتجاه التدفق
+    flow_dir = FlowDirection(dem_path)
+    flow_dir.save(f"{output_folder}/FlowDirection.tif")
+    
+    # تراكم التدفق
+    flow_acc = FlowAccumulation(flow_dir)
+    flow_acc.save(f"{output_folder}/FlowAccumulation.tif")
+    
+    # استخراج شبكة الأنهار (عتبة > 1000)
+    streams = flow_acc > 1000
+    streams.save(f"{output_folder}/Streams.tif")
+    
+    # تحديد الأحواض المائية
+    basins = Basin(flow_dir)
+    basins.save(f"{output_folder}/Basins.tif")
+    
+    print("✅ تم إكمال التحليل الهيدرولوجي")
+    return {"flow_dir": flow_dir, "flow_acc": flow_acc, "streams": streams, "basins": basins}
+
+# ============================================================
+# 3. تحليل NDVI لمنطقة الجبل الأخضر
+# ============================================================
+def ndvi_analysis(red_band, nir_band, output_folder):
+    """
+    حساب NDVI للغطاء النباتي في الجبل الأخضر - ليبيا
+    """
+    red = Raster(red_band)
+    nir = Raster(nir_band)
+    
+    ndvi = (nir - red) / (nir + red)
+    ndvi.save(f"{output_folder}/NDVI.tif")
+    
+    # تصنيف NDVI
+    classes = {
+        "مياه": [-1, 0],
+        "تربة عارية": [0, 0.2],
+        "نباتات متوسطة": [0.2, 0.5],
+        "نباتات كثيفة": [0.5, 1]
+    }
+    classified = Reclassify(ndvi, "VALUE", classes)
+    classified.save(f"{output_folder}/NDVI_Classified.tif")
+    
+    print("✅ تم إكمال تحليل NDVI")
+    return {"ndvi": ndvi, "classified": classified}
+
+# ============================================================
+# 4. تحليل التراكب الموزون لمنطقة السهل الساحلي
+# ============================================================
+def weighted_overlay_analysis(factors, weights, output_folder):
+    """
+    تحليل التراكب الموزون لتحديد المناطق المناسبة للزراعة
+    """
+    suitability = Raster(0)
+    
+    for factor, weight in weights.items():
+        raster = Raster(factors[factor])
+        # توحيد القيم بين 0-100
+        normalized = (raster - raster.minimum) / (raster.maximum - raster.minimum) * 100
+        suitability += normalized * weight
+    
+    suitability.save(f"{output_folder}/Suitability.tif")
+    
+    # تصنيف النتائج
+    classes = {
+        "غير مناسب": [0, 25],
+        "منخفض الملاءمة": [25, 50],
+        "متوسط الملاءمة": [50, 75],
+        "عالي الملاءمة": [75, 100]
+    }
+    classified = Reclassify(suitability, "VALUE", classes)
+    classified.save(f"{output_folder}/Suitability_Classified.tif")
+    
+    print("✅ تم إكمال تحليل التراكب الموزون")
+    return {"suitability": suitability, "classified": classified}
+
+# ============================================================
+# 5. تحليل الاستيفاء المكاني (IDW & Kriging)
+# ============================================================
+def interpolation_analysis(points_layer, field, output_folder):
+    """
+    استيفاء مكاني باستخدام IDW و Kriging
+    """
+    # IDW
+    idw_result = Idw(points_layer, field, cell_size=100, power=2, search_radius=1000)
+    idw_result.save(f"{output_folder}/IDW_Result.tif")
+    
+    # Kriging
+    kriging_result = Kriging(points_layer, field, "SPHERICAL", 100, "PREDICTION")
+    kriging_result.save(f"{output_folder}/Kriging_Result.tif")
+    
+    print("✅ تم إكمال تحليل الاستيفاء")
+    return {"idw": idw_result, "kriging": kriging_result}
+
+# ============================================================
+# 6. تحليل Buffer للآبار في وادي المجنين
+# ============================================================
+def buffer_analysis(wells_layer, output_folder):
+    """
+    إنشاء مناطق عازلة حول الآبار لحماية الموارد المائية
+    """
+    # مناطق عازلة 500 متر
+    buffer_500 = arcpy.Buffer_analysis(wells_layer, f"{output_folder}/Wells_Buffer_500m", "500 Meters")
+    
+    # مناطق عازلة 1 كيلومتر
+    buffer_1000 = arcpy.Buffer_analysis(wells_layer, f"{output_folder}/Wells_Buffer_1km", "1000 Meters")
+    
+    print("✅ تم إكمال تحليل Buffer")
+    return {"buffer_500": buffer_500, "buffer_1000": buffer_1000}
+
+# ============================================================
+# 7. إحصاء مكاني (Moran's I) لتوزيع الأمراض في طرابلس
+# ============================================================
+def spatial_statistics(points_layer, field, output_folder):
+    """
+    تحليل الإحصاء المكاني باستخدام مؤشر موران
+    """
+    # حساب Moran's I
+    moran_result = arcpy.stats.SpatialAutocorrelation(points_layer, field, "INVERSE_DISTANCE")
+    
+    # حفظ النتائج
+    with open(f"{output_folder}/MoransI_Report.txt", "w") as f:
+        f.write("تقرير مؤشر موران - تحليل توزيع الأمراض في طرابلس\n")
+        f.write("=" * 50 + "\n")
+        f.write(moran_result.getOutput(0) + "\n")
+        f.write(f"معامل موران: {moran_result.getOutput(1)}\n")
+        f.write(f"القيمة الاحتمالية: {moran_result.getOutput(2)}\n")
+        f.write(f"درجة Z: {moran_result.getOutput(3)}\n")
+    
+    print("✅ تم إكمال التحليل الإحصائي المكاني")
+    return {"moran": moran_result}
+
+# ============================================================
+# الدالة الرئيسية لتشغيل جميع التحليلات
+# ============================================================
+def main():
+    """
+    تشغيل جميع التحليلات على بيانات ليبيا
+    """
+    # تحديد مسارات البيانات
+    base_path = "C:\\GIS\\Libya_Data\\"
+    output_path = "C:\\GIS\\Libya_Results\\"
+    
+    # 1. تحليل التضاريس (الجبل الغربي)
+    print("\n🔹 بدء تحليل التضاريس...")
+    dem_path = f"{base_path}Western_Mountain_DEM.tif"
+    terrain_analysis(dem_path, output_path)
+    
+    # 2. التحليل الهيدرولوجي (وادي المجنين)
+    print("\n🔹 بدء التحليل الهيدرولوجي...")
+    wadi_dem = f"{base_path}Wadi_Majinin_DEM.tif"
+    hydrological_analysis(wadi_dem, output_path)
+    
+    # 3. تحليل NDVI (الجبل الأخضر)
+    print("\n🔹 بدء تحليل NDVI...")
+    red = f"{base_path}Landsat_Band3.tif"
+    nir = f"{base_path}Landsat_Band4.tif"
+    ndvi_analysis(red, nir, output_path)
+    
+    # 4. التراكب الموزون (السهل الساحلي)
+    print("\n🔹 بدء تحليل التراكب الموزون...")
+    factors = {
+        "slope": f"{output_path}Slope.tif",
+        "soil": f"{base_path}Soil_Map.tif",
+        "vegetation": f"{output_path}NDVI.tif",
+        "water": f"{base_path}Water_Availability.tif"
+    }
+    weights = {"slope": 0.25, "soil": 0.30, "vegetation": 0.25, "water": 0.20}
+    weighted_overlay_analysis(factors, weights, output_path)
+    
+    # 5. Buffer للآبار
+    print("\n🔹 بدء تحليل Buffer...")
+    wells = f"{base_path}Wells.shp"
+    buffer_analysis(wells, output_path)
+    
+    print("\n✅ تم إكمال جميع التحليلات بنجاح!")
+    print(f"📍 النتائج محفوظة في: {output_path}")
+
+if __name__ == "__main__":
+    main()
+        </pre>
+        <div style="background: #2d3748; padding: 8px 12px; border-radius: 8px; margin-top: 8px; direction:rtl; text-align:right; font-size:0.8rem;">
+            <i class="fas fa-info-circle" style="color: #f0c040;"></i> 
+            <span style="color: #e0e0e0;">هذه الشيفرة تدمج جميع أنواع التحليل المكاني وتطبقها على مناطق مختلفة في ليبيا (الجبل الغربي، وادي المجنين، الجبل الأخضر، السهل الساحلي، طرابلس).</span>
+        </div>
+    </div>
+
+</div>
+<!-- ===== END أنواع التحليل المكاني ===== -->
             <!-- ===== دورة عمل GIS (Workflow) ===== -->
     <div class="info-box green">
         <h4 style="color: #2f855a;">🔄 دورة عمل GIS (GIS Workflow)</h4>
