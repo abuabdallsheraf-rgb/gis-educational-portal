@@ -1769,38 +1769,173 @@
         </div>
     </div>
 
-    <!-- ===== SPATIAL STATISTICS ===== -->
-    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
-        <h4 style="color: #2b6cb0;">📊 الإحصاء المكاني (Spatial Statistics)</h4>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem;">
-            <div style="background: white; border-radius: 12px; padding: 0.6rem; text-align: center; border-left: 4px solid #2b6cb0;">
-                <div style="font-weight: 700; font-size: 0.75rem;">Moran's I</div>
-                <span style="font-size:0.6rem;">الارتباط المكاني</span>
-                <div style="font-size:0.55rem; color:#4a5568;">-1 إلى +1</div>
+   <!-- ===== SPATIAL STATISTICS ===== -->
+<div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+    <h4 style="color: #2b6cb0;">📊 الإحصاء المكاني (Spatial Statistics)</h4>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem;">
+        <div style="background: white; border-radius: 12px; padding: 0.6rem; text-align: center; border-left: 4px solid #2b6cb0;">
+            <div style="font-weight: 700; font-size: 0.75rem;">Moran's I</div>
+            <span style="font-size:0.6rem;">الارتباط المكاني</span>
+            <div style="font-size:0.55rem; color:#4a5568;">-1 إلى +1</div>
+        </div>
+        <div style="background: white; border-radius: 12px; padding: 0.6rem; text-align: center; border-left: 4px solid #e53e3e;">
+            <div style="font-weight: 700; font-size: 0.75rem;">Hot Spot</div>
+            <span style="font-size:0.6rem;">البقع الساخنة</span>
+            <div style="font-size:0.55rem; color:#4a5568;">Getis-Ord Gi*</div>
+        </div>
+        <div style="background: white; border-radius: 12px; padding: 0.6rem; text-align: center; border-left: 4px solid #38a169;">
+            <div style="font-weight: 700; font-size: 0.75rem;">Mean Center</div>
+            <span style="font-size:0.6rem;">المركز المتوسط</span>
+            <div style="font-size:0.55rem; color:#4a5568;">(x̄, ȳ)</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 0.8rem; background: white; border-radius: 16px; padding: 0.8rem; border: 1px solid #bee3f8;">
+        <div style="font-weight: 600; font-size: 0.85rem; color: #2b6cb0;">📐 معادلات الإحصاء المكاني</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem; font-size:0.7rem; margin-top:4px; direction:ltr; text-align:left;">
+            <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Moran's I</strong> = n/Σw × Σw(x−x̄)(x−x̄)/Σ(x−x̄)²</div>
+            <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Mean Center</strong> = (Σxᵢ/n, Σyᵢ/n)</div>
+            <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Standard Distance</strong> = √[Σ(xᵢ-x̄)²/n + Σ(yᵢ-ȳ)²/n]</div>
+            <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Geary's C</strong> = (n-1)/2Σw × Σw(xᵢ-xⱼ)²/Σ(xᵢ-x̄)²</div>
+        </div>
+    </div>
+
+    <!-- ===== EXTENDED PART: MATH EQUATIONS + EXAMPLES (ArcGIS / QGIS) ===== -->
+    <div style="margin-top: 1.2rem; background: white; border-radius: 16px; padding: 1.2rem; border: 2px solid #2b6cb0; box-shadow: 0 4px 12px rgba(43,108,176,0.15);">
+        <div style="font-weight: 700; font-size: 1rem; color: #1a365d; margin-bottom: 0.8rem; border-bottom: 2px solid #bee3f8; padding-bottom: 0.4rem;">
+            📈 تفصيل رياضي متقدم مع أمثلة تطبيقية في ArcGIS Pro و QGIS
+        </div>
+
+        <!-- 1. Moran's I -->
+        <div style="margin-bottom: 1.5rem; background: #f7fafc; border-radius: 12px; padding: 0.8rem 1rem;">
+            <div style="font-weight: 700; color: #2b6cb0; font-size: 0.95rem;">🔹 1. مؤشر موران (Moran's I) – الارتباط المكاني العالمي</div>
+            <div style="font-size: 0.85rem; margin-top: 0.4rem; direction: ltr; text-align: left; background: #edf2f7; padding: 0.5rem 0.8rem; border-radius: 8px; font-family: 'Courier New', monospace;">
+                I = [ n / ΣᵢΣⱼ wᵢⱼ ] × [ ΣᵢΣⱼ wᵢⱼ (xᵢ - x̄)(xⱼ - x̄) / Σᵢ (xᵢ - x̄)² ]
             </div>
-            <div style="background: white; border-radius: 12px; padding: 0.6rem; text-align: center; border-left: 4px solid #e53e3e;">
-                <div style="font-weight: 700; font-size: 0.75rem;">Hot Spot</div>
-                <span style="font-size:0.6rem;">البقع الساخنة</span>
-                <div style="font-size:0.55rem; color:#4a5568;">Getis-Ord Gi*</div>
+            <ul style="font-size: 0.8rem; margin-top: 0.4rem; list-style: square; padding-right: 1.2rem;">
+                <li><strong>التفسير:</strong> I &gt; 0 → تكتل (Clustered) ، I ≈ 0 → عشوائي (Random) ، I &lt; 0 → تفرق (Dispersed)</li>
+                <li><strong>مثال (ArcGIS Pro):</strong> باستخدام أداة <code>Spatial Autocorrelation (Morans I)</code> على بيانات الجرائم في مدينة، قمنا بحساب I = 0.42 بقيمة p = 0.001 → دليل قوي على تكتل الجرائم في أحياء محددة.</li>
+                <li><strong>مثال (QGIS):</strong> عبر <code>Processing Toolbox → Moran's I</code>، طبّقناها على نقاط محطات جودة الهواء، فكان I = -0.12 (p = 0.32) → توزيع عشوائي غير معنوي.</li>
+                <li><strong>حساب يدوي:</strong> إذا كان لدينا 5 مناطق بقيم سكانية (100, 80, 120, 90, 110) ومصفوفة جوار، نحصل على I = 0.15 كما في المثال السابق.</li>
+            </ul>
+        </div>
+
+        <!-- 2. Getis-Ord Gi* (Hot Spot) -->
+        <div style="margin-bottom: 1.5rem; background: #f7fafc; border-radius: 12px; padding: 0.8rem 1rem;">
+            <div style="font-weight: 700; color: #e53e3e; font-size: 0.95rem;">🔹 2. إحصائية البقع الساخنة (Getis-Ord Gi*)</div>
+            <div style="font-size: 0.85rem; margin-top: 0.4rem; direction: ltr; text-align: left; background: #edf2f7; padding: 0.5rem 0.8rem; border-radius: 8px; font-family: 'Courier New', monospace;">
+                Gi* = [ Σⱼ wᵢⱼ xⱼ - x̄ Σⱼ wᵢⱼ ] / [ S × √( (n Σⱼ wᵢⱼ² - (Σⱼ wᵢⱼ)²) / (n-1) ) ]
             </div>
-            <div style="background: white; border-radius: 12px; padding: 0.6rem; text-align: center; border-left: 4px solid #38a169;">
-                <div style="font-weight: 700; font-size: 0.75rem;">Mean Center</div>
-                <span style="font-size:0.6rem;">المركز المتوسط</span>
-                <div style="font-size:0.55rem; color:#4a5568;">(x̄, ȳ)</div>
+            <ul style="font-size: 0.8rem; margin-top: 0.4rem; list-style: square; padding-right: 1.2rem;">
+                <li><strong>التفسير:</strong> قيم Z كبيرة موجبة → بقع ساخنة (تركيز عالٍ)، قيم Z سالبة → بقع باردة (تركيز منخفض).</li>
+                <li><strong>مثال (ArcGIS Pro):</strong> أداة <code>Optimized Hot Spot Analysis</code> على بيانات الحوادث المرورية، حددت 3 بقع ساخنة عند تقاطعات رئيسية (Z > 2.58، p < 0.01).</li>
+                <li><strong>مثال (QGIS):</strong> باستخدام <code>Hot Spot Analysis (Getis-Ord Gi*)</code> على نقاط بيع العقارات، ظهرت بقع ساخنة في المناطق القريبة من الجامعة (Z = 3.1).</li>
+                <li><strong>تطبيق:</strong> تستخدم في الصحة العامة لتحديد بؤر الأمراض، وفي الاقتصاد لتحديد مناطق النشاط التجاري.</li>
+            </ul>
+        </div>
+
+        <!-- 3. Mean Center & Standard Distance -->
+        <div style="margin-bottom: 1.5rem; background: #f7fafc; border-radius: 12px; padding: 0.8rem 1rem;">
+            <div style="font-weight: 700; color: #38a169; font-size: 0.95rem;">🔹 3. المركز المتوسط والمسافة المعيارية (Mean Center &amp; Standard Distance)</div>
+            <div style="font-size: 0.85rem; margin-top: 0.4rem; direction: ltr; text-align: left; background: #edf2f7; padding: 0.5rem 0.8rem; border-radius: 8px; font-family: 'Courier New', monospace;">
+                Mean Center: (x̄, ȳ) = ( Σxᵢ/n , Σyᵢ/n ) <br>
+                Standard Distance: SD = √[ Σ(xᵢ-x̄)²/n + Σ(yᵢ-ȳ)²/n ]
+            </div>
+            <ul style="font-size: 0.8rem; margin-top: 0.4rem; list-style: square; padding-right: 1.2rem;">
+                <li><strong>التفسير:</strong> المركز المتوسط يمثل متوسط موقع النقاط، والمسافة المعيارية تعكس التشتت المكاني حول المركز.</li>
+                <li><strong>مثال (ArcGIS Pro):</strong> أداة <code>Mean Center</code> على مواقع متاجر سلسلة غذائية، أظهرت أن المركز يقع عند تقاطع شارعي النيل والجمهورية، و SD = 1.2 كم مما يشير إلى تركيز قريب.</li>
+                <li><strong>مثال (QGIS):</strong> باستخدام <code>Mean Coordinate(s)</code> على نقاط الآبار، حصلنا على (x̄ = 520000, ȳ = 3800000) في UTM Zone 34N.</li>
+                <li><strong>حساب يدوي:</strong> لنقاط (2,3) و (4,5) و (6,7) → المركز (4,5) و SD = √[( (4+0+4)/3 ) + ( (4+0+4)/3 )] = √(2.667+2.667) = 2.31</li>
+            </ul>
+        </div>
+
+        <!-- 4. Geary's C -->
+        <div style="margin-bottom: 1.5rem; background: #f7fafc; border-radius: 12px; padding: 0.8rem 1rem;">
+            <div style="font-weight: 700; color: #805ad5; font-size: 0.95rem;">🔹 4. مؤشر جيري (Geary's C) – التباين المكاني</div>
+            <div style="font-size: 0.85rem; margin-top: 0.4rem; direction: ltr; text-align: left; background: #edf2f7; padding: 0.5rem 0.8rem; border-radius: 8px; font-family: 'Courier New', monospace;">
+                C = [ (n-1) / 2ΣᵢΣⱼ wᵢⱼ ] × [ ΣᵢΣⱼ wᵢⱼ (xᵢ - xⱼ)² / Σᵢ (xᵢ - x̄)² ]
+            </div>
+            <ul style="font-size: 0.8rem; margin-top: 0.4rem; list-style: square; padding-right: 1.2rem;">
+                <li><strong>التفسير:</strong> C يتراوح بين 0 و 2. C &lt; 1 → ارتباط موجب (تشابه بين الجيران)، C &gt; 1 → ارتباط سالب (تباين بين الجيران).</li>
+                <li><strong>مثال (ArcGIS Pro):</strong> أداة <code>Geary's C</code> على أسعار المنازل، أعطت C = 0.65 (p = 0.02) → دلالة على أن الأسعار المتجاورة متشابهة (تكتل سعري).</li>
+                <li><strong>مثال (QGIS):</strong> باستخدام <code>Geary's C</code> عبر <code>R</code> داخل QGIS، على بيانات درجة الحرارة، كانت C = 1.24 → تباين مكاني في درجات الحرارة بين المناطق المجاورة.</li>
+                <li><strong>الفرق بين Moran's I و Geary's C:</strong> Moran's I أكثر حساسية للقيم المتطرفة، بينما Geary's C أكثر حساسية للاختلافات المحلية بين الجيران.</li>
+            </ul>
+        </div>
+
+        <!-- 5. General G Statistics -->
+        <div style="margin-bottom: 1.5rem; background: #f7fafc; border-radius: 12px; padding: 0.8rem 1rem;">
+            <div style="font-weight: 700; color: #d69e2e; font-size: 0.95rem;">🔹 5. إحصائية General G – التكتل العام</div>
+            <div style="font-size: 0.85rem; margin-top: 0.4rem; direction: ltr; text-align: left; background: #edf2f7; padding: 0.5rem 0.8rem; border-radius: 8px; font-family: 'Courier New', monospace;">
+                G = [ ΣᵢΣⱼ wᵢⱼ xᵢ xⱼ ] / [ ΣᵢΣⱼ xᵢ xⱼ ]   ,   i ≠ j
+            </div>
+            <ul style="font-size: 0.8rem; margin-top: 0.4rem; list-style: square; padding-right: 1.2rem;">
+                <li><strong>التفسير:</strong> G &gt; E(G) → تكتل للقيم العالية، G &lt; E(G) → تكتل للقيم المنخفضة.</li>
+                <li><strong>مثال (ArcGIS Pro):</strong> أداة <code>General G</code> على بيانات الدخل الشهري للأسر، أعطت G = 0.025 مع p = 0.001 → تكتل للدخل المرتفع في مناطق محددة.</li>
+                <li><strong>مثال (QGIS):</strong> باستخدام <code>General G</code> عبر <code>R Stats</code> على بيانات التلوث، كانت G = 0.018 → تكتل للقيم المنخفضة (مناطق نظيفة).</li>
+            </ul>
+        </div>
+
+        <!-- 6. Average Nearest Neighbor -->
+        <div style="background: #f7fafc; border-radius: 12px; padding: 0.8rem 1rem;">
+            <div style="font-weight: 700; color: #2b6cb0; font-size: 0.95rem;">🔹 6. متوسط أقرب جار (Average Nearest Neighbor)</div>
+            <div style="font-size: 0.85rem; margin-top: 0.4rem; direction: ltr; text-align: left; background: #edf2f7; padding: 0.5rem 0.8rem; border-radius: 8px; font-family: 'Courier New', monospace;">
+                ANN = d̄_obs / d̄_exp  ,  حيث d̄_exp = 1 / 2√(n/A)
+            </div>
+            <ul style="font-size: 0.8rem; margin-top: 0.4rem; list-style: square; padding-right: 1.2rem;">
+                <li><strong>التفسير:</strong> ANN &lt; 1 → تكتل، ANN = 1 → عشوائي، ANN &gt; 1 → منتظم.</li>
+                <li><strong>مثال (ArcGIS Pro):</strong> أداة <code>Average Nearest Neighbor</code> على نقاط الأشجار في غابة، ANN = 0.68 (Z = -2.5, p = 0.01) → تكتل معنوي في توزيع الأشجار.</li>
+                <li><strong>مثال (QGIS):</strong> باستخدام <code>Nearest Neighbour Analysis</code> على نقاط الحفريات، ANN = 1.21 (Z = 1.8, p = 0.07) → توزيع شبه منتظم عند مستوى 90%.</li>
+                <li><strong>حساب يدوي:</strong> 10 نقاط في مساحة 100 كم²: d̄_exp = 1/(2√(10/100)) = 1/(2×0.316) = 1.58 كم. إذا كانت d̄_obs = 1.2 كم → ANN = 0.76 → تكتل.</li>
+            </ul>
+        </div>
+
+        <!-- ===== أمثلة عملية في ArcGIS و QGIS ===== -->
+        <div style="margin-top: 1.5rem; background: #e2e8f0; border-radius: 14px; padding: 1rem; border-right: 6px solid #2b6cb0;">
+            <div style="font-weight: 700; font-size: 0.95rem; color: #1a365d;">🛠️ أمثلة عملية خطوة بخطوة في ArcGIS Pro و QGIS</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem; font-size: 0.8rem;">
+                <div style="background: white; border-radius: 12px; padding: 0.8rem;">
+                    <div style="font-weight: 700; color: #2b6cb0;">ArcGIS Pro</div>
+                    <ul style="list-style: none; padding: 0; margin: 0.4rem 0;">
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Moran's I:</strong> Spatial Statistics → Analyzing Patterns → Spatial Autocorrelation (Morans I)</li>
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Hot Spot:</strong> Mapping Clusters → Optimized Hot Spot Analysis</li>
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Mean Center:</strong> Measuring Geographic Distributions → Mean Center</li>
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Geary's C:</strong> عبر ArcToolbox → Spatial Statistics → Similarity → Gearys C</li>
+                        <li style="padding: 0.2rem 0;">🔹 <strong>ANN:</strong> Analyzing Patterns → Average Nearest Neighbor</li>
+                    </ul>
+                </div>
+                <div style="background: white; border-radius: 12px; padding: 0.8rem;">
+                    <div style="font-weight: 700; color: #38a169;">QGIS</div>
+                    <ul style="list-style: none; padding: 0; margin: 0.4rem 0;">
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Moran's I:</strong> Processing Toolbox → Moran's I (vector)</li>
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Hot Spot:</strong> Processing → Hot Spot Analysis (Getis-Ord Gi*)</li>
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Mean Center:</strong> Vector analysis → Mean Coordinate(s)</li>
+                        <li style="padding: 0.2rem 0; border-bottom: 1px dashed #e2e8f0;">🔹 <strong>Geary's C:</strong> عبر R Provider → Geary's C (ضمن أدوات الإحصاء المكاني)</li>
+                        <li style="padding: 0.2rem 0;">🔹 <strong>ANN:</strong> Vector analysis → Nearest Neighbour Analysis</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div style="margin-top: 0.8rem; background: white; border-radius: 16px; padding: 0.8rem; border: 1px solid #bee3f8;">
-            <div style="font-weight: 600; font-size: 0.85rem; color: #2b6cb0;">📐 معادلات الإحصاء المكاني</div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem; font-size:0.7rem; margin-top:4px; direction:ltr; text-align:left;">
-                <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Moran's I</strong> = n/Σw × Σw(x−x̄)(x−x̄)/Σ(x−x̄)²</div>
-                <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Mean Center</strong> = (Σxᵢ/n, Σyᵢ/n)</div>
-                <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Standard Distance</strong> = √[Σ(xᵢ-x̄)²/n + Σ(yᵢ-ȳ)²/n]</div>
-                <div style="background:#edf2f7; padding:0.2rem 0.6rem; border-radius:8px;"><strong>Geary's C</strong> = (n-1)/2Σw × Σw(xᵢ-xⱼ)²/Σ(xᵢ-x̄)²</div>
-            </div>
+        <!-- ملخص الجداول -->
+        <div style="margin-top: 1.2rem; background: white; border-radius: 12px; padding: 0.8rem; border: 1px solid #2b6cb0;">
+            <div style="font-weight: 700; font-size: 0.9rem; color: #1a365d;">📋 ملخص المؤشرات الإحصائية المكانية وتفسيراتها</div>
+            <table style="width:100%; font-size:0.75rem; border-collapse:collapse; margin-top:0.4rem;">
+                <thead style="background:#2b6cb0; color:white;">
+                    <tr><th>المؤشر</th><th>النطاق</th><th>القيمة &lt; 1</th><th>القيمة ≈ 1</th><th>القيمة &gt; 1</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Moran's I</td><td>[-1, +1]</td><td>تفرق (Dispersed)</td><td>عشوائي (Random)</td><td>تكتل (Clustered)</td></tr>
+                    <tr><td>Geary's C</td><td>[0, 2]</td><td>ارتباط موجب (تشابه)</td><td>عشوائي</td><td>ارتباط سالب (تباين)</td></tr>
+                    <tr><td>ANN</td><td>[0, ∞)</td><td>تكتل (Clustered)</td><td>عشوائي (Random)</td><td>منتظم (Dispersed)</td></tr>
+                    <tr><td>General G</td><td>[0, 1]</td><td>تكتل قيم منخفضة</td><td>عشوائي</td><td>تكتل قيم عالية</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
+    <!-- ===== END EXTENDED ===== -->
+</div>
 
     <!-- ===== SPATIAL INTERPOLATION ===== -->
     <div class="info-box" style="background: linear-gradient(135deg, #f0fff4, #c6f6d5); border-color: #38a169;">
