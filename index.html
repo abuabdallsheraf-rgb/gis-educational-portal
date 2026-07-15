@@ -121,20 +121,97 @@
             align-items: center;
             width: calc(100% - 100px);
             z-index: 5;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         .logo-item-box {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 10px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.9rem;
-            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 8px 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 0.85rem;
+            font-weight: 700;
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
             gap: 10px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
         }
+        .logo-item-box:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        .logo-item-box img {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        .logo-item-box .logo-fallback {
+            display: none;
+            font-size: 1.2rem;
+            color: var(--satellite-cyan);
+        }
+
+        /* ===== ANNOUNCEMENT BOX ===== */
+        .announcement-box {
+            background: linear-gradient(135deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF);
+            background-size: 300% 300%;
+            animation: gradientShift 6s ease-in-out infinite;
+            padding: 10px 22px;
+            border-radius: 50px;
+            color: #1a202c;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 25px rgba(255, 107, 107, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+            cursor: default;
+            white-space: nowrap;
+        }
+        .announcement-box:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 40px rgba(255, 107, 107, 0.7);
+        }
+        .announcement-box i {
+            font-size: 1.2rem;
+            color: #1a202c;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        .announcement-box .announcement-highlight {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+        }
+        .announcement-box .announcement-date {
+            background: rgba(0,0,0,0.15);
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.8rem;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+        }
+
         .earth-container-3d {
             width: 160px;
             height: 160px;
@@ -463,8 +540,30 @@
             .env-grid-metrics { grid-template-columns: repeat(2, 1fr); }
             .weather-layout-container { grid-template-columns: 1fr; }
         }
+        @media (max-width: 992px) {
+            .hero-top-logos {
+                justify-content: center;
+                gap: 10px;
+                top: 15px;
+                left: 15px; right: 15px;
+                width: calc(100% - 30px);
+            }
+            .announcement-box {
+                font-size: 0.75rem;
+                padding: 8px 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+                white-space: normal;
+            }
+            .logo-item-box {
+                font-size: 0.7rem;
+                padding: 6px 12px;
+            }
+            .logo-item-box img {
+                height: 25px;
+            }
+        }
         @media (max-width: 768px) {
-            .hero-top-logos { display: none; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .cards-hub-grid { grid-template-columns: 1fr; }
             .weather-api-grid { grid-template-columns: 1fr; }
@@ -472,6 +571,29 @@
             .hero-content h1 { font-size: 2rem; }
             .navbar-inner { flex-wrap: wrap; }
             .nav-menu-container { flex-wrap: wrap; justify-content: center; }
+            .hero-top-logos {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                top: 10px;
+            }
+            .announcement-box {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.7rem;
+                padding: 8px 12px;
+                border-radius: 30px;
+            }
+            .announcement-box .announcement-highlight {
+                font-size: 0.65rem;
+                padding: 2px 8px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.6rem; }
+            .hero-content .en-title { font-size: 1.2rem; }
+            .logo-item-box { font-size: 0.6rem; padding: 4px 10px; }
+            .logo-item-box img { height: 20px; }
         }
 
         /* ===== FOOTER ===== */
@@ -509,10 +631,30 @@
         <div class="particle" style="width:4px; height:4px; left:45%; animation-delay:2s;"></div>
         <div class="particle" style="width:8px; height:8px; left:75%; animation-delay:4s;"></div>
     </div>
+    
+    <!-- ===== LOGOS & EVENT ANNOUNCEMENT ===== -->
     <div class="hero-top-logos">
-        <div class="logo-item-box"><i class="fas fa-university" style="color:var(--satellite-cyan);"></i> University of Tripoli جامعة طرابلس </div>
-        <div class="logo-item-box">Faculty of Agriculture كلية الزراعة <i class="fas fa-seedling" style="color:var(--vegetation-green);"></i></div>
+        <!-- University of Tripoli Logo -->
+        <div class="logo-item-box">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/University_of_Tripoli_logo.svg/200px-University_of_Tripoli_logo.svg.png" alt="University of Tripoli Logo" loading="lazy">
+            <span>University of Tripoli</span>
+        </div>
+        
+        <!-- ===== COLORFUL ANNOUNCEMENT BOX ===== -->
+        <div class="announcement-box">
+            <i class="fas fa-bullhorn"></i>
+            <span><strong>GIS DAY</strong> <span class="announcement-date">Nov 18, 2026</span></span>
+            <span class="announcement-highlight">🗺️ Workshops &amp; Exhibitions</span>
+        </div>
+        
+        <!-- Faculty of Agriculture Logo -->
+        <div class="logo-item-box">
+            <img src="https://www.agriculture.edu.ly/img/logo.png" alt="Faculty of Agriculture Logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback" style="display:none;"><i class="fas fa-seedling"></i></span>
+            <span>Faculty of Agriculture</span>
+        </div>
     </div>
+
     <div class="earth-container-3d"></div>
     <div class="hero-content">
         <h1>منصة التقنيات الجيومكانية الذكية وتطبيقاتها <span class="en-title">Advanced Geospatial Technologies Platform</span></h1>
@@ -759,6 +901,142 @@
             </div>
         </div>
     </div>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4><i class="fas fa-university"></i> الجهات المنظمة</h4>
+                <a href="#">University of Tripoli</a>
+                <a href="#">Faculty of Agriculture</a>
+                <a href="#">Department of Geomatics</a>
+                <a href="#">Research &amp; Innovation Office</a>
+            </div>
+            <div>
+                <h4><i class="fas fa-link"></i> روابط سريعة</h4>
+                <a href="#">الدورات التدريبية</a>
+                <a href="#">المكتبة العلمية</a>
+                <a href="#">خرائط تفاعلية</a>
+                <a href="#">تقارير بحثية</a>
+            </div>
+            <div>
+                <h4><i class="fas fa-globe"></i> المنصات الدولية</h4>
+                <a href="#">Google Earth Engine</a>
+                <a href="#">OpenStreetMap</a>
+                <a href="#">USGS Earth Explorer</a>
+                <a href="#">Copernicus Open Access</a>
+            </div>
+            <div>
+                <h4><i class="fas fa-envelope"></i> تواصل معنا</h4>
+                <a href="mailto:gis@agriculture.edu.ly"><i class="fas fa-envelope"></i> gis@agriculture.edu.ly</a>
+                <a href="#"><i class="fas fa-phone"></i> +218 21 333 4444</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</a>
+                <a href="#"><i class="fab fa-twitter"></i> @GeoAgriLibya</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 منصة التقنيات الجيومكانية الذكية - جامعة طرابلس، كلية الزراعة. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+
+</div><!-- end container -->
+
+<!-- ============================================================ -->
+<!-- SCRIPTS -->
+<!-- ============================================================ -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // ===== LEAFET MAP INITIALIZATION =====
+    const map = L.map('map').setView([32.8872, 13.1913], 13);
+
+    // Base layer objects
+    const baseLayers = {
+        google: L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        }),
+        esri: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 19
+        }),
+        osm: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        })
+    };
+
+    let currentBase = 'google';
+    baseLayers.google.addTo(map);
+
+    // Analysis overlay layers (placeholder)
+    let analysisLayers = {};
+
+    function switchBaseLayer(layerName) {
+        // Remove all base layers
+        Object.keys(baseLayers).forEach(key => {
+            if (map.hasLayer(baseLayers[key])) {
+                map.removeLayer(baseLayers[key]);
+            }
+        });
+        currentBase = layerName;
+        baseLayers[layerName].addTo(map);
+
+        // Update button active state
+        document.querySelectorAll('.dash-switcher-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        // Find the clicked button (first in stack)
+        const btns = document.querySelectorAll('.dash-switcher-btn');
+        if (layerName === 'google') btns[0].classList.add('active');
+        else if (layerName === 'esri') btns[1].classList.add('active');
+        else if (layerName === 'osm') btns[2].classList.add('active');
+    }
+
+    function toggleAnalysisLayer(type) {
+        alert(`تحليل الطبقة: ${type} - سيتم تفعيلها في الإصدار المتقدم.`);
+    }
+
+    // ===== WEATHER WIDGET SIMULATION =====
+    function updateWeather() {
+        const temps = [22, 24, 26, 28, 30, 32];
+        const humidities = [40, 45, 50, 55, 60, 65];
+        const winds = [3, 4, 5, 6, 7, 8];
+        const conditions = ['صافي', 'غائم جزئياً', 'غائم', 'ممطر خفيف', 'مشمس', 'رياح معتدلة'];
+
+        document.getElementById('live-temp').innerHTML = `${temps[Math.floor(Math.random() * temps.length)]} °C`;
+        document.getElementById('live-humidity').innerHTML = `${humidities[Math.floor(Math.random() * humidities.length)]} %`;
+        document.getElementById('live-wind').innerHTML = `${winds[Math.floor(Math.random() * winds.length)]} m/s`;
+        document.getElementById('live-condition').innerHTML = conditions[Math.floor(Math.random() * conditions.length)];
+    }
+    updateWeather();
+    setInterval(updateWeather, 30000);
+
+    // ===== ENVIRONMENTAL METRICS SIMULATION =====
+    function updateEnvMetrics() {
+        const ndvi = (0.3 + Math.random() * 0.4).toFixed(2);
+        const soil = (12 + Math.random() * 25).toFixed(0);
+        const rain = (150 + Math.random() * 150).toFixed(0);
+        const lst = (28 + Math.random() * 10).toFixed(0);
+        const risk = Math.random() > 0.5 ? 'مرتفع' : 'متوسط';
+
+        document.getElementById('env-ndvi').innerHTML = ndvi;
+        document.getElementById('env-soil-moisture').innerHTML = `${soil} %`;
+        document.getElementById('env-rain').innerHTML = `${rain} ملم`;
+        document.getElementById('env-lst').innerHTML = `${lst} °C`;
+        document.getElementById('env-drought-risk').innerHTML = risk;
+        document.getElementById('env-drought-risk').style.color = risk === 'مرتفع' ? '#e53e3e' : '#FB8C00';
+    }
+    updateEnvMetrics();
+    setInterval(updateEnvMetrics, 15000);
+
+    // ===== RESPONSIVE MAP RESIZE =====
+    window.addEventListener('resize', function() {
+        map.invalidateSize();
+    });
+</script>
+
+</body>
+</html>
 <!-- ============================================================ -->
     <!-- ===== أساسيات نظم المعلومات الجغرافية ===== -->
     <!-- ============================================================ -->
