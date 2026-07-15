@@ -455,6 +455,270 @@
             margin: 10px 0; direction: ltr;
         }
 
+        /* ===== ANNOUNCEMENTS BOX ===== */
+        .announcement-box {
+            background: linear-gradient(135deg, #0B1F3A, #1a3a5c);
+            border-radius: 20px;
+            padding: 30px 35px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(0, 188, 212, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 188, 212, 0.15);
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        .announcement-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 188, 212, 0.1), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .announcement-box::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(46, 125, 50, 0.08), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .announcement-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .announcement-header .icon-badge {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--satellite-cyan), #00838f);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 188, 212, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(0, 188, 212, 0.6); }
+        }
+        .announcement-header h3 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            margin: 0;
+            color: white;
+        }
+        .announcement-header h3 small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #94a3b8;
+            display: block;
+        }
+        .announcement-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .announcement-item {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            padding: 18px 22px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .announcement-item:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            border-color: rgba(0, 188, 212, 0.3);
+        }
+        .announcement-item .date-badge {
+            background: rgba(0, 188, 212, 0.2);
+            border-radius: 10px;
+            padding: 6px 14px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--satellite-cyan);
+            white-space: nowrap;
+            border: 1px solid rgba(0, 188, 212, 0.15);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .announcement-item .item-content {
+            flex: 1;
+        }
+        .announcement-item .item-content h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: white;
+            margin: 0 0 4px 0;
+        }
+        .announcement-item .item-content p {
+            font-size: 0.8rem;
+            color: #cbd5e0;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .announcement-item .item-content .tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-top: 5px;
+            background: rgba(46, 125, 50, 0.25);
+            color: #81c784;
+            border: 1px solid rgba(46, 125, 50, 0.2);
+        }
+        .announcement-item .item-content .tag.highlight {
+            background: rgba(251, 140, 0, 0.25);
+            color: #ffb74d;
+            border-color: rgba(251, 140, 0, 0.2);
+        }
+        .announcement-item .item-content .tag.urgent {
+            background: rgba(229, 62, 62, 0.25);
+            color: #ef9a9a;
+            border-color: rgba(229, 62, 62, 0.2);
+        }
+        .announcement-ticker {
+            margin-top: 18px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        .announcement-ticker i {
+            color: var(--satellite-cyan);
+            font-size: 1rem;
+        }
+        .announcement-ticker .countdown {
+            font-weight: 700;
+            color: white;
+            background: rgba(0, 188, 212, 0.15);
+            padding: 2px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 188, 212, 0.15);
+            font-size: 0.8rem;
+        }
+        .announcement-ticker .countdown span {
+            color: var(--satellite-cyan);
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px) {
+            .announcement-grid {
+                grid-template-columns: 1fr;
+            }
+            .announcement-box {
+                padding: 20px;
+            }
+            .announcement-header h3 {
+                font-size: 1rem;
+            }
+            .announcement-item {
+                padding: 14px 16px;
+                flex-wrap: wrap;
+            }
+            .announcement-item .date-badge {
+                font-size: 0.6rem;
+                padding: 4px 10px;
+            }
+            .announcement-ticker {
+                flex-wrap: wrap;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* ===== SECTION CONTENT STYLES ===== */
+        .section-content {
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .section-content .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .section-content .content-grid .text-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section-content .content-grid .text-content ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-content .content-grid .text-content ul li i {
+            color: var(--gis-blue);
+            width: 20px;
+        }
+        .section-content .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .section-content .feature-card h4 {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--dark-navy);
+            margin-bottom: 10px;
+        }
+        .section-content .feature-card p {
+            color: #718096;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .section-content .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        .section-content .feature-card ul li {
+            padding: 6px 0;
+            font-size: 0.85rem;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-content .feature-card ul li i {
+            color: var(--vegetation-green);
+            width: 18px;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .section-content .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .stats-grid { grid-template-columns: repeat(3, 1fr); }
@@ -541,7 +805,7 @@
             <li class="menu-item-has-children">
                 <a href="#">نظم المعلومات الجغرافية <i class="fas fa-chevron-down"></i></a>
                 <div class="mega-dropdown">
-                    <a href="#gis-fundamentals"><i class="fas fa-info-circle"></i>أساسيات نظم المعلومات الجغرافية (GIS)</a>
+                    <a href="#gis-fundamentals"><i class="fas fa-info-circle"></i> أساسيات نظم المعلومات الجغرافية (GIS)</a>
                     <a href="#geodatabase"><i class="fas fa-database"></i> قواعد البيانات</a>
                     <a href="#spatial-analysis"><i class="fas fa-chart-pie"></i> التحليل المكاني</a>
                     <a href="#topography-applications"><i class="fas fa-mountain"></i> التطبيقات الطبوغرافية</a>
@@ -608,6 +872,28 @@
 <div class="container">
 
     <!-- ============================================================ -->
+    <!-- ANNOUNCEMENTS & EVENTS BOX - STARTING FROM GIS DAY -->
+    <!-- ============================================================ -->
+    <div class="announcement-box" id="announcements">
+        <div class="announcement-header">
+            <div class="icon-badge">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <div>
+                <h3>📢 الإعلانات والفعاليات <small>منذ يوم GIS العالمي</small></h3>
+            </div>
+        </div>
+        <div class="announcement-grid">
+            <div class="announcement-item">
+                <span class="date-badge">18 نوفمبر 2026</span>
+                <div class="item-content">
+                    <h4>🌍 GIS Day 2026 — الاحتفال العالمي</h4>
+                    <p>  أنطلاق فعاليات يوم نظم المعلومات الجغرافية العالمي تحت شعار "رسم مستقبل كوكبنا" بجامعة طرابلس - كلية الزراعة - قسم التربة و المياه.</p>
+                    <span class="tag highlight">فعالية رئيسية</span>
+                </div>
+            </div>
+            
+    <!-- ============================================================ -->
     <!-- STATISTICS SECTION -->
     <!-- ============================================================ -->
     <div class="stats-grid">
@@ -660,6 +946,243 @@
             <p>نمذجة الأحواض المائية، وتقدير الجريان السطحي وحصاد مياه الأمطار في المناطق الجافة.</p></div>
             <div class="hub-card-footer">استكشاف المحور <i class="fas fa-arrow-left"></i></div>
         </a>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- GIS FUNDAMENTALS SECTION (FIXED - Content Added) -->
+    <!-- ============================================================ -->
+    <div id="gis-fundamentals" class="section-content">
+        <div class="section-title"><i class="fas fa-map-marked-alt"></i> أساسيات نظم المعلومات الجغرافية (GIS)</div>
+        <div class="info-box blue">
+            <h4>📌 ما هي نظم المعلومات الجغرافية؟</h4>
+            <p>نظم المعلومات الجغرافية (GIS) هي إطار عمل لجمع وإدارة وتحليل البيانات المكانية والجغرافية. تجمع بين الخرائط، البيانات الإحصائية، وتقنيات تحليل المكان لفهم الأنماط والعلاقات في العالم الحقيقي.</p>
+        </div>
+        <div class="content-grid">
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-cogs" style="color:var(--gis-blue);"></i> المكونات الأساسية</h4>
+                    <ul>
+                        <li><i class="fas fa-hard-drive"></i> الأجهزة (Hardware)</li>
+                        <li><i class="fas fa-code"></i> البرمجيات (Software)</li>
+                        <li><i class="fas fa-database"></i> البيانات المكانية (Spatial Data)</li>
+                        <li><i class="fas fa-users"></i> الكوادر البشرية (People)</li>
+                        <li><i class="fas fa-sitemap"></i> المنهجيات والتقنيات (Procedures)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-check-circle" style="color:var(--vegetation-green);"></i> التطبيقات الرئيسية</h4>
+                    <ul>
+                        <li><i class="fas fa-seedling"></i> الزراعة الدقيقة وإدارة المحاصيل</li>
+                        <li><i class="fas fa-tint"></i> إدارة الموارد المائية</li>
+                        <li><i class="fas fa-tree"></i> حماية الغابات والمراعي</li>
+                        <li><i class="fas fa-city"></i> التخطيط الحضري والبنية التحتية</li>
+                        <li><i class="fas fa-globe-asia"></i> مراقبة التغيرات البيئية والتصحر</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- GEODATABASE SECTION -->
+    <!-- ============================================================ -->
+    <div id="geodatabase" class="section-content">
+        <div class="section-title"><i class="fas fa-database"></i> قواعد البيانات المكانية</div>
+        <div class="info-box green">
+            <h4>📊 إدارة البيانات المكانية</h4>
+            <p>قواعد البيانات المكانية (Geodatabases) هي أنظمة تخزين متخصصة تتيح إدارة وتنظيم البيانات الجغرافية بكفاءة. تدعم أنواعاً متعددة من البيانات مثل النقاط، الخطوط، المضلعات، والصور الفضائية.</p>
+        </div>
+        <div class="content-grid">
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-folder-open" style="color:var(--gis-blue);"></i> أنواع قواعد البيانات</h4>
+                    <ul>
+                        <li><i class="fas fa-file"></i> File Geodatabase</li>
+                        <li><i class="fas fa-server"></i> Enterprise Geodatabase</li>
+                        <li><i class="fas fa-cloud"></i> Cloud-based Spatial Databases</li>
+                        <li><i class="fas fa-table"></i> Personal Geodatabase</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-tools" style="color:var(--climate-orange);"></i> أدوات إدارة البيانات</h4>
+                    <ul>
+                        <li><i class="fas fa-edit"></i> استيراد وتصدير البيانات</li>
+                        <li><i class="fas fa-search"></i> الاستعلام المكاني</li>
+                        <li><i class="fas fa-sync"></i> تحديث وتحرير البيانات</li>
+                        <li><i class="fas fa-shield-alt"></i> إدارة الصلاحيات والأمان</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SPATIAL ANALYSIS SECTION -->
+    <!-- ============================================================ -->
+    <div id="spatial-analysis" class="section-content">
+        <div class="section-title"><i class="fas fa-chart-pie"></i> التحليل المكاني</div>
+        <div class="info-box purple">
+            <h4>🔍 أدوات التحليل المكاني</h4>
+            <p>التحليل المكاني هو مجموعة من التقنيات التي تستخدم لدراسة الأنماط الجغرافية، العلاقات بين الظواهر، وإجراء عمليات القياس المكاني. يساعد في اتخاذ القرارات المدعومة بالبيانات.</p>
+        </div>
+        <div class="content-grid">
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-calculator" style="color:var(--gis-blue);"></i> عمليات التحليل الأساسية</h4>
+                    <ul>
+                        <li><i class="fas fa-bullseye"></i> التحليل القريب (Proximity Analysis)</li>
+                        <li><i class="fas fa-layer-group"></i> التراكب (Overlay Analysis)</li>
+                        <li><i class="fas fa-route"></i> تحليل المسارات (Network Analysis)</li>
+                        <li><i class="fas fa-chart-area"></i> التحليل السطحي (Surface Analysis)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-lightbulb" style="color:var(--climate-orange);"></i> تطبيقات التحليل المكاني</h4>
+                    <ul>
+                        <li><i class="fas fa-water"></i> تحديد مناطق الفيضانات</li>
+                        <li><i class="fas fa-seedling"></i> تحديد المناسبية الزراعية</li>
+                        <li><i class="fas fa-map-pin"></i> تحديد مواقع الخدمات</li>
+                        <li><i class="fas fa-globe-asia"></i> تقييم المخاطر البيئية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TOPOGRAPHY APPLICATIONS SECTION -->
+    <!-- ============================================================ -->
+    <div id="topography-applications" class="section-content">
+        <div class="section-title"><i class="fas fa-mountain"></i> التطبيقات الطبوغرافية</div>
+        <div class="info-box orange">
+            <h4>🏔️ تطبيقات GIS في الطبوغرافيا</h4>
+            <p>تطبيقات الطبوغرافيا باستخدام نظم المعلومات الجغرافية تشمل تحليل التضاريس، إنشاء نماذج الارتفاع الرقمية (DEM)، وحساب الانحدار والاتجاهات الجغرافية للمناطق المختلفة.</p>
+        </div>
+        <div class="feature-card">
+            <h4><i class="fas fa-chart-line" style="color:var(--gis-blue);"></i> مخرجات التحليل الطبوغرافي</h4>
+            <ul>
+                <li><i class="fas fa-map"></i> خرائط الكنتور</li>
+                <li><i class="fas fa-arrow-up"></i> نماذج الارتفاع الرقمية (DEM)</li>
+                <li><i class="fas fa-chart-line"></i> خرائط الانحدار والاتجاه</li>
+                <li><i class="fas fa-water"></i> تحليل المسطحات المائية والتصريف</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- GEOLOGY APPLICATIONS SECTION -->
+    <!-- ============================================================ -->
+    <div id="geology-applications" class="section-content">
+        <div class="section-title"><i class="fas fa-gem"></i> التطبيقات الجيولوجية</div>
+        <div class="info-box green">
+            <h4>🔬 تطبيقات الجيولوجيا المكانية</h4>
+            <p>تساعد تقنيات GIS في رسم الخرائط الجيولوجية، تحديد مناطق التعدين، دراسة الصدوع الأرضية، وتحليل تكوينات الصخور والتربة في البيئات المختلفة.</p>
+        </div>
+        <div class="feature-card">
+            <h4><i class="fas fa-bolt" style="color:var(--climate-orange);"></i> التطبيقات الجيولوجية</h4>
+            <ul>
+                <li><i class="fas fa-mountain"></i> رسم الخرائط الجيولوجية</li>
+                <li><i class="fas fa-tools"></i> تحديد مناطق التعدين</li>
+                <li><i class="fas fa-shield-alt"></i> تحليل الزلازل والصدوع</li>
+                <li><i class="fas fa-water"></i> دراسة الموارد الجوفية</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SOIL APPLICATIONS SECTION -->
+    <!-- ============================================================ -->
+    <div id="soil-applications" class="section-content">
+        <div class="section-title"><i class="fas fa-ground"></i> تطبيقات التربة</div>
+        <div class="info-box brown">
+            <h4>🧪 تطبيقات GIS في علوم التربة</h4>
+            <p>تستخدم نظم المعلومات الجغرافية في رسم خرائط خواص التربة، تحليل خصوبتها، مراقبة الملوحة، وتصنيف أنواع التربة وتوزيعها في المناطق الزراعية.</p>
+        </div>
+        <div class="content-grid">
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-chart-bar" style="color:var(--soil-brown);"></i> خواص التربة</h4>
+                    <ul>
+                        <li><i class="fas fa-tint"></i> الرطوبة</li>
+                        <li><i class="fas fa-flask"></i> الحموضة (pH)</li>
+                        <li><i class="fas fa-mortar-pestle"></i> العناصر الغذائية</li>
+                        <li><i class="fas fa-balance-scale"></i> الملوحة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-th-large" style="color:var(--vegetation-green);"></i> تصنيف التربة</h4>
+                    <ul>
+                        <li><i class="fas fa-arrows-alt-h"></i> توزيع أنواع التربة</li>
+                        <li><i class="fas fa-chart-pie"></i> المناسبية الزراعية</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> مناطق التدهور</li>
+                        <li><i class="fas fa-undo-alt"></i> إعادة التأهيل</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- WATER APPLICATIONS SECTION -->
+    <!-- ============================================================ -->
+    <div id="water-applications" class="section-content">
+        <div class="section-title"><i class="fas fa-tint"></i> التطبيقات المائية</div>
+        <div class="info-box blue">
+            <h4>💧 إدارة الموارد المائية باستخدام GIS</h4>
+            <p>تتيح نظم المعلومات الجغرافية تحليل الأحواض المائية، مراقبة جودة المياه، تخطيط شبكات الري، وإدارة موارد المياه الجوفية والسطحية بكفاءة.</p>
+        </div>
+        <div class="feature-card">
+            <h4><i class="fas fa-water" style="color:var(--gis-blue);"></i> تطبيقات الموارد المائية</h4>
+            <ul>
+                <li><i class="fas fa-route"></i> تحليل الأحواض المائية</li>
+                <li><i class="fas fa-chart-area"></i> تقدير الجريان السطحي</li>
+                <li><i class="fas fa-tint"></i> مراقبة جودة المياه</li>
+                <li><i class="fas fa-road"></i> تصميم شبكات الري</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SOIL EROSION APPLICATIONS SECTION -->
+    <!-- ============================================================ -->
+    <div id="soil-erosion-applications" class="section-content">
+        <div class="section-title"><i class="fas fa-earth-asia"></i> انجراف التربة</div>
+        <div class="info-box red">
+            <h4>⚠️ تحليل انجراف التربة</h4>
+            <p>تستخدم نظم المعلومات الجغرافية في تقييم مخاطر انجراف التربة بفعل المياه والرياح، تحديد المناطق المتأثرة، ووضع خطط للحد من التدهور البيئي.</p>
+        </div>
+        <div class="content-grid">
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-exclamation-triangle" style="color:#e53e3e;"></i> عوامل الانجراف</h4>
+                    <ul>
+                        <li><i class="fas fa-mountain"></i> الميل والانحدار</li>
+                        <li><i class="fas fa-water"></i> شدة الأمطار</li>
+                        <li><i class="fas fa-leaf"></i> الغطاء النباتي</li>
+                        <li><i class="fas fa-shield-alt"></i> ممارسات الحفاظ على التربة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-content">
+                <div class="feature-card">
+                    <h4><i class="fas fa-check-double" style="color:var(--vegetation-green);"></i> استراتيجيات المعالجة</h4>
+                    <ul>
+                        <li><i class="fas fa-tree"></i> التشجير</li>
+                        <li><i class="fas fa-draw-polygon"></i> المدرجات الزراعية</li>
+                        <li><i class="fas fa-water"></i> أحواض حصاد المياه</li>
+                        <li><i class="fas fa-shield-alt"></i> أنظمة الحماية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- ============================================================ -->
@@ -759,6 +1282,203 @@
             </div>
         </div>
     </div>
+
+    <!-- ... the rest of the page content remains unchanged ... -->
+
+</div>
+<!-- End Container -->
+
+<!-- ============================================================ -->
+<!-- SCRIPTS -->
+<!-- ============================================================ -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // ============================
+    // ANNOUNCEMENTS COUNTDOWN
+    // ============================
+    (function() {
+        const targetDate = new Date('2026-12-01T09:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const countdownEl = document.getElementById('conferenceCountdown');
+            if (countdownEl) {
+                if (distance < 0) {
+                    countdownEl.innerHTML = 'انطلق المؤتمر!';
+                } else {
+                    countdownEl.innerHTML = `<span>${days}</span> يوم <span>${hours}</span> ساعة <span>${minutes}</span> دقيقة`;
+                }
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+    })();
+
+    // ============================
+    // GIS MAP SETUP
+    // ============================
+    const map = L.map('map').setView([32.8872, 13.1913], 13);
+
+    const googleSat = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0','mt1','mt2','mt3']
+    });
+    const esriSat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 19
+    });
+    const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+    });
+
+    let currentBaseLayer = googleSat;
+    currentBaseLayer.addTo(map);
+
+    const analysisLayers = {
+        dem: false,
+        ndvi: false,
+        erosion: false
+    };
+
+    // Simulated overlay layers (just markers for demo)
+    let demLayer, ndviLayer, erosionLayer;
+
+    function toggleAnalysisLayer(type) {
+        analysisLayers[type] = !analysisLayers[type];
+        if (analysisLayers[type]) {
+            addAnalysisLayer(type);
+        } else {
+            removeAnalysisLayer(type);
+        }
+    }
+
+    function addAnalysisLayer(type) {
+        const center = [32.8872, 13.1913];
+        switch(type) {
+            case 'dem':
+                if (!demLayer) {
+                    demLayer = L.circle(center, { radius: 5000, color: '#8D6E63', fillColor: '#8D6E63', fillOpacity: 0.2, weight: 2 })
+                        .bindPopup('DEM Model Area - Elevation Range: 0-300m');
+                    demLayer.addTo(map);
+                }
+                break;
+            case 'ndvi':
+                if (!ndviLayer) {
+                    ndviLayer = L.circle([32.87, 13.18], { radius: 4000, color: '#2E7D32', fillColor: '#2E7D32', fillOpacity: 0.25, weight: 2 })
+                        .bindPopup('NDVI Vegetation Index - High biomass detected');
+                    ndviLayer.addTo(map);
+                }
+                break;
+            case 'erosion':
+                if (!erosionLayer) {
+                    erosionLayer = L.circle([32.90, 13.20], { radius: 3000, color: '#e53e3e', fillColor: '#e53e3e', fillOpacity: 0.2, weight: 2 })
+                        .bindPopup('Erosion Risk Zone - High susceptibility');
+                    erosionLayer.addTo(map);
+                }
+                break;
+        }
+    }
+
+    function removeAnalysisLayer(type) {
+        switch(type) {
+            case 'dem':
+                if (demLayer) { map.removeLayer(demLayer); demLayer = null; }
+                break;
+            case 'ndvi':
+                if (ndviLayer) { map.removeLayer(ndviLayer); ndviLayer = null; }
+                break;
+            case 'erosion':
+                if (erosionLayer) { map.removeLayer(erosionLayer); erosionLayer = null; }
+                break;
+        }
+    }
+
+    window.toggleAnalysisLayer = toggleAnalysisLayer;
+
+    function switchBaseLayer(type) {
+        map.removeLayer(currentBaseLayer);
+        if (type === 'google') {
+            currentBaseLayer = googleSat;
+        } else if (type === 'esri') {
+            currentBaseLayer = esriSat;
+        } else if (type === 'osm') {
+            currentBaseLayer = osm;
+        }
+        currentBaseLayer.addTo(map);
+        // Update active button
+        document.querySelectorAll('.dash-switcher-btn').forEach(btn => btn.classList.remove('active'));
+        const btns = document.querySelectorAll('.dash-switcher-btn');
+        if (type === 'google') btns[0].classList.add('active');
+        else if (type === 'esri') btns[1].classList.add('active');
+        else if (type === 'osm') btns[2].classList.add('active');
+    }
+    window.switchBaseLayer = switchBaseLayer;
+
+    // ============================
+    // WEATHER FETCH
+    // ============================
+    (function() {
+        const weatherAPI = 'https://api.open-meteo.com/v1/forecast?latitude=32.8872&longitude=13.1913&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m&timezone=auto';
+        const humidityEl = document.getElementById('live-humidity');
+        const windEl = document.getElementById('live-wind');
+        const conditionEl = document.getElementById('live-condition');
+
+        async function fetchWeather() {
+            try {
+                const res = await fetch(weatherAPI);
+                const data = await res.json();
+                if (data.current_weather) {
+                    const temp = data.current_weather.temperature;
+                    document.getElementById('live-temp').innerHTML = `${temp} °C <small style="font-size:0.7rem; font-weight:400; color:#94a3b8;">طرابلس</small>`;
+                }
+                if (data.hourly) {
+                    const humidity = data.hourly.relativehumidity_2m[0] || '--';
+                    humidityEl.textContent = humidity + ' %';
+                    const wind = data.hourly.windspeed_10m[0] || '--';
+                    windEl.textContent = wind + ' m/s';
+                }
+                // Condition based on temperature
+                if (data.current_weather) {
+                    const temp = data.current_weather.temperature;
+                    if (temp > 30) conditionEl.textContent = 'مشمس وحار';
+                    else if (temp > 20) conditionEl.textContent = 'معتدل';
+                    else if (temp > 10) conditionEl.textContent = 'بارد نسبياً';
+                    else conditionEl.textContent = 'بارد';
+                }
+            } catch (e) {
+                console.warn('Weather fetch failed:', e);
+                humidityEl.textContent = '-- %';
+                windEl.textContent = '-- m/s';
+                conditionEl.textContent = 'غير متاح';
+            }
+        }
+
+        fetchWeather();
+        setInterval(fetchWeather, 1800000); // 30 min
+    })();
+
+    // ============================
+    // ENV DASHBOARD SIMULATED UPDATES
+    // ============================
+    setInterval(() => {
+        const ndvi = (0.35 + Math.random() * 0.25).toFixed(2);
+        document.getElementById('env-ndvi').textContent = ndvi;
+        const moisture = (12 + Math.random() * 18).toFixed(1);
+        document.getElementById('env-soil-moisture').textContent = moisture + ' %';
+        const lst = (28 + Math.random() * 10).toFixed(0);
+        document.getElementById('env-lst').textContent = lst + ' °C';
+    }, 30000);
+</script>
+
+</body>
+</html>
 <!-- ============================================================ -->
     <!-- ===== أساسيات نظم المعلومات الجغرافية ===== -->
     <!-- ============================================================ -->
