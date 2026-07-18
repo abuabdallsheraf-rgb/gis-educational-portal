@@ -7055,6 +7055,234 @@
         </div>
     </div>
 
+<!-- ============================================================ -->
+<!-- =====  RS IMAGE ANALYSIS ===== -->
+<!-- ============================================================ -->
+<section class="section" id="rs-fundamentals">
+    <div class="section-title"><i class="fas fa-satellite" style="color: #2b6cb0;"></i> تحليل الصور الجوية و الفضائية في الاستشعار عن بعد (Remote Sensing)</div>
+
+    <!-- intro / subhead -->
+    <div style="display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-bottom: 28px; background: #eef5fa; padding: 12px 24px; border-radius: 60px;">
+        <span style="font-weight: 600; color: #0b3954;"><i class="fas fa-graduation-cap"></i> تحليل الصور الفضائية</span>
+        <span style="color: #1d5a7a;">استخراج المعلومات الكمية والنوعية من صور الأقمار الصناعية والطائرات بدون طيار</span>
+        <span class="badge" style="background: #2b6cb0; color: white; padding: 4px 18px;">أكاديمي</span>
+    </div>
+
+    <!-- المفاهيم الأساسية في كروت -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 16px; margin-bottom: 32px;">
+        <div style="background: #d9eaf5; border-radius: 16px; padding: 14px 16px; text-align: center; border-right: 4px solid #2b6cb0;">
+            <i class="fas fa-eye" style="color:#2b6cb0; font-size:1.6rem;"></i>
+            <div style="font-weight: 700; margin-top: 4px;">تحليل بصري</div>
+            <div style="font-size:0.85rem; color:#1d4a66;">تفسير بالخبرة</div>
+        </div>
+        <div style="background: #d9eaf5; border-radius: 16px; padding: 14px 16px; text-align: center; border-right: 4px solid #2a9d8f;">
+            <i class="fas fa-microchip" style="color:#2a9d8f; font-size:1.6rem;"></i>
+            <div style="font-weight: 700; margin-top: 4px;">تحليل رقمي</div>
+            <div style="font-size:0.85rem; color:#1d4a66;">خوارزميات حاسوبية</div>
+        </div>
+        <div style="background: #d9eaf5; border-radius: 16px; padding: 14px 16px; text-align: center; border-right: 4px solid #e76f51;">
+            <i class="fas fa-brain" style="color:#e76f51; font-size:1.6rem;"></i>
+            <div style="font-weight: 700; margin-top: 4px;">تعلم آلي / عميق</div>
+            <div style="font-size:0.85rem; color:#1d4a66;">CNN, SVM, RF</div>
+        </div>
+        <div style="background: #d9eaf5; border-radius: 16px; padding: 14px 16px; text-align: center; border-right: 4px solid #f4a261;">
+            <i class="fas fa-clock" style="color:#f4a261; font-size:1.6rem;"></i>
+            <div style="font-weight: 700; margin-top: 4px;">تحليل زمني</div>
+            <div style="font-size:0.85rem; color:#1d4a66;">سلاسل زمنية</div>
+        </div>
+        <div style="background: #d9eaf5; border-radius: 16px; padding: 14px 16px; text-align: center; border-right: 4px solid #6f42c1;">
+            <i class="fas fa-satellite-dish" style="color:#6f42c1; font-size:1.6rem;"></i>
+            <div style="font-weight: 700; margin-top: 4px;">راداري (SAR)</div>
+            <div style="font-size:0.85rem; color:#1d4a66;">InSAR, استقطاب</div>
+        </div>
+    </div>
+
+    <!-- ===== المحتوى الرئيسي: أنواع التحليل مع رسوم بيانية وجداول ===== -->
+    <div style="background: white; border-radius: 24px; padding: 20px 22px 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); border:1px solid #dceaf2;">
+
+        <!-- FLOWCHART: سير العمل -->
+        <div style="margin-bottom: 28px;">
+            <div style="font-weight: 700; font-size:1.3rem; color:#0b3954; margin-bottom: 12px;"><i class="fas fa-project-diagram" style="color:#2b6cb0;"></i> سير عمل تحليل الصور</div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 14px; background: #f4faff; padding: 16px 10px; border-radius: 80px;">
+                <span style="background: #e3f0f7; border-radius: 40px; padding: 6px 22px; font-weight:600; border:2px solid #41b0e0; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-image"></i> خام</span>
+                <span style="font-size:1.8rem; color:#41b0e0;"><i class="fas fa-arrow-right"></i></span>
+                <span style="background: #d4edda; border-radius: 40px; padding:6px 22px; font-weight:600; border:2px solid #28a745; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-sliders-h"></i> تحسين</span>
+                <span style="font-size:1.8rem; color:#41b0e0;"><i class="fas fa-arrow-right"></i></span>
+                <span style="background: #fff3cd; border-radius: 40px; padding:6px 22px; font-weight:600; border:2px solid #ffc107; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-vector-square"></i> تحويلات طيفية</span>
+                <span style="font-size:1.8rem; color:#41b0e0;"><i class="fas fa-arrow-right"></i></span>
+                <span style="background: #f8d7da; border-radius: 40px; padding:6px 22px; font-weight:600; border:2px solid #dc3545; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-tags"></i> تصنيف</span>
+                <span style="font-size:1.8rem; color:#41b0e0;"><i class="fas fa-arrow-right"></i></span>
+                <span style="background: #cce5ff; border-radius: 40px; padding:6px 22px; font-weight:600; border:2px solid #007bff; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-check-double"></i> تقييم دقة</span>
+                <span style="font-size:1.8rem; color:#41b0e0;"><i class="fas fa-arrow-right"></i></span>
+                <span style="background: #e2d5f5; border-radius: 40px; padding:6px 22px; font-weight:600; border:2px solid #6f42c1; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-map-marked-alt"></i> خرائط</span>
+            </div>
+        </div>
+
+        <!-- الرسوم البيانية (3 charts) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 20px; margin-bottom: 30px;">
+            <div style="background: #f9fcff; border-radius: 18px; padding: 12px 14px; border:1px solid #dceaf2;">
+                <div style="font-weight:600; font-size:0.95rem; color:#0b3954;"><i class="fas fa-chart-bar"></i> شيوع الاستخدام</div>
+                <div style="height:170px;"><canvas id="popularityChartSec9" width="200" height="150"></canvas></div>
+            </div>
+            <div style="background: #f9fcff; border-radius: 18px; padding: 12px 14px; border:1px solid #dceaf2;">
+                <div style="font-weight:600; font-size:0.95rem; color:#0b3954;"><i class="fas fa-chart-line"></i> متوسط الدقة</div>
+                <div style="height:170px;"><canvas id="accuracyChartSec9" width="200" height="150"></canvas></div>
+            </div>
+            <div style="background: #f9fcff; border-radius: 18px; padding: 12px 14px; border:1px solid #dceaf2;">
+                <div style="font-weight:600; font-size:0.95rem; color:#0b3954;"><i class="fas fa-clock"></i> زمن المعالجة</div>
+                <div style="height:170px;"><canvas id="timeChartSec9" width="200" height="150"></canvas></div>
+            </div>
+        </div>
+
+        <!-- جدول مقارنة شامل -->
+        <div style="margin-bottom: 26px; overflow-x: auto;">
+            <div style="font-weight: 700; font-size:1.2rem; color:#0b3954; margin-bottom: 12px;"><i class="fas fa-table" style="color:#2b6cb0;"></i> مقارنة أنواع تحليل الصور</div>
+            <table style="width:100%; border-collapse: collapse; font-size:0.85rem; background: #fafdff; border-radius: 16px; overflow:hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
+                <thead style="background: #0b3954; color: white;">
+                    <tr><th style="padding:12px 10px;">نوع التحليل</th><th>الاعتماد</th><th>الدقة</th><th>التعقيد</th><th>السرعة</th><th>التطبيقات</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><i class="fas fa-eye" style="color:#41b0e0;"></i> بصري</td><td>خبرة بشرية</td><td>متوسطة</td><td>منخفض</td><td>بطيء</td><td>تفسير أولي</td></tr>
+                    <tr><td><i class="fas fa-sliders-h" style="color:#2a9d8f;"></i> تحسين</td><td>خوارزميات</td><td>—</td><td>منخفض</td><td>سريع</td><td>إبراز تفاصيل</td></tr>
+                    <tr><td><i class="fas fa-chart-pie" style="color:#2a9d8f;"></i> طيفي</td><td>رياضي</td><td>عالية</td><td>متوسط</td><td>سريع</td><td>مؤشرات (NDVI)</td></tr>
+                    <tr><td><i class="fas fa-tag" style="color:#e76f51;"></i> تصنيف غير موجه</td><td>تجميع</td><td>متوسطة</td><td>منخفض</td><td>سريع</td><td>استكشاف</td></tr>
+                    <tr><td><i class="fas fa-tags" style="color:#e76f51;"></i> تصنيف موجه</td><td>عينات تدريب</td><td>عالية جداً</td><td>متوسط</td><td>متوسط</td><td>خرائط استخدامات</td></tr>
+                    <tr><td><i class="fas fa-shapes" style="color:#e76f51;"></i> OBIA</td><td>كائنات</td><td>عالية جداً</td><td>مرتفع</td><td>بطيء</td><td>صور عالية الدقة</td></tr>
+                    <tr><td><i class="fas fa-brain" style="color:#6f42c1;"></i> تعلم عميق (CNN)</td><td>شبكات عصبية</td><td>متفوقة</td><td>مرتفع جداً</td><td>بطيء (تدريب)</td><td>تجزئة، كشف</td></tr>
+                    <tr><td><i class="fas fa-exchange-alt" style="color:#f4a261;"></i> كشف تغيرات</td><td>مقارنة زمنية</td><td>عالية</td><td>متوسط</td><td>متوسط</td><td>مراقبة بيئية</td></tr>
+                    <tr><td><i class="fas fa-thermometer-half" style="color:#f4a261;"></i> حراري</td><td>الأشعة تحت الحمراء</td><td>عالية</td><td>متوسط</td><td>سريع</td><td>جزر حرارية، حرائق</td></tr>
+                    <tr><td><i class="fas fa-satellite-dish" style="color:#2a9d8f;"></i> راداري (SAR)</td><td>انعكاس الرادار</td><td>عالية جداً</td><td>مرتفع</td><td>متوسط</td><td>هبوط أرضي، فيضانات</td></tr>
+                    <tr><td><i class="fas fa-clock" style="color:#f4a261;"></i> زمني (Time Series)</td><td>سلاسل زمنية</td><td>عالية</td><td>مرتفع</td><td>بطيء</td><td>تغير المناخ</td></tr>
+                    <tr><td><i class="fas fa-cube" style="color:#1d6f8f;"></i> ثلاثي الأبعاد (DEM)</td><td>نموذج ارتفاع</td><td>عالية</td><td>متوسط</td><td>متوسط</td><td>طبوغرافيا، هيدرولوجيا</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- تحليلات إضافية: مؤشرات و خوارزميات -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 20px;">
+            <div style="background: #f9fcff; border-radius: 18px; padding: 12px 14px; border:1px solid #dceaf2;">
+                <div style="font-weight:600; font-size:0.95rem; color:#0b3954;"><i class="fas fa-leaf"></i> مؤشرات الغطاء النباتي</div>
+                <div style="height:150px;"><canvas id="indicesChartSec9" width="200" height="140"></canvas></div>
+            </div>
+            <div style="background: #f9fcff; border-radius: 18px; padding: 12px 14px; border:1px solid #dceaf2;">
+                <div style="font-weight:600; font-size:0.95rem; color:#0b3954;"><i class="fas fa-robot"></i> أداء خوارزميات التصنيف</div>
+                <div style="height:150px;"><canvas id="mlChartSec9" width="200" height="140"></canvas></div>
+            </div>
+        </div>
+
+        <!-- ملخص التطبيقات -->
+        <div style="margin-top: 24px; background: #e9f2f9; border-radius: 20px; padding: 16px 20px;">
+            <div style="font-weight:700; color:#0b3954;"><i class="fas fa-check-circle" style="color:#28a745;"></i> أبرز التطبيقات حسب نوع التحليل</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 8px;">
+                <span><span class="badge" style="background:#41b0e0; color:white;">بصري</span> تفسير أولي، خرائط</span>
+                <span><span class="badge" style="background:#2a9d8f; color:white;">رقمي</span> تحسين، مرشحات</span>
+                <span><span class="badge" style="background:#e76f51; color:white;">تصنيف</span> استخدامات الأراضي</span>
+                <span><span class="badge" style="background:#f4a261; color:white;">زمني/حراري</span> جفاف، حرائق</span>
+                <span><span class="badge" style="background:#6f42c1; color:white;">راداري</span> فيضانات، تشوهات</span>
+                <span><span class="badge" style="background:#0b3954; color:white;">3D</span> طبوغرافيا</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer academic -->
+    <div style="margin-top: 16px; font-size:0.85rem; color:#3a5e72; text-align: center; border-top: 1px solid #d4e7f0; padding-top: 16px;">
+        <i class="fas fa-database"></i> مرجع: تحليل الصور في الاستشعار عن بعد – بصري، رقمي، طيفي، زمني، راداري، ذكاء اصطناعي 
+        <span style="margin:0 10px;">•</span> 
+        <i class="fas fa-chart-simple"></i> رسوم بيانية تفاعلية باستخدام Chart.js
+    </div>
+</section>
+
+<!-- ===== SCRIPTS FOR CHARTS (SECTION 9) ===== -->
+<script>
+    (function() {
+        // 1. Popularity (bar)
+        const ctx1 = document.getElementById('popularityChartSec9');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['بصري', 'رقمي', 'تصنيف', 'OBIA', 'عميق', 'راداري', 'زمني'],
+                    datasets: [{
+                        data: [65, 80, 90, 60, 75, 55, 70],
+                        backgroundColor: ['#41b0e0', '#2a9d8f', '#e76f51', '#f4a261', '#6f42c1', '#1d6f8f', '#f4a261'],
+                        borderRadius: 6
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+        }
+        // 2. Accuracy (line)
+        const ctx2 = document.getElementById('accuracyChartSec9');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['غير موجه', 'موجه', 'SVM', 'RF', 'CNN', 'OBIA'],
+                    datasets: [{
+                        data: [68, 82, 89, 91, 94, 88],
+                        borderColor: '#e76f51',
+                        backgroundColor: 'rgba(231,111,81,0.08)',
+                        tension: 0.2,
+                        pointBackgroundColor: '#0b3954',
+                        fill: true
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+        }
+        // 3. Time (bar)
+        const ctx3 = document.getElementById('timeChartSec9');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: ['بصري', 'تحسين', 'طيفي', 'تصنيف', 'OBIA', 'عميق', 'زمني'],
+                    datasets: [{
+                        data: [2, 1, 2, 4, 6, 9, 7],
+                        backgroundColor: ['#41b0e0', '#2a9d8f', '#f4a261', '#e76f51', '#6f42c1', '#dc3545', '#f4a261']
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+        }
+        // 4. Indices (radar)
+        const ctx4 = document.getElementById('indicesChartSec9');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'radar',
+                data: {
+                    labels: ['NDVI', 'SAVI', 'EVI', 'GNDVI', 'NDRE'],
+                    datasets: [
+                        { label: 'صحي', data: [0.75, 0.70, 0.68, 0.72, 0.65],
+                          backgroundColor: 'rgba(46,139,87,0.2)', borderColor: '#2a9d8f', pointBackgroundColor: '#2a9d8f' },
+                        { label: 'متوتر', data: [0.35, 0.32, 0.30, 0.38, 0.28],
+                          backgroundColor: 'rgba(231,111,81,0.15)', borderColor: '#e76f51', pointBackgroundColor: '#e76f51' }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10 } } } }
+            });
+        }
+        // 5. ML algorithms (bar)
+        const ctx5 = document.getElementById('mlChartSec9');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['Min Dist', 'M.Like', 'SVM', 'RF', 'CNN'],
+                    datasets: [{
+                        data: [72, 81, 89, 92, 95],
+                        backgroundColor: ['#41b0e0', '#2a9d8f', '#f4a261', '#e76f51', '#6f42c1'],
+                        borderRadius: 6
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+        }
+    })();
+</script>
+<!-- ============================================================ -->
+<!-- ============================================================ -->
+    
     <!-- ===== KEY TERMINOLOGY ===== -->
     <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
         <h4 style="color: #c53030;">📌 المصطلحات العلمية الأساسية</h4>
