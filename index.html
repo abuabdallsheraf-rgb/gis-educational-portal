@@ -9059,7 +9059,7 @@
         </div>
     </div>
 
-    <!-- ===== جيواستاتيات ===== -->
+    <!-- ===== الإحصاء الجغرافي (Geostatistics) ===== -->
     <div class="info-box" style="background: linear-gradient(135deg, #e9d5ff, #d8b4fe); border-color: #6b46c1;">
         <h4 style="color: #553c9a;">📐 الجيواستاتيات في الزراعة الدقيقة</h4>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 0.6rem;">
@@ -9247,22 +9247,414 @@
 <!-- ===== END PRECISION AGRICULTURE SECTION ===== -->
 
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 15: VRT ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="vrt-technology">
-        <div class="section-title"><i class="fas fa-tachometer-alt"></i> التسميد المتغير (VRT)</div>
-        <div class="info-box orange">
-            <h4 style="color: #dd6b20;">📚 التسميد المتغير (Variable Rate Technology)</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>التسميد المتغير (VRT)</strong> هو <strong>تقنية زراعية دقيقة</strong> تتيح تطبيق المدخلات الزراعية 
-                <strong>بمعدلات متغيرة</strong> داخل الحقل الواحد.
+   <!-- ============================================================ -->
+<!-- ===== SECTION 15: VARIABLE RATE TECHNOLOGY (VRT) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="vrt-technology">
+    <div class="section-title"><i class="fas fa-sliders-h"></i> تقنية المعدلات المتغيرة (Variable Rate Technology - VRT)</div>
+
+    <!-- ===== مقدمة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #ebf8ff, #bee3f8); border-color: #2b6cb0;">
+        <h4 style="color: #2b6cb0;">🌱 مقدمة في تقنية المعدلات المتغيرة</h4>
+        <p style="font-size: 1rem; line-height: 1.8;">
+            تُعد <strong>تقنية المعدلات المتغيرة (Variable Rate Technology - VRT)</strong> من أهم التقنيات التطبيقية في 
+            <strong>الزراعة الدقيقة</strong>، حيث تمثل <strong>المرحلة التنفيذية</strong> التي يتم فيها تحويل البيانات المكانية 
+            التي جُمعت بواسطة نظم المعلومات الجغرافية (GIS)، والاستشعار عن بعد، والطائرات بدون طيار، وأجهزة الاستشعار، 
+            إلى <strong>عمليات زراعية فعلية</strong> داخل الحقل.
+        </p>
+        <div style="background: #f0f8ff; border-radius: 12px; padding: 0.8rem; margin-top: 0.6rem; border-right: 4px solid #2b6cb0;">
+            <p style="margin: 0; font-size: 0.95rem; color: #2b6cb0; text-align: center;">
+                <i class="fas fa-quote-right" style="color:#2b6cb0;"></i> 
+                <strong>"المعدل المناسب في المكان المناسب، وفي الوقت المناسب، وبالكمية المناسبة"</strong>
+                <br><span style="font-size:0.8rem; color:#4a5568;">(The Right Rate at the Right Place and Right Time)</span>
             </p>
-            <div class="formula-box" style="font-size: 0.9rem;">
-                N_rate = (N_uptake × Yield_target - N_soil) × Efficiency_factor
+        </div>
+    </div>
+
+    <!-- ===== التعريف ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;">📖 تعريف تقنية المعدلات المتغيرة (VRT)</h4>
+        <div style="background: #f0fff4; border-radius: 12px; padding: 1rem; border-right: 4px solid #38a169;">
+            <p style="font-size: 1rem; line-height: 1.8; margin: 0;">
+                <strong>نظام زراعي ذكي</strong> يستخدم الخرائط الرقمية وأجهزة الاستشعار وتقنيات تحديد المواقع العالمية (GPS/GNSS) 
+                للتحكم في كمية المدخلات الزراعية (الأسمدة، المياه، البذور، المبيدات وغيرها) بحيث تختلف معدلات التطبيق 
+                من منطقة إلى أخرى داخل الحقل وفقاً للاحتياجات الفعلية لكل منطقة.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== لماذا نحتاج VRT ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e;">
+        <h4 style="color: #c53030;">❓ لماذا نحتاج إلى VRT؟</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
+            <div style="background: white; border-radius: 12px; padding: 0.8rem;">
+                <h5 style="color: #e53e3e; margin-top: 0;">⚠️ التحديات</h5>
+                <ul style="font-size: 0.85rem; line-height: 1.8; padding-right: 1.2rem;">
+                    <li>❌ هدر في الموارد</li>
+                    <li>❌ انخفاض الإنتاج</li>
+                    <li>❌ زيادة التلوث البيئي</li>
+                    <li>❌ ارتفاع تكلفة الإنتاج</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border: 2px solid #38a169;">
+                <h5 style="color: #38a169; margin-top: 0;">✅ الحلول</h5>
+                <ul style="font-size: 0.85rem; line-height: 1.8; padding-right: 1.2rem;">
+                    <li>✔ تخصيص المدخلات حسب الاحتياج</li>
+                    <li>✔ زيادة الإنتاجية</li>
+                    <li>✔ تقليل التلوث</li>
+                    <li>✔ خفض التكاليف</li>
+                </ul>
             </div>
         </div>
-    </section>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 0.6rem;">
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">خصوبة التربة</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">الملوحة</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">القوام</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">المادة العضوية</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">الرطوبة</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">كثافة النباتات</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">الآفات</span>
+            <span style="background: #e53e3e; color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem;">الإنتاجية</span>
+        </div>
+    </div>
+
+    <!-- ===== المبدأ العلمي ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;">🧬 المبدأ العلمي لتقنية VRT</h4>
+        <p style="font-size: 0.95rem;">تعتمد VRT على <strong>أربعة عناصر رئيسية</strong>:</p>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.3rem; margin-top: 0.6rem; direction: rtl;">
+            <span style="background: #2b6cb0; color: white; padding: 0.5rem 2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; width: fit-content; box-shadow: 0 4px 10px rgba(43,108,176,0.3);"><i class="fas fa-database"></i> جمع البيانات</span>
+            <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 1.2rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.5rem 2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; width: fit-content; box-shadow: 0 4px 10px rgba(56,161,105,0.3);"><i class="fas fa-chart-pie"></i> تحليل البيانات (GIS + AI)</span>
+            <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 1.2rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.5rem 2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; width: fit-content; box-shadow: 0 4px 10px rgba(221,107,32,0.3);"><i class="fas fa-map"></i> إنشاء خريطة المعدلات المتغيرة</span>
+            <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 1.2rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.5rem 2rem; border-radius: 40px; font-weight: 600; font-size: 0.9rem; width: fit-content; box-shadow: 0 4px 10px rgba(107,70,193,0.3);"><i class="fas fa-cogs"></i> تنفيذ التطبيق آلياً</span>
+        </div>
+    </div>
+
+    <!-- ===== مكونات النظام ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">⚙️ مكونات نظام VRT</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #6b46c1;">
+                <i class="fas fa-globe" style="color: #6b46c1; font-size: 2rem;"></i>
+                <h5 style="color: #553c9a; margin: 0.3rem 0;">GPS/GNSS</h5>
+                <span style="font-size: 0.7rem; color: #4a5568;">تحديد الموقع بدقة سنتيمترية (RTK)</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #6b46c1;">
+                <i class="fas fa-map" style="color: #6b46c1; font-size: 2rem;"></i>
+                <h5 style="color: #553c9a; margin: 0.3rem 0;">GIS</h5>
+                <span style="font-size: 0.7rem; color: #4a5568;">خرائط الخصوبة، الملوحة، الرطوبة</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #6b46c1;">
+                <i class="fas fa-microchip" style="color: #6b46c1; font-size: 2rem;"></i>
+                <h5 style="color: #553c9a; margin: 0.3rem 0;">وحدة التحكم</h5>
+                <span style="font-size: 0.7rem; color: #4a5568;">استقبال الخريطة وتعديل التطبيق</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #6b46c1;">
+                <i class="fas fa-tractor" style="color: #6b46c1; font-size: 2rem;"></i>
+                <h5 style="color: #553c9a; margin: 0.3rem 0;">المعدات الذكية</h5>
+                <span style="font-size: 0.7rem; color: #4a5568;">موزعات، رشاشات، بذارات</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #6b46c1;">
+                <i class="fas fa-thermometer-half" style="color: #6b46c1; font-size: 2rem;"></i>
+                <h5 style="color: #553c9a; margin: 0.3rem 0;">أجهزة الاستشعار</h5>
+                <span style="font-size: 0.7rem; color: #4a5568;">رطوبة، EC، NDVI</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== أنواع VRT ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #c6f6d5, #9ae6b4); border-color: #38a169;">
+        <h4 style="color: #22543d;">📊 أنواع VRT</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
+            <!-- Map-Based -->
+            <div style="background: white; border-radius: 12px; padding: 1rem; border: 2px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0; margin-top: 0; text-align: center;"><i class="fas fa-map"></i> Map-Based VRT</h5>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem; direction: rtl; font-size: 0.8rem;">
+                    <span style="background: #ebf8ff; padding: 0.2rem 0.8rem; border-radius: 12px;">جمع البيانات</span>
+                    <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 0.8rem;"></i>
+                    <span style="background: #ebf8ff; padding: 0.2rem 0.8rem; border-radius: 12px;">تحليل GIS</span>
+                    <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 0.8rem;"></i>
+                    <span style="background: #ebf8ff; padding: 0.2rem 0.8rem; border-radius: 12px;">Prescription Map</span>
+                    <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 0.8rem;"></i>
+                    <span style="background: #ebf8ff; padding: 0.2rem 0.8rem; border-radius: 12px;">تحميل للآلة</span>
+                    <i class="fas fa-arrow-down" style="color: #2b6cb0; font-size: 0.8rem;"></i>
+                    <span style="background: #ebf8ff; padding: 0.2rem 0.8rem; border-radius: 12px;">تنفيذ التطبيق</span>
+                </div>
+                <ul style="font-size: 0.75rem; margin-top: 0.3rem; padding-right: 1.2rem;">
+                    <li>✔ دقة عالية</li>
+                    <li>✔ مناسب للمساحات الكبيرة</li>
+                    <li>✔ إمكانية التخطيط المسبق</li>
+                </ul>
+            </div>
+            <!-- Sensor-Based -->
+            <div style="background: white; border-radius: 12px; padding: 1rem; border: 2px solid #e53e3e;">
+                <h5 style="color: #e53e3e; margin-top: 0; text-align: center;"><i class="fas fa-microchip"></i> Sensor-Based VRT</h5>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem; direction: rtl; font-size: 0.8rem;">
+                    <span style="background: #fff5f5; padding: 0.2rem 0.8rem; border-radius: 12px;">📡 قياس فوري</span>
+                    <i class="fas fa-arrow-down" style="color: #e53e3e; font-size: 0.8rem;"></i>
+                    <span style="background: #fff5f5; padding: 0.2rem 0.8rem; border-radius: 12px;">🧠 تحليل لحظي</span>
+                    <i class="fas fa-arrow-down" style="color: #e53e3e; font-size: 0.8rem;"></i>
+                    <span style="background: #fff5f5; padding: 0.2rem 0.8rem; border-radius: 12px;">⚙️ تطبيق فوري</span>
+                </div>
+                <ul style="font-size: 0.75rem; margin-top: 0.3rem; padding-right: 1.2rem;">
+                    <li>✔ استجابة فورية</li>
+                    <li>✔ لا يحتاج خرائط</li>
+                    <li>✔ مناسب للمحاصيل سريعة النمو</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مقارنة بين النوعين ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fefcbf, #f6e05e); border-color: #d69e2e;">
+        <h4 style="color: #744210;">📊 مقارنة بين Map-Based و Sensor-Based</h4>
+        <div style="overflow-x: auto; margin-top: 0.6rem;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; background: white; border-radius: 12px; overflow: hidden;">
+                <thead style="background: #744210; color: white;">
+                    <tr><th style="padding: 10px;">العنصر</th><th style="padding: 10px;">Map-Based</th><th style="padding: 10px;">Sensor-Based</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e2e8f0;"><td>يعتمد على خرائط</td><td style="text-align: center;">✅ نعم</td><td style="text-align: center;">❌ لا</td></tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;"><td>يعتمد على مستشعرات مباشرة</td><td style="text-align: center;">❌ لا</td><td style="text-align: center;">✅ نعم</td></tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;"><td>يعمل في الزمن الحقيقي</td><td style="text-align: center;">محدود</td><td style="text-align: center;">✅ نعم</td></tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;"><td>يحتاج GIS</td><td style="text-align: center;">✅ نعم</td><td style="text-align: center;">غالباً لا</td></tr>
+                    <tr><td>مناسب للمساحات الكبيرة</td><td style="text-align: center;">ممتاز</td><td style="text-align: center;">جيد</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== تطبيقات VRT ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;">🌾 تطبيقات VRT</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0; margin-top: 0;"><i class="fas fa-flask"></i> التسميد المتغير</h5>
+                <p style="font-size: 0.8rem; margin: 0;">توزيع N, P, K حسب احتياجات كل منطقة</p>
+                <span style="font-size: 0.7rem; color: #38a169;">✔ زيادة الكفاءة، تقليل التلوث</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0; margin-top: 0;"><i class="fas fa-tint"></i> الري المتغير</h5>
+                <p style="font-size: 0.8rem; margin: 0;">حسب رطوبة التربة، النوع، الاحتياجات</p>
+                <span style="font-size: 0.7rem; color: #38a169;">✔ توفير المياه، تحسين الإنتاج</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0; margin-top: 0;"><i class="fas fa-seedling"></i> البذر المتغير</h5>
+                <p style="font-size: 0.8rem; margin: 0;">تغيير كثافة البذور حسب خصوبة التربة</p>
+                <span style="font-size: 0.7rem; color: #38a169;">✔ تحسين التوزيع، زيادة الإنتاج</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0; margin-top: 0;"><i class="fas fa-spray-can"></i> الرش المتغير</h5>
+                <p style="font-size: 0.8rem; margin: 0;">المبيدات، مبيدات الأعشاب، الفطريات</p>
+                <span style="font-size: 0.7rem; color: #38a169;">✔ تقليل الكيماويات، حماية البيئة</span>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0; margin-top: 0;"><i class="fas fa-vial"></i> إضافة الجير</h5>
+                <p style="font-size: 0.8rem; margin: 0;">حسب درجة الحموضة (pH)</p>
+                <span style="font-size: 0.7rem; color: #38a169;">✔ تحسين خصوبة التربة</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== خطوات تطبيق VRT ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fbd38d, #f6ad55); border-color: #dd6b20;">
+        <h4 style="color: #7b341e;">📋 خطوات تطبيق VRT</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.6rem 0; direction: rtl;">
+            <span style="background: #2b6cb0; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">🧪 تحليل التربة</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">📊 جمع البيانات</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">🛰️ صور الأقمار</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">🗺️ خرائط GIS</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">🧠 تحليل AI</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #2b6cb0; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📋 Prescription Map</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">⚙️ تحميل للمعدة</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">🎯 التطبيق المتغير</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size: 1rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 600; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📈 التقييم</span>
+        </div>
+    </div>
+
+    <!-- ===== معادلات حساب السماد ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #e9d5ff, #d8b4fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">🧮 معادلات حساب كميات المدخلات</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
+            <div style="background: white; border-radius: 12px; padding: 1rem; border: 2px solid #6b46c1; direction: ltr;">
+                <h5 style="color: #553c9a; margin-top: 0; text-align: center;">معادلة حساب السماد</h5>
+                <div style="text-align: center; font-size: 1.2rem; font-weight: 700; color: #553c9a; background: #f5f0ff; padding: 0.5rem; border-radius: 8px;">
+                    F<sub>r</sub> = N<sub>r</sub> / N<sub>f</sub>
+                </div>
+                <ul style="font-size: 0.8rem; margin-top: 0.3rem; padding-right: 1.2rem;">
+                    <li><strong>F<sub>r</sub></strong> = معدل السماد المطلوب (كجم/هكتار)</li>
+                    <li><strong>N<sub>r</sub></strong> = احتياج النبات من العنصر (كجم/هكتار)</li>
+                    <li><strong>N<sub>f</sub></strong> = نسبة العنصر في السماد (بالصيغة العشرية)</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 1rem; border: 2px solid #e53e3e;">
+                <h5 style="color: #e53e3e; margin-top: 0; text-align: center;">📝 مثال تطبيقي</h5>
+                <div style="background: #fff5f5; border-radius: 8px; padding: 0.8rem; direction: ltr; text-align: center;">
+                    <p style="margin: 0.2rem;">N<sub>r</sub> = 120 كجم/هكتار (نيتروجين)</p>
+                    <p style="margin: 0.2rem;">N<sub>f</sub> = 46% (يوريا) = 0.46</p>
+                    <div style="font-size: 1.1rem; font-weight: 700; color: #e53e3e; background: white; padding: 0.3rem; border-radius: 8px; margin-top: 0.3rem;">
+                        F<sub>r</sub> = 120 / 0.46 = <strong>261 كجم/هكتار</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== خريطة المعدلات المتغيرة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fecaca); border-color: #e53e3e;">
+        <h4 style="color: #742a2a;">🗺️ خريطة المعدلات المتغيرة (Prescription Map)</h4>
+        <div style="overflow-x: auto; margin-top: 0.6rem;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; background: white; border-radius: 12px; overflow: hidden;">
+                <thead style="background: #742a2a; color: white;">
+                    <tr><th style="padding: 10px;">المنطقة</th><th style="padding: 10px;">خصوبة التربة</th><th style="padding: 10px;">معدل النيتروجين (كجم/هكتار)</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e2e8f0; background: #f0fff4;"><td><strong>A</strong></td><td>مرتفعة</td><td style="text-align: center; background: #c6f6d5;">60</td></tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0; background: #fffff0;"><td><strong>B</strong></td><td>متوسطة</td><td style="text-align: center; background: #fefcbf;">90</td></tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0; background: #fff5f5;"><td><strong>C</strong></td><td>منخفضة</td><td style="text-align: center; background: #fed7d7;">130</td></tr>
+                    <tr style="background: #fff5f5;"><td><strong>D</strong></td><td>منخفضة جداً</td><td style="text-align: center; background: #feb2b2;">160</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 0.6rem;">
+            <span style="display: inline-flex; align-items: center; gap: 0.3rem; background: #c6f6d5; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem;">🟢 مرتفعة</span>
+            <span style="display: inline-flex; align-items: center; gap: 0.3rem; background: #fefcbf; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem;">🟡 متوسطة</span>
+            <span style="display: inline-flex; align-items: center; gap: 0.3rem; background: #fed7d7; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem;">🟠 منخفضة</span>
+            <span style="display: inline-flex; align-items: center; gap: 0.3rem; background: #feb2b2; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem;">🔴 منخفضة جداً</span>
+        </div>
+    </div>
+
+    <!-- ===== التقنيات الداعمة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #e6fffa, #b2f5ea); border-color: #319795;">
+        <h4 style="color: #234e52;">🛰️ التقنيات الداعمة لـ VRT</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 0.6rem;">
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-map" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">GIS</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-satellite" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">الاستشعار عن بعد</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-globe" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">GPS/RTK</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-drone" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">UAVs</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-brain" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">AI/ML</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-wifi" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">IoT</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-cloud" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">Cloud Computing</strong></span>
+            <span style="background: white; padding: 0.5rem; border-radius: 12px; text-align: center; border: 2px solid #319795;"><i class="fas fa-robot" style="color: #319795; font-size: 1.5rem;"></i><br><strong style="font-size: 0.8rem;">الروبوتات</strong></span>
+        </div>
+    </div>
+
+    <!-- ===== المزايا ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;">✨ المزايا</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #38a169;">
+                <i class="fas fa-seedling" style="color: #38a169; font-size: 2rem;"></i>
+                <h5 style="color: #22543d; margin: 0.3rem 0;">🌾 زراعياً</h5>
+                <ul style="font-size: 0.75rem; text-align: right; padding-right: 1.2rem; margin: 0;">
+                    <li>زيادة الإنتاجية</li>
+                    <li>تحسين الجودة</li>
+                    <li>تجانس النمو</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #38a169;">
+                <i class="fas fa-coins" style="color: #38a169; font-size: 2rem;"></i>
+                <h5 style="color: #22543d; margin: 0.3rem 0;">💰 اقتصادياً</h5>
+                <ul style="font-size: 0.75rem; text-align: right; padding-right: 1.2rem; margin: 0;">
+                    <li>خفض الاستهلاك</li>
+                    <li>تقليل التكاليف</li>
+                    <li>زيادة العائد</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; text-align: center; border: 2px solid #38a169;">
+                <i class="fas fa-globe-americas" style="color: #38a169; font-size: 2rem;"></i>
+                <h5 style="color: #22543d; margin: 0.3rem 0;">🌍 بيئياً</h5>
+                <ul style="font-size: 0.75rem; text-align: right; padding-right: 1.2rem; margin: 0;">
+                    <li>تقليل التلوث</li>
+                    <li>خفض الانبعاثات</li>
+                    <li>تحسين صحة التربة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== التحديات ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fed7d7, #feb2b2); border-color: #e53e3e;">
+        <h4 style="color: #742a2a;">⚠️ التحديات</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #e53e3e;">
+                <h5 style="color: #e53e3e; margin-top: 0;">💰 التحديات الاقتصادية</h5>
+                <ul style="font-size: 0.8rem; padding-right: 1.2rem; margin: 0;">
+                    <li>ارتفاع تكلفة المعدات الذكية</li>
+                    <li>تكاليف الصيانة والتشغيل</li>
+                    <li>فترة استرداد الاستثمار</li>
+                </ul>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 0.8rem; border-right: 4px solid #e53e3e;">
+                <h5 style="color: #e53e3e; margin-top: 0;">🛠️ التحديات التقنية</h5>
+                <ul style="font-size: 0.8rem; padding-right: 1.2rem; margin: 0;">
+                    <li>الحاجة لبيانات دقيقة ومحدثة</li>
+                    <li>متطلبات التدريب الفني</li>
+                    <li>البنية التحتية الرقمية</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مستقبل VRT ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #2d3748, #1a202c); border-color: #4a5568; color: white;">
+        <h4 style="color: #fbd38d;">🚀 مستقبل تقنية VRT</h4>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.8;">
+            يتجه مستقبل تقنية المعدلات المتغيرة نحو دمجها مع:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.6rem; margin-top: 0.6rem;">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-brain" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">الذكاء الاصطناعي التوليدي</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-copy" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">التوأم الرقمي</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-robot" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">الروبوتات الذاتية</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-wifi" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">Ag-IoT</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-signal" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">5G</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-chart-line" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">التحليلات التنبؤية</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.6rem; text-align: center;">
+                <i class="fas fa-cloud" style="color: #fbd38d; font-size: 1.5rem;"></i>
+                <div style="font-weight: 600; font-size: 0.8rem; color: #fbd38d;">Cloud & Edge Computing</div>
+            </div>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 0.8rem; margin-top: 0.8rem; border-right: 4px solid #fbd38d;">
+            <p style="color: #e2e8f0; font-size: 0.9rem; margin: 0; text-align: center;">
+                <i class="fas fa-quote-right" style="color: #fbd38d;"></i>
+                من المتوقع أن تصبح VRT إحدى الركائز الأساسية للزراعة الذكية، حيث سيتمكن النظام من 
+                <strong style="color: #fbd38d;">جمع البيانات</strong>، <strong style="color: #fbd38d;">تحليلها</strong>، 
+                <strong style="color: #fbd38d;">اتخاذ القرار</strong>، <strong style="color: #fbd38d;">وتنفيذ العمليات</strong> 
+                آلياً مع الحد الأدنى من التدخل البشري، مما يسهم في تعزيز الأمن الغذائي وتحقيق أهداف التنمية الزراعية المستدامة.
+            </p>
+        </div>
+    </div>
+
+</section>
 
     <!-- ============================================================ -->
     <!-- ===== SECTION 16: CROPS & HORTICULTURE ===== -->
