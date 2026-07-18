@@ -8785,19 +8785,467 @@
 
 </section>
 <!-- ===== END UAV TECHNOLOGY SECTION ===== -->
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 14: PRECISION AGRICULTURE ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="precision-agriculture">
-        <div class="section-title"><i class="fas fa-tractor"></i> الزراعة الدقيقة والزراعة الذكية</div>
-        <div class="info-box green">
-            <h4 style="color: #2f855a;">🌾 مقدمة في الزراعة الدقيقة</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>الزراعة الدقيقة (Precision Agriculture)</strong> هي <strong>نهج إداري</strong> يعتمد على 
-                <strong>مراقبة</strong> و<strong>تحليل</strong> <strong>التباين المكاني والزماني</strong> في الحقول الزراعية.
+  <!-- ============================================================ -->
+<!-- ===== SECTION 14: PRECISION AGRICULTURE ===== -->
+<!-- ============================================================ -->
+<section class="section" id="precision-agriculture">
+    <div class="section-title"><i class="fas fa-tractor"></i> الزراعة الدقيقة والزراعة الذكية</div>
+
+    <!-- ===== مقدمة علمية ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;">🌾 مقدمة في الزراعة الدقيقة</h4>
+        <p style="font-size: 1rem; line-height: 1.8;">
+            <strong>الزراعة الدقيقة (Precision Agriculture - PA)</strong> هي <strong>نظام متكامل</strong> لإدارة المزارع يعتمد على 
+            <strong>جمع البيانات</strong> و<strong>تحليلها</strong> و<strong>اتخاذ القرارات</strong> الزراعية بناءً على 
+            <strong>التباين المكاني والزماني</strong> داخل الحقل، بدلاً من التعامل مع الحقل كوحدة متجانسة.
+        </p>
+        <div style="background: #f0fff4; border-radius: 12px; padding: 1rem; margin-top: 0.8rem; border-right: 4px solid #38a169;">
+            <p style="margin: 0; font-size: 0.95rem; color: #22543d;">
+                <i class="fas fa-quote-right" style="color: #38a169;"></i> 
+                <strong>تعريف الجمعية الدولية للزراعة الدقيقة (ISPA):</strong><br>
+                "نظام إداري يعتمد على جمع وتحليل المعلومات المكانية والزمانية لدعم القرارات الزراعية بهدف تحسين الإنتاجية، 
+                وزيادة الكفاءة الاقتصادية، وتقليل التأثيرات البيئية."
             </p>
         </div>
-    </section>
+    </div>
+
+    <!-- ===== نشأة الزراعة الدقيقة ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;">📅 نشأة الزراعة الدقيقة والتطور التاريخي</h4>
+        <p style="font-size: 0.95rem; line-height: 1.8;">
+            ظهر مفهوم الزراعة الدقيقة في <strong>أوائل تسعينيات القرن الماضي</strong> نتيجة التطور الكبير في:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.6rem; margin: 0.8rem 0;">
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-map" style="color:#2b6cb0;"></i> GIS</span>
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-satellite" style="color:#2b6cb0;"></i> الاستشعار عن بعد</span>
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-globe" style="color:#2b6cb0;"></i> GPS/GNSS</span>
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-microchip" style="color:#2b6cb0;"></i> أجهزة الاستشعار</span>
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-drone" style="color:#2b6cb0;"></i> UAVs/Drones</span>
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-brain" style="color:#2b6cb0;"></i> الذكاء الاصطناعي</span>
+            <span style="background: #ebf8ff; padding: 0.4rem 0.8rem; border-radius: 20px; text-align: center; font-size:0.85rem; border:1px solid #bee3f8;"><i class="fas fa-wifi" style="color:#2b6cb0;"></i> إنترنت الأشياء</span>
+        </div>
+        <!-- ===== Timeline ===== -->
+        <div style="margin-top: 0.8rem; background: white; border-radius: 16px; padding: 1rem; border: 2px solid #bee3f8;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.3rem;">
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#e2e8f0; border-radius:8px;"><strong style="color:#2b6cb0;">1960s</strong><br><span style="font-size:0.7rem;">GIS</span></div>
+                <i class="fas fa-arrow-left" style="color:#2b6cb0; font-size:1.2rem;"></i>
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#e2e8f0; border-radius:8px;"><strong style="color:#2b6cb0;">1970s</strong><br><span style="font-size:0.7rem;">الاستشعار عن بعد</span></div>
+                <i class="fas fa-arrow-left" style="color:#2b6cb0; font-size:1.2rem;"></i>
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#e2e8f0; border-radius:8px;"><strong style="color:#2b6cb0;">1980s</strong><br><span style="font-size:0.7rem;">إدارة خاصة بالموقع</span></div>
+                <i class="fas fa-arrow-left" style="color:#2b6cb0; font-size:1.2rem;"></i>
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#bee3f8; border-radius:8px; border:2px solid #2b6cb0;"><strong style="color:#2b6cb0;">1990s</strong><br><span style="font-size:0.7rem;">الزراعة الدقيقة</span></div>
+                <i class="fas fa-arrow-left" style="color:#2b6cb0; font-size:1.2rem;"></i>
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#e2e8f0; border-radius:8px;"><strong style="color:#2b6cb0;">2000s</strong><br><span style="font-size:0.7rem;">شبكات الاستشعار</span></div>
+                <i class="fas fa-arrow-left" style="color:#2b6cb0; font-size:1.2rem;"></i>
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#e2e8f0; border-radius:8px;"><strong style="color:#2b6cb0;">2010s</strong><br><span style="font-size:0.7rem;">AI + IoT</span></div>
+                <i class="fas fa-arrow-left" style="color:#2b6cb0; font-size:1.2rem;"></i>
+                <div style="text-align: center; flex:1; min-width:80px; padding:0.3rem; background:#fbd38d; border-radius:8px; border:2px solid #dd6b20;"><strong style="color:#dd6b20;">2020s</strong><br><span style="font-size:0.7rem;">الزراعة الذكية</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المفاهيم الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">🧩 المفاهيم الأساسية: التباين المكاني والزماني</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
+            <div style="background: #f0eaf7; border-radius: 12px; padding: 1rem; border-right: 4px solid #6b46c1;">
+                <h5 style="color: #6b46c1; margin-top:0;"><i class="fas fa-map-pin"></i> التباين المكاني</h5>
+                <p style="font-size:0.9rem; margin:0;">اختلاف خصائص التربة والمحصول من مكان لآخر داخل نفس الحقل.</p>
+                <div style="margin-top:0.5rem; display:flex; flex-wrap:wrap; gap:0.3rem;">
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">رملية</span>
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">طينية</span>
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">مرتفعة</span>
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">منخفضة</span>
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">ملوحة عالية</span>
+                </div>
+            </div>
+            <div style="background: #f0eaf7; border-radius: 12px; padding: 1rem; border-right: 4px solid #6b46c1;">
+                <h5 style="color: #6b46c1; margin-top:0;"><i class="fas fa-clock"></i> التباين الزماني</h5>
+                <p style="font-size:0.9rem; margin:0;">التغير الذي يحدث بمرور الزمن خلال الموسم أو بين المواسم.</p>
+                <div style="margin-top:0.5rem; display:flex; flex-wrap:wrap; gap:0.3rem;">
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">رطوبة يومية</span>
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">نمو أسبوعي</span>
+                    <span style="background:#6b46c1; color:white; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.7rem;">NDVI موسمي</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== مقارنة الزراعة التقليدية والدقيقة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fefcbf, #f6e05e); border-color: #d69e2e;">
+        <h4 style="color: #744210;">📊 مقارنة بين الزراعة التقليدية والزراعة الدقيقة</h4>
+        <div style="overflow-x: auto; margin-top: 0.6rem;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.85rem; background: white; border-radius: 12px; overflow:hidden;">
+                <thead style="background: #744210; color: white;">
+                    <tr><th style="padding:10px;">الزراعة التقليدية</th><th style="padding:10px;">الزراعة الدقيقة</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;">معاملة الحقل كوحدة واحدة</td><td style="padding:8px; background:#f0fff4;">تقسيم الحقل إلى مناطق إدارة</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;">معدلات ثابتة للأسمدة</td><td style="padding:8px; background:#f0fff4;">معدلات متغيرة حسب الحاجة</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;">ري موحد</td><td style="padding:8px; background:#f0fff4;">ري ذكي حسب الرطوبة</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td style="padding:8px;">قرارات تعتمد على الخبرة</td><td style="padding:8px; background:#f0fff4;">قرارات تعتمد على البيانات</td></tr>
+                    <tr><td style="padding:8px;">هدر في المدخلات</td><td style="padding:8px; background:#f0fff4;">كفاءة عالية</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== أهداف الزراعة الدقيقة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #c6f6d5, #9ae6b4); border-color: #38a169;">
+        <h4 style="color: #22543d;">🎯 أهداف الزراعة الدقيقة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #38a169;">
+                <i class="fas fa-seedling" style="font-size:2rem; color:#38a169;"></i>
+                <div style="font-weight:700; font-size:0.9rem; margin-top:0.3rem;">زيادة الإنتاج</div>
+                <span style="font-size:0.7rem; color:#4a5568;">تلبية احتياجات النبات بدقة</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #38a169;">
+                <i class="fas fa-coins" style="font-size:2rem; color:#38a169;"></i>
+                <div style="font-weight:700; font-size:0.9rem; margin-top:0.3rem;">تخفيض التكاليف</div>
+                <span style="font-size:0.7rem; color:#4a5568;">تقليل الأسمدة والمبيدات والمياه</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #38a169;">
+                <i class="fas fa-star" style="font-size:2rem; color:#38a169;"></i>
+                <div style="font-weight:700; font-size:0.9rem; margin-top:0.3rem;">جودة المحصول</div>
+                <span style="font-size:0.7rem; color:#4a5568;">بروتين، حجم، لون، تجانس</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #38a169;">
+                <i class="fas fa-globe-americas" style="font-size:2rem; color:#38a169;"></i>
+                <div style="font-weight:700; font-size:0.9rem; margin-top:0.3rem;">حماية البيئة</div>
+                <span style="font-size:0.7rem; color:#4a5568;">تقليل التلوث والانبعاثات</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #38a169;">
+                <i class="fas fa-recycle" style="font-size:2rem; color:#38a169;"></i>
+                <div style="font-weight:700; font-size:0.9rem; margin-top:0.3rem;">استدامة</div>
+                <span style="font-size:0.7rem; color:#4a5568;">استخدام أمثل للموارد</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المبادئ الأساسية ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;">🔄 المبادئ الأساسية للزراعة الدقيقة (خمس مراحل)</h4>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8rem 0; direction: rtl;">
+            <span style="background: #2b6cb0; color: white; padding: 0.4rem 1.2rem; border-radius: 40px; font-weight:600; font-size:0.8rem; box-shadow: 0 4px 10px rgba(43,108,176,0.3);">📊 جمع البيانات</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size:1.2rem;"></i>
+            <span style="background: #38a169; color: white; padding: 0.4rem 1.2rem; border-radius: 40px; font-weight:600; font-size:0.8rem; box-shadow: 0 4px 10px rgba(56,161,105,0.3);">📈 تحليل البيانات</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size:1.2rem;"></i>
+            <span style="background: #dd6b20; color: white; padding: 0.4rem 1.2rem; border-radius: 40px; font-weight:600; font-size:0.8rem; box-shadow: 0 4px 10px rgba(221,107,32,0.3);">🤔 اتخاذ القرار</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size:1.2rem;"></i>
+            <span style="background: #6b46c1; color: white; padding: 0.4rem 1.2rem; border-radius: 40px; font-weight:600; font-size:0.8rem; box-shadow: 0 4px 10px rgba(107,70,193,0.3);">🎯 التنفيذ الدقيق</span>
+            <i class="fas fa-arrow-left" style="color: #2b6cb0; font-size:1.2rem;"></i>
+            <span style="background: #e53e3e; color: white; padding: 0.4rem 1.2rem; border-radius: 40px; font-weight:600; font-size:0.8rem; box-shadow: 0 4px 10px rgba(229,62,62,0.3);">📋 التقييم والتحسين</span>
+        </div>
+    </div>
+
+    <!-- ===== التقنيات المستخدمة ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #e6fffa, #b2f5ea); border-color: #319795;">
+        <h4 style="color: #234e52;">🛰️ التقنيات المستخدمة في الزراعة الدقيقة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 0.6rem;">
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-satellite" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">الاستشعار عن بعد</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-map" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">GIS</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-globe" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">GPS/GNSS</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-drone" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">UAVs</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-camera" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">كاميرات متعددة الأطياف</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-thermometer-half" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">مستشعرات رطوبة</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-cloud-sun" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">محطات طقس ذكية</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-brain" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">الذكاء الاصطناعي</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-robot" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">التعلم الآلي</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-wifi" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">إنترنت الأشياء</strong></span>
+            <span style="background:white; padding:0.5rem; border-radius:12px; text-align:center; border:2px solid #319795; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-tachometer-alt" style="color:#319795; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">VRT</strong></span>
+        </div>
+    </div>
+
+    <!-- ===== الزراعة الدقيقة VS الزراعة الذكية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #feb2b2); border-color: #e53e3e;">
+        <h4 style="color: #742a2a;">⚖️ العلاقة بين الزراعة الدقيقة والزراعة الذكية</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:1rem; border:2px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0; margin-top:0; text-align:center;">🌾 الزراعة الدقيقة</h5>
+                <ul style="font-size:0.85rem; line-height:1.8; padding-right:1.2rem;">
+                    <li>تحليل البيانات لاتخاذ القرار</li>
+                    <li>GIS، GPS، الاستشعار عن بعد</li>
+                    <li>تدخل بشري أكبر</li>
+                    <li>إدارة خاصة بكل موقع</li>
+                </ul>
+            </div>
+            <div style="background:white; border-radius:12px; padding:1rem; border:2px solid #e53e3e;">
+                <h5 style="color:#e53e3e; margin-top:0; text-align:center;">🤖 الزراعة الذكية</h5>
+                <ul style="font-size:0.85rem; line-height:1.8; padding-right:1.2rem;">
+                    <li>تحليل + أتمتة + تنفيذ ذاتي</li>
+                    <li>AI + IoT + روبوتات</li>
+                    <li>تشغيل آلي عالي</li>
+                    <li>إدارة متصلة بالكامل</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المؤشرات الطيفية ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;">📊 مؤشرات الغطاء النباتي المتقدمة</h4>
+        <div style="overflow-x: auto; margin-top: 0.6rem;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.8rem; background: white; border-radius: 12px; overflow:hidden;">
+                <thead style="background: #2f855a; color: white;">
+                    <tr><th style="padding:8px;">المؤشر</th><th style="padding:8px;">الصيغة الرياضية</th><th style="padding:8px;">التطبيق</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td><strong>NDVI</strong></td><td style="direction:ltr; text-align:center;">(NIR - Red)/(NIR + Red)</td><td>الكتلة الحيوية</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td><strong>SAVI</strong></td><td style="direction:ltr; text-align:center;">(NIR-Red)/(NIR+Red+L) × (1+L)</td><td>تصحيح تأثير التربة</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td><strong>EVI</strong></td><td style="direction:ltr; text-align:center;">2.5×(NIR-Red)/(NIR+6Red-7.5Blue+1)</td><td>تصحيح جوي وتحسين</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td><strong>NDWI</strong></td><td style="direction:ltr; text-align:center;">(Green - NIR)/(Green + NIR)</td><td>محتوى الماء</td></tr>
+                    <tr style="border-bottom:1px solid #e2e8f0;"><td><strong>MSAVI</strong></td><td style="direction:ltr; text-align:center;">(2NIR+1 - √((2NIR+1)² - 8(NIR-Red)))/2</td><td>تصحيح ديناميكي للتربة</td></tr>
+                    <tr><td><strong>NDII</strong></td><td style="direction:ltr; text-align:center;">(NIR - SWIR)/(NIR + SWIR)</td><td>إجهاد الرطوبة</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== معادلات الري ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;">💧 معادلات إدارة الري الدقيق</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:1rem; border:2px solid #2b6cb0; direction:ltr;">
+                <h5 style="color:#2b6cb0; margin-top:0; text-align:center;">معادلة الاحتياج المائي</h5>
+                <div style="text-align:center; font-size:1.1rem; font-weight:700; color:#2b6cb0; background:#ebf8ff; padding:0.5rem; border-radius:8px;">
+                    ETc = ETo × Kc
+                </div>
+                <ul style="font-size:0.8rem; margin-top:0.5rem; padding-right:1.2rem;">
+                    <li><strong>ETc</strong> = احتياج المحصول (mm/day)</li>
+                    <li><strong>ETo</strong> = البخر-نتح المرجعي</li>
+                    <li><strong>Kc</strong> = معامل المحصول</li>
+                </ul>
+            </div>
+            <div style="background:white; border-radius:12px; padding:1rem; border:2px solid #e53e3e; direction:ltr;">
+                <h5 style="color:#e53e3e; margin-top:0; text-align:center;">معادلة بنمن-مانتيث</h5>
+                <div style="text-align:center; font-size:0.7rem; font-weight:600; color:#e53e3e; background:#fff5f5; padding:0.5rem; border-radius:8px; overflow-x:auto;">
+                    ETo = (0.408Δ(Rn-G) + γ(900/(T+273))u₂(eₛ-eₐ)) / (Δ + γ(1+0.34u₂))
+                </div>
+                <ul style="font-size:0.7rem; margin-top:0.5rem; padding-right:1.2rem;">
+                    <li><strong>Rn</strong> = الإشعاع الصافي</li>
+                    <li><strong>G</strong> = تدفق حرارة التربة</li>
+                    <li><strong>γ</strong> = الثابت السيكرومتري</li>
+                    <li><strong>u₂</strong> = سرعة الرياح</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== معادلات التسميد ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fefcbf, #f6e05e); border-color: #d69e2e;">
+        <h4 style="color: #744210;">🧪 نماذج التسميد الدقيق</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #d69e2e; direction:ltr;">
+                <h5 style="color:#744210; margin-top:0; text-align:center; font-size:0.9rem;">ليبيج</h5>
+                <div style="text-align:center; font-size:1rem; font-weight:700; color:#744210; background:#fffff0; padding:0.3rem; border-radius:8px;">
+                    Y = f(العنصر المحدد)
+                </div>
+                <p style="font-size:0.7rem; text-align:center; margin:0.3rem 0 0 0;">الإنتاجية محدودة بأقل عنصر غذائي</p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #d69e2e; direction:ltr;">
+                <h5 style="color:#744210; margin-top:0; text-align:center; font-size:0.9rem;">ميتشرليش</h5>
+                <div style="text-align:center; font-size:0.9rem; font-weight:700; color:#744210; background:#fffff0; padding:0.3rem; border-radius:8px;">
+                    Y = Aₘₐₓ × (1 - e^(-c × N))
+                </div>
+                <p style="font-size:0.7rem; text-align:center; margin:0.3rem 0 0 0;">استجابة أسية للعناصر الغذائية</p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #d69e2e; direction:ltr;">
+                <h5 style="color:#744210; margin-top:0; text-align:center; font-size:0.9rem;">الخطي-الثلاثي</h5>
+                <div style="text-align:center; font-size:0.8rem; font-weight:700; color:#744210; background:#fffff0; padding:0.3rem; border-radius:8px;">
+                    Y = {b₀+b₁N, N < Nₘₐₓ<br>Yₘₐₓ, N ≥ Nₘₐₓ}
+                </div>
+                <p style="font-size:0.7rem; text-align:center; margin:0.3rem 0 0 0;">استجابة خطية ثم ثبات</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== جيواستاتيات ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #e9d5ff, #d8b4fe); border-color: #6b46c1;">
+        <h4 style="color: #553c9a;">📐 الجيواستاتيات في الزراعة الدقيقة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #6b46c1;">
+                <i class="fas fa-chart-line" style="color:#6b46c1; font-size:1.5rem;"></i>
+                <div style="font-weight:700; font-size:0.8rem; margin-top:0.3rem;">الفاريوغرام</div>
+                <span style="font-size:0.65rem; color:#4a5568;">قياس التباين المكاني</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #6b46c1;">
+                <i class="fas fa-map" style="color:#6b46c1; font-size:1.5rem;"></i>
+                <div style="font-weight:700; font-size:0.8rem; margin-top:0.3rem;">الكريجينج</div>
+                <span style="font-size:0.65rem; color:#4a5568;">استيفاء مكاني</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #6b46c1;">
+                <i class="fas fa-ruler" style="color:#6b46c1; font-size:1.5rem;"></i>
+                <div style="font-weight:700; font-size:0.8rem; margin-top:0.3rem;">النطاق (Range)</div>
+                <span style="font-size:0.65rem; color:#4a5568;">مسافة الاعتماد المكاني</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #6b46c1;">
+                <i class="fas fa-crosshairs" style="color:#6b46c1; font-size:1.5rem;"></i>
+                <div style="font-weight:700; font-size:0.8rem; margin-top:0.3rem;">تأثير الرصاصة</div>
+                <span style="font-size:0.65rem; color:#4a5568;">خطأ القياس</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== أنواع المستشعرات ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fbd38d, #f6ad55); border-color: #dd6b20;">
+        <h4 style="color: #7b341e;">📡 أنواع المستشعرات الطيفية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #dd6b20;">
+                <h5 style="color:#dd6b20; margin-top:0;">🟦 متعدد الأطياف</h5>
+                <p style="font-size:0.8rem; margin:0;">5-15 نطاقاً<br><small>مثال: Sentinel-2, Landsat</small></p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #dd6b20;">
+                <h5 style="color:#dd6b20; margin-top:0;">🟪 فائق الطيف</h5>
+                <p style="font-size:0.8rem; margin:0;">100-300 نطاقاً متصلاً<br><small>مثال: Hyperion, AVIRIS</small></p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #dd6b20;">
+                <h5 style="color:#dd6b20; margin-top:0;">🔴 حراري</h5>
+                <p style="font-size:0.8rem; margin:0;">8-14 ميكرومتر<br><small>تقييم إجهاد الرطوبة</small></p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #dd6b20;">
+                <h5 style="color:#dd6b20; margin-top:0;">🟢 راداري (SAR)</h5>
+                <p style="font-size:0.8rem; margin:0;">ميكروويف نشط<br><small>رطوبة التربة، تضاريس</small></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== الذكاء الاصطناعي ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #e2e8f0, #cbd5e0); border-color: #4a5568;">
+        <h4 style="color: #2d3748;">🧠 الذكاء الاصطناعي في الزراعة الدقيقة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #4a5568;">
+                <i class="fas fa-network-wired" style="color:#4a5568; font-size:1.8rem;"></i>
+                <div style="font-weight:700; font-size:0.85rem; margin-top:0.3rem;">CNN</div>
+                <span style="font-size:0.7rem; color:#4a5568;">تصنيف المحاصيل، كشف الآفات</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #4a5568;">
+                <i class="fas fa-clock" style="color:#4a5568; font-size:1.8rem;"></i>
+                <div style="font-weight:700; font-size:0.85rem; margin-top:0.3rem;">LSTM</div>
+                <span style="font-size:0.7rem; color:#4a5568;">سلاسل زمنية، توقع الإنتاج</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #4a5568;">
+                <i class="fas fa-tree" style="color:#4a5568; font-size:1.8rem;"></i>
+                <div style="font-weight:700; font-size:0.85rem; margin-top:0.3rem;">Random Forest</div>
+                <span style="font-size:0.7rem; color:#4a5568;">تصنيف وتقدير الإنتاج</span>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; text-align:center; border:2px solid #4a5568;">
+                <i class="fas fa-robot" style="color:#4a5568; font-size:1.8rem;"></i>
+                <div style="font-weight:700; font-size:0.85rem; margin-top:0.3rem;">YOLO</div>
+                <span style="font-size:0.7rem; color:#4a5568;">كشف فوري للآفات</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== الروبوتات الزراعية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fecaca); border-color: #e53e3e;">
+        <h4 style="color: #742a2a;">🚜 الروبوتات الزراعية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 0.6rem;">
+            <span style="background:white; padding:0.6rem; border-radius:12px; text-align:center; border:2px solid #e53e3e; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-apple-alt" style="color:#e53e3e; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">روبوتات الحصاد</strong></span>
+            <span style="background:white; padding:0.6rem; border-radius:12px; text-align:center; border:2px solid #e53e3e; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-leaf" style="color:#e53e3e; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">إزالة الأعشاب</strong></span>
+            <span style="background:white; padding:0.6rem; border-radius:12px; text-align:center; border:2px solid #e53e3e; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-spray-can" style="color:#e53e3e; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">روبوتات الرش</strong></span>
+            <span style="background:white; padding:0.6rem; border-radius:12px; text-align:center; border:2px solid #e53e3e; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-seedling" style="color:#e53e3e; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">روبوتات التربة</strong></span>
+            <span style="background:white; padding:0.6rem; border-radius:12px; text-align:center; border:2px solid #e53e3e; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"><i class="fas fa-plane" style="color:#e53e3e; font-size:1.5rem;"></i><br><strong style="font-size:0.8rem;">طائرات الرش</strong></span>
+        </div>
+    </div>
+
+    <!-- ===== التحديات ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fed7d7, #feb2b2); border-color: #e53e3e;">
+        <h4 style="color: #742a2a;">⚠️ التحديات والعوائق</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #e53e3e;">
+                <h5 style="color:#e53e3e; margin-top:0;">🛠️ تقنية</h5>
+                <ul style="font-size:0.8rem; padding-right:1rem; margin:0;">
+                    <li>جودة البيانات</li>
+                    <li>كثافة البيانات</li>
+                    <li>التكامل بين الأنظمة</li>
+                </ul>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #e53e3e;">
+                <h5 style="color:#e53e3e; margin-top:0;">💰 اقتصادية</h5>
+                <ul style="font-size:0.8rem; padding-right:1rem; margin:0;">
+                    <li>ارتفاع التكلفة الأولية</li>
+                    <li>فترة استرداد طويلة</li>
+                    <li>الحاجة للتدريب</li>
+                </ul>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border-right:4px solid #e53e3e;">
+                <h5 style="color:#e53e3e; margin-top:0;">👥 اجتماعية</h5>
+                <ul style="font-size:0.8rem; padding-right:1rem; margin:0;">
+                    <li>مقاومة التغيير</li>
+                    <li>الفجوة الرقمية</li>
+                    <li>سياسات الدعم</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== التوجهات المستقبلية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #c6f6d5, #9ae6b4); border-color: #38a169;">
+        <h4 style="color: #22543d;">🚀 التوجهات المستقبلية</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.6rem;">
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #38a169;">
+                <i class="fas fa-robot" style="color:#38a169; font-size:1.5rem;"></i>
+                <h5 style="color:#22543d; margin:0.3rem 0;">الزراعة الرقمية بالكامل</h5>
+                <p style="font-size:0.8rem; margin:0;">مزارع تعمل دون تدخل بشري، قرارات لحظية</p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #38a169;">
+                <i class="fas fa-seedling" style="color:#38a169; font-size:1.5rem;"></i>
+                <h5 style="color:#22543d; margin:0.3rem 0;">الزراعة على مستوى النبات</h5>
+                <p style="font-size:0.8rem; margin:0;">معاملة كل نبات على حدة</p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #38a169;">
+                <i class="fas fa-chart-line" style="color:#38a169; font-size:1.5rem;"></i>
+                <h5 style="color:#22543d; margin:0.3rem 0;">الزراعة المتنبئة</h5>
+                <p style="font-size:0.8rem; margin:0;">توقع الأحداث قبل حدوثها بفترة طويلة</p>
+            </div>
+            <div style="background:white; border-radius:12px; padding:0.8rem; border:2px solid #38a169;">
+                <i class="fas fa-dna" style="color:#38a169; font-size:1.5rem;"></i>
+                <h5 style="color:#22543d; margin:0.3rem 0;">الزراعة الجينومية</h5>
+                <p style="font-size:0.8rem; margin:0;">تكييف المحاصيل مع الظروف المحلية</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== خلاصة علمية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #2d3748, #1a202c); border-color: #4a5568; color: white;">
+        <h4 style="color: #fbd38d;">📌 خلاصة علمية متكاملة</h4>
+        <p style="font-size: 1rem; line-height: 1.8; color: #e2e8f0;">
+            تمثل الزراعة الدقيقة والزراعة الذكية <strong style="color: #fbd38d;">أحد أهم التحولات النوعية</strong> في تاريخ العلوم الزراعية،
+            حيث تنتقل الزراعة من نشاط تجريبي قائم على الحدس إلى <strong style="color: #fbd38d;">علم هندسي دقيق</strong> يعتمد على:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.6rem; margin-top: 0.8rem;">
+            <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:0.6rem; text-align:center;">
+                <i class="fas fa-calculator" style="color:#fbd38d; font-size:1.5rem;"></i>
+                <div style="font-weight:600; font-size:0.8rem; color:#fbd38d;">أسس رياضية</div>
+                <span style="font-size:0.7rem; color:#e2e8f0;">جيواستاتيات، احتمالات</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:0.6rem; text-align:center;">
+                <i class="fas fa-satellite" style="color:#fbd38d; font-size:1.5rem;"></i>
+                <div style="font-weight:600; font-size:0.8rem; color:#fbd38d;">جمع بيانات متقدم</div>
+                <span style="font-size:0.7rem; color:#e2e8f0;">استشعار عن بعد، شبكات</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:0.6rem; text-align:center;">
+                <i class="fas fa-brain" style="color:#fbd38d; font-size:1.5rem;"></i>
+                <div style="font-weight:600; font-size:0.8rem; color:#fbd38d;">تحليل ذكي</div>
+                <span style="font-size:0.7rem; color:#e2e8f0;">تعلم آلي، ذكاء اصطناعي</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:0.6rem; text-align:center;">
+                <i class="fas fa-cogs" style="color:#fbd38d; font-size:1.5rem;"></i>
+                <div style="font-weight:600; font-size:0.8rem; color:#fbd38d;">تنفيذ دقيق</div>
+                <span style="font-size:0.7rem; color:#e2e8f0;">معدلات متغيرة، روبوتات</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:0.6rem; text-align:center;">
+                <i class="fas fa-sync-alt" style="color:#fbd38d; font-size:1.5rem;"></i>
+                <div style="font-weight:600; font-size:0.8rem; color:#fbd38d;">تقييم وتحسين</div>
+                <span style="font-size:0.7rem; color:#e2e8f0;">تغذية راجعة، تكيف</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ===== END PRECISION AGRICULTURE SECTION ===== -->
+
 
     <!-- ============================================================ -->
     <!-- ===== SECTION 15: VRT ===== -->
