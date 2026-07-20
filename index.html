@@ -19686,46 +19686,323 @@
 <!-- ===== END SECTION 29 ===== -->
 
     <!-- ============================================================ -->
-    <!-- ===== SECTION 30: GOOGLE EARTH ENGINE ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="google-earth-engine">
-        <div class="section-title"><i class="fab fa-google"></i> Google Earth Engine (GEE)</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">🌍 ما هو Google Earth Engine؟</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>Google Earth Engine (GEE)</strong> هو <strong>منصة سحابية</strong> متطورة من <strong>Google</strong> 
-                تتيح <strong>تحليل البيانات المكانية</strong> و<strong>الاستشعار عن بعد</strong> على نطاق واسع.
-            </p>
+<!-- ===== SECTION 30: GOOGLE EARTH ENGINE (EXPANDED) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="google-earth-engine">
+
+    <!-- العنوان الرئيسي -->
+    <div class="section-title">
+        <i class="fab fa-google"></i> 
+        Google Earth Engine (GEE) – منصة التحليل الجغرافي السحابي
+    </div>
+
+    <!-- ===== 1. INTRODUCTION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-africa"></i> مقدمة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            تُعد <strong>Google Earth Engine (GEE)</strong> واحدة من أهم المنصات الحديثة في مجال <strong>الاستشعار عن بعد (Remote Sensing)</strong> و <strong>علوم الأرض (Earth Science)</strong> وتحليل البيانات الجيومكانية. وهي منصة سحابية متقدمة طورتها Google بالتعاون مع المؤسسات العلمية والبحثية، بهدف توفير بيئة متكاملة لمعالجة وتحليل كميات ضخمة من البيانات الجغرافية والبيئية باستخدام قدرات <strong>الحوسبة السحابية (Cloud Computing)</strong>.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            على عكس البرامج التقليدية (ArcGIS، QGIS) التي تعتمد على قدرة جهاز المستخدم، تعتمد GEE على الخوادم السحابية الضخمة لشركة Google، مما يسمح بمعالجة ملايين الصور الفضائية وتحليل سلاسل زمنية طويلة خلال وقت قصير.
+        </p>
+        <div style="background: #e6fffa; padding: 14px 20px; border-radius: 14px; margin-top: 12px;">
+            <p><i class="fas fa-rocket" style="color: #319795;"></i> تُستخدم GEE في: مراقبة تغيرات الغطاء الأرضي، الزراعة الدقيقة، مراقبة المحاصيل، دراسة الجفاف والتصحر، إدارة الموارد المائية، تحليل تغير المناخ، مراقبة الغابات، تقييم الكوارث، رسم خرائط التربة، وتطبيقات GeoAI.</p>
         </div>
-        <div class="info-box">
-            <h4 style="color: #2b6cb0;">🗂️ البيانات في GEE</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
-                <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2b6cb0;">
-                    <p style="font-weight: 700; color: #2b6cb0;">🛰️ صور الأقمار</p>
-                    <ul style="list-style: none; padding: 0; font-size: 0.7rem; line-height: 2;">
-                        <li>🔹 Landsat</li>
-                        <li>🔹 Sentinel</li>
-                        <li>🔹 MODIS</li>
-                    </ul>
-                </div>
-                <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2f855a;">
-                    <p style="font-weight: 700; color: #2f855a;">🌤️ بيانات مناخية</p>
-                    <ul style="list-style: none; padding: 0; font-size: 0.7rem; line-height: 2;">
-                        <li>🔹 MODIS LST</li>
-                        <li>🔹 ERA5</li>
-                        <li>🔹 CHIRPS</li>
-                    </ul>
-                </div>
-                <div style="background: #f7fafc; border-radius: 12px; padding: 12px; border-bottom: 4px solid #6b46c1;">
-                    <p style="font-weight: 700; color: #6b46c1;">⛰️ بيانات طبوغرافية</p>
-                    <ul style="list-style: none; padding: 0; font-size: 0.7rem; line-height: 2;">
-                        <li>🔹 SRTM</li>
-                        <li>🔹 ASTER GDEM</li>
-                    </ul>
-                </div>
+    </div>
+
+    <!-- ===== 2. WHAT IS GEE? ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-question-circle"></i> ما هي Google Earth Engine؟</h4>
+        <p><strong>التعريف العلمي:</strong> GEE هي منصة تحليل جغرافي سحابية تجمع بين: قاعدة بيانات ضخمة من صور الأقمار الصناعية، قدرات الحوسبة السحابية، أدوات تحليل جغرافي متقدمة، وخوارزميات الذكاء الاصطناعي والتعلم الآلي، بهدف تحليل ومراقبة التغيرات على سطح الأرض باستخدام البيانات الجغرافية الزمنية.</p>
+        <div style="background: #f0fff4; padding: 14px 20px; border-radius: 14px; margin-top: 12px; border-right: 4px solid #38a169;">
+            <p><i class="fas fa-lightbulb" style="color: #38a169;"></i> <strong>الفكرة الأساسية:</strong> بدلاً من تحميل البيانات → تخزينها محلياً → معالجتها (ساعات/أيام)، تعمل GEE عبر: اختيار البيانات → معالجة سحابية → تحليل ملايين الصور → إنتاج الخرائط والنتائج في ثوانٍ.</p>
+        </div>
+    </div>
+
+    <!-- ===== 3. OBJECTIVES ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-bullseye"></i> أهداف Google Earth Engine</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 10px;">
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-database" style="color:#6b46c1;"></i> تسهيل الوصول إلى البيانات الفضائية العالمية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-chart-line" style="color:#6b46c1;"></i> تحليل التغيرات البيئية واسعة النطاق</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-graduation-cap" style="color:#6b46c1;"></i> توفير أدوات بحثية مجانية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-globe" style="color:#6b46c1;"></i> دعم علوم الأرض والاستدامة</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-brain" style="color:#6b46c1;"></i> تطوير نماذج تنبؤية باستخدام AI</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-satellite" style="color:#6b46c1;"></i> دمج البيانات الفضائية مع البيانات الأرضية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-leaf" style="color:#6b46c1;"></i> دعم القرارات البيئية والزراعية</div>
+        </div>
+    </div>
+
+    <!-- ===== 4. COMPONENTS ===== -->
+    <div class="info-box">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-cubes"></i> مكونات Google Earth Engine</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 12px;">
+            <div style="background: #ebf8ff; border-radius: 16px; padding: 16px; border-bottom: 5px solid #2b6cb0;">
+                <h5><i class="fas fa-database" style="color:#2b6cb0;"></i> قاعدة البيانات الجغرافية</h5>
+                <p style="font-size:0.85rem;">Landsat, Sentinel, MODIS, SRTM, CHIRPS, ERA5, WorldCover, SoilGrids</p>
+            </div>
+            <div style="background: #f0fff4; border-radius: 16px; padding: 16px; border-bottom: 5px solid #38a169;">
+                <h5><i class="fas fa-code" style="color:#38a169;"></i> بيئة البرمجة</h5>
+                <p style="font-size:0.85rem;">JavaScript (Code Editor), Python API (Colab, Jupyter), TensorFlow</p>
+            </div>
+            <div style="background: #faf5ff; border-radius: 16px; padding: 16px; border-bottom: 5px solid #6b46c1;">
+                <h5><i class="fas fa-cloud" style="color:#6b46c1;"></i> محرك المعالجة السحابية</h5>
+                <p style="font-size:0.85rem;">معالجة الصور الكبيرة، التحليل الزمني، العمليات الرياضية، الخوارزميات المكانية</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 16px; padding: 16px; border-bottom: 5px solid #dd6b20;">
+                <h5><i class="fas fa-map" style="color:#dd6b20;"></i> أدوات العرض والتحليل</h5>
+                <p style="font-size:0.85rem;">خرائط تفاعلية، رسوم بيانية زمنية، تصدير النتائج، إنشاء التطبيقات</p>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- ===== 5. HOW GEE WORKS (FLOWCHART) ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-cogs"></i> كيف تعمل Google Earth Engine؟</h4>
+        <div style="background: #1a202c; border-radius: 14px; padding: 20px; text-align: center; direction: ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 10px;">
+                <span style="background: #2b6cb0; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-satellite"></i> Satellite Data</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #3182ce; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-database"></i> Earth Engine DB</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #4299e1; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-cloud"></i> Cloud Processing</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-image"></i> Image Processing</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-vector-square"></i> Spatial Analysis</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #bee3f8; color: #1a202c; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-brain"></i> AI / ML</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #ebf8ff; color: #1a202c; padding: 6px 16px; border-radius: 20px; border:2px solid #2b6cb0; font-size:0.8rem;"><i class="fas fa-chart-pie"></i> Maps + Statistics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 6. DATA CATALOG TABLE ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-table"></i> قاعدة البيانات الجغرافية (Earth Engine Data Catalog)</h4>
+        <div style="overflow-x: auto;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.85rem; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <thead style="background: #2b6cb0; color: white;">
+                    <tr>
+                        <th style="padding: 10px 12px;">الفئة</th>
+                        <th style="padding: 10px 12px;">البيانات</th>
+                        <th style="padding: 10px 12px;">الاستخدامات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>صور الأقمار</strong></td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">Landsat 4-9, Sentinel-1 (SAR), Sentinel-2 (Multispectral), MODIS</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">تغيرات الغطاء الأرضي، صحة النبات، الفيضانات، رطوبة التربة</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>بيانات مناخية</strong></td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">CHIRPS Rainfall, ERA5 Climate, MODIS LST</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">دراسة الجفاف، التغير المناخي، نماذج الطقس</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>بيانات طبوغرافية</strong></td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">SRTM DEM, ASTER GDEM</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">نماذج الارتفاع، تحليل الانحدار، الهيدرولوجيا</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>خرائط أرضية</strong></td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">WorldCover, Global Forest Change, SoilGrids</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">استخدامات الأراضي، إزالة الغابات، خصائص التربة</td></tr>
+                    <tr><td style="padding: 8px 12px;"><strong>بيانات أخرى</strong></td><td style="padding: 8px 12px;">MODIS Fire, VIIRS, Landsat NDVI composites</td><td style="padding: 8px 12px;">مراقبة الحرائق، المؤشرات النباتية</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== 7. IMAGE PROCESSING & MATH EQUATIONS ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-calculator"></i> معالجة الصور والمؤشرات الطيفية في GEE</h4>
+        <p style="font-size:0.95rem;">تشمل مراحل المعالجة: اختيار البيانات، إزالة السحب (Cloud Masking)، المعالجة الطيفية (Surface Reflectance)، وحساب المؤشرات:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px;">
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169;">NDVI (الغطاء النباتي)</h5>
+                <p style="font-family: 'Courier New', monospace; font-size:1rem; direction:ltr; text-align:center;">NDVI = (NIR - RED) / (NIR + RED)</p>
+                <p style="font-size:0.8rem;">نطاق: -1 إلى +1 (صحة النبات)</p>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;">NDWI (المياه)</h5>
+                <p style="font-family: 'Courier New', monospace; font-size:1rem; direction:ltr; text-align:center;">NDWI = (GREEN - NIR) / (GREEN + NIR)</p>
+                <p style="font-size:0.8rem;">كشف المسطحات المائية</p>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color:#6b46c1;">SAVI (المناطق الجافة)</h5>
+                <p style="font-family: 'Courier New', monospace; font-size:0.9rem; direction:ltr; text-align:center;">SAVI = (NIR - RED)·(1+L) / (NIR+RED+L)</p>
+                <p style="font-size:0.8rem;">L = 0.5 (تعديل تأثير التربة)</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color:#dd6b20;">EVI (محسن)</h5>
+                <p style="font-family: 'Courier New', monospace; font-size:0.85rem; direction:ltr; text-align:center;">EVI = 2.5 × (NIR-RED) / (NIR+6·RED-7.5·BLUE+1)</p>
+                <p style="font-size:0.8rem;">مقاوم للتأثيرات الجوية والتربة</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 8. APPLICATIONS IN AGRICULTURE ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-seedling"></i> تطبيقات Google Earth Engine في الزراعة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px;">
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color:#dd6b20;"><i class="fas fa-chart-line"></i> مراقبة المحاصيل</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>متابعة النمو</li>
+                    <li>بداية الموسم الزراعي</li>
+                    <li>الإجهاد النباتي</li>
+                    <li>تقدير الإنتاجية</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;"><i class="fas fa-tags"></i> تصنيف المحاصيل</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>Random Forest</li>
+                    <li>SVM, CART</li>
+                    <li>Deep Learning</li>
+                    <li>خرائط القمح، الشعير، الزيتون</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169;"><i class="fas fa-tint"></i> إدارة الري</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>رطوبة التربة</li>
+                    <li>التبخر والنتح</li>
+                    <li>المؤشرات النباتية</li>
+                    <li>دعم أنظمة الري الذكي</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color:#6b46c1;"><i class="fas fa-map"></i> خرائط التربة</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>الملوحة</li>
+                    <li>الرطوبة</li>
+                    <li>المادة العضوية</li>
+                    <li>الكربون العضوي</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 9. ENVIRONMENTAL APPLICATIONS ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-asia"></i> تطبيقات GEE في البيئة والموارد الطبيعية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-right: 4px solid #2b6cb0;">
+                <i class="fas fa-arrows-alt-h" style="color:#2b6cb0;"></i> <strong>تغير استخدامات الأراضي</strong>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>التوسع العمراني</li>
+                    <li>فقدان الغطاء النباتي</li>
+                    <li>تغير الأراضي الزراعية</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-right: 4px solid #38a169;">
+                <i class="fas fa-desert" style="color:#38a169;"></i> <strong>مراقبة التصحر</strong>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>انخفاض NDVI</li>
+                    <li>تغير الغطاء النباتي</li>
+                    <li>تدهور الأراضي</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 12px; border-right: 4px solid #6b46c1;">
+                <i class="fas fa-fire" style="color:#6b46c1;"></i> <strong>مراقبة الحرائق</strong>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>MODIS Fire Data</li>
+                    <li>Sentinel-2</li>
+                    <li>VIIRS</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 12px; border-right: 4px solid #dd6b20;">
+                <i class="fas fa-water" style="color:#dd6b20;"></i> <strong>الموارد المائية</strong>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>البحيرات والسدود</li>
+                    <li>الأراضي الرطبة</li>
+                    <li>تغير المسطحات المائية</li>
+                </ul>
+            </div>
+            <div style="background: #fefcbf; border-radius: 12px; padding: 12px; border-right: 4px solid #d69e2e;">
+                <i class="fas fa-tree" style="color:#d69e2e;"></i> <strong>الغابات والمراعي</strong>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>إزالة الغابات</li>
+                    <li>الكتلة الحيوية</li>
+                    <li>تقييم الغطاء النباتي</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 10. GEE + AI INTEGRATION ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-brain"></i> GEE والذكاء الاصطناعي (GeoAI)</h4>
+        <p style="font-size:0.95rem;">تدعم GEE تطبيقات Machine Learning من خلال التكامل مع TensorFlow وGoogle Colab:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">Random Forest</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">CART</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">SVM</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">Deep Learning</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">تصنيف الصور الفضائية</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">كشف التغيرات</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.8rem;">النمذجة المكانية</span>
+        </div>
+    </div>
+
+    <!-- ===== 11. INTEGRATION WITH GIS ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-sitemap"></i> التكامل مع GIS</h4>
+        <p style="font-size:0.95rem;">يمكن دمج GEE مع:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+            <span style="background: #2f855a; color: white; padding: 6px 18px; border-radius: 30px; font-size:0.85rem;">ArcGIS Pro</span>
+            <span style="background: #2f855a; color: white; padding: 6px 18px; border-radius: 30px; font-size:0.85rem;">QGIS</span>
+            <span style="background: #2f855a; color: white; padding: 6px 18px; border-radius: 30px; font-size:0.85rem;">Google Maps</span>
+            <span style="background: #2f855a; color: white; padding: 6px 18px; border-radius: 30px; font-size:0.85rem;">Python GIS (Geopandas, Folium)</span>
+        </div>
+        <p style="font-size:0.9rem; margin-top: 8px;">لإنتاج: خرائط موضوعية، نماذج مكانية، قواعد بيانات جغرافية.</p>
+    </div>
+
+    <!-- ===== 12. STUDENT PROJECT EXAMPLES ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-tasks"></i> أمثلة مشاريع لطلاب الجامعة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 5px solid #dd6b20;">
+                <h5 style="color:#dd6b20;"><i class="fas fa-leaf"></i> مشروع 1: مراقبة الغطاء النباتي</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>البيانات: Sentinel-2, NDVI</li>
+                    <li>الفترة: 2015–2026</li>
+                    <li>الناتج: خريطة تغير الغطاء النباتي</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 5px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;"><i class="fas fa-tint"></i> مشروع 2: دراسة الجفاف الزراعي</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>البيانات: MODIS NDVI, CHIRPS</li>
+                    <li>التحليل: Vegetation Drought Index</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 5px solid #38a169;">
+                <h5 style="color:#38a169;"><i class="fas fa-map"></i> مشروع 3: تصنيف استخدامات الأراضي</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>الخوارزمية: Random Forest</li>
+                    <li>البيانات: Sentinel-2</li>
+                    <li>الناتج: Land Cover Map</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 13. FUTURE OF GEE ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-rocket"></i> مستقبل Google Earth Engine</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-brain" style="color:#2b6cb0;"></i> دمج أكبر مع الذكاء الاصطناعي</div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-globe" style="color:#2b6cb0;"></i> نماذج GeoAI واسعة النطاق</div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-clock" style="color:#2b6cb0;"></i> تحليل البيانات في الزمن الحقيقي</div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-cube" style="color:#2b6cb0;"></i> التوائم الرقمية للأرض</div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-temperature-high" style="color:#2b6cb0;"></i> مراقبة التغير المناخي عالمياً</div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-seedling" style="color:#2b6cb0;"></i> دعم الزراعة الذكية</div>
+        </div>
+    </div>
+
+    <!-- ===== 14. CONCLUSION ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-graduation-cap"></i> الخلاصة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            تُعد <strong>Google Earth Engine (GEE)</strong> من أهم الأدوات التعليمية والبحثية الحديثة في مجال التقنيات الجيومكانية، لأنها توفر بيئة مجانية وقوية لتحليل ملايين الصور الفضائية والبيانات البيئية دون الحاجة إلى أجهزة حاسوب عالية القدرة. وتمثل حلقة وصل بين <strong>الاستشعار عن بعد</strong>، و <strong>نظم المعلومات الجغرافية</strong>، و <strong>الذكاء الاصطناعي</strong>، و <strong>البيانات الضخمة</strong>.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            بالنسبة لطلبة الزراعة وعلوم التربة والمياه والبيئة، تعد GEE أداة أساسية لتعلم: <strong>الزراعة الدقيقة</strong>، مراقبة المحاصيل، تحليل الجفاف، إدارة المياه، مراقبة التصحر، رسم خرائط التربة، وتحليل التغيرات البيئية. وتشكل مع <strong>GIS + RS + GNSS + IoT + AI</strong> الأساس العلمي لمنظومة التقنيات الجيومكانية الذكية (Smart Geospatial Technologies).
+        </p>
+    </div>
+
+</section>
+<!-- ===== END SECTION 30 ===== -->
 
     <!-- ============================================================ -->
     <!-- ===== SECTION 31: SPATIAL MODELING ===== -->
