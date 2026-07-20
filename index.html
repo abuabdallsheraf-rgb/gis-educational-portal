@@ -18713,45 +18713,291 @@
     </div>
 
 </section>
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 27: GNSS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="gnss-systems">
-        <div class="section-title"><i class="fas fa-satellite-dish"></i> أنظمة التموقع العالمي (GNSS)</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">🛰️ تعريف أنظمة GNSS</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>أنظمة التموقع العالمي (GNSS)</strong> هي <strong>مجموعة من الأقمار الصناعية</strong> 
-                التي تُستخدم لتحديد <strong>المواقع الجغرافية</strong> بدقة عالية.
-            </p>
+  <!-- ============================================================ -->
+<!-- ===== SECTION 27: GNSS (EXPANDED) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="gnss-systems">
+
+    <!-- العنوان الرئيسي -->
+    <div class="section-title">
+        <i class="fas fa-satellite-dish"></i> 
+        أنظمة الملاحة العالمية عبر الأقمار الصناعية (GNSS)
+    </div>
+
+    <!-- ===== 1. INTRODUCTION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-africa"></i> مقدمة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            تُعد أنظمة الملاحة العالمية عبر الأقمار الصناعية (GNSS) من أهم التقنيات الجيومكانية الحديثة، 
+            وهي الركيزة الأساسية للعديد من التطبيقات في <strong>نظم المعلومات الجغرافية (GIS)</strong>، 
+            <strong>الاستشعار عن بعد</strong>، <strong>المساحة</strong>، <strong>الزراعة الدقيقة</strong>، 
+            وإدارة الموارد الطبيعية، والمدن الذكية، والمركبات ذاتية القيادة.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            تعتمد تقنية GNSS على مجموعة من الأقمار الصناعية التي تدور حول الأرض وتبث إشارات راديوية 
+            تستقبلها أجهزة الاستقبال لحساب الموقع والسرعة والاتجاه والوقت بدقة عالية في أي مكان على سطح الأرض 
+            وفي أي وقت، بغض النظر عن الظروف الجوية.
+        </p>
+    </div>
+
+    <!-- ===== 2. WHAT IS GNSS? ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-question-circle"></i> ما هو GNSS؟</h4>
+        <p><strong>GNSS</strong> (Global Navigation Satellite Systems) هو مصطلح عام يشمل جميع أنظمة الملاحة العالمية القائمة على الأقمار الصناعية، والتي توفر خدمات <strong>تحديد الموقع (Positioning)</strong>، <strong>الملاحة (Navigation)</strong>، <strong>التوقيت (Timing)</strong>، ويُشار إليها مجتمعةً باسم خدمات <strong>PNT</strong>.</p>
+        <div style="background: #e6fffa; padding: 12px 18px; border-radius: 14px; margin-top: 12px;">
+            <p><i class="fas fa-graduation-cap" style="color: #319795;"></i> <strong>التعريف العلمي:</strong> GNSS هو نظام عالمي يعتمد على مجموعة من الأقمار الصناعية ومحطات التحكم الأرضية وأجهزة الاستقبال لتحديد الإحداثيات الجغرافية والارتفاع والسرعة والوقت بدقة عالية، من خلال قياس زمن انتقال الإشارات بين الأقمار الصناعية والمستقبل.</p>
         </div>
-        <div class="info-box">
-            <h4 style="color: #2b6cb0;">🛰️ أنظمة GNSS العاملة</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; text-align: center; border-bottom: 4px solid #2b6cb0;">
-                    <div style="font-size: 2.5rem;">🇺🇸</div>
-                    <h5 style="color: #2b6cb0;">GPS</h5>
-                    <p style="font-size: 0.7rem;">31 قمراً</p>
-                </div>
-                <div style="background: #f0fff4; border-radius: 12px; padding: 12px; text-align: center; border-bottom: 4px solid #2f855a;">
-                    <div style="font-size: 2.5rem;">🇷🇺</div>
-                    <h5 style="color: #2f855a;">GLONASS</h5>
-                    <p style="font-size: 0.7rem;">24 قمراً</p>
-                </div>
-                <div style="background: #faf5ff; border-radius: 12px; padding: 12px; text-align: center; border-bottom: 4px solid #6b46c1;">
-                    <div style="font-size: 2.5rem;">🇪🇺</div>
-                    <h5 style="color: #6b46c1;">Galileo</h5>
-                    <p style="font-size: 0.7rem;">28 قمراً</p>
-                </div>
-                <div style="background: #fffbeb; border-radius: 12px; padding: 12px; text-align: center; border-bottom: 4px solid #dd6b20;">
-                    <div style="font-size: 2.5rem;">🇨🇳</div>
-                    <h5 style="color: #dd6b20;">BeiDou</h5>
-                    <p style="font-size: 0.7rem;">35 قمراً</p>
-                </div>
+    </div>
+
+    <!-- ===== 3. OBJECTIVES ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-bullseye"></i> أهداف GNSS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 10px;">
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-map-pin" style="color:#2b6cb0;"></i> تحديد المواقع بدقة عالية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-ship" style="color:#2b6cb0;"></i> الملاحة البرية والبحرية والجوية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-clock" style="color:#2b6cb0;"></i> مرجع زمني عالمي دقيق</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-draw-polygon" style="color:#2b6cb0;"></i> دعم أعمال المساحة والهندسة</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-globe" style="color:#2b6cb0;"></i> دعم GIS والاستشعار عن بعد</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-tractor" style="color:#2b6cb0;"></i> تمكين الزراعة الدقيقة</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-tree" style="color:#2b6cb0;"></i> تحسين إدارة الموارد الطبيعية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-ambulance" style="color:#2b6cb0;"></i> دعم الاستجابة للكوارث والطوارئ</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-robot" style="color:#2b6cb0;"></i> تمكين المركبات والروبوتات ذاتية القيادة</div>
+        </div>
+    </div>
+
+    <!-- ===== 4. COMPONENTS ===== -->
+    <div class="info-box">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-cubes"></i> مكونات نظام GNSS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 12px;">
+            <div style="background: #ebf8ff; border-radius: 16px; padding: 16px; border-bottom: 5px solid #2b6cb0;">
+                <h5><i class="fas fa-satellite" style="color:#2b6cb0;"></i> القطاع الفضائي</h5>
+                <p style="font-size:0.9rem;">كوكبة من الأقمار الصناعية في مدارات MEO، تبث إشارات تحتوي على وقت الإرسال، موقع القمر، معلومات المدار، وصحة القمر.</p>
+            </div>
+            <div style="background: #f0fff4; border-radius: 16px; padding: 16px; border-bottom: 5px solid #38a169;">
+                <h5><i class="fas fa-tower-broadcast" style="color:#38a169;"></i> القطاع الأرضي</h5>
+                <p style="font-size:0.9rem;">محطات المراقبة، محطات التحكم الرئيسية، محطات رفع البيانات، وأنظمة مراقبة الساعات الذرية. متابعة وتحديث المدارات وتصحيح الأخطاء.</p>
+            </div>
+            <div style="background: #faf5ff; border-radius: 16px; padding: 16px; border-bottom: 5px solid #6b46c1;">
+                <h5><i class="fas fa-mobile-alt" style="color:#6b46c1;"></i> قطاع المستخدم</h5>
+                <p style="font-size:0.9rem;">أجهزة استقبال GNSS: الهواتف الذكية، أجهزة GPS المحمولة، أجهزة المساحة الجيوديسية، أجهزة تتبع المركبات، الطائرات بدون طيار، الجرارات الزراعية الذكية، والروبوتات.</p>
             </div>
         </div>
-    </section>
+    </div>
 
+    <!-- ===== 5. GLOBAL SYSTEMS ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-americas"></i> الأنظمة العالمية الرئيسية لـ GNSS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 12px;">
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 12px; text-align: center; border-bottom: 4px solid #2b6cb0;">
+                <div style="font-size: 2.8rem;">🇺🇸</div>
+                <h5 style="color: #2b6cb0;">GPS</h5>
+                <p style="font-size:0.8rem;">~31 قمراً (1995)</p>
+                <p style="font-size:0.75rem;">تطبيقات: ملاحة، مساحة، زراعة، طيران، خرائط رقمية</p>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 12px; text-align: center; border-bottom: 4px solid #38a169;">
+                <div style="font-size: 2.8rem;">🇪🇺</div>
+                <h5 style="color: #38a169;">Galileo</h5>
+                <p style="font-size:0.8rem;">~28 قمراً (2019)</p>
+                <p style="font-size:0.75rem;">دقة مدنية عالية، خدمة عالية الدقة (HAS)</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 12px; text-align: center; border-bottom: 4px solid #dd6b20;">
+                <div style="font-size: 2.8rem;">🇷🇺</div>
+                <h5 style="color: #dd6b20;">GLONASS</h5>
+                <p style="font-size:0.8rem;">~24 قمراً (1996)</p>
+                <p style="font-size:0.75rem;">تغطية محسنة في خطوط العرض العالية</p>
+            </div>
+            <div style="background: #fefcbf; border-radius: 14px; padding: 12px; text-align: center; border-bottom: 4px solid #d69e2e;">
+                <div style="font-size: 2.8rem;">🇨🇳</div>
+                <h5 style="color: #d69e2e;">BeiDou (BDS)</h5>
+                <p style="font-size:0.8rem;">~35 قمراً (2020)</p>
+                <p style="font-size:0.75rem;">خدمات الرسائل القصيرة، تغطية عالمية</p>
+            </div>
+        </div>
+        <div style="margin-top: 15px; background: #e2e8f0; border-radius: 14px; padding: 12px;">
+            <p><i class="fas fa-flag"></i> <strong>الأنظمة الإقليمية الداعمة:</strong> QZSS (اليابان)، NavIC (الهند)</p>
+        </div>
+    </div>
+
+    <!-- ===== 6. HOW IT WORKS + FLOWCHART ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-cogs"></i> كيف يعمل GNSS؟</h4>
+        <p>يعتمد GNSS على قياس الزمن الذي تستغرقه الإشارة للانتقال من القمر الصناعي إلى جهاز الاستقبال.</p>
+        <!-- Flowchart -->
+        <div style="background: #e6fffa; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 12px;">
+                <span style="background: #2b6cb0; color: white; padding: 8px 18px; border-radius: 30px; font-size:0.9rem;"><i class="fas fa-satellite"></i> القمر الصناعي</span>
+                <span style="font-size:1.8rem; color:#2b6cb0;">→</span>
+                <span style="background: #3182ce; color: white; padding: 8px 18px; border-radius: 30px; font-size:0.9rem;"><i class="fas fa-broadcast-tower"></i> إرسال إشارة</span>
+                <span style="font-size:1.8rem; color:#2b6cb0;">→</span>
+                <span style="background: #4299e1; color: white; padding: 8px 18px; border-radius: 30px; font-size:0.9rem;"><i class="fas fa-antenna"></i> استقبال الإشارة</span>
+                <span style="font-size:1.8rem; color:#2b6cb0;">→</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 8px 18px; border-radius: 30px; font-size:0.9rem;"><i class="fas fa-clock"></i> حساب زمن الانتقال</span>
+                <span style="font-size:1.8rem; color:#2b6cb0;">→</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 8px 18px; border-radius: 30px; font-size:0.9rem;"><i class="fas fa-ruler"></i> حساب المسافة</span>
+                <span style="font-size:1.8rem; color:#2b6cb0;">→</span>
+                <span style="background: #bee3f8; color: #1a202c; padding: 8px 18px; border-radius: 30px; font-size:0.9rem;"><i class="fas fa-vector-square"></i> التثليث الفراغي</span>
+                <span style="font-size:1.8rem; color:#2b6cb0;">→</span>
+                <span style="background: #ebf8ff; color: #1a202c; padding: 8px 18px; border-radius: 30px; font-size:0.9rem; border: 2px solid #2b6cb0;"><i class="fas fa-map-marked-alt"></i> حساب الموقع (X,Y,Z)</span>
+            </div>
+        </div>
+        <p><i class="fas fa-info-circle" style="color:#2f855a;"></i> <strong>مبدأ التثليث الفراغي (Trilateration):</strong> يحدد المستقبل موقعه من خلال قياس المسافة إلى أربعة أقمار صناعية أو أكثر.</p>
+        <div style="background: #f0fff4; padding: 12px 18px; border-radius: 14px; border-right: 4px solid #38a169;">
+            <p><strong>المعادلات الأساسية:</strong></p>
+            <p dir="ltr" style="font-family: 'Courier New', monospace; background: #1a202c; color: #68d391; padding: 12px; border-radius: 10px; text-align: left;">
+                √[(x - xᵢ)² + (y - yᵢ)² + (z - zᵢ)²] + c·δt = ρᵢ
+            </p>
+            <p style="font-size:0.9rem;">حيث (x,y,z) موقع المستقبل، (xᵢ,yᵢ,zᵢ) موقع القمر، c سرعة الضوء، δt خطأ ساعة المستقبل، ρᵢ المسافة الظاهرية.</p>
+        </div>
+    </div>
+
+    <!-- ===== 7. SIGNALS & FREQUENCIES TABLE ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-wave-square"></i> الإشارات والترددات</h4>
+        <div style="overflow-x: auto;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.9rem; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <thead style="background: #6b46c1; color: white;">
+                    <tr>
+                        <th style="padding: 10px 12px;">التردد</th>
+                        <th style="padding: 10px 12px;">التطبيق</th>
+                        <th style="padding: 10px 12px;">الأنظمة المستخدمة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>L1</strong> (1575.42 MHz)</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">الاستخدام المدني الأساسي</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">GPS، Galileo، BeiDou، QZSS</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>L2</strong> (1227.60 MHz)</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">تحسين الدقة والتصحيحات</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">GPS، GLONASS، BeiDou</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>L5</strong> (1176.45 MHz)</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">تطبيقات السلامة والطيران</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">GPS (III)، Galileo، BeiDou، NavIC</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>E1</strong> (1575.42 MHz)</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">خدمة مفتوحة وحكومية</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">Galileo</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;"><strong>E5a / E5b</strong></td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">خدمة مفتوحة عالية الدقة</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">Galileo</td></tr>
+                    <tr><td style="padding: 8px 12px;"><strong>B1 / B2 / B3</strong></td><td style="padding: 8px 12px;">خدمات مفتوحة وحكومية</td><td style="padding: 8px 12px;">BeiDou</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="margin-top: 12px; font-size:0.9rem;"><i class="fas fa-info-circle" style="color:#6b46c1;"></i> استخدام الترددات المتعددة يساعد في تصحيح الأخطاء الأيونوسفيرية وتحسين الدقة والموثوقية.</p>
+    </div>
+
+    <!-- ===== 8. ERRORS & ENHANCEMENT TECHNIQUES ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-exclamation-triangle"></i> مصادر الخطأ في GNSS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px; border-right: 4px solid #dd6b20;"><i class="fas fa-cloud-sun" style="color:#dd6b20;"></i> تأخير الغلاف الأيوني (3-30 م)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px; border-right: 4px solid #dd6b20;"><i class="fas fa-cloud-rain" style="color:#dd6b20;"></i> تأخير الغلاف الجوي السفلي (2-20 م)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px; border-right: 4px solid #dd6b20;"><i class="fas fa-clock" style="color:#dd6b20;"></i> أخطاء الساعات الذرية (1-10 م)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px; border-right: 4px solid #dd6b20;"><i class="fas fa-globe" style="color:#dd6b20;"></i> أخطاء المدارات (1-5 م)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px; border-right: 4px solid #dd6b20;"><i class="fas fa-arrows-spin" style="color:#dd6b20;"></i> الانعكاسات متعددة المسارات (1-10 م)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px; border-right: 4px solid #dd6b20;"><i class="fas fa-building" style="color:#dd6b20;"></i> حجب الإشارة بالمباني أو الأشجار</div>
+        </div>
+    </div>
+
+    <!-- ===== 9. ENHANCEMENT TECHNIQUES ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-chart-line"></i> تقنيات تحسين الدقة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; text-align: center; border-bottom: 4px solid #2b6cb0;">
+                <i class="fas fa-satellite-dish" style="font-size:2rem; color:#2b6cb0;"></i>
+                <h5 style="color:#2b6cb0;">DGPS</h5>
+                <p style="font-size:0.8rem;">0.5-5 م</p>
+                <p style="font-size:0.7rem;">محطة مرجعية لتصحيح الأخطاء</p>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; text-align: center; border-bottom: 4px solid #38a169;">
+                <i class="fas fa-ruler-combined" style="font-size:2rem; color:#38a169;"></i>
+                <h5 style="color:#38a169;">RTK</h5>
+                <p style="font-size:0.8rem;">1-2 سم</p>
+                <p style="font-size:0.7rem;">تحليل الطور الحامل، دقة سنتيمترية</p>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; text-align: center; border-bottom: 4px solid #6b46c1;">
+                <i class="fas fa-map-pin" style="font-size:2rem; color:#6b46c1;"></i>
+                <h5 style="color:#6b46c1;">PPP</h5>
+                <p style="font-size:0.8rem;">1-5 سم</p>
+                <p style="font-size:0.7rem;">نماذج مدارية وساعات دقيقة</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; text-align: center; border-bottom: 4px solid #dd6b20;">
+                <i class="fas fa-globe-asia" style="font-size:2rem; color:#dd6b20;"></i>
+                <h5 style="color:#dd6b20;">SBAS</h5>
+                <p style="font-size:0.8rem;">1-3 م</p>
+                <p style="font-size:0.7rem;">WAAS، EGNOS، GAGAN، MSAS</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 10. APPLICATIONS (AGRICULTURE, ENVIRONMENT, GIS, UAVs) ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-seedling"></i> تطبيقات GNSS</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 5px solid #2f855a;">
+                <h5><i class="fas fa-tractor" style="color:#2f855a;"></i> الزراعة الدقيقة</h5>
+                <ul style="font-size:0.85rem; padding-right:20px; margin:6px 0;">
+                    <li>توجيه الجرارات آلياً</li>
+                    <li>التسميد المتغير</li>
+                    <li>خرائط الغلة</li>
+                    <li>إدارة الري</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 5px solid #2b6cb0;">
+                <h5><i class="fas fa-globe" style="color:#2b6cb0;"></i> البيئة والموارد</h5>
+                <ul style="font-size:0.85rem; padding-right:20px; margin:6px 0;">
+                    <li>رسم الخرائط البيئية</li>
+                    <li>مراقبة التصحر</li>
+                    <li>تتبع الحياة البرية</li>
+                    <li>مراقبة السواحل</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 5px solid #6b46c1;">
+                <h5><i class="fas fa-map" style="color:#6b46c1;"></i> GIS والاستشعار عن بعد</h5>
+                <ul style="font-size:0.85rem; padding-right:20px; margin:6px 0;">
+                    <li>جمع البيانات الحقلية</li>
+                    <li>التحقق من التصنيف (Ground Truth)</li>
+                    <li>تحديث الخرائط</li>
+                    <li>إدارة الأصول</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 5px solid #dd6b20;">
+                <h5><i class="fas fa-drone" style="color:#dd6b20;"></i> الطائرات بدون طيار (UAVs)</h5>
+                <ul style="font-size:0.85rem; padding-right:20px; margin:6px 0;">
+                    <li>الملاحة الذاتية</li>
+                    <li>تخطيط مسارات الطيران</li>
+                    <li>التصوير الجوي</li>
+                    <li>المسح الفوتوغرامتري</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 11. ADVANTAGES & FUTURE TRENDS ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-star"></i> مزايا GNSS</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">تغطية عالمية</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">عمل مستمر 24/7</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">لا يتأثر بالحدود السياسية</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">دقة عالية</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">سهولة الاستخدام</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">تكامل مع GIS وRemote Sensing</span>
+            <span style="background: #6b46c1; color: white; padding: 4px 16px; border-radius: 30px; font-size:0.85rem;">دعم التطبيقات الزمن الحقيقي</span>
+        </div>
+    </div>
+
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-rocket"></i> الاتجاهات المستقبلية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-brain" style="color:#dd6b20;"></i> دمج GNSS مع الذكاء الاصطناعي (GeoAI)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-wifi" style="color:#dd6b20;"></i> تكامل GNSS مع إنترنت الأشياء (IoT)</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-car" style="color:#dd6b20;"></i> تحسين الملاحة للمركبات الذاتية القيادة</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-wave-square" style="color:#dd6b20;"></i> استخدام الترددات متعددة النطاقات</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-5g" style="color:#dd6b20;"></i> تكامل GNSS مع شبكات 5G والحوسبة الطرفية</div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-cube" style="color:#dd6b20;"></i> دعم التوائم الرقمية (Digital Twins)</div>
+        </div>
+    </div>
+
+    <!-- ===== 12. CONCLUSION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-graduation-cap"></i> الخلاصة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            تُعد أنظمة الملاحة العالمية عبر الأقمار الصناعية (GNSS) من أهم التقنيات الأساسية في العلوم الجيومكانية الحديثة، حيث توفر بيانات دقيقة للموقع والوقت والاتجاه، وتشكل الأساس لتطبيقات GIS والاستشعار عن بعد والزراعة الدقيقة وGeoAI وإدارة الموارد الطبيعية. ومع تطور تقنيات RTK وPPP ودمج GNSS مع الذكاء الاصطناعي والطائرات بدون طيار وإنترنت الأشياء، أصبحت هذه الأنظمة عنصراً رئيسياً في بناء أنظمة ذكية تدعم الإدارة المستدامة للموارد، وترفع كفاءة الإنتاج الزراعي، وتحسن التخطيط البيئي، وتعزز دقة التحليل المكاني واتخاذ القرار.
+        </p>
+    </div>
+
+</section>
+<!-- ===== END SECTION 27 ===== -->
     <!-- ============================================================ -->
     <!-- ===== SECTION 28: AI + IoT INTEGRATION ===== -->
     <!-- ============================================================ -->
