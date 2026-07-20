@@ -19322,38 +19322,368 @@
 </section>
 <!-- ===== END SECTION 28 ===== -->
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 29: IOT APPLICATIONS ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="iot-applications">
-        <div class="section-title"><i class="fas fa-wifi"></i> إنترنت الأشياء (IoT) في الزراعة والبيئة</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">🌐 مقدمة في إنترنت الأشياء (IoT)</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>إنترنت الأشياء (IoT)</strong> هو <strong>شبكة من الأجهزة المادية المترابطة</strong> 
-                التي تجمع وتبادل البيانات عبر <strong>الإنترنت</strong>.
-            </p>
+  <!-- ============================================================ -->
+<!-- ===== SECTION 29: IOT APPLICATIONS (EXPANDED) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="iot-applications">
+
+    <!-- العنوان الرئيسي -->
+    <div class="section-title">
+        <i class="fas fa-wifi"></i> 
+        إنترنت الأشياء (IoT) في الزراعة والبيئة
+    </div>
+
+    <!-- ===== 1. INTRODUCTION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-africa"></i> مقدمة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            أصبح <strong>إنترنت الأشياء (Internet of Things - IoT)</strong> أحد أهم التقنيات الحديثة التي تدعم التحول نحو <strong>الزراعة الذكية (Smart Agriculture)</strong> و <strong>الإدارة البيئية الذكية (Smart Environmental Management)</strong>، حيث يسمح بربط الأجهزة والمستشعرات والآلات والمنصات الرقمية مع بعضها البعض لجمع البيانات وتحليلها واتخاذ القرارات في الزمن الحقيقي.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            يعتمد إنترنت الأشياء على منظومة متكاملة من: <strong>أجهزة الاستشعار</strong>، <strong>شبكات الاتصال</strong>، <strong>الحوسبة السحابية</strong>، <strong>تحليل البيانات</strong>، <strong>الذكاء الاصطناعي (AI)</strong>، <strong>نظم المعلومات الجغرافية (GIS)</strong>، <strong>الاستشعار عن بعد (RS)</strong>، و <strong>أنظمة GNSS</strong>.
+        </p>
+        <div style="background: #e6fffa; padding: 14px 20px; border-radius: 14px; margin-top: 12px;">
+            <p><i class="fas fa-sync-alt" style="color: #319795;"></i> يتيح هذا التكامل الانتقال من الإدارة التقليدية إلى <strong>الإدارة القائمة على البيانات (Data-Driven Management)</strong>، حيث يتم اتخاذ القرارات اعتماداً على معلومات دقيقة ومستمرة.</p>
         </div>
-        <div class="info-box">
-            <h4 style="color: #2f855a;">🌾 تطبيقات IoT في الزراعة</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div style="background: #f0fff4; border-radius: 12px; padding: 15px; border-right: 4px solid #2f855a;">
-                    <h5 style="color: #2f855a;">🌱 الزراعة الدقيقة</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 حساسات رطوبة التربة</li>
-                        <li>🔹 حساسات درجة الحرارة</li>
-                    </ul>
+    </div>
+
+    <!-- ===== 2. CONCEPT & COMPONENTS ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-question-circle"></i> مفهوم إنترنت الأشياء في الزراعة والبيئة</h4>
+        <p>هو نظام ذكي يربط أجهزة الاستشعار المنتشرة في الحقول والبيئات الطبيعية مع منصات تحليل البيانات بهدف:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 10px;">
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-eye" style="color:#2f855a;"></i> مراقبة الظروف الزراعية والبيئية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-bell" style="color:#2f855a;"></i> اكتشاف التغيرات في الوقت الحقيقي</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-cloud-rain" style="color:#2f855a;"></i> التنبؤ بالمخاطر</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-robot" style="color:#2f855a;"></i> التحكم الآلي في العمليات</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><i class="fas fa-leaf" style="color:#2f855a;"></i> تحسين استخدام الموارد الطبيعية</div>
+        </div>
+    </div>
+
+    <!-- ===== COMPONENTS FLOWCHART ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-cogs"></i> مكونات نظام IoT الزراعي والبيئي</h4>
+        <div style="background: #1a202c; border-radius: 14px; padding: 20px; text-align: center; direction: ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 10px;">
+                <span style="background: #2b6cb0; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-tractor"></i> الميدان</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #3182ce; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-microchip"></i> المستشعرات</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #4299e1; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-wifi"></i> شبكات الاتصال</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-database"></i> معالجة البيانات</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-brain"></i> AI / ML</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #bee3f8; color: #1a202c; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-map"></i> GIS + RS</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #ebf8ff; color: #1a202c; padding: 6px 16px; border-radius: 20px; border:2px solid #2b6cb0; font-size:0.8rem;"><i class="fas fa-check-circle"></i> نظام دعم القرار</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #38a169; color: white; padding: 6px 16px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-bolt"></i> إجراء ذكي</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 3. AGRICULTURE APPLICATIONS ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-seedling"></i> أولاً: تطبيقات إنترنت الأشياء في الزراعة</h4>
+        
+        <!-- 3.1 Precision Agriculture -->
+        <div style="background: #fffbeb; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #dd6b20;">
+            <h5 style="color: #dd6b20;"><i class="fas fa-map-marked-alt"></i> 1. الزراعة الدقيقة (Precision Agriculture)</h5>
+            <p style="font-size:0.95rem;">تُعد الزراعة الدقيقة من أهم تطبيقات IoT، حيث يتم تقسيم الحقل إلى وحدات إدارية صغيرة بناءً على الاختلافات المكانية في: خصائص التربة، الرطوبة، العناصر الغذائية، إنتاجية المحاصيل، الحالة النباتية.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-top: 8px;">
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem; text-align:center;">مستشعرات التربة</span>
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem; text-align:center;">GPS/GNSS</span>
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem; text-align:center;">صور الأقمار الصناعية</span>
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem; text-align:center;">الطائرات بدون طيار</span>
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem; text-align:center;">GIS</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ زيادة الإنتاجية</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تقليل استهلاك المياه والأسمدة</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تقليل التكلفة</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تحسين جودة المحاصيل</span>
+            </div>
+        </div>
+
+        <!-- 3.2 Smart Irrigation -->
+        <div style="background: #ebf8ff; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #2b6cb0;">
+            <h5 style="color: #2b6cb0;"><i class="fas fa-tint"></i> 2. أنظمة الري الذكية (Smart Irrigation)</h5>
+            <p style="font-size:0.95rem;">يعتبر الري الذكي من أهم التطبيقات في المناطق الجافة وشبه الجافة مثل شمال أفريقيا.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 8px;">
+                <div style="background: #f0fff4; border-radius: 10px; padding: 8px; text-align:center; border:1px solid #c6f6d5;">
+                    <i class="fas fa-thermometer-half" style="color:#2b6cb0;"></i> رطوبة التربة
                 </div>
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; border-right: 4px solid #2b6cb0;">
-                    <h5 style="color: #2b6cb0;">📊 مراقبة المحاصيل</h5>
-                    <ul style="list-style: none; padding: 0; font-size: 0.8rem; line-height: 2;">
-                        <li>🔹 حساب NDVI</li>
-                        <li>🔹 تقدير الإنتاجية</li>
-                    </ul>
+                <div style="background: #f0fff4; border-radius: 10px; padding: 8px; text-align:center; border:1px solid #c6f6d5;">
+                    <i class="fas fa-temperature-high" style="color:#2b6cb0;"></i> درجة الحرارة
+                </div>
+                <div style="background: #f0fff4; border-radius: 10px; padding: 8px; text-align:center; border:1px solid #c6f6d5;">
+                    <i class="fas fa-flask" style="color:#2b6cb0;"></i> الملوحة (EC)
+                </div>
+                <div style="background: #f0fff4; border-radius: 10px; padding: 8px; text-align:center; border:1px solid #c6f6d5;">
+                    <i class="fas fa-cloud-sun" style="color:#2b6cb0;"></i> محطات مناخية
+                </div>
+            </div>
+            <!-- Irrigation flowchart -->
+            <div style="background: #e2e8f0; border-radius: 12px; padding: 12px; margin-top: 10px; text-align:center; direction:ltr;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 10px;">
+                    <span style="background: #2b6cb0; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">قياس رطوبة التربة</span>
+                    <span style="color:#2b6cb0;">↓</span>
+                    <span style="background: #3182ce; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">تحليل البيانات</span>
+                    <span style="color:#2b6cb0;">↓</span>
+                    <span style="background: #4299e1; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">مقارنة الاحتياجات المائية</span>
+                    <span style="color:#2b6cb0;">↓</span>
+                    <span style="background: #63b3ed; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">قرار الري</span>
+                    <span style="color:#2b6cb0;">↓</span>
+                    <span style="background: #90cdf4; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">تشغيل المضخات والصمامات</span>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ توفير المياه</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تقليل الإجهاد المائي</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تحسين كفاءة الري بالتنقيط</span>
+            </div>
+        </div>
+
+        <!-- 3.3 Crop Health Monitoring -->
+        <div style="background: #faf5ff; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #6b46c1;">
+            <h5 style="color: #6b46c1;"><i class="fas fa-leaf"></i> 3. مراقبة صحة النبات (Crop Health Monitoring)</h5>
+            <p style="font-size:0.95rem;">يستخدم IoT لمراقبة: نمو النبات، الإجهاد المائي، نقص العناصر الغذائية، الأمراض والآفات.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                <span style="background: #6b46c1; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">صور الأقمار الصناعية</span>
+                <span style="background: #6b46c1; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">NDVI</span>
+                <span style="background: #6b46c1; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">EVI</span>
+                <span style="background: #6b46c1; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">الطائرات بدون طيار</span>
+            </div>
+        </div>
+
+        <!-- 3.4 Satellite + IoT Integration -->
+        <div style="background: #f0fff4; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #38a169;">
+            <h5 style="color: #38a169;"><i class="fas fa-satellite"></i> 4. مراقبة المحاصيل باستخدام المستشعرات والأقمار الصناعية</h5>
+            <p style="font-size:0.95rem;">يتم دمج بيانات <strong>IoT Sensors</strong> مع <strong>Remote Sensing</strong> للحصول على معلومات دقيقة عن: الكثافة النباتية، المساحة المزروعة، مراحل النمو، الإنتاج المتوقع.</p>
+            <div style="background: #1a202c; border-radius: 12px; padding: 14px; text-align:center; direction:ltr; margin-top: 8px;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 10px;">
+                    <span style="background: #2b6cb0; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Satellite Image</span>
+                    <span style="color:#a0aec0;">+</span>
+                    <span style="background: #3182ce; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Field Sensors</span>
+                    <span style="color:#a0aec0;">+</span>
+                    <span style="background: #4299e1; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">AI Model</span>
+                    <span style="color:#a0aec0;">=</span>
+                    <span style="background: #38a169; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Crop Prediction</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- 3.5 Pest & Disease Detection -->
+        <div style="background: #fffbeb; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #dd6b20;">
+            <h5 style="color: #dd6b20;"><i class="fas fa-bug"></i> 5. الكشف المبكر عن الأمراض والآفات</h5>
+            <p style="font-size:0.95rem;">تستخدم: كاميرات ذكية، مستشعرات بيئية، الذكاء الاصطناعي للكشف عن: أمراض الأوراق، انتشار الحشرات، الظروف المناسبة لظهور المرض.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ التدخل المبكر</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تقليل استخدام المبيدات</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ حماية البيئة</span>
+            </div>
+        </div>
+
+        <!-- 3.6 Smart Greenhouses -->
+        <div style="background: #ebf8ff; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #2b6cb0;">
+            <h5 style="color: #2b6cb0;"><i class="fas fa-warehouse"></i> 6. البيوت المحمية الذكية (Smart Greenhouses)</h5>
+            <p style="font-size:0.95rem;">تتحكم أنظمة IoT في: درجة الحرارة، الرطوبة، الإضاءة، التهوية، ثاني أكسيد الكربون، الري والتسميد.</p>
+            <div style="background: #e2e8f0; border-radius: 12px; padding: 12px; text-align:center; direction:ltr; margin-top: 8px;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 10px;">
+                    <span style="background: #2b6cb0; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Sensors</span>
+                    <span style="color:#2b6cb0;">→</span>
+                    <span style="background: #3182ce; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Controller</span>
+                    <span style="color:#2b6cb0;">→</span>
+                    <span style="background: #4299e1; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">AI Analysis</span>
+                    <span style="color:#2b6cb0;">→</span>
+                    <span style="background: #63b3ed; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Automatic Control</span>
+                    <span style="color:#2b6cb0;">→</span>
+                    <span style="background: #38a169; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Optimal Growing Conditions</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.7 Smart Machinery -->
+        <div style="background: #faf5ff; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #6b46c1;">
+            <h5 style="color: #6b46c1;"><i class="fas fa-tractor"></i> 7. الآلات الزراعية الذكية</h5>
+            <p style="font-size:0.95rem;">يشمل ذلك: الجرارات ذاتية القيادة، آلات الحصاد الذكية، روبوتات إزالة الأعشاب، أنظمة التوجيه باستخدام GNSS.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ زيادة الدقة</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تقليل الوقود</span>
+                <span style="background: #2f855a; color: white; padding: 2px 14px; border-radius: 30px; font-size:0.75rem;">✅ تقليل التداخل</span>
+            </div>
+        </div>
+
+        <!-- 3.8 Livestock IoT -->
+        <div style="background: #fffbeb; border-radius: 14px; padding: 16px; margin-top: 12px; border-right: 5px solid #dd6b20;">
+            <h5 style="color: #dd6b20;"><i class="fas fa-cow"></i> 8. إنترنت الأشياء في الإنتاج الحيواني</h5>
+            <p style="font-size:0.95rem;">يستخدم لمراقبة: موقع الحيوان، الحركة والنشاط، درجة الحرارة، التغذية، الأمراض.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">Wearable Sensors</span>
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">RFID</span>
+                <span style="background: #dd6b20; color: white; padding: 4px 12px; border-radius: 20px; font-size:0.75rem;">GNSS Tracking</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 4. ENVIRONMENTAL APPLICATIONS ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-asia"></i> ثانياً: تطبيقات إنترنت الأشياء في البيئة</h4>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 12px;">
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0;"><i class="fas fa-wind"></i> 1. مراقبة جودة الهواء</h5>
+                <p style="font-size:0.85rem;">قياس PM2.5, PM10, CO₂, CO, NO₂, SO₂, O₃</p>
+                <ul style="font-size:0.8rem; padding-right:18px;">
+                    <li>خرائط جودة الهواء الذكية (GIS)</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color: #38a169;"><i class="fas fa-water"></i> 2. مراقبة جودة المياه</h5>
+                <p style="font-size:0.85rem;">قياس: درجة الحرارة، pH، EC، الأكسجين الذائب، العكارة، الملوثات الكيميائية.</p>
+                <ul style="font-size:0.8rem; padding-right:18px;">
+                    <li>الأنهار، البحيرات، السدود، المياه الجوفية</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color: #6b46c1;"><i class="fas fa-cloud-sun"></i> 3. محطات الطقس الذكية</h5>
+                <p style="font-size:0.85rem;">قياس: الحرارة، الرطوبة، سرعة الرياح، الأمطار، الإشعاع الشمسي.</p>
+                <ul style="font-size:0.8rem; padding-right:18px;">
+                    <li>التنبؤ بالجفاف، دعم الزراعة، الإنذار المبكر</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color: #dd6b20;"><i class="fas fa-fire"></i> 4. مراقبة حرائق الغابات</h5>
+                <p style="font-size:0.85rem;">كشف ارتفاع الحرارة، قياس الرطوبة، اكتشاف الدخان، تحديد موقع الحريق.</p>
+                <ul style="font-size:0.8rem; padding-right:18px;">
+                    <li>دمج مع الأقمار الصناعية، GIS، الذكاء الاصطناعي</li>
+                </ul>
+            </div>
+            <div style="background: #fefcbf; border-radius: 14px; padding: 14px; border-right: 4px solid #d69e2e;">
+                <h5 style="color: #d69e2e;"><i class="fas fa-desert"></i> 5. مراقبة التصحر وتدهور الأراضي</h5>
+                <p style="font-size:0.85rem;">دمج IoT + GIS + Remote Sensing + AI لمراقبة: انخفاض الغطاء النباتي، جفاف التربة، التعرية.</p>
+            </div>
+            <div style="background: #e6fffa; border-radius: 14px; padding: 14px; border-right: 4px solid #319795;">
+                <h5 style="color: #319795;"><i class="fas fa-tree"></i> 6. مراقبة الغابات والتنوع الحيوي</h5>
+                <p style="font-size:0.85rem;">متابعة نمو الأشجار، قياس رطوبة الغابات، حماية الحياة البرية، تتبع الحيوانات.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 5. INTEGRATION WITH GIS & AI ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-sitemap"></i> ثالثاً: التكامل بين IoT و GIS و AI (Smart Geospatial IoT System)</h4>
+        <p style="font-size:0.95rem;">يمثل هذا التكامل الجيل الجديد من الإدارة الذكية:</p>
+        <div style="background: #1a202c; border-radius: 14px; padding: 16px; text-align:center; direction:ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 10px;">
+                <span style="background: #2b6cb0; color: white; padding: 6px 14px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-microchip"></i> Sensors</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #3182ce; color: white; padding: 6px 14px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-network-wired"></i> IoT Network</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #4299e1; color: white; padding: 6px 14px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-cloud"></i> Cloud Database</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 6px 14px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-brain"></i> AI / ML</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 6px 14px; border-radius: 20px; font-size:0.8rem;"><i class="fas fa-map"></i> GIS Mapping</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #ebf8ff; color: #1a202c; padding: 6px 14px; border-radius: 20px; border:2px solid #2b6cb0; font-size:0.8rem;"><i class="fas fa-check-circle"></i> Decision Support</span>
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 12px;">
+            <div style="background: #f0fff4; border-radius: 12px; padding: 10px; border-right: 4px solid #38a169;">
+                <h6 style="color: #38a169; margin:0;">الزراعة</h6>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>خرائط الري الذكي</li>
+                    <li>خرائط خصوبة التربة</li>
+                    <li>التنبؤ بالإنتاج</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px; border-right: 4px solid #2b6cb0;">
+                <h6 style="color: #2b6cb0; margin:0;">البيئة</h6>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>خرائط التلوث</li>
+                    <li>مراقبة التغير المناخي</li>
+                    <li>الإنذار المبكر للكوارث</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px; border-right: 4px solid #6b46c1;">
+                <h6 style="color: #6b46c1; margin:0;">الموارد الطبيعية</h6>
+                <ul style="font-size:0.8rem; padding-right:16px; margin:4px 0;">
+                    <li>إدارة المياه</li>
+                    <li>مراقبة الغطاء النباتي</li>
+                    <li>تقييم التدهور البيئي</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 6. PRACTICAL EXAMPLES ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-tasks"></i> رابعاً: أمثلة عملية للطلاب</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 5px solid #dd6b20;">
+                <h5 style="color: #dd6b20;"><i class="fas fa-tint"></i> مشروع 1: نظام ري ذكي</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>Arduino / ESP32</li>
+                    <li>Soil Moisture Sensor</li>
+                    <li>Temperature Sensor</li>
+                    <li>Water Pump</li>
+                    <li>GIS Dashboard</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 5px solid #2b6cb0;">
+                <h5 style="color: #2b6cb0;"><i class="fas fa-water"></i> مشروع 2: مراقبة جودة المياه</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>pH</li>
+                    <li>EC</li>
+                    <li>Temperature</li>
+                    <li>GIS + AI التحليل</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 5px solid #38a169;">
+                <h5 style="color: #38a169;"><i class="fas fa-satellite"></i> مشروع 3: مراقبة محصول</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>Sentinel-2</li>
+                    <li>NDVI</li>
+                    <li>Soil Sensors</li>
+                    <li>خريطة صحة المحصول</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 7. MATH EQUATION ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-calculator"></i> مثال رياضي: مؤشر NDVI باستخدام بيانات IoT و RS</h4>
+        <div style="background: #f0fff4; padding: 16px 20px; border-radius: 14px; border-right: 4px solid #38a169;">
+            <p style="font-family: 'Courier New', monospace; font-size:1.2rem; text-align: center;">
+                NDVI = (NIR - RED) / (NIR + RED)
+            </p>
+            <p style="font-size:0.95rem;">حيث:</p>
+            <ul style="font-size:0.9rem; padding-right:20px;">
+                <li><strong>NDVI</strong> = مؤشر الفرق الطبيعي للغطاء النباتي (يقيس صحة النبات)</li>
+                <li><strong>NIR</strong> = الانعكاس في النطاق القريب من الأشعة تحت الحمراء (من مستشعرات الطائرات بدون طيار أو الأقمار الصناعية)</li>
+                <li><strong>RED</strong> = الانعكاس في النطاق الأحمر المرئي</li>
+            </ul>
+            <p style="font-size:0.9rem; margin-top:8px;"><i class="fas fa-info-circle" style="color:#38a169;"></i> يتم حساب NDVI في الوقت الفعلي باستخدام بيانات المستشعرات المدمجة مع صور الأقمار الصناعية، ويُستخدم لتقييم صحة المحاصيل وتوجيه عمليات التسميد والري.</p>
+        </div>
+    </div>
+
+    <!-- ===== 8. CONCLUSION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-graduation-cap"></i> الخلاصة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            يمثل <strong>إنترنت الأشياء (IoT)</strong> أحد أهم أعمدة التحول نحو <strong>الزراعة الذكية</strong> و <strong>الإدارة البيئية المستدامة</strong>. فهو يسمح بجمع البيانات الدقيقة من الحقول والأنظمة الطبيعية بصورة مستمرة، وتحليلها باستخدام الذكاء الاصطناعي والتقنيات الجيومكانية، مما يؤدي إلى تحسين استخدام المياه والتربة والطاقة، وزيادة الإنتاج الزراعي، وتقليل المخاطر البيئية.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            ويُعد دمج: <strong>IoT + AI + GIS + Remote Sensing + GNSS</strong> من أهم الاتجاهات المستقبلية في علوم الزراعة والبيئة وإدارة الموارد الطبيعية، وهو مجال أساسي لطلبة كليات الزراعة والعلوم والهندسة والجيوماتكس.
+        </p>
+    </div>
+
+</section>
+<!-- ===== END SECTION 29 ===== -->
 
     <!-- ============================================================ -->
     <!-- ===== SECTION 30: GOOGLE EARTH ENGINE ===== -->
