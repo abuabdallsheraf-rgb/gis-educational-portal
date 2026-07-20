@@ -20427,137 +20427,395 @@
 <!-- ===== END SECTION 31 ===== -->
 
 <!-- ============================================================ -->
-<!-- ===== SECTION: RESOURCES ===== -->
+<!-- ===== SECTION: RESOURCES (EXPANDED - NO DIAGRAM) ===== -->
 <!-- ============================================================ -->
-<section class="section" id="resources" style="padding: 60px 0; background: var(--gray100);">
+<section class="section" id="resources" style="padding: 60px 0; background: #f7fafc;">
     <div class="container">
-        <div class="section-title"><i class="fas fa-link"></i> الموارد العلمية والبيانات</div>
+        <div class="section-title"><i class="fas fa-link"></i> الموارد العلمية والبيانات للتقنيات الجيومكانية الذكية</div>
         
-        <!-- ===== جامعات عالمية ===== -->
-        <div class="info-box">
+        <!-- ===== 1. SATELLITE IMAGERY DATA SOURCES ===== -->
+        <div class="info-box" style="border-right: 6px solid #2b6cb0;">
             <h4 style="color: #2b6cb0; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-university"></i> جامعات عالمية
+                <i class="fas fa-satellite" style="color:#2b6cb0;"></i> 🛰️ 1. مصادر بيانات الأقمار الصناعية (Satellite Imagery Data)
             </h4>
-            <div class="resource-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="https://gis.mit.edu/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-map-marked-alt"></i> MIT GIS Lab
-                </a>
-                <a href="https://cga.harvard.edu/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-university"></i> Harvard CGA
-                </a>
-                <a href="https://www.spatial.ucsb.edu/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-globe-americas"></i> UCSB Spatial
-                </a>
-                <a href="https://www.geog.psu.edu/gis" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-graduation-cap"></i> Penn State GIS
-                </a>
-                <a href="https://www.itc.nl/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-globe-europe"></i> ITC - Netherlands
-                </a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 16px; border-bottom: 4px solid #2b6cb0;">
+                    <h5 style="color:#2b6cb0;"><i class="fas fa-satellite-dish"></i> Landsat (NASA / USGS)</h5>
+                    <p style="font-size:0.85rem;">أطول سجل زمني (منذ 1972) – تغير استخدامات الأراضي، الغطاء النباتي، التصحر، الموارد المائية، التغير المناخي.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;">
+                        <span style="background:#2b6cb0; color:white; padding:2px 12px; border-radius:30px; font-size:0.7rem;">Landsat 4-9</span>
+                        <span style="background:#2b6cb0; color:white; padding:2px 12px; border-radius:30px; font-size:0.7rem;">Surface Reflectance</span>
+                        <span style="background:#2b6cb0; color:white; padding:2px 12px; border-radius:30px; font-size:0.7rem;">NDVI</span>
+                    </div>
+                    <a href="https://earthexplorer.usgs.gov/" target="_blank" class="resource-link" style="display:inline-block; margin-top:8px; color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 USGS EarthExplorer</a>
+                </div>
+                <div style="background: #f0fff4; border-radius: 14px; padding: 16px; border-bottom: 4px solid #38a169;">
+                    <h5 style="color:#38a169;"><i class="fas fa-satellite"></i> Sentinel (ESA Copernicus)</h5>
+                    <p style="font-size:0.85rem;"><strong>Sentinel-1</strong> (SAR): الفيضانات، رطوبة التربة، التشوهات الأرضية. <strong>Sentinel-2</strong> (Multispectral): الزراعة الدقيقة، NDVI، تصنيف المحاصيل.</p>
+                    <a href="https://dataspace.copernicus.eu/" target="_blank" class="resource-link" style="display:inline-block; margin-top:8px; color:#38a169; font-weight:600; text-decoration:underline;">🔗 Copernicus Data Space</a>
+                </div>
+                <div style="background: #faf5ff; border-radius: 14px; padding: 16px; border-bottom: 4px solid #6b46c1;">
+                    <h5 style="color:#6b46c1;"><i class="fas fa-rocket"></i> NASA Earth Data / MODIS</h5>
+                    <p style="font-size:0.85rem;">بيانات الأقمار الصناعية، المناخ، الغلاف الجوي، المحيطات، الكوارث الطبيعية. <strong>MODIS</strong> (Terra & Aqua): الغطاء النباتي، الحرائق، الجفاف، الإنتاجية النباتية.</p>
+                    <a href="https://earthdata.nasa.gov/" target="_blank" class="resource-link" style="display:inline-block; margin-top:8px; color:#6b46c1; font-weight:600; text-decoration:underline;">🔗 NASA Earth Data</a>
+                </div>
+                <div style="background: #fffbeb; border-radius: 14px; padding: 16px; border-bottom: 4px solid #dd6b20;">
+                    <h5 style="color:#dd6b20;"><i class="fas fa-camera"></i> Planet Satellite Data</h5>
+                    <p style="font-size:0.85rem;">صور عالية الدقة لمراقبة الحقول الزراعية والتحليل الزراعي.</p>
+                    <a href="https://www.planet.com/" target="_blank" class="resource-link" style="display:inline-block; margin-top:8px; color:#dd6b20; font-weight:600; text-decoration:underline;">🔗 Planet.com</a>
+                </div>
             </div>
         </div>
-        
-        <!-- ===== بيانات ليبيا ===== -->
-        <div class="info-box" style="margin-top: 20px;">
+
+        <!-- ===== 2. CLOUD GEOSPATIAL PLATFORMS ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #2f855a;">
             <h4 style="color: #2f855a; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-map-marked-alt"></i> بيانات ليبيا
+                <i class="fas fa-cloud" style="color:#2f855a;"></i> 🌍 2. المنصات الجيومكانية السحابية (Cloud Geospatial Platforms)
             </h4>
-            <div class="resource-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="https://climateknowledgeportal.worldbank.org/country/libya" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-cloud-sun"></i> مناخ ليبيا
-                </a>
-                <a href="https://soilgrids.org/explorer/libya" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-ground"></i> تربة ليبيا
-                </a>
-                <a href="https://earthexplorer.usgs.gov/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-satellite"></i> صور Landsat
-                </a>
-                <a href="https://scihub.copernicus.eu/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-satellite"></i> صور Sentinel
-                </a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 16px;">
+                    <h5 style="color:#2b6cb0;"><i class="fab fa-google"></i> Google Earth Engine (GEE)</h5>
+                    <p style="font-size:0.85rem;">تحليل ملايين الصور الفضائية، NDVI Time Series، Machine Learning، GeoAI، Climate Analysis.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:4px; margin-top:4px;">
+                        <span style="background:#2b6cb0; color:white; padding:2px 10px; border-radius:30px; font-size:0.65rem;">Landsat</span>
+                        <span style="background:#2b6cb0; color:white; padding:2px 10px; border-radius:30px; font-size:0.65rem;">Sentinel</span>
+                        <span style="background:#2b6cb0; color:white; padding:2px 10px; border-radius:30px; font-size:0.65rem;">MODIS</span>
+                    </div>
+                    <a href="https://earthengine.google.com/" target="_blank" class="resource-link" style="display:inline-block; margin-top:6px; color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 GEE Platform</a>
+                </div>
+                <div style="background: #f0fff4; border-radius: 14px; padding: 16px;">
+                    <h5 style="color:#38a169;"><i class="fas fa-microchip"></i> Microsoft Planetary Computer</h5>
+                    <p style="font-size:0.85rem;">بيانات الأقمار الصناعية، التحليل السحابي، التطبيقات البيئية.</p>
+                    <a href="https://planetarycomputer.microsoft.com/" target="_blank" class="resource-link" style="display:inline-block; margin-top:6px; color:#38a169; font-weight:600; text-decoration:underline;">🔗 Planetary Computer</a>
+                </div>
+                <div style="background: #faf5ff; border-radius: 14px; padding: 16px;">
+                    <h5 style="color:#6b46c1;"><i class="fab fa-aws"></i> AWS Open Data Registry</h5>
+                    <p style="font-size:0.85rem;">بيانات الأقمار الصناعية، المناخ، المحيطات.</p>
+                    <a href="https://registry.opendata.aws/" target="_blank" class="resource-link" style="display:inline-block; margin-top:6px; color:#6b46c1; font-weight:600; text-decoration:underline;">🔗 AWS Open Data</a>
+                </div>
             </div>
         </div>
 
-        <!-- ===== مصادر بيانات عالمية إضافية ===== -->
-        <div class="info-box" style="margin-top: 20px;">
+        <!-- ===== 3. DIGITAL ELEVATION MODELS ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #c05621;">
             <h4 style="color: #c05621; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-database"></i> مصادر بيانات عالمية
+                <i class="fas fa-mountain" style="color:#c05621;"></i> 🗺️ 3. بيانات الارتفاعات الرقمية (DEM)
             </h4>
-            <div class="resource-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="https://www.naturalearthdata.com/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-globe"></i> Natural Earth
-                </a>
-                <a href="https://www.openstreetmap.org/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-map"></i> OpenStreetMap
-                </a>
-                <a href="https://earthdata.nasa.gov/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-rocket"></i> NASA Earth Data
-                </a>
-                <a href="https://www.usgs.gov/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-mountain"></i> USGS
-                </a>
-                <a href="https://www.fao.org/geonetwork/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-seedling"></i> FAO GeoNetwork
-                </a>
-                <a href="https://www.gbif.org/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-bug"></i> GBIF
-                </a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                <div style="background: #fffbeb; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#c05621;">SRTM DEM</h5>
+                    <p style="font-size:0.85rem;">تحليل التضاريس، الانحدار، الأحواض المائية.</p>
+                    <a href="https://www2.jpl.nasa.gov/srtm/" target="_blank" style="color:#c05621; font-weight:600; text-decoration:underline;">🔗 NASA SRTM</a>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#2b6cb0;">ASTER GDEM</h5>
+                    <p style="font-size:0.85rem;">الدراسات الجيومورفولوجية، تحليل التضاريس.</p>
+                    <a href="https://asterweb.jpl.nasa.gov/gdem.asp" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 ASTER GDEM</a>
+                </div>
+                <div style="background: #f0fff4; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#38a169;">Copernicus DEM</h5>
+                    <p style="font-size:0.85rem;">دقة عالية – الهيدرولوجيا، النمذجة المكانية.</p>
+                    <a href="https://dataspace.copernicus.eu/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">🔗 Copernicus DEM</a>
+                </div>
             </div>
         </div>
 
-        <!-- ===== منصات تعليمية ===== -->
-        <div class="info-box" style="margin-top: 20px;">
-            <h4 style="color: #805ad5; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-graduation-cap"></i> منصات تعليمية
+        <!-- ===== 4. SOIL DATA ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #6b46c1;">
+            <h4 style="color: #6b46c1; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-ground" style="color:#6b46c1;"></i> 🌱 4. مصادر بيانات التربة (Soil Data)
             </h4>
-            <div class="resource-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="https://www.esri.com/training/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-graduation-cap"></i> Esri Academy
-                </a>
-                <a href="https://developers.google.com/earth-engine/tutorials" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-cloud"></i> GEE Tutorials
-                </a>
-                <a href="https://www.coursera.org/specializations/gis" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-video"></i> Coursera GIS
-                </a>
-                <a href="https://www.edx.org/learn/gis" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-chalkboard-teacher"></i> edX GIS
-                </a>
-                <a href="https://un-spider.org/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-satellite-dish"></i> UN-SPIDER
-                </a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
+                <div style="background: #faf5ff; border-radius: 14px; padding: 16px;">
+                    <h5 style="color:#6b46c1;">SoilGrids (ISRIC)</h5>
+                    <p style="font-size:0.85rem;">بيانات عالمية: pH، Organic Carbon، Texture، Bulk Density، Soil Depth (دقة 250m).</p>
+                    <a href="https://soilgrids.org/" target="_blank" class="resource-link" style="display:inline-block; margin-top:4px; color:#6b46c1; font-weight:600; text-decoration:underline;">🔗 SoilGrids</a>
+                </div>
+                <div style="background: #f0fff4; border-radius: 14px; padding: 16px;">
+                    <h5 style="color:#38a169;">FAO Soil Portal</h5>
+                    <p style="font-size:0.85rem;">خرائط التربة العالمية، تصنيف التربة، موارد الأراضي.</p>
+                    <a href="https://www.fao.org/soils-portal/" target="_blank" class="resource-link" style="display:inline-block; margin-top:4px; color:#38a169; font-weight:600; text-decoration:underline;">🔗 FAO Soil Portal</a>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 16px;">
+                    <h5 style="color:#2b6cb0;">HWSD</h5>
+                    <p style="font-size:0.85rem;">Harmonized World Soil Database – تقييم الأراضي، الدراسات الزراعية.</p>
+                    <a href="https://www.fao.org/land-water/land/land-governance/land-resources-planning-toolbox/category/details/en/c/1036361/" target="_blank" class="resource-link" style="display:inline-block; margin-top:4px; color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 HWSD</a>
+                </div>
             </div>
         </div>
 
-        <!-- ===== برمجيات مفتوحة المصدر ===== -->
-        <div class="info-box" style="margin-top: 20px;">
+        <!-- ===== 5. CLIMATE DATA ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #dd6b20;">
+            <h4 style="color: #dd6b20; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-cloud-sun" style="color:#dd6b20;"></i> 🌦️ 5. مصادر البيانات المناخية (Climate Data)
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                <div style="background: #fffbeb; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#dd6b20;">WorldClim</h5>
+                    <p style="font-size:0.85rem;">درجات الحرارة، الأمطار، المتغيرات المناخية الحيوية – النمذجة البيئية، الزراعة، التنوع الحيوي.</p>
+                    <a href="https://www.worldclim.org/" target="_blank" style="color:#dd6b20; font-weight:600; text-decoration:underline;">🔗 WorldClim</a>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#2b6cb0;">CHIRPS Rainfall</h5>
+                    <p style="font-size:0.85rem;">تحليل الأمطار، الجفاف، الزراعة المطرية.</p>
+                    <a href="https://www.chc.ucsb.edu/data/chirps" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 CHIRPS</a>
+                </div>
+                <div style="background: #f0fff4; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#38a169;">ERA5 (ECMWF)</h5>
+                    <p style="font-size:0.85rem;">الحرارة، الرياح، الرطوبة، الضغط.</p>
+                    <a href="https://cds.climate.copernicus.eu/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">🔗 ERA5</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 6. WATER RESOURCES ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #319795;">
+            <h4 style="color: #319795; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-water" style="color:#319795;"></i> 💧 6. بيانات الموارد المائية (Water Resources)
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                <div style="background: #e6fffa; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#319795;">HydroSHEDS</h5>
+                    <p style="font-size:0.85rem;">شبكات الأنهار، الأحواض المائية، منتجات DEM الهيدرولوجية.</p>
+                    <a href="https://www.hydrosheds.org/" target="_blank" style="color:#319795; font-weight:600; text-decoration:underline;">🔗 HydroSHEDS</a>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#2b6cb0;">Global Surface Water Explorer</h5>
+                    <p style="font-size:0.85rem;">تغير المسطحات المائية، البحيرات، الأراضي الرطبة.</p>
+                    <a href="https://global-surface-water.appspot.com/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 Surface Water</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 7. LAND COVER DATA ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #d69e2e;">
+            <h4 style="color: #d69e2e; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-tree" style="color:#d69e2e;"></i> 🌳 7. بيانات الغطاء الأرضي (Land Cover)
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                <div style="background: #fefcbf; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#d69e2e;">ESA WorldCover</h5>
+                    <p style="font-size:0.85rem;">دقة 10m – فئات: زراعة، غابات، مياه، عمران.</p>
+                    <a href="https://esa-worldcover.org/" target="_blank" style="color:#d69e2e; font-weight:600; text-decoration:underline;">🔗 ESA WorldCover</a>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 14px; padding: 14px;">
+                    <h5 style="color:#2b6cb0;">Dynamic World</h5>
+                    <p style="font-size:0.85rem;">يعتمد على Sentinel-2 + AI.</p>
+                    <a href="https://dynamicworld.app/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">🔗 Dynamic World</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 8. GEOAI / ML ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #6b46c1;">
+            <h4 style="color: #6b46c1; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-brain" style="color:#6b46c1;"></i> 🧠 8. موارد GeoAI والتعلم الآلي
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <div style="background: #faf5ff; border-radius: 14px; padding: 12px 20px; border: 1px solid #e9d8fd;">
+                    <a href="https://www.tensorflow.org/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">TensorFlow</a> – Deep Learning, CNN
+                </div>
+                <div style="background: #faf5ff; border-radius: 14px; padding: 12px 20px; border: 1px solid #e9d8fd;">
+                    <a href="https://pytorch.org/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">PyTorch</a> – Deep Learning, Computer Vision
+                </div>
+                <div style="background: #faf5ff; border-radius: 14px; padding: 12px 20px; border: 1px solid #e9d8fd;">
+                    <a href="https://scikit-learn.org/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">Scikit-learn</a> – Random Forest, SVM
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 9. GNSS RESOURCES ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #2f855a;">
+            <h4 style="color: #2f855a; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-satellite-dish" style="color:#2f855a;"></i> 📡 9. مصادر GNSS
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <div style="background: #f0fff4; border-radius: 14px; padding: 12px 20px; border: 1px solid #c6f6d5;">
+                    <a href="https://www.gps.gov/" target="_blank" style="color:#2f855a; font-weight:600; text-decoration:underline;">GPS.gov</a> – المصدر الرسمي لنظام GPS
+                </div>
+                <div style="background: #f0fff4; border-radius: 14px; padding: 12px 20px; border: 1px solid #c6f6d5;">
+                    <a href="https://igs.org/" target="_blank" style="color:#2f855a; font-weight:600; text-decoration:underline;">IGS (International GNSS Service)</a> – محطات GNSS، مدارات دقيقة
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 10. IOT RESOURCES ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #dd6b20;">
+            <h4 style="color: #dd6b20; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-microchip" style="color:#dd6b20;"></i> 📡 10. موارد IoT والمستشعرات البيئية
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <div style="background: #fffbeb; border-radius: 14px; padding: 12px 20px; border: 1px solid #fefcbf;">
+                    <a href="https://www.arduino.cc/" target="_blank" style="color:#dd6b20; font-weight:600; text-decoration:underline;">Arduino</a> – مشاريع تعليمية IoT
+                </div>
+                <div style="background: #fffbeb; border-radius: 14px; padding: 12px 20px; border: 1px solid #fefcbf;">
+                    <a href="https://www.espressif.com/" target="_blank" style="color:#dd6b20; font-weight:600; text-decoration:underline;">ESP32</a> – الزراعة الذكية، المراقبة البيئية
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 11. OPEN DATA PORTALS ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #2b6cb0;">
             <h4 style="color: #2b6cb0; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-code"></i> برمجيات مفتوحة المصدر
+                <i class="fas fa-database" style="color:#2b6cb0;"></i> 🗃️ 11. بوابات البيانات الجغرافية المفتوحة
             </h4>
-            <div class="resource-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="https://qgis.org/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-globe"></i> QGIS
-                </a>
-                <a href="https://grass.osgeo.org/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-tree"></i> GRASS GIS
-                </a>
-                <a href="https://gdal.org/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-database"></i> GDAL
-                </a>
-                <a href="https://www.esri.com/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-map-marked-alt"></i> ArcGIS
-                </a>
-                <a href="https://earthengine.google.com/" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; gap: 6px; background: var(--white); padding: 8px 18px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: 0.3s; border: 1px solid var(--gray200);">
-                    <i class="fas fa-cloud"></i> Google Earth Engine
-                </a>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://www.openstreetmap.org/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">OpenStreetMap</a>
+                </div>
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://www.naturalearthdata.com/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">Natural Earth Data</a>
+                </div>
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://data.worldbank.org/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">World Bank Data</a>
+                </div>
             </div>
         </div>
-        
+
+        <!-- ===== 12. GIS / RS SOFTWARE ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #38a169;">
+            <h4 style="color: #38a169; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-code" style="color:#38a169;"></i> 💻 12. برمجيات GIS والاستشعار عن بعد (مفتوحة المصدر)
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://qgis.org/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">QGIS</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://grass.osgeo.org/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">GRASS GIS</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://saga-gis.sourceforge.io/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">SAGA GIS</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://step.esa.int/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">ESA SNAP</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://www.orfeo-toolbox.org/" target="_blank" style="color:#38a169; font-weight:600; text-decoration:underline;">Orfeo Toolbox</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 13. SCIENTIFIC DATABASES ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #6b46c1;">
+            <h4 style="color: #6b46c1; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-book" style="color:#6b46c1;"></i> 📚 13. قواعد البيانات العلمية
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://scholar.google.com/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">Google Scholar</a>
+                </div>
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://www.scopus.com/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">Scopus</a>
+                </div>
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://www.webofscience.com/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">Web of Science</a>
+                </div>
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://www.sciencedirect.com/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">ScienceDirect</a>
+                </div>
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://link.springer.com/" target="_blank" style="color:#6b46c1; font-weight:600; text-decoration:underline;">SpringerLink</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 14. SCIENTIFIC JOURNALS ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #c05621;">
+            <h4 style="color: #c05621; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-newspaper" style="color:#c05621;"></i> 📖 14. مجلات علمية موصى بها
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#fffbeb; border-radius:30px; padding:8px 24px; border:1px solid #fefcbf;">
+                    <a href="https://www.mdpi.com/journal/remotesensing" target="_blank" style="color:#c05621; font-weight:600; text-decoration:underline;">Remote Sensing (MDPI)</a>
+                </div>
+                <div style="background:#fffbeb; border-radius:30px; padding:8px 24px; border:1px solid #fefcbf;">
+                    <a href="https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing" target="_blank" style="color:#c05621; font-weight:600; text-decoration:underline;">ISPRS J. Photogrammetry</a>
+                </div>
+                <div style="background:#fffbeb; border-radius:30px; padding:8px 24px; border:1px solid #fefcbf;">
+                    <a href="https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture" target="_blank" style="color:#c05621; font-weight:600; text-decoration:underline;">Computers & Electronics in Agriculture</a>
+                </div>
+                <div style="background:#fffbeb; border-radius:30px; padding:8px 24px; border:1px solid #fefcbf;">
+                    <a href="https://link.springer.com/journal/10661" target="_blank" style="color:#c05621; font-weight:600; text-decoration:underline;">Environmental Monitoring & Assessment</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 15. EDUCATIONAL RESOURCES ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #805ad5;">
+            <h4 style="color: #805ad5; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-graduation-cap" style="color:#805ad5;"></i> 🎓 15. الموارد التعليمية للطلاب
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset" target="_blank" style="color:#805ad5; font-weight:600; text-decoration:underline;">NASA ARSET Training</a>
+                </div>
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://www.esri.com/training/" target="_blank" style="color:#805ad5; font-weight:600; text-decoration:underline;">Esri Training</a>
+                </div>
+                <div style="background:#faf5ff; border-radius:30px; padding:8px 24px; border:1px solid #e9d8fd;">
+                    <a href="https://developers.google.com/earth-engine/tutorials" target="_blank" style="color:#805ad5; font-weight:600; text-decoration:underline;">GEE Tutorials</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 16. LIBYA SPECIFIC DATA ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #2f855a;">
+            <h4 style="color: #2f855a; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-map-marked-alt" style="color:#2f855a;"></i> 🇱🇾 16. بيانات ليبيا
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://climateknowledgeportal.worldbank.org/country/libya" target="_blank" style="color:#2f855a; font-weight:600; text-decoration:underline;">مناخ ليبيا</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://soilgrids.org/explorer/libya" target="_blank" style="color:#2f855a; font-weight:600; text-decoration:underline;">تربة ليبيا</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://earthexplorer.usgs.gov/" target="_blank" style="color:#2f855a; font-weight:600; text-decoration:underline;">صور Landsat</a>
+                </div>
+                <div style="background:#f0fff4; border-radius:30px; padding:8px 24px; border:1px solid #c6f6d5;">
+                    <a href="https://scihub.copernicus.eu/" target="_blank" style="color:#2f855a; font-weight:600; text-decoration:underline;">صور Sentinel</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 17. UNIVERSITIES ===== -->
+        <div class="info-box" style="margin-top: 20px; border-right: 6px solid #2b6cb0;">
+            <h4 style="color: #2b6cb0; font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-university" style="color:#2b6cb0;"></i> 🏛️ 17. جامعات عالمية
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://gis.mit.edu/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">MIT GIS Lab</a>
+                </div>
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://cga.harvard.edu/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">Harvard CGA</a>
+                </div>
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://www.spatial.ucsb.edu/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">UCSB Spatial</a>
+                </div>
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://www.geog.psu.edu/gis" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">Penn State GIS</a>
+                </div>
+                <div style="background:#ebf8ff; border-radius:30px; padding:8px 24px; border:1px solid #bee3f8;">
+                    <a href="https://www.itc.nl/" target="_blank" style="color:#2b6cb0; font-weight:600; text-decoration:underline;">ITC - Netherlands</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CONCLUSION ===== -->
+        <div class="info-box" style="margin-top: 30px; background: #ebf8ff; border-right: 6px solid #2b6cb0;">
+            <p style="font-size: 1rem; line-height: 1.9;">
+                <i class="fas fa-info-circle" style="color:#2b6cb0;"></i>
+                توفر هذه الموارد العلمية والبيانات <strong>مرجعاً شاملاً للطلاب والباحثين</strong> للوصول إلى البيانات الفضائية، المناخية، البيئية، الزراعية، البرمجيات، والمراجع العلمية. 
+                وهي تدعم <strong>التقنيات الجيومكانية الذكية (Smart Geospatial Technologies)</strong> وتكاملها مع <strong>GIS، الاستشعار عن بعد، GNSS، IoT، والذكاء الاصطناعي</strong>.
+            </p>
+        </div>
+
     </div>
 </section>
-    </section>
-
-</div><!-- /container -->
+<!-- ===== END RESOURCES SECTION ===== -->
 
 <!-- ============================================================ -->
 <!-- FOOTER -->
