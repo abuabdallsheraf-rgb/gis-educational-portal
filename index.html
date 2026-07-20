@@ -20004,39 +20004,427 @@
 </section>
 <!-- ===== END SECTION 30 ===== -->
 
-    <!-- ============================================================ -->
-    <!-- ===== SECTION 31: SPATIAL MODELING ===== -->
-    <!-- ============================================================ -->
-    <section class="section" id="spatial-modeling">
-        <div class="section-title"><i class="fas fa-cubes"></i> النمذجة المكانية (Spatial Modeling)</div>
-        <div class="info-box blue">
-            <h4 style="color: #2b6cb0;">📐 مقدمة في النمذجة المكانية</h4>
-            <p style="font-size: 1rem; line-height: 1.8;">
-                <strong>النمذجة المكانية (Spatial Modeling)</strong> هي عملية <strong>تمثيل الظواهر الجغرافية</strong> 
-                باستخدام <strong>النماذج الرياضية والإحصائية</strong> لفهم <strong>العلاقات المكانية</strong>.
-            </p>
+   <!-- ============================================================ -->
+<!-- ===== SECTION 31: SPATIAL MODELING (EXPANDED) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="spatial-modeling">
+
+    <!-- العنوان الرئيسي -->
+    <div class="section-title">
+        <i class="fas fa-cubes"></i> 
+        النمذجة المكانية (Spatial Modeling)
+    </div>
+
+    <!-- ===== 1. INTRODUCTION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-africa"></i> مقدمة في النمذجة المكانية</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            <strong>النمذجة المكانية (Spatial Modeling)</strong> هي عملية <strong>تمثيل الظواهر الجغرافية</strong> باستخدام <strong>النماذج الرياضية والإحصائية</strong> لفهم <strong>العلاقات المكانية</strong>، ومحاكاة العمليات الطبيعية أو البشرية، والتنبؤ بتوزيع الظواهر في المكان والزمان.
+        </p>
+        <div style="background: #e6fffa; padding: 14px 20px; border-radius: 14px; margin-top: 12px;">
+            <p><i class="fas fa-sync-alt" style="color: #319795;"></i> تمثل النمذجة المكانية أحد أهم فروع التقنيات الجيومكانية الحديثة، حيث تحول البيانات الجغرافية من مجرد خرائط وصفية إلى نماذج تحليلية وتنبؤية.</p>
         </div>
-        <div class="info-box">
-            <h4 style="color: #6b46c1;">📊 أنواع النماذج المكانية</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
-                <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2b6cb0;">
-                    <div style="font-size: 2.5rem; text-align: center;">📊</div>
-                    <h5 style="color: #2b6cb0; text-align: center;">إحصائية</h5>
-                    <p style="font-size: 0.7rem;">انحدار خطي، لوجستي</p>
-                </div>
-                <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-bottom: 4px solid #2f855a;">
-                    <div style="font-size: 2.5rem; text-align: center;">📐</div>
-                    <h5 style="color: #2f855a; text-align: center;">رياضية</h5>
-                    <p style="font-size: 0.7rem;">USLE, دارسي</p>
-                </div>
-                <div style="background: #faf5ff; border-radius: 12px; padding: 12px; border-bottom: 4px solid #6b46c1;">
-                    <div style="font-size: 2.5rem; text-align: center;">🧠</div>
-                    <h5 style="color: #6b46c1; text-align: center;">تعلم آلي</h5>
-                    <p style="font-size: 0.7rem;">Random Forest, SVM</p>
-                </div>
+    </div>
+
+    <!-- ===== 2. DEFINITION ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-question-circle"></i> تعريف النمذجة المكانية</h4>
+        <p><strong>التعريف العلمي:</strong> النمذجة المكانية هي عملية بناء تمثيل رياضي أو حسابي للظواهر الجغرافية بهدف تحليل العلاقات المكانية، ومحاكاة العمليات الطبيعية أو البشرية، والتنبؤ بتوزيع الظواهر في المكان والزمان.</p>
+    </div>
+
+    <!-- ===== 3. GIS vs SPATIAL MODELING TABLE ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-table"></i> الفرق بين GIS التقليدي والنمذجة المكانية</h4>
+        <div style="overflow-x: auto;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.9rem; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <thead style="background: #6b46c1; color: white;">
+                    <tr>
+                        <th style="padding: 10px 12px;">GIS التقليدي</th>
+                        <th style="padding: 10px 12px;">النمذجة المكانية (Spatial Modeling)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">عرض البيانات</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">تفسير وتحليل البيانات</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">إنتاج الخرائط</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">بناء نماذج تنبؤية</td></tr>
+                    <tr><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">وصف الوضع الحالي</td><td style="padding: 8px 12px; border-bottom:1px solid #e2e8f0;">توقع المستقبل</td></tr>
+                    <tr><td style="padding: 8px 12px;">تحليل طبقة واحدة</td><td style="padding: 8px 12px;">دمج عدة عوامل وخوارزميات</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== 4. OBJECTIVES ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-bullseye"></i> أهداف النمذجة المكانية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-top: 10px;">
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-shapes" style="color:#2b6cb0;"></i> فهم الأنماط المكانية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-link" style="color:#2b6cb0;"></i> تفسير العلاقات بين المتغيرات</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-clock" style="color:#2b6cb0;"></i> التنبؤ بالتغيرات المستقبلية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-tasks" style="color:#2b6cb0;"></i> دعم التخطيط واتخاذ القرار</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-tree" style="color:#2b6cb0;"></i> إدارة الموارد الطبيعية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-exclamation-triangle" style="color:#2b6cb0;"></i> تقييم المخاطر البيئية</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-seedling" style="color:#2b6cb0;"></i> تحسين الإنتاج الزراعي</div>
+            <div style="background: white; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-sync-alt" style="color:#2b6cb0;"></i> محاكاة الأنظمة الطبيعية</div>
+        </div>
+    </div>
+
+    <!-- ===== 5. COMPONENTS FLOWCHART ===== -->
+    <div class="info-box">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-cogs"></i> عناصر النموذج المكاني</h4>
+        <div style="background: #1a202c; border-radius: 14px; padding: 20px; text-align: center; direction: ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 8px;">
+                <span style="background: #2b6cb0; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-database"></i> Spatial Data</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #3182ce; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-tools"></i> Data Prep</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #4299e1; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-list"></i> Variables</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-code"></i> Model Dev</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-sliders-h"></i> Calibration</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #bee3f8; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-check-double"></i> Validation</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #ebf8ff; color: #1a202c; padding: 4px 14px; border-radius: 20px; border:2px solid #2b6cb0; font-size:0.75rem;"><i class="fas fa-chart-line"></i> Prediction</span>
+                <span style="color: #a0aec0;">→</span>
+                <span style="background: #38a169; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;"><i class="fas fa-check-circle"></i> Decision</span>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- ===== 6. DATA TYPES ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-database"></i> أنواع البيانات المستخدمة في النمذجة المكانية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 12px;">
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169;"><i class="fas fa-vector-square"></i> بيانات المتجهات</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>نقاط (آبار، عينات)</li>
+                    <li>خطوط (طرق، أنهار)</li>
+                    <li>مضلعات (حدود حقول)</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;"><i class="fas fa-th"></i> البيانات الشبكية (Raster)</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>صور الأقمار الصناعية</li>
+                    <li>DEM</li>
+                    <li>خرائط التربة والمناخ</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color:#6b46c1;"><i class="fas fa-clock"></i> البيانات الزمنية</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>تغير NDVI عبر السنوات</li>
+                    <li>تغير درجات الحرارة</li>
+                    <li>تغير الأمطار</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 7. MATH EQUATIONS ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-calculator"></i> المكونات الرياضية للنمذجة المكانية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px;">
+            <div style="background: #faf5ff; border-radius: 14px; padding: 16px; border-right: 4px solid #6b46c1;">
+                <p style="font-family: 'Courier New', monospace; font-size:1.1rem; text-align:center; direction:ltr;">Y = f(X₁, X₂, X₃, ... Xₙ)</p>
+                <p style="font-size:0.9rem;">حيث: Y = الظاهرة المطلوبة، X = المتغيرات المؤثرة</p>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 16px; border-right: 4px solid #38a169;">
+                <p style="font-family: 'Courier New', monospace; font-size:1rem; text-align:center; direction:ltr;">Yield = f(Soil, Rainfall, Temp, NDVI, Mgmt)</p>
+                <p style="font-size:0.9rem;">مثال: تقييم إنتاجية المحصول</p>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 16px; border-right: 4px solid #2b6cb0;">
+                <p style="font-family: 'Courier New', monospace; font-size:1rem; text-align:center; direction:ltr;">Suitability = W₁X₁ + W₂X₂ + W₃X₃</p>
+                <p style="font-size:0.9rem;">مثال: تقييم متعدد المعايير (MCE) – W = الوزن</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 16px; border-right: 4px solid #dd6b20;">
+                <p style="font-family: 'Courier New', monospace; font-size:1rem; text-align:center; direction:ltr;">Runoff = f(Rainfall, Slope, Soil, Landuse)</p>
+                <p style="font-size:0.9rem;">مثال: نموذج هيدرولوجي للجريان السطحي</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 8. MODEL TYPES ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-list-ul"></i> أنواع النماذج المكانية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color:#dd6b20;"><i class="fas fa-chart-bar"></i> 1. نماذج التحليل المكاني</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>Buffer Analysis</li>
+                    <li>Overlay Analysis</li>
+                    <li>Proximity Analysis</li>
+                    <li>Density Analysis</li>
+                </ul>
+                <div style="background:#e2e8f0; border-radius:8px; padding:8px; margin-top:6px; font-size:0.8rem;">
+                    <strong>مثال:</strong> تحديد مناطق خطر التلوث ← مصدر التلوث + اتجاه الرياح + نوع التربة + المياه الجوفية
+                </div>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;"><i class="fas fa-balance-scale"></i> 2. التقييم متعدد المعايير (MCE)</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>اختيار موقع سد</li>
+                    <li>العوامل: الانحدار، الجيولوجيا، الأمطار، استخدامات الأرض</li>
+                </ul>
+                <div style="background:#e2e8f0; border-radius:8px; padding:8px; margin-top:6px; font-size:0.8rem; direction:ltr;">
+                    Suitability = W₁X₁ + W₂X₂ + W₃X₃
+                </div>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169;"><i class="fas fa-chart-scatter"></i> 3. النماذج الجيوإحصائية</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>Kriging</li>
+                    <li>Co-Kriging</li>
+                    <li>Variogram Analysis</li>
+                    <li>خرائط خصوبة التربة والملوحة</li>
+                </ul>
+                <div style="background:#e2e8f0; border-radius:8px; padding:8px; margin-top:6px; font-size:0.8rem;">
+                    عينات التربة ← Kriging ← خريطة الملوحة
+                </div>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color:#6b46c1;"><i class="fas fa-water"></i> 4. النماذج الهيدرولوجية</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>الجريان السطحي</li>
+                    <li>الفيضانات</li>
+                    <li>الأحواض المائية</li>
+                </ul>
+                <div style="background:#e2e8f0; border-radius:8px; padding:8px; margin-top:6px; font-size:0.8rem; direction:ltr;">
+                    Runoff = f(Rainfall, Slope, Soil, Landuse)
+                </div>
+            </div>
+            <div style="background: #fefcbf; border-radius: 14px; padding: 14px; border-right: 4px solid #d69e2e;">
+                <h5 style="color:#d69e2e;"><i class="fas fa-exchange-alt"></i> 5. نماذج تغير استخدامات الأراضي</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>CA-Markov</li>
+                    <li>SLEUTH</li>
+                    <li>Cellular Automata</li>
+                </ul>
+            </div>
+            <div style="background: #e6fffa; border-radius: 14px; padding: 14px; border-right: 4px solid #319795;">
+                <h5 style="color:#319795;"><i class="fas fa-brain"></i> 6. نماذج الذكاء الاصطناعي المكاني</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>Artificial Neural Networks</li>
+                    <li>Random Forest</li>
+                    <li>SVM</li>
+                    <li>Deep Learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 9. APPLICATIONS IN AGRICULTURE ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-seedling"></i> تطبيقات النمذجة المكانية في الزراعة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169;"><i class="fas fa-map"></i> النمذجة المكانية للتربة</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>خرائط pH, EC, CaCO₃</li>
+                    <li>المادة العضوية، القوام</li>
+                    <li>باستخدام: عينات التربة، الاستشعار عن بعد، DEM، ML</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;"><i class="fas fa-chart-line"></i> نمذجة إنتاجية المحاصيل</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>المتغيرات: NDVI، المطر، الحرارة، خصائص التربة</li>
+                    <li style="direction:ltr;">Yield = f(NDVI, Climate, Soil)</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color:#6b46c1;"><i class="fas fa-tint"></i> نمذجة الاحتياجات المائية</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>ET، بيانات الطقس، رطوبة التربة</li>
+                    <li>تحديد كمية ووقت الري</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color:#dd6b20;"><i class="fas fa-bug"></i> نمذجة انتشار الآفات</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>العوامل: الحرارة، الرطوبة، نوع المحصول</li>
+                    <li>الناتج: خريطة خطر الإصابة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 10. ENVIRONMENTAL APPLICATIONS ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-globe-asia"></i> تطبيقات النمذجة المكانية في البيئة والموارد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 12px; border-right: 4px solid #2b6cb0;">
+                <i class="fas fa-desert" style="color:#2b6cb0;"></i> <strong>نمذجة التصحر</strong>
+                <ul style="font-size:0.8rem; padding-right:16px;">
+                    <li>الغطاء النباتي، المناخ، التربة، الضغط البشري</li>
+                    <li>خريطة حساسية التصحر</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 12px; padding: 12px; border-right: 4px solid #38a169;">
+                <i class="fas fa-trowel" style="color:#38a169;"></i> <strong>تدهور الأراضي</strong>
+                <ul style="font-size:0.8rem; padding-right:16px;">
+                    <li>انجراف التربة، الملوحة، فقد الغطاء النباتي</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 12px; border-right: 4px solid #6b46c1;">
+                <i class="fas fa-smog" style="color:#6b46c1;"></i> <strong>نمذجة التلوث</strong>
+                <ul style="font-size:0.8rem; padding-right:16px;">
+                    <li>مصادر التلوث، اتجاه الانتشار، التأثير المكاني</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 12px; border-right: 4px solid #dd6b20;">
+                <i class="fas fa-temperature-high" style="color:#dd6b20;"></i> <strong>التغير المناخي</strong>
+                <ul style="font-size:0.8rem; padding-right:16px;">
+                    <li>تغير الحرارة، تغير الأمطار، مخاطر الجفاف</li>
+                </ul>
+            </div>
+            <div style="background: #fefcbf; border-radius: 12px; padding: 12px; border-right: 4px solid #d69e2e;">
+                <i class="fas fa-water" style="color:#d69e2e;"></i> <strong>المياه الجوفية</strong>
+                <ul style="font-size:0.8rem; padding-right:16px;">
+                    <li>عمق المياه، نوع الصخور، التغذية، الجودة</li>
+                </ul>
+            </div>
+            <div style="background: #e6fffa; border-radius: 12px; padding: 12px; border-right: 4px solid #319795;">
+                <i class="fas fa-tree" style="color:#319795;"></i> <strong>الغابات والمراعي</strong>
+                <ul style="font-size:0.8rem; padding-right:16px;">
+                    <li>إزالة الغابات، خطر الحرائق، الكتلة الحيوية</li>
+                    <li>إنتاجية الغطاء النباتي، قدرة التحمل الرعوي</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 11. REMOTE SENSING + SPATIAL MODELING ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-satellite"></i> النمذجة المكانية باستخدام الاستشعار عن بعد</h4>
+        <p style="font-size:0.95rem;">تستخدم صور الأقمار الصناعية لاستخراج: NDVI, NDWI, SAVI, LST, Soil Moisture، ثم إدخالها في النماذج المكانية.</p>
+        <div style="background: #1a202c; border-radius: 12px; padding: 14px; text-align:center; direction:ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 10px;">
+                <span style="background: #2b6cb0; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Sentinel-2</span>
+                <span style="color:#a0aec0;">+</span>
+                <span style="background: #3182ce; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">DEM</span>
+                <span style="color:#a0aec0;">+</span>
+                <span style="background: #4299e1; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Climate</span>
+                <span style="color:#a0aec0;">+</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Soil</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #ebf8ff; color: #1a202c; padding: 4px 14px; border-radius: 20px; border:2px solid #2b6cb0; font-size:0.75rem;">Spatial Model</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #38a169; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Prediction Map</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 12. SPATIAL MODELING + GEOAI ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-brain"></i> النمذجة المكانية و GeoAI</h4>
+        <p style="font-size:0.95rem;">يمثل دمج النمذجة المكانية مع الذكاء الاصطناعي الجيل الجديد من التحليل الجغرافي.</p>
+        <div style="background: #1a202c; border-radius: 12px; padding: 14px; text-align:center; direction:ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 8px;">
+                <span style="background: #2b6cb0; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Spatial Data</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #3182ce; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Feature Extraction</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #4299e1; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Machine Learning</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Training</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Validation</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #bee3f8; color: #1a202c; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Prediction</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #38a169; color: white; padding: 4px 14px; border-radius: 20px; font-size:0.75rem;">Smart Map</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 13. STUDENT PROJECTS ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-tasks"></i> أمثلة تطبيقية لطلاب الجامعة</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 5px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0;"><i class="fas fa-mountain"></i> مشروع 1: خطر انجراف التربة</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>البيانات: DEM, Rainfall, Soil, Land Cover</li>
+                    <li>النموذج: RUSLE + GIS</li>
+                    <li>الناتج: Soil Erosion Risk Map</li>
+                </ul>
+            </div>
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 5px solid #38a169;">
+                <h5 style="color:#38a169;"><i class="fas fa-flask"></i> مشروع 2: نمذجة ملوحة التربة</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>البيانات: EC Samples, Sentinel-2, Soil Properties</li>
+                    <li>النموذج: Kriging + Machine Learning</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 5px solid #6b46c1;">
+                <h5 style="color:#6b46c1;"><i class="fas fa-tint"></i> مشروع 3: نمذجة الجفاف الزراعي</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>البيانات: NDVI, Rainfall, Temperature</li>
+                    <li>النموذج: Drought Index Model</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 14. TOOLS & SOFTWARE ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-tools"></i> برامج وأدوات النمذجة المكانية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;">
+            <div style="background: #f0fff4; border-radius: 12px; padding: 10px; text-align:center;">
+                <i class="fas fa-map" style="font-size:1.8rem; color:#2f855a;"></i>
+                <h6 style="margin:4px 0;">GIS</h6>
+                <p style="font-size:0.7rem;">ArcGIS Pro, QGIS, GRASS GIS</p>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 12px; padding: 10px; text-align:center;">
+                <i class="fas fa-satellite" style="font-size:1.8rem; color:#2b6cb0;"></i>
+                <h6 style="margin:4px 0;">Remote Sensing</h6>
+                <p style="font-size:0.7rem;">GEE, ENVI, ERDAS Imagine</p>
+            </div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px; text-align:center;">
+                <i class="fas fa-code" style="font-size:1.8rem; color:#6b46c1;"></i>
+                <h6 style="margin:4px 0;">Programming</h6>
+                <p style="font-size:0.7rem;">Python, R, MATLAB</p>
+            </div>
+            <div style="background: #fffbeb; border-radius: 12px; padding: 10px; text-align:center;">
+                <i class="fas fa-brain" style="font-size:1.8rem; color:#dd6b20;"></i>
+                <h6 style="margin:4px 0;">AI</h6>
+                <p style="font-size:0.7rem;">TensorFlow, PyTorch, Scikit-learn</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 15. FUTURE ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-rocket"></i> مستقبل النمذجة المكانية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-brain" style="color:#6b46c1;"></i> GeoAI Spatial Modeling</div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-clock" style="color:#6b46c1;"></i> النماذج التنبؤية الزمنية</div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-cube" style="color:#6b46c1;"></i> Digital Twins للأرض</div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-wifi" style="color:#6b46c1;"></i> دمج IoT مع GIS</div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-bolt" style="color:#6b46c1;"></i> التحليل المكاني في الزمن الحقيقي</div>
+            <div style="background: #faf5ff; border-radius: 12px; padding: 10px 14px;"><i class="fas fa-seedling" style="color:#6b46c1;"></i> الزراعة الذاتية الذكية</div>
+        </div>
+    </div>
+
+    <!-- ===== 16. CONCLUSION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-graduation-cap"></i> الخلاصة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            تمثل <strong>النمذجة المكانية (Spatial Modeling)</strong> أحد أهم فروع التقنيات الجيومكانية الحديثة، حيث تحول البيانات الجغرافية من مجرد خرائط وصفية إلى نماذج تحليلية وتنبؤية قادرة على تفسير الظواهر الطبيعية والبشرية ومحاكاة تغيراتها المستقبلية.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            ومن خلال دمج: <strong>GIS + Remote Sensing + GNSS + Geostatistics + IoT + AI + GeoAI</strong> أصبحت النمذجة المكانية أداة أساسية في: <strong>الزراعة الدقيقة</strong>، إدارة التربة والمياه، مكافحة التصحر، تقييم المخاطر البيئية، إدارة الموارد الطبيعية، ودعم التنمية المستدامة.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            وتعد من أهم الموضوعات التي يجب تدريسها لطلبة كليات الزراعة، علوم الأرض، البيئة، الجغرافيا، والهندسة الجيوماتية ضمن برامج <strong>التقنيات الجيومكانية الحديثة</strong>.
+        </p>
+    </div>
+
+</section>
+<!-- ===== END SECTION 31 ===== -->
 
 <!-- ============================================================ -->
 <!-- ===== SECTION: RESOURCES ===== -->
