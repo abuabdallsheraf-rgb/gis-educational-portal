@@ -10484,314 +10484,608 @@
         </div>
     </div>
 
-   <!-- ===== APPLICATIONS ===== -->
-<div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1; padding: 2rem; border-radius: 20px;">
-    <h4 style="color: #553c9a; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; border-bottom: 3px solid #6b46c1; padding-bottom: 0.5rem;">
-        🌍 التطبيقات العلمية والعملية للاستشعار عن بعد
-    </h4>
-    
-    <!-- ===== SECTION 1: PRECISION AGRICULTURE ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #2b6cb0; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-seedling" style="color: #2b6cb0;"></i> 1. الزراعة الدقيقة (Precision Agriculture)
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;"><strong>المفهوم:</strong> نظام إدارة متطور يعتمد على مراقبة وتحليل التباين المكاني والزماني داخل الحقل باستخدام الأقمار الصناعية، الطائرات بدون طيار، GPS، GIS، والذكاء الاصطناعي، بهدف إدارة كل جزء من الحقل وفق احتياجاته الفعلية.</p>
+   <!-- ============================================================ -->
+<!-- ===== SECTION: REMOTE SENSING APPLICATIONS (EXPANDED) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="rs-applications">
+
+    <!-- ===== APPLICATIONS ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #faf5ff, #ede9fe); border-color: #6b46c1; padding: 2rem; border-radius: 20px;">
+        <h4 style="color: #553c9a; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; border-bottom: 3px solid #6b46c1; padding-bottom: 0.5rem;">
+            🌍 التطبيقات العلمية والعملية للاستشعار عن بعد
+        </h4>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0;">
-            <div style="background: #ebf8ff; border-radius: 12px; padding: 1rem;">
-                <h6 style="color: #2b6cb0; margin: 0 0 0.5rem 0;">🎯 الأهداف</h6>
-                <ul style="margin: 0; padding-right: 1.2rem; color: #2d3748; font-size: 0.9rem;">
-                    <li>زيادة الإنتاجية</li>
-                    <li>تقليل استهلاك المياه</li>
-                    <li>تقليل الأسمدة والمبيدات</li>
-                    <li>تحسين جودة المحصول</li>
-                    <li>حماية البيئة</li>
-                </ul>
-            </div>
-            <div style="background: #f0fff4; border-radius: 12px; padding: 1rem;">
-                <h6 style="color: #38a169; margin: 0 0 0.5rem 0;">📊 أهم المؤشرات النباتية</h6>
-                <ul style="margin: 0; padding-right: 1.2rem; color: #2d3748; font-size: 0.85rem;">
-                    <li><strong>NDVI</strong> = (NIR - Red) / (NIR + Red)</li>
-                    <li><strong>EVI</strong> = G × (NIR - Red) / (NIR + C₁·Red - C₂·Blue + L)</li>
-                    <li><strong>SAVI</strong> = (NIR - Red) / (NIR + Red + L) × (1+L)</li>
-                    <li><strong>NDWI</strong> = (Green - NIR) / (Green + NIR)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Flowchart: Precision Agriculture Steps -->
-        <div style="background: #f7fafc; border-radius: 12px; padding: 1rem; margin: 1rem 0; text-align: center;">
-            <h6 style="color: #2b6cb0; margin: 0 0 0.8rem 0;">🔄 خطوات الزراعة الدقيقة</h6>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; font-size: 0.8rem; direction: ltr;">
-                <span style="background: #2b6cb0; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">جمع البيانات</span>
-                <span style="color: #2b6cb0; font-weight: bold;">→</span>
-                <span style="background: #3182ce; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">الصور الفضائية</span>
-                <span style="color: #2b6cb0; font-weight: bold;">→</span>
-                <span style="background: #4299e1; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">التحليل</span>
-                <span style="color: #2b6cb0; font-weight: bold;">→</span>
-                <span style="background: #63b3ed; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">خرائط الإنتاجية</span>
-                <span style="color: #2b6cb0; font-weight: bold;">→</span>
-                <span style="background: #90cdf4; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">خرائط التسميد</span>
-                <span style="color: #2b6cb0; font-weight: bold;">→</span>
-                <span style="background: #bee3f8; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">خرائط الري</span>
-                <span style="color: #2b6cb0; font-weight: bold;">→</span>
-                <span style="background: #ebf8ff; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px; border: 2px solid #2b6cb0;">الإدارة الذكية</span>
-            </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-            <div style="background: #ebf8ff; border-radius: 10px; padding: 0.8rem; text-align: center; border: 1px solid #bee3f8;">
-                <span style="font-weight: 700; color: #2b6cb0;">إدارة التسميد</span>
-                <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">خرائط معدلات متغيرة (VRF) لتقليل التكاليف 20-40%</p>
-            </div>
-            <div style="background: #f0fff4; border-radius: 10px; padding: 0.8rem; text-align: center; border: 1px solid #c6f6d5;">
-                <span style="font-weight: 700; color: #38a169;">إدارة المبيدات</span>
-                <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">كشف مبكر للأمراض والرش الموضعي</p>
-            </div>
-            <div style="background: #fefcbf; border-radius: 10px; padding: 0.8rem; text-align: center; border: 1px solid #f6e05e;">
-                <span style="font-weight: 700; color: #d69e2e;">إدارة الري</span>
-                <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">توفير المياه 20-50% عبر خرائط الاحتياجات المائية</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SECTION 2: WATER RESOURCES ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #38a169; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-water" style="color: #38a169;"></i> 2. الموارد المائية (Water Resources)
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;">يشمل رصد البحيرات، الأنهار، الثلوج، ورطوبة التربة باستخدام مؤشرات متخصصة وأقمار صناعية مثل <strong>SMAP, SMOS, Sentinel-1</strong>.</p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0;">
-            <div style="background: #e6fffa; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #319795;">
-                <i class="fas fa-map-marked-alt" style="color: #319795; font-size: 1.8rem;"></i>
-                <h6 style="margin: 0.3rem 0; color: #234e52;">مؤشرات المياه</h6>
-                <p style="font-size: 0.75rem; margin: 0;">NDWI = (Green - NIR)/(Green + NIR)</p>
-                <p style="font-size: 0.75rem; margin: 0;">MNDWI = (Green - SWIR)/(Green + SWIR)</p>
-            </div>
-            <div style="background: #f0fff4; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #2f855a;">
-                <i class="fas fa-snowflake" style="color: #2f855a; font-size: 1.8rem;"></i>
-                <h6 style="margin: 0.3rem 0; color: #1c4532;">الثلوج والجليد</h6>
-                <p style="font-size: 0.75rem; margin: 0;">NDSI = (Green - SWIR)/(Green + SWIR)</p>
-                <p style="font-size: 0.75rem; margin: 0;">تقدير المكافئ المائي للثلج</p>
-            </div>
-            <div style="background: #ebf8ff; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #2b6cb0;">
-                <i class="fas fa-tint" style="color: #2b6cb0; font-size: 1.8rem;"></i>
-                <h6 style="margin: 0.3rem 0; color: #1a365d;">رطوبة التربة</h6>
-                <p style="font-size: 0.75rem; margin: 0;">بيانات SMAP, SMOS, Sentinel-1</p>
-                <p style="font-size: 0.75rem; margin: 0;">دقة تصل إلى 0.04 m³/m³</p>
-            </div>
-        </div>
-
-        <!-- Flowchart: Water Cycle Monitoring -->
-        <div style="background: #f7fafc; border-radius: 12px; padding: 1rem; margin: 1rem 0; text-align: center;">
-            <h6 style="color: #38a169; margin: 0 0 0.8rem 0;">🔄 دورة المياه من الفضاء</h6>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; font-size: 0.8rem; direction: ltr;">
-                <span style="background: #38a169; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">⬆️ تبخر-نتح</span>
-                <span style="color: #38a169; font-weight: bold;">→</span>
-                <span style="background: #48bb78; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">☁️ السحب</span>
-                <span style="color: #38a169; font-weight: bold;">→</span>
-                <span style="background: #68d391; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">🌧️ هطول</span>
-                <span style="color: #38a169; font-weight: bold;">→</span>
-                <span style="background: #9ae6b4; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">🏞️ جريان سطحي</span>
-                <span style="color: #38a169; font-weight: bold;">→</span>
-                <span style="background: #c6f6d5; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px; border: 2px solid #38a169;">💧 تغذية جوفية</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SECTION 3: FORESTRY ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #dd6b20; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-tree" style="color: #dd6b20;"></i> 3. الغابات (Forestry)
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;">يشمل مراقبة إزالة الغابات، تقدير الكتلة الحيوية، ومخزون الكربون باستخدام <strong>LiDAR، SAR، والتصوير فائق الطيف</strong>.</p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-            <div style="background: #fffaf0; border-radius: 12px; padding: 1rem; border-left: 5px solid #dd6b20;">
-                <h6 style="color: #c05621; margin: 0 0 0.5rem 0;">📉 إزالة الغابات</h6>
-                <p style="font-size: 0.85rem; margin: 0;">تُستخدم مقارنة صور متعددة السنوات (1990-2025) لحساب المساحة المفقودة ومعدل الإزالة.</p>
-                <div style="background: #fbd38d; border-radius: 8px; padding: 0.3rem; margin-top: 0.5rem; text-align: center; font-size: 0.8rem;">
-                    مؤشر NBR = (NIR - SWIR)/(NIR + SWIR) لتقييم شدة الحرائق
+        <!-- ===== SECTION 1: PRECISION AGRICULTURE ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #2b6cb0; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-seedling" style="color: #2b6cb0;"></i> 1. الزراعة الدقيقة (Precision Agriculture)
+            </h5>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0;">
+                <div style="background: #ebf8ff; border-radius: 12px; padding: 1rem;">
+                    <h6 style="color: #2b6cb0; margin: 0 0 0.5rem 0;">🎯 التعريف والأهداف</h6>
+                    <p style="font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                        <strong>الزراعة الدقيقة (Precision Agriculture)</strong> هي نظام إدارة متطور يعتمد على مراقبة وتحليل التباين المكاني والزماني داخل الحقل باستخدام الأقمار الصناعية، الطائرات بدون طيار (UAVs)، GPS، GIS، والذكاء الاصطناعي، بهدف إدارة كل جزء من الحقل وفق احتياجاته الفعلية.
+                    </p>
+                    <ul style="margin: 0.5rem 0 0; padding-right: 1.2rem; color: #2d3748; font-size: 0.9rem;">
+                        <li>✅ زيادة الإنتاجية بنسبة 5-15%</li>
+                        <li>✅ تقليل استهلاك المياه بنسبة 20-50%</li>
+                        <li>✅ تقليل الأسمدة والمبيدات بنسبة 20-40%</li>
+                        <li>✅ تحسين جودة المحصول</li>
+                        <li>✅ حماية البيئة وتقليل التلوث</li>
+                    </ul>
+                </div>
+                <div style="background: #f0fff4; border-radius: 12px; padding: 1rem;">
+                    <h6 style="color: #38a169; margin: 0 0 0.5rem 0;">📊 أهم المؤشرات النباتية (Vegetation Indices)</h6>
+                    <div style="direction: ltr; text-align: left; font-size: 0.85rem; background: white; padding: 0.5rem; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <strong>NDVI</strong> = (NIR - Red) / (NIR + Red)
+                        <div style="font-size: 0.7rem; color: #4a5568;">(نطاق: -1 إلى +1، صحة النبات)</div>
+                    </div>
+                    <div style="direction: ltr; text-align: left; font-size: 0.85rem; background: white; padding: 0.5rem; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <strong>EVI</strong> = G × (NIR - Red) / (NIR + C₁·Red - C₂·Blue + L)
+                        <div style="font-size: 0.7rem; color: #4a5568;">(مقاوم للتأثيرات الجوية والتربة)</div>
+                    </div>
+                    <div style="direction: ltr; text-align: left; font-size: 0.85rem; background: white; padding: 0.5rem; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <strong>SAVI</strong> = (NIR - Red) / (NIR + Red + L) × (1+L)
+                        <div style="font-size: 0.7rem; color: #4a5568;">(مناسب للمناطق الجافة، L=0.5)</div>
+                    </div>
+                    <div style="direction: ltr; text-align: left; font-size: 0.85rem; background: white; padding: 0.5rem; border-radius: 8px;">
+                        <strong>NDWI</strong> = (Green - NIR) / (Green + NIR)
+                        <div style="font-size: 0.7rem; color: #4a5568;">(مؤشر المياه، كشف الإجهاد المائي)</div>
+                    </div>
                 </div>
             </div>
-            <div style="background: #f0fff4; border-radius: 12px; padding: 1rem; border-left: 5px solid #38a169;">
-                <h6 style="color: #276749; margin: 0 0 0.5rem 0;">🌿 الكتلة الحيوية والكربون</h6>
-                <p style="font-size: 0.85rem; margin: 0;"><strong>AGB = a × DBH^b × H^c × ρ^d</strong></p>
-                <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">مخزون الكربون = AGB × 0.5</p>
-                <p style="font-size: 0.75rem; color: #2d3748;">تُستخدم لتقدير دورة الكربون وتغير المناخ.</p>
+
+            <!-- Flowchart: Precision Agriculture Steps -->
+            <div style="background: #f7fafc; border-radius: 12px; padding: 1rem; margin: 1rem 0; text-align: center;">
+                <h6 style="color: #2b6cb0; margin: 0 0 0.8rem 0;">🔄 دورة عمل الزراعة الدقيقة</h6>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem; font-size: 0.75rem; direction: ltr;">
+                    <span style="background: #2b6cb0; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">جمع البيانات</span>
+                    <span style="color: #2b6cb0; font-weight: bold;">→</span>
+                    <span style="background: #3182ce; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">صور فضائية</span>
+                    <span style="color: #2b6cb0; font-weight: bold;">→</span>
+                    <span style="background: #4299e1; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">تحليل مؤشرات</span>
+                    <span style="color: #2b6cb0; font-weight: bold;">→</span>
+                    <span style="background: #63b3ed; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">خرائط الإنتاجية</span>
+                    <span style="color: #2b6cb0; font-weight: bold;">→</span>
+                    <span style="background: #90cdf4; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">خرائط التسميد</span>
+                    <span style="color: #2b6cb0; font-weight: bold;">→</span>
+                    <span style="background: #bee3f8; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">خرائط الري</span>
+                    <span style="color: #2b6cb0; font-weight: bold;">→</span>
+                    <span style="background: #ebf8ff; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px; border: 2px solid #2b6cb0;">الإدارة الذكية</span>
+                </div>
+            </div>
+
+            <!-- تطبيقات فرعية -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                <div style="background: #ebf8ff; border-radius: 10px; padding: 0.8rem; text-align: center; border: 1px solid #bee3f8;">
+                    <span style="font-weight: 700; color: #2b6cb0;">إدارة التسميد</span>
+                    <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">خرائط معدلات متغيرة (VRF) لتقليل التكاليف 20-40%</p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #ebf8ff; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        N_rate = f(NDVI, Soil_N, Crop_Type)
+                    </div>
+                </div>
+                <div style="background: #f0fff4; border-radius: 10px; padding: 0.8rem; text-align: center; border: 1px solid #c6f6d5;">
+                    <span style="font-weight: 700; color: #38a169;">إدارة المبيدات</span>
+                    <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">كشف مبكر للأمراض والرش الموضعي</p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #f0fff4; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        Disease_Risk = f(Temperature, Humidity, NDVI)
+                    </div>
+                </div>
+                <div style="background: #fefcbf; border-radius: 10px; padding: 0.8rem; text-align: center; border: 1px solid #f6e05e;">
+                    <span style="font-weight: 700; color: #d69e2e;">إدارة الري</span>
+                    <p style="font-size: 0.8rem; margin: 0.3rem 0 0;">توفير المياه 20-50% عبر خرائط الاحتياجات المائية</p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #fefcbf; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        ET = K_c × ETo × (1 - α)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 2: WATER RESOURCES ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #38a169; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-water" style="color: #38a169;"></i> 2. الموارد المائية (Water Resources)
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.95rem;">
+                يشمل رصد <strong>البحيرات، الأنهار، الثلوج، ورطوبة التربة</strong> باستخدام مؤشرات متخصصة وأقمار صناعية مثل 
+                <strong>SMAP, SMOS, Sentinel-1, Sentinel-2, Landsat</strong>. 
+                تُستخدم هذه البيانات في <strong>إدارة أحواض الأنهار، التنبؤ بالفيضانات، وتخطيط الموارد المائية</strong>.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                <div style="background: #e6fffa; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #319795;">
+                    <i class="fas fa-map-marked-alt" style="color: #319795; font-size: 1.8rem;"></i>
+                    <h6 style="margin: 0.3rem 0; color: #234e52;">مؤشرات المياه</h6>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #e6fffa; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        NDWI = (Green - NIR)/(Green + NIR)
+                    </div>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #e6fffa; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        MNDWI = (Green - SWIR)/(Green + SWIR)
+                    </div>
+                    <p style="font-size: 0.7rem; margin: 0.2rem 0 0; color: #234e52;">كشف المسطحات المائية بدقة عالية</p>
+                </div>
+                <div style="background: #f0fff4; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #2f855a;">
+                    <i class="fas fa-snowflake" style="color: #2f855a; font-size: 1.8rem;"></i>
+                    <h6 style="margin: 0.3rem 0; color: #1c4532;">الثلوج والجليد</h6>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #f0fff4; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        NDSI = (Green - SWIR)/(Green + SWIR)
+                    </div>
+                    <p style="font-size: 0.7rem; margin: 0.2rem 0 0; color: #1c4532;">تقدير المكافئ المائي للثلج (SWE)</p>
+                    <p style="font-size: 0.65rem; margin: 0; color: #2d3748;">مهم للموارد المائية في الجبال</p>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #2b6cb0;">
+                    <i class="fas fa-tint" style="color: #2b6cb0; font-size: 1.8rem;"></i>
+                    <h6 style="margin: 0.3rem 0; color: #1a365d;">رطوبة التربة</h6>
+                    <p style="font-size: 0.75rem; margin: 0;">بيانات <strong>SMAP, SMOS, Sentinel-1</strong></p>
+                    <p style="font-size: 0.7rem; margin: 0;">دقة تصل إلى <strong>0.04 m³/m³</strong></p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #ebf8ff; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        Soil_Moisture = f(Backscatter, Incidence_Angle)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flowchart: Water Cycle Monitoring -->
+            <div style="background: #f7fafc; border-radius: 12px; padding: 1rem; margin: 1rem 0; text-align: center;">
+                <h6 style="color: #38a169; margin: 0 0 0.8rem 0;">🔄 دورة المياه من الفضاء</h6>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem; font-size: 0.75rem; direction: ltr;">
+                    <span style="background: #38a169; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">⬆️ تبخر-نتح</span>
+                    <span style="color: #38a169; font-weight: bold;">→</span>
+                    <span style="background: #48bb78; color: white; padding: 0.3rem 0.8rem; border-radius: 20px;">☁️ السحب</span>
+                    <span style="color: #38a169; font-weight: bold;">→</span>
+                    <span style="background: #68d391; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">🌧️ هطول</span>
+                    <span style="color: #38a169; font-weight: bold;">→</span>
+                    <span style="background: #9ae6b4; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px;">🏞️ جريان سطحي</span>
+                    <span style="color: #38a169; font-weight: bold;">→</span>
+                    <span style="background: #c6f6d5; color: #1a365d; padding: 0.3rem 0.8rem; border-radius: 20px; border: 2px solid #38a169;">💧 تغذية جوفية</span>
+                </div>
+                <div style="font-size: 0.7rem; color: #4a5568; margin-top: 0.5rem;">
+                    <strong>المعادلة:</strong> P = ET + R + G (حيث: P = الهطول، ET = التبخر-نتح، R = الجريان، G = التغذية الجوفية)
+                </div>
+            </div>
+
+            <!-- تطبيقات المياه -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem;">
+                <div style="background: #e6fffa; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #b2f5ea;">
+                    <span style="font-weight: 700; color: #319795;">🏞️ مراقبة البحيرات</span>
+                    <p style="font-size: 0.7rem; margin: 0.2rem 0 0;">تغير المسطحات المائية</p>
+                </div>
+                <div style="background: #e6fffa; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #b2f5ea;">
+                    <span style="font-weight: 700; color: #319795;">🌊 مراقبة السواحل</span>
+                    <p style="font-size: 0.7rem; margin: 0.2rem 0 0;">التعرية والتراكم</p>
+                </div>
+                <div style="background: #e6fffa; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #b2f5ea;">
+                    <span style="font-weight: 700; color: #319795;">💧 جودة المياه</span>
+                    <p style="font-size: 0.7rem; margin: 0.2rem 0 0;">العكارة، الكلوروفيل</p>
+                </div>
+                <div style="background: #e6fffa; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #b2f5ea;">
+                    <span style="font-weight: 700; color: #319795;">📊 التنبؤ بالفيضانات</span>
+                    <p style="font-size: 0.7rem; margin: 0.2rem 0 0;">نمذجة الجريان السطحي</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 3: FORESTRY ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #dd6b20; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-tree" style="color: #dd6b20;"></i> 3. الغابات (Forestry)
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.95rem;">
+                يشمل <strong>مراقبة إزالة الغابات، تقدير الكتلة الحيوية، ومخزون الكربون</strong> باستخدام تقنيات متقدمة مثل 
+                <strong>LiDAR (Light Detection and Ranging)، SAR (Synthetic Aperture Radar)، والتصوير فائق الطيف (Hyperspectral)</strong>.
+                تُستخدم بيانات الأقمار الصناعية مثل <strong>Sentinel-1, Sentinel-2, Landsat, وGEDI</strong> لرصد الغابات عالمياً.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0;">
+                <div style="background: #fffaf0; border-radius: 12px; padding: 1rem; border-left: 5px solid #dd6b20;">
+                    <h6 style="color: #c05621; margin: 0 0 0.5rem 0;">📉 مراقبة إزالة الغابات</h6>
+                    <p style="font-size: 0.85rem; margin: 0; line-height: 1.7;">
+                        تُستخدم مقارنة صور متعددة السنوات (1990-2025) لحساب المساحة المفقودة ومعدل الإزالة. 
+                        <strong>مؤشر NBR</strong> يستخدم لتقييم شدة الحرائق.
+                    </p>
+                    <div style="direction: ltr; font-size: 0.75rem; background: #fbd38d; border-radius: 8px; padding: 0.3rem; margin-top: 0.5rem; text-align: center;">
+                        NBR = (NIR - SWIR)/(NIR + SWIR)  (تقييم شدة الحرائق)
+                    </div>
+                    <div style="direction: ltr; font-size: 0.75rem; background: #fbd38d; border-radius: 8px; padding: 0.3rem; margin-top: 0.3rem; text-align: center;">
+                        dNBR = NBR_pre - NBR_post  (تغير شدة الحريق)
+                    </div>
+                </div>
+                <div style="background: #f0fff4; border-radius: 12px; padding: 1rem; border-left: 5px solid #38a169;">
+                    <h6 style="color: #276749; margin: 0 0 0.5rem 0;">🌿 الكتلة الحيوية والكربون</h6>
+                    <p style="font-size: 0.85rem; margin: 0; line-height: 1.7;">
+                        <strong>تقدير الكتلة الحيوية فوق الأرض (AGB):</strong>
+                    </p>
+                    <div style="direction: ltr; font-size: 0.75rem; background: #f0fff4; border-radius: 8px; padding: 0.3rem; text-align: center; border: 1px solid #38a169;">
+                        AGB = a × DBH^b × H^c × ρ^d
+                    </div>
+                    <p style="font-size: 0.75rem; margin: 0.3rem 0 0;">
+                        <strong>حيث:</strong> DBH = قطر الجذع، H = الارتفاع، ρ = كثافة الخشب
+                    </p>
+                    <div style="direction: ltr; font-size: 0.75rem; background: #f0fff4; border-radius: 8px; padding: 0.3rem; text-align: center; border: 1px solid #38a169; margin-top: 0.3rem;">
+                        مخزون الكربون = AGB × 0.5  (نسبة الكربون 50%)
+                    </div>
+                    <p style="font-size: 0.75rem; color: #2d3748; margin-top: 0.3rem;">
+                        تُستخدم لتقدير دورة الكربون وتغير المناخ.
+                    </p>
+                </div>
+            </div>
+
+            <!-- تطبيقات الغابات -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+                <div style="background: #fffaf0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #fbd38d;">
+                    <span style="font-weight: 700; color: #c05621;">🌲 تصنيف أنواع الأشجار</span>
+                </div>
+                <div style="background: #fffaf0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #fbd38d;">
+                    <span style="font-weight: 700; color: #c05621;">📊 صحة الغابات</span>
+                </div>
+                <div style="background: #fffaf0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #fbd38d;">
+                    <span style="font-weight: 700; color: #c05621;">🔥 الحرائق</span>
+                </div>
+                <div style="background: #fffaf0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #fbd38d;">
+                    <span style="font-weight: 700; color: #c05621;">📈 الكتلة الحيوية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 4: URBAN PLANNING ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #6b46c1; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-city" style="color: #6b46c1;"></i> 4. التخطيط الحضري (Urban Planning)
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.95rem;">
+                يشمل <strong>مراقبة نمو المدن، استخدامات الأراضي (LULC)، والبنية التحتية</strong> باستخدام صور عالية الدقة مثل 
+                <strong>WorldView-3 (0.31 م)</strong>، <strong>GeoEye</strong>، <strong>Sentinel-2</strong>، و<strong>Landsat</strong>.
+                تُستخدم تقنيات <strong>التعلم العميق (Deep Learning)</strong> و<strong>CNN</strong> لتصنيف الصور الفضائية وتحديد الأنماط الحضرية.
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
+                <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; flex: 1; min-width: 150px; border: 1px solid #d6bcfa;">
+                    <span style="font-weight: 700; color: #6b46c1;">🏙️ التوسع الحضري</span>
+                    <p style="font-size: 0.75rem; margin: 0.2rem 0;">حساب المساحة الحضرية ومعدل النمو</p>
+                    <div style="direction: ltr; font-size: 0.65rem; background: #faf5ff; padding: 0.2rem; border-radius: 4px;">
+                        Urban_Growth = (Area_t2 - Area_t1) / Δt
+                    </div>
+                </div>
+                <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; flex: 1; min-width: 150px; border: 1px solid #d6bcfa;">
+                    <span style="font-weight: 700; color: #6b46c1;">🗺️ LULC</span>
+                    <p style="font-size: 0.75rem; margin: 0.2rem 0;">سكني، صناعي، زراعي، تجاري، غابات، مياه</p>
+                    <div style="direction: ltr; font-size: 0.65rem; background: #faf5ff; padding: 0.2rem; border-radius: 4px;">
+                        LULC_Map = f(Spectral_Bands, Texture, DEM)
+                    </div>
+                </div>
+                <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; flex: 1; min-width: 150px; border: 1px solid #d6bcfa;">
+                    <span style="font-weight: 700; color: #6b46c1;">🛣️ البنية التحتية</span>
+                    <p style="font-size: 0.75rem; margin: 0.2rem 0;">مراقبة الطرق، الجسور، المطارات باستخدام InSAR وLiDAR</p>
+                </div>
+            </div>
+
+            <!-- جدول تصنيف LULC -->
+            <div style="background: #f7fafc; border-radius: 12px; padding: 1rem; margin: 1rem 0; overflow-x: auto;">
+                <h6 style="color: #6b46c1; margin: 0 0 0.5rem 0; text-align: center;">📊 تصنيف استخدامات الأراضي (LULC Classes)</h6>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.75rem; text-align: center;">
+                    <thead style="background: #6b46c1; color: white;">
+                        <tr>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">الفئة</th>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">الوصف</th>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">الأقمار المستخدمة</th>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">المؤشرات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ebf8ff;"><td><strong>حضري</strong></td><td>مباني، طرق، مناطق حضرية</td><td>WorldView, Sentinel-2</td><td>NDBI</td></tr>
+                        <tr style="background: #f0fff4;"><td><strong>زراعي</strong></td><td>محاصيل، أرض زراعية</td><td>Sentinel-2, Landsat</td><td>NDVI, EVI</td></tr>
+                        <tr style="background: #fefcbf;"><td><strong>غابات</strong></td><td>أشجار، غابات كثيفة</td><td>Sentinel-2, LiDAR</td><td>NDVI, SAVI</td></tr>
+                        <tr style="background: #e6fffa;"><td><strong>مياه</strong></td><td>بحيرات، أنهار، محيطات</td><td>Sentinel-2, Landsat</td><td>NDWI, MNDWI</td></tr>
+                        <tr style="background: #fff5f5;"><td><strong>أرض جرداء</strong></td><td>صحراء، تربة عارية</td><td>Landsat, MODIS</td><td>Albedo, LST</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 5: NATURAL DISASTERS ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #e53e3e; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-fire" style="color: #e53e3e;"></i> 5. الكوارث الطبيعية (Natural Disasters)
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.95rem;">
+                يشمل <strong>مراقبة الحرائق، الفيضانات، الزلازل، والانزلاقات الأرضية</strong> باستخدام تقنيات متقدمة مثل 
+                <strong>InSAR (Interferometric SAR)</strong>، <strong>SAR (Sentinel-1)</strong>، ومؤشرات <strong>NBR و dNBR</strong>.
+                تُستخدم بيانات الأقمار الصناعية للإنذار المبكر، تقييم الأضرار، ودعم عمليات الإغاثة.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                <div style="background: #fff5f5; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #fc8181;">
+                    <h6 style="color: #c53030; margin: 0 0 0.3rem;">🔥 حرائق الغابات</h6>
+                    <p style="font-size: 0.8rem; margin: 0;"><strong>dNBR</strong> = NBR_pre - NBR_post</p>
+                    <p style="font-size: 0.75rem;">تصنيف الشدة: منخفضة، متوسطة، عالية، عالية جداً</p>
+                    <div style="background: #fed7d7; border-radius: 4px; padding: 0.2rem; margin-top: 0.2rem; font-size: 0.65rem;">
+                        معادلة تصنيف شدة الحريق: Severity = f(dNBR, Vegetation_Type)
+                    </div>
+                </div>
+                <div style="background: #ebf8ff; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #63b3ed;">
+                    <h6 style="color: #2b6cb0; margin: 0 0 0.3rem;">🌊 الفيضانات</h6>
+                    <p style="font-size: 0.8rem; margin: 0;">SAR من <strong>Sentinel-1</strong> يخترق السحب</p>
+                    <p style="font-size: 0.75rem;">تحديد المناطق المغمورة وتقدير الأضرار</p>
+                    <div style="background: #bee3f8; border-radius: 4px; padding: 0.2rem; margin-top: 0.2rem; font-size: 0.65rem;">
+                        Flood_Map = f(Backscatter, DEM, Landcover)
+                    </div>
+                </div>
+                <div style="background: #fefcbf; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #f6ad55;">
+                    <h6 style="color: #975a16; margin: 0 0 0.3rem;">🌍 الزلازل</h6>
+                    <p style="font-size: 0.8rem; margin: 0;"><strong>InSAR</strong> يقيس الإزاحة بدقة مليمترية</p>
+                    <p style="font-size: 0.75rem;">تقييم الأضرار الهيكلية وتشوهات الأرض</p>
+                    <div style="background: #fefcbf; border-radius: 4px; padding: 0.2rem; margin-top: 0.2rem; font-size: 0.65rem;">
+                        Displacement = f(Phase_Difference, Wavelength, Geometry)
+                    </div>
+                </div>
+                <div style="background: #f0e6ff; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #9f7aea;">
+                    <h6 style="color: #553c9a; margin: 0 0 0.3rem;">⛰️ الانزلاقات الأرضية</h6>
+                    <p style="font-size: 0.8rem; margin: 0;">تحليل الميل، الصخور، الأمطار، والغطاء النباتي</p>
+                    <p style="font-size: 0.75rem;">رسم خرائط القابلية باستخدام AHP والغابة العشوائية</p>
+                    <div style="background: #e9d8fd; border-radius: 4px; padding: 0.2rem; margin-top: 0.2rem; font-size: 0.65rem;">
+                        Landslide_Risk = f(Slope, Geology, Rainfall, Vegetation)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 6: CLIMATE ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #d69e2e; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-cloud-sun" style="color: #d69e2e;"></i> 6. المناخ (Climate)
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.95rem;">
+                يشمل <strong>مراقبة تغير المناخ، طبقات الغلاف الجوي، والطاقة</strong> باستخدام أقمار مثل 
+                <strong>MODIS</strong>، <strong>Sentinel-5P</strong>، <strong>CERES</strong>، <strong>CALIPSO</strong>.
+                تُستخدم البيانات لتحليل اتجاهات الحرارة، الذوبان الجليدي، والتصحر.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                <div style="background: #fffff0; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #d69e2e;">
+                    <i class="fas fa-temperature-high" style="color: #d69e2e; font-size: 1.6rem;"></i>
+                    <h6 style="margin: 0.3rem 0; color: #744210;">تغير المناخ</h6>
+                    <p style="font-size: 0.75rem; margin: 0;">ارتفاع الحرارة، ذوبان الجليد، التصحر</p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #fffff0; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        ΔT = T_2025 - T_1980
+                    </div>
+                </div>
+                <div style="background: #e6fffa; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #319795;">
+                    <i class="fas fa-wind" style="color: #319795; font-size: 1.6rem;"></i>
+                    <h6 style="margin: 0.3rem 0; color: #234e52;">الغلاف الجوي</h6>
+                    <p style="font-size: 0.75rem; margin: 0;">قياس بخار الماء، الأوزون، CO₂، الميثان</p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #e6fffa; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        CO₂_Concentration = f(Sentinel-5P, TROPOMI)
+                    </div>
+                </div>
+                <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #6b46c1;">
+                    <i class="fas fa-solar-panel" style="color: #6b46c1; font-size: 1.6rem;"></i>
+                    <h6 style="margin: 0.3rem 0; color: #44337a;">الطاقة</h6>
+                    <p style="font-size: 0.75rem; margin: 0;">الإشعاع الشمسي، سرعة الرياح، الحرارة السطحية</p>
+                    <div style="direction: ltr; font-size: 0.7rem; background: #faf5ff; padding: 0.2rem; border-radius: 4px; margin-top: 0.2rem;">
+                        Solar_Radiation = f(CERES, Cloud_Cover)
+                    </div>
+                </div>
+            </div>
+
+            <!-- مؤشرات المناخ -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem;">
+                <div style="background: #fffff0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #f6e05e;">
+                    <span style="font-weight: 700; color: #744210;">📊 متابعة الجفاف</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">مؤشر SPI، VCI</p>
+                </div>
+                <div style="background: #fffff0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #f6e05e;">
+                    <span style="font-weight: 700; color: #744210;">❄️ ذوبان الجليد</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">مراقبة القطبين</p>
+                </div>
+                <div style="background: #fffff0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #f6e05e;">
+                    <span style="font-weight: 700; color: #744210;">🌡️ الجزر الحرارية</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">تحليل LST في المدن</p>
+                </div>
+                <div style="background: #fffff0; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #f6e05e;">
+                    <span style="font-weight: 700; color: #744210;">🌿 الإنتاجية الأولية</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">NPP، GPP من MODIS</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 7: LIBYA APPLICATIONS ===== -->
+        <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-right: 6px solid #d69e2e;">
+            <h5 style="color: #2b6cb0; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-map-marked-alt" style="color: #d69e2e;"></i> تطبيقات خاصة بليبيا
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.95rem;">
+                يلعب الاستشعار عن بعد دوراً محورياً في دعم التنمية الزراعية والبيئية في ليبيا، حيث تساهم البيانات الفضائية في مواجهة التحديات البيئية والمناخية.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 0.8rem;">
+                <div style="background: #ebf8ff; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #bee3f8;">
+                    <span style="font-weight: 700; color: #2b6cb0;">🏜️ التصحر وزحف الرمال</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">مراقبة الصحراء الليبية باستخدام NDVI</p>
+                </div>
+                <div style="background: #f0fff4; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #c6f6d5;">
+                    <span style="font-weight: 700; color: #38a169;">💧 إدارة المياه الجوفية</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">مراقبة خزانات المياه الجوفية باستخدام GRACE</p>
+                </div>
+                <div style="background: #fefcbf; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #f6e05e;">
+                    <span style="font-weight: 700; color: #d69e2e;">🌾 الزراعة في المناطق الجافة</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">دعم الزراعة المطرية باستخدام بيانات الأمطار</p>
+                </div>
+                <div style="background: #faf5ff; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #d6bcfa;">
+                    <span style="font-weight: 700; color: #6b46c1;">🌿 مراقبة المراعي</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">تقييم الغطاء النباتي في المناطق الرعوية</p>
+                </div>
+                <div style="background: #fff5f5; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #fed7d7;">
+                    <span style="font-weight: 700; color: #e53e3e;">🏙️ التوسع العمراني</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">مراقبة نمو المدن الليبية باستخدام Landsat</p>
+                </div>
+                <div style="background: #e6fffa; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #b2f5ea;">
+                    <span style="font-weight: 700; color: #319795;">🏖️ التغيرات الساحلية</span>
+                    <p style="font-size: 0.65rem; margin: 0.2rem 0;">مراقبة تآكل الساحل الليبي</p>
+                </div>
+            </div>
+
+            <!-- أهداف التنمية المستدامة -->
+            <div style="background: linear-gradient(135deg, #f0fff4, #ebf8ff); border-radius: 12px; padding: 1rem; margin-top: 1rem; border: 2px solid #38a169;">
+                <h6 style="color: #2f855a; margin: 0 0 0.5rem 0; text-align: center;">🌍 دعم أهداف التنمية المستدامة (SDGs) في ليبيا</h6>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;">
+                    <div style="background: white; border-radius: 8px; padding: 0.4rem; text-align: center; border: 1px solid #38a169;">
+                        <span style="font-weight: 700; color: #2f855a;">SDG 2</span>
+                        <p style="font-size: 0.6rem; margin: 0;">القضاء على الجوع</p>
+                    </div>
+                    <div style="background: white; border-radius: 8px; padding: 0.4rem; text-align: center; border: 1px solid #38a169;">
+                        <span style="font-weight: 700; color: #2f855a;">SDG 6</span>
+                        <p style="font-size: 0.6rem; margin: 0;">المياه النظيفة</p>
+                    </div>
+                    <div style="background: white; border-radius: 8px; padding: 0.4rem; text-align: center; border: 1px solid #38a169;">
+                        <span style="font-weight: 700; color: #2f855a;">SDG 13</span>
+                        <p style="font-size: 0.6rem; margin: 0;">العمل المناخي</p>
+                    </div>
+                    <div style="background: white; border-radius: 8px; padding: 0.4rem; text-align: center; border: 1px solid #38a169;">
+                        <span style="font-weight: 700; color: #2f855a;">SDG 15</span>
+                        <p style="font-size: 0.6rem; margin: 0;">الحياة على الأرض</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 8: INTEGRATION WITH MODERN TECHNOLOGIES ===== -->
+        <div style="margin-bottom: 2rem; background: linear-gradient(135deg, #ebf4ff, #f0e6ff); border-radius: 16px; padding: 1.5rem; border: 2px solid #6b46c1;">
+            <h5 style="color: #553c9a; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-microchip" style="color: #6b46c1;"></i> التكامل بين الاستشعار عن بعد والتقنيات الحديثة
+            </h5>
+            <p style="color: #2d3748; line-height: 1.8; font-size: 0.9rem; text-align: center;">
+                يُمثل التكامل بين الاستشعار عن بعد والتقنيات الحديثة أساس <strong>الأنظمة الذكية</strong> في إدارة الموارد الطبيعية، الزراعة، البيئة، والتخطيط الحضري.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem; font-size: 0.75rem;">
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #2b6cb0;">
+                    <i class="fas fa-map" style="color: #2b6cb0; font-size: 1.4rem;"></i><br>
+                    <strong>GIS</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #38a169;">
+                    <i class="fas fa-satellite-dish" style="color: #38a169; font-size: 1.4rem;"></i><br>
+                    <strong>GPS/GNSS</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #dd6b20;">
+                    <i class="fas fa-drone" style="color: #dd6b20; font-size: 1.4rem;"></i><br>
+                    <strong>UAV</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #e53e3e;">
+                    <i class="fas fa-ruler-combined" style="color: #e53e3e; font-size: 1.4rem;"></i><br>
+                    <strong>LiDAR</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #319795;">
+                    <i class="fas fa-radar" style="color: #319795; font-size: 1.4rem;"></i><br>
+                    <strong>SAR</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #6b46c1;">
+                    <i class="fas fa-camera" style="color: #6b46c1; font-size: 1.4rem;"></i><br>
+                    <strong>Hyperspectral</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #d69e2e;">
+                    <i class="fas fa-wifi" style="color: #d69e2e; font-size: 1.4rem;"></i><br>
+                    <strong>IoT</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #ed64a6;">
+                    <i class="fas fa-brain" style="color: #ed64a6; font-size: 1.4rem;"></i><br>
+                    <strong>AI/ML</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #4fd1c5;">
+                    <i class="fas fa-network-wired" style="color: #4fd1c5; font-size: 1.4rem;"></i><br>
+                    <strong>Deep Learning</strong>
+                </div>
+                <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #f6ad55;">
+                    <i class="fab fa-google" style="color: #f6ad55; font-size: 1.4rem;"></i><br>
+                    <strong>GEE</strong>
+                </div>
+            </div>
+            <div style="background: white; border-radius: 8px; padding: 0.8rem; margin-top: 0.8rem; text-align: center;">
+                <p style="font-size: 0.85rem; color: #2d3748; margin: 0;">
+                    <strong>Google Earth Engine (GEE)</strong> يتيح معالجة وتحليل كميات ضخمة من بيانات الأقمار الصناعية سحابياً، مع دعم خوارزميات الذكاء الاصطناعي والتصنيف الآلي.
+                </p>
+                <div style="direction: ltr; font-size: 0.7rem; background: #f7fafc; padding: 0.3rem; border-radius: 4px; margin-top: 0.3rem;">
+                    GEE_Workflow = (Satellite_Data, Preprocessing, Index_Calculation, Classification, Export)
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 9: FAMOUS SATELLITES ===== -->
+        <div style="background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            <h5 style="color: #2d3748; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem; margin-top: 0;">
+                <i class="fas fa-satellite" style="color: #2b6cb0;"></i> أشهر الأقمار الصناعية المستخدمة
+            </h5>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.75rem; text-align: center;">
+                    <thead style="background: #2b6cb0; color: white;">
+                        <tr>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">القمر الصناعي</th>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">الدقة المكانية</th>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">زمن التكرار</th>
+                            <th style="padding: 0.4rem; border: 1px solid #cbd5e0;">أهم التطبيقات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ebf8ff;"><td><strong>Landsat 8/9</strong></td><td>30 م</td><td>16 يوماً</td><td>استخدامات الأراضي، الغطاء النباتي، المياه</td></tr>
+                        <tr style="background: #f0fff4;"><td><strong>Sentinel-2A/B</strong></td><td>10–20 م</td><td>5 أيام</td><td>الزراعة الدقيقة، مراقبة المحاصيل</td></tr>
+                        <tr style="background: #fff5f5;"><td><strong>Sentinel-1</strong></td><td>10 م (رادار)</td><td>6–12 يوماً</td><td>الفيضانات، رطوبة التربة، التشوهات</td></tr>
+                        <tr style="background: #fefcbf;"><td><strong>MODIS</strong></td><td>250–1000 م</td><td>يومي</td><td>المناخ، الحرائق، الإنتاجية الأولية</td></tr>
+                        <tr style="background: #faf5ff;"><td><strong>PlanetScope</strong></td><td>3–5 م</td><td>يومي</td><td>الزراعة الدقيقة والمراقبة المستمرة</td></tr>
+                        <tr style="background: #e6fffa;"><td><strong>WorldView-3</strong></td><td>حتى 0.31 م</td><td>حسب المهمة</td><td>التخطيط الحضري والبنية التحتية</td></tr>
+                        <tr style="background: #f0e6ff;"><td><strong>SMAP</strong></td><td>~9–36 كم</td><td>2–3 أيام</td><td>رطوبة التربة</td></tr>
+                        <tr style="background: #fefcbf;"><td><strong>Sentinel-5P</strong></td><td>3.5–7 كم</td><td>يومي</td><td>جودة الهواء والغازات الجوية</td></tr>
+                        <tr style="background: #fff5f5;"><td><strong>GEDI</strong></td><td>25 م (LiDAR)</td><td>مستمر</td><td>بنية الغابات والكتلة الحيوية</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- أيقونات الأقمار -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 0.8rem;">
+                <span style="background: #2b6cb0; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🛰️ Landsat</span>
+                <span style="background: #38a169; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🛰️ Sentinel</span>
+                <span style="background: #dd6b20; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🛰️ MODIS</span>
+                <span style="background: #6b46c1; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🛰️ Planet</span>
+                <span style="background: #e53e3e; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🛰️ WorldView</span>
+                <span style="background: #319795; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🛰️ SMAP</span>
+            </div>
+        </div>
+
+        <!-- ===== SUMMARY ===== -->
+        <div style="margin-top: 2rem; background: linear-gradient(135deg, #f0fff4, #ebf8ff); border-radius: 16px; padding: 1.5rem; border: 2px solid #38a169; text-align: center;">
+            <h5 style="color: #2f855a; font-size: 1.3rem; margin: 0;">📌 الخلاصة</h5>
+            <p style="color: #2d3748; line-height: 1.8; margin: 0.5rem 0 0; font-size: 0.95rem;">
+                يُعد الاستشعار عن بعد نظاماً متكاملاً لدعم القرار يعتمد على التكامل مع <strong>GIS، AI، UAVs، SAR، LiDAR، IoT، وGoogle Earth Engine</strong>، 
+                مما يمكن من مراقبة الموارد الطبيعية في الزمن الحقيقي، وتحسين إدارة الإنتاج الزراعي، وحماية البيئة، والتنبؤ بالكوارث، ودعم التنمية المستدامة.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 0.8rem;">
+                <span style="background: #2b6cb0; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🌱 الزراعة الدقيقة</span>
+                <span style="background: #38a169; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">💧 الموارد المائية</span>
+                <span style="background: #dd6b20; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🌳 الغابات</span>
+                <span style="background: #6b46c1; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🏙️ التخطيط الحضري</span>
+                <span style="background: #e53e3e; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🔥 الكوارث</span>
+                <span style="background: #d69e2e; color: white; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.65rem;">🌤️ المناخ</span>
             </div>
         </div>
     </div>
 
-    <!-- ===== SECTION 4: URBAN PLANNING ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #6b46c1; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-city" style="color: #6b46c1;"></i> 4. التخطيط الحضري (Urban Planning)
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;">يشمل مراقبة نمو المدن، استخدامات الأراضي (LULC)، والبنية التحتية باستخدام صور عالية الدقة مثل <strong>WorldView-3</strong>.</p>
-        
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
-            <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; flex: 1; min-width: 150px; border: 1px solid #d6bcfa;">
-                <span style="font-weight: 700; color: #6b46c1;">🏙️ التوسع الحضري</span>
-                <p style="font-size: 0.75rem; margin: 0.2rem 0;">حساب المساحة الحضرية ومعدل النمو</p>
-            </div>
-            <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; flex: 1; min-width: 150px; border: 1px solid #d6bcfa;">
-                <span style="font-weight: 700; color: #6b46c1;">🗺️ LULC</span>
-                <p style="font-size: 0.75rem; margin: 0.2rem 0;">سكني، صناعي، زراعي، تجاري، غابات، مياه</p>
-            </div>
-            <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; flex: 1; min-width: 150px; border: 1px solid #d6bcfa;">
-                <span style="font-weight: 700; color: #6b46c1;">🛣️ البنية التحتية</span>
-                <p style="font-size: 0.75rem; margin: 0.2rem 0;">مراقبة الطرق، الجسور، المطارات باستخدام InSAR وLiDAR</p>
-            </div>
+    <!-- ===== المصطلحات العلمية الأساسية ===== -->
+    <div class="info-box" style="background: linear-gradient(135deg, #fef2f2, #fed7d7); border-color: #e53e3e; margin-top: 1.5rem;">
+        <h4 style="color: #c53030;">📌 مصطلحات علمية في الاستشعار عن بعد</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem 1.2rem;">
+            <div><span style="font-weight:700; color:#c53030;">Spectral Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة طيفية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Spatial Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة مكانية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Temporal Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة زمنية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Radiometric Resolution</span> <span style="font-size:0.8rem; color:#4a5568;">دقة إشعاعية</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Atmospheric Correction</span> <span style="font-size:0.8rem; color:#4a5568;">تصحيح جوي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Geometric Correction</span> <span style="font-size:0.8rem; color:#4a5568;">تصحيح هندسي</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Supervised Classification</span> <span style="font-size:0.8rem; color:#4a5568;">تصنيف موجه</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Unsupervised Classification</span> <span style="font-size:0.8rem; color:#4a5568;">تصنيف غير موجه</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Radar</span> <span style="font-size:0.8rem; color:#4a5568;">رادار</span></div>
+            <div><span style="font-weight:700; color:#c53030;">LiDAR</span> <span style="font-size:0.8rem; color:#4a5568;">كشف بالليزر</span></div>
+            <div><span style="font-weight:700; color:#c53030;">InSAR</span> <span style="font-size:0.8rem; color:#4a5568;">تداخل الرادار</span></div>
+            <div><span style="font-weight:700; color:#c53030;">Hyperspectral</span> <span style="font-size:0.8rem; color:#4a5568;">فائق الطيف</span></div>
         </div>
     </div>
 
-    <!-- ===== SECTION 5: NATURAL DISASTERS ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #e53e3e; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-fire" style="color: #e53e3e;"></i> 5. الكوارث الطبيعية (Natural Disasters)
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;">يشمل مراقبة الحرائق، الفيضانات، الزلازل، والانزلاقات الأرضية باستخدام <strong>InSAR، Sentinel-1، ومؤشرات NBR وdNBR</strong>.</p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div style="background: #fff5f5; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #fc8181;">
-                <h6 style="color: #c53030; margin: 0 0 0.3rem;">🔥 حرائق الغابات</h6>
-                <p style="font-size: 0.8rem; margin: 0;"><strong>dNBR</strong> = NBR_pre - NBR_post</p>
-                <p style="font-size: 0.75rem;">تصنيف الشدة: منخفضة، متوسطة، عالية، عالية جداً</p>
-            </div>
-            <div style="background: #ebf8ff; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #63b3ed;">
-                <h6 style="color: #2b6cb0; margin: 0 0 0.3rem;">🌊 الفيضانات</h6>
-                <p style="font-size: 0.8rem; margin: 0;">SAR من Sentinel-1 يخترق السحب</p>
-                <p style="font-size: 0.75rem;">تحديد المناطق المغمورة وتقدير الأضرار</p>
-            </div>
-            <div style="background: #fefcbf; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #f6ad55;">
-                <h6 style="color: #975a16; margin: 0 0 0.3rem;">🌍 الزلازل</h6>
-                <p style="font-size: 0.8rem; margin: 0;">InSAR يقيس الإزاحة بدقة مليمترية</p>
-                <p style="font-size: 0.75rem;">تقييم الأضرار الهيكلية</p>
-            </div>
-            <div style="background: #f0e6ff; border-radius: 10px; padding: 0.8rem; border-right: 5px solid #9f7aea;">
-                <h6 style="color: #553c9a; margin: 0 0 0.3rem;">⛰️ الانزلاقات الأرضية</h6>
-                <p style="font-size: 0.8rem; margin: 0;">تحليل الميل، الصخور، الأمطار، والغطاء النباتي</p>
-                <p style="font-size: 0.75rem;">رسم خرائط القابلية باستخدام AHP والغابة العشوائية</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SECTION 6: CLIMATE ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #d69e2e; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-cloud-sun" style="color: #d69e2e;"></i> 6. المناخ (Climate)
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;">يشمل مراقبة تغير المناخ، طبقات الغلاف الجوي، والطاقة باستخدام أقمار مثل <strong>MODIS، Sentinel-5P، CERES، CALIPSO</strong>.</p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
-            <div style="background: #fffff0; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #d69e2e;">
-                <i class="fas fa-temperature-high" style="color: #d69e2e; font-size: 1.6rem;"></i>
-                <h6 style="margin: 0.3rem 0; color: #744210;">تغير المناخ</h6>
-                <p style="font-size: 0.75rem; margin: 0;">ارتفاع الحرارة، ذوبان الجليد، التصحر</p>
-            </div>
-            <div style="background: #e6fffa; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #319795;">
-                <i class="fas fa-wind" style="color: #319795; font-size: 1.6rem;"></i>
-                <h6 style="margin: 0.3rem 0; color: #234e52;">الغلاف الجوي</h6>
-                <p style="font-size: 0.75rem; margin: 0;">قياس بخار الماء، الأوزون، CO₂، الميثان</p>
-            </div>
-            <div style="background: #faf5ff; border-radius: 10px; padding: 0.8rem; text-align: center; border-bottom: 4px solid #6b46c1;">
-                <i class="fas fa-solar-panel" style="color: #6b46c1; font-size: 1.6rem;"></i>
-                <h6 style="margin: 0.3rem 0; color: #44337a;">الطاقة</h6>
-                <p style="font-size: 0.75rem; margin: 0;">الإشعاع الشمسي، سرعة الرياح، الحرارة السطحية</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SECTION 7: LIBYA APPLICATIONS ===== -->
-    <div style="margin-bottom: 2.5rem; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-right: 6px solid #d69e2e;">
-        <h5 style="color: #2b6cb0; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-map-marked-alt" style="color: #d69e2e;"></i> تطبيقات خاصة بليبيا
-        </h5>
-        <p style="color: #2d3748; line-height: 1.8;">يلعب الاستشعار عن بعد دوراً محورياً في دعم التنمية الزراعية والبيئية في ليبيا، ومن أهم التطبيقات:</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-top: 0.8rem;">
-            <div style="background: #ebf8ff; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #bee3f8;">
-                <span style="font-weight: 700; color: #2b6cb0;">🏜️ التصحر وزحف الرمال</span>
-            </div>
-            <div style="background: #f0fff4; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #c6f6d5;">
-                <span style="font-weight: 700; color: #38a169;">💧 إدارة المياه الجوفية</span>
-            </div>
-            <div style="background: #fefcbf; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #f6e05e;">
-                <span style="font-weight: 700; color: #d69e2e;">🌾 الزراعة في المناطق الجافة</span>
-            </div>
-            <div style="background: #faf5ff; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #d6bcfa;">
-                <span style="font-weight: 700; color: #6b46c1;">🌿 مراقبة المراعي</span>
-            </div>
-            <div style="background: #fff5f5; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #fed7d7;">
-                <span style="font-weight: 700; color: #e53e3e;">🏙️ التوسع العمراني</span>
-            </div>
-            <div style="background: #e6fffa; border-radius: 8px; padding: 0.6rem; text-align: center; border: 1px solid #b2f5ea;">
-                <span style="font-weight: 700; color: #319795;">🏖️ التغيرات الساحلية</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SECTION 8: INTEGRATION WITH MODERN TECHNOLOGIES ===== -->
-    <div style="margin-bottom: 2rem; background: linear-gradient(135deg, #ebf4ff, #f0e6ff); border-radius: 16px; padding: 1.5rem; border: 2px solid #6b46c1;">
-        <h5 style="color: #553c9a; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-            <i class="fas fa-microchip" style="color: #6b46c1;"></i> التكامل بين الاستشعار عن بعد والتقنيات الحديثة
-        </h5>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.6rem; font-size: 0.8rem;">
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #2b6cb0;">GIS</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #38a169;">GPS/GNSS</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #dd6b20;">UAV</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #e53e3e;">LiDAR</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #319795;">SAR</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #6b46c1;">Hyperspectral</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #d69e2e;">IoT</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #ed64a6;">AI/ML</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #4fd1c5;">Deep Learning</div>
-            <div style="background: white; border-radius: 8px; padding: 0.5rem; text-align: center; border-bottom: 3px solid #f6ad55;">GEE</div>
-        </div>
-        <p style="text-align: center; font-size: 0.85rem; color: #2d3748; margin-top: 0.8rem;">
-            <strong>Google Earth Engine (GEE)</strong> يتيح معالجة وتحليل كميات ضخمة من بيانات الأقمار الصناعية سحابياً.
-        </p>
-    </div>
-
-    <!-- ===== SECTION 9: FAMOUS SATELLITES ===== -->
-    <div style="background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-        <h5 style="color: #2d3748; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem; margin-top: 0;">
-            <i class="fas fa-satellite" style="color: #2b6cb0;"></i> أشهر الأقمار الصناعية المستخدمة
-        </h5>
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: center;">
-                <thead style="background: #2b6cb0; color: white;">
-                    <tr>
-                        <th style="padding: 0.5rem; border: 1px solid #cbd5e0;">القمر الصناعي</th>
-                        <th style="padding: 0.5rem; border: 1px solid #cbd5e0;">الدقة المكانية</th>
-                        <th style="padding: 0.5rem; border: 1px solid #cbd5e0;">زمن التكرار</th>
-                        <th style="padding: 0.5rem; border: 1px solid #cbd5e0;">أهم التطبيقات</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="background: #ebf8ff;"><td><strong>Landsat 8/9</strong></td><td>30 م</td><td>16 يوماً</td><td>استخدامات الأراضي، الغطاء النباتي، المياه</td></tr>
-                    <tr style="background: #f0fff4;"><td><strong>Sentinel-2A/B</strong></td><td>10–20 م</td><td>5 أيام</td><td>الزراعة الدقيقة، مراقبة المحاصيل</td></tr>
-                    <tr style="background: #fff5f5;"><td><strong>Sentinel-1</strong></td><td>10 م (رادار)</td><td>6–12 يوماً</td><td>الفيضانات، رطوبة التربة، التشوهات</td></tr>
-                    <tr style="background: #fefcbf;"><td><strong>MODIS</strong></td><td>250–1000 م</td><td>يومي</td><td>المناخ، الحرائق، الإنتاجية الأولية</td></tr>
-                    <tr style="background: #faf5ff;"><td><strong>PlanetScope</strong></td><td>3–5 م</td><td>يومي</td><td>الزراعة الدقيقة والمراقبة المستمرة</td></tr>
-                    <tr style="background: #e6fffa;"><td><strong>WorldView-3</strong></td><td>حتى 0.31 م</td><td>حسب المهمة</td><td>التخطيط الحضري والبنية التحتية</td></tr>
-                    <tr style="background: #f0e6ff;"><td><strong>SMAP</strong></td><td>~9–36 كم</td><td>2–3 أيام</td><td>رطوبة التربة</td></tr>
-                    <tr style="background: #fefcbf;"><td><strong>Sentinel-5P</strong></td><td>3.5–7 كم</td><td>يومي</td><td>جودة الهواء والغازات الجوية</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- ===== SUMMARY ===== -->
-    <div style="margin-top: 2rem; background: linear-gradient(135deg, #f0fff4, #ebf8ff); border-radius: 16px; padding: 1.5rem; border: 2px solid #38a169; text-align: center;">
-        <h5 style="color: #2f855a; font-size: 1.3rem; margin: 0;">📌 الخلاصة</h5>
-        <p style="color: #2d3748; line-height: 1.8; margin: 0.5rem 0 0;">
-            يُعد الاستشعار عن بعد نظاماً متكاملاً لدعم القرار يعتمد على التكامل مع <strong>GIS، AI، UAVs، SAR، LiDAR، IoT، وGoogle Earth Engine</strong>، 
-            مما يمكن من مراقبة الموارد الطبيعية في الزمن الحقيقي، وتحسين إدارة الإنتاج الزراعي، وحماية البيئة، والتنبؤ بالكوارث، ودعم التنمية المستدامة.
-        </p>
-    </div>
-
+</section>
+<!-- ===== END SECTION ===== -->
 <!-- ============================================================ -->
 <!-- =====  RS IMAGE ANALYSIS ===== -->
 <!-- ============================================================ -->
