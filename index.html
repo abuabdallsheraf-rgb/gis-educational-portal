@@ -21926,6 +21926,41 @@
     console.log('🌍 GIS Educational Portal loaded successfully!');
     console.log('📚 جامعة طرابلس - كلية الزراعة - قسم التربة والمياه');
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all menu items with dropdowns
+    document.querySelectorAll('.menu-item-has-children').forEach(function(item) {
+        const link = item.querySelector('a');
+        const dropdown = item.querySelector('.mega-dropdown');
 
+        if (link && dropdown) {
+            // Toggle on click
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent page jump
+                e.stopPropagation();
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.menu-item-has-children').forEach(function(other) {
+                    if (other !== item) {
+                        other.querySelector('.mega-dropdown')?.classList.remove('active');
+                        other.querySelector('a')?.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+                link.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!item.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                    link.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
