@@ -597,6 +597,7 @@
                     <a href="#google-earth-engine"><i class="fab fa-google"></i> Google Earth Engine</a>
                     <a href="#spatial-modeling"><i class="fas fa-cubes"></i> النمذجة المكانية</a>
                       <a href="#spatial-interpolation"><i class="fas fa-cube"></i> الاستيفاء المكاني</a>
+                    <a href="#digital-twin"><i class="fas fa-cubes"></i> التوأم الرقمي</a>
                 </div>
             </li>
         </ul>
@@ -21361,6 +21362,262 @@
 
 </section>
 <!-- ===== END SECTION 32 ===== -->
+    <!-- ============================================================ -->
+<!-- ===== SECTION 33: DIGITAL TWIN (التوأم الرقمي) ===== -->
+<!-- ============================================================ -->
+<section class="section" id="digital-twin">
+
+    <!-- العنوان الرئيسي -->
+    <div class="section-title">
+        <i class="fas fa-cubes"></i>
+        التوأم الرقمي (Digital Twin)
+    </div>
+
+    <!-- ===== 1. DEFINITION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-gem"></i> ما هو التوأم الرقمي؟</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            <strong>التوأم الرقمي</strong> هو نموذج رقمي حي (Living Digital Replica) يمثل أصلاً مادياً أو نظاماً أو عملية في الزمن الحقيقي، ويتم تحديثه باستمرار باستخدام البيانات الواردة من <strong>أجهزة الاستشعار (Sensors)</strong>، <strong>إنترنت الأشياء (IoT)</strong>، <strong>نظم المعلومات الجغرافية (GIS)</strong>، <strong>الاستشعار عن بعد (Remote Sensing)</strong>، و <strong>الذكاء الاصطناعي (AI)</strong>، مما يتيح المراقبة والمحاكاة والتنبؤ واتخاذ القرارات المثلى.
+        </p>
+        <div style="background: #e6fffa; padding: 14px 20px; border-radius: 14px; margin-top: 12px;">
+            <p><i class="fas fa-graduation-cap" style="color: #319795;"></i> <strong>تعريف أكاديمي:</strong> "نسخة رقمية حية تمثل نظاماً أو كائناً مادياً، وتتبادل البيانات معه بشكل مستمر من أجل المراقبة والمحاكاة والتحليل والتنبؤ وتحسين الأداء."</p>
+        </div>
+    </div>
+
+    <!-- ===== 2. CORE IDEA & FLOWCHART ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-sync-alt"></i> الفكرة الأساسية ومسار العمل</h4>
+        <div style="background: #1a202c; border-radius: 14px; padding: 20px; text-align: center; direction: ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 8px;">
+                <span style="background: #2b6cb0; color: white; padding: 6px 16px; border-radius: 30px; font-size:0.8rem; font-weight:700;">🌍 العالم الحقيقي</span>
+                <span style="color: #a0aec0; font-size:1.2rem;">↓</span>
+                <span style="background: #3182ce; color: white; padding: 6px 16px; border-radius: 30px; font-size:0.8rem; font-weight:700;">📡 جمع البيانات</span>
+                <span style="color: #a0aec0; font-size:1.2rem;">↓</span>
+                <span style="background: #4299e1; color: white; padding: 6px 16px; border-radius: 30px; font-size:0.8rem; font-weight:700;">💻 العالم الرقمي</span>
+                <span style="color: #a0aec0; font-size:1.2rem;">↓</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 6px 16px; border-radius: 30px; font-size:0.8rem; font-weight:700;">🧠 الذكاء الاصطناعي</span>
+                <span style="color: #a0aec0; font-size:1.2rem;">↓</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 6px 16px; border-radius: 30px; font-size:0.8rem; font-weight:700;">🔮 التنبؤ</span>
+                <span style="color: #a0aec0; font-size:1.2rem;">↓</span>
+                <span style="background: #bee3f8; color: #1a202c; padding: 6px 16px; border-radius: 30px; font-size:0.8rem; font-weight:700;">📋 اتخاذ القرار</span>
+            </div>
+            <div style="color: #a0aec0; font-size:0.8rem; margin-top: 8px; direction: rtl;">
+                <i class="fas fa-arrow-up" style="color: #38a169;"></i> تغذية راجعة مستمرة لتحسين الأداء
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 3. COMPONENTS TABLE ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-puzzle-piece"></i> مكونات نظام التوأم الرقمي</h4>
+        <div style="overflow-x: auto; margin-top: 10px;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.9rem; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <thead style="background: #6b46c1; color: white;">
+                    <tr><th style="padding: 10px 14px;">المكون</th><th style="padding: 10px 14px;">الوظيفة</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">الأصل الحقيقي</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">الحقل، التربة، المبنى، الآلة، المدينة، السد</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">أجهزة الاستشعار</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">قياس الرطوبة، الحرارة، الملوحة، الضغط</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">إنترنت الأشياء (IoT)</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">نقل البيانات لحظياً من الحساسات إلى السحابة</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">قواعد البيانات</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">تخزين وإدارة كميات البيانات الضخمة</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">نظم المعلومات الجغرافية (GIS)</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">إدارة البيانات المكانية والخرائط الرقمية</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">الاستشعار عن بعد (RS)</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">توفير صور الأقمار الصناعية والطائرات بدون طيار</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">الذكاء الاصطناعي (AI)</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">تحليل البيانات، اكتشاف الأنماط، التنبؤ</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">النماذج الرياضية</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">محاكاة العمليات الفيزيائية والكيميائية والبيولوجية</td></tr>
+                    <tr><td style="padding: 8px 14px;">لوحة التحكم (Dashboard)</td><td style="padding: 8px 14px;">عرض النتائج بشكل تفاعلي واتخاذ القرار</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== 4. TYPES OF DIGITAL TWIN (GRAPH) ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-layer-group"></i> أنواع التوأم الرقمي</h4>
+        <div style="background: #fffbeb; border-radius: 14px; padding: 16px; font-family: 'Courier New', monospace; font-size:0.85rem; direction: ltr; text-align: left; white-space: pre; overflow-x: auto; border: 2px solid #f6ad55; line-height: 1.8;">
+            <span style="color:#dd6b20;">الحجم والنطاق</span>
+            ^
+            |      (أكبر نطاق)
+            |    +-------------------+
+            |    | Process Twin     |  (دورة الري، سلسلة الإنتاج)
+            |    +-------|-----------+
+            |            |
+            |    +-------v-----------+
+            |    | System Twin      |  (شبكة الري، مصنع)
+            |    +-------|-----------+
+            |            |
+            |    +-------v-----------+
+            |    | Asset Twin       |  (جرار زراعي، محطة ضخ)
+            |    +-------|-----------+
+            |            |
+            |    +-------v-----------+
+            |    | Component Twin   |  (مضخة، مستشعر، محرك)
+            |    +-------------------+
+            +-------------------------------> <span style="color:#dd6b20;">النوع</span>
+        </div>
+    </div>
+
+    <!-- ===== 5. COMPARISON: 3D Model vs Digital Twin ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-balance-scale"></i> الفرق بين النموذج ثلاثي الأبعاد والتوأم الرقمي</h4>
+        <div style="overflow-x: auto; margin-top: 10px;">
+            <table style="width:100%; border-collapse: collapse; font-size:0.9rem; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <thead style="background: #2b6cb0; color: white;">
+                    <tr><th style="padding: 10px 14px;">الخاصية</th><th style="padding: 10px 14px;">النموذج ثلاثي الأبعاد</th><th style="padding: 10px 14px;">التوأم الرقمي</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">الطبيعة</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">شكل فقط (ثابت)</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">نموذج حي وديناميكي</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">التحديث</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">لا يتغير</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">يتحدث باستمرار مع البيانات الحية</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">البيانات</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">بدون بيانات</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">يعتمد على البيانات لحظياً</td></tr>
+                    <tr><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">التنبؤ</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">لا يتنبأ</td><td style="padding: 8px 14px; border-bottom:1px solid #e2e8f0;">يتنبأ بالمستقبل ويحاكي السيناريوهات</td></tr>
+                    <tr><td style="padding: 8px 14px;">الوظيفة</td><td style="padding: 8px 14px;">للعرض والتوضيح</td><td style="padding: 8px 14px;">للتحليل المتعمق واتخاذ القرار</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== 6. HOW IT WORKS (STEP BY STEP) ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-step-forward"></i> كيف يعمل التوأم الرقمي (خطوة بخطوة)</h4>
+        <div style="background: #1a202c; border-radius: 14px; padding: 20px; direction: ltr; font-family: 'Courier New', monospace; font-size:0.75rem; color: #e2e8f0; overflow-x: auto; line-height: 1.9;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 8px; color: #a0aec0;">
+                <span style="background: #2b6cb0; color:white; padding:4px 12px; border-radius:20px;">[1] الأصل الحقيقي</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #3182ce; color:white; padding:4px 12px; border-radius:20px;">[2] جمع البيانات</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #4299e1; color:white; padding:4px 12px; border-radius:20px;">[3] الحوسبة السحابية</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #63b3ed; color:#1a202c; padding:4px 12px; border-radius:20px;">[4] النموذج الرقمي</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #90cdf4; color:#1a202c; padding:4px 12px; border-radius:20px;">[5] تحليل البيانات (AI/ML)</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #bee3f8; color:#1a202c; padding:4px 12px; border-radius:20px;">[6] التنبؤ</span>
+                <span style="color:#a0aec0;">→</span>
+                <span style="background: #38a169; color:white; padding:4px 12px; border-radius:20px;">[7] اتخاذ القرار</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 7. APPLICATIONS IN SMART AGRICULTURE ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-seedling"></i> تطبيقات التوأم الرقمي في الزراعة الذكية</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 10px;">
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169; margin:0;"><i class="fas fa-tint"></i> إدارة الري</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>رطوبة التربة، الحرارة، الرياح</li>
+                    <li>تحديد موعد وكمية الري</li>
+                </ul>
+            </div>
+            <div style="background: #ebf8ff; border-radius: 14px; padding: 14px; border-right: 4px solid #2b6cb0;">
+                <h5 style="color:#2b6cb0; margin:0;"><i class="fas fa-leaf"></i> مراقبة المحاصيل</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>NDVI, SAVI, EVI, GNDVI</li>
+                    <li>كشف مبكر: نقص مياه، تغذية، أمراض</li>
+                </ul>
+            </div>
+            <div style="background: #faf5ff; border-radius: 14px; padding: 14px; border-right: 4px solid #6b46c1;">
+                <h5 style="color:#6b46c1; margin:0;"><i class="fas fa-mountain"></i> إدارة التربة</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>الرطوبة، الملوحة، المادة العضوية، pH</li>
+                    <li>توقع تغير خصائص التربة</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color:#dd6b20; margin:0;"><i class="fas fa-robot"></i> الزراعة الدقيقة</h5>
+                <ul style="font-size:0.85rem; padding-right:18px;">
+                    <li>تحديد أماكن التسميد والري</li>
+                    <li>مناطق الإصابة والإنتاجية المتوقعة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 8. RELATIONSHIP WITH OTHER TECHNOLOGIES ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-project-diagram"></i> العلاقة مع التقنيات الأخرى</h4>
+        <div style="background: #1a202c; border-radius: 14px; padding: 16px; text-align: center; direction: ltr; margin-top: 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 12px;">
+                <span style="background: #2b6cb0; color: white; padding: 4px 18px; border-radius: 30px; font-size:0.8rem; font-weight:700;">🌐 التوأم الرقمي</span>
+                <span style="color: #a0aec0; font-size:1.2rem;">↕</span>
+                <span style="background: #3182ce; color: white; padding: 4px 18px; border-radius: 30px; font-size:0.8rem;">🗺️ GIS</span>
+                <span style="background: #4299e1; color: white; padding: 4px 18px; border-radius: 30px; font-size:0.8rem;">🛰️ RS</span>
+                <span style="background: #63b3ed; color: #1a202c; padding: 4px 18px; border-radius: 30px; font-size:0.8rem;">🧠 AI</span>
+                <span style="background: #90cdf4; color: #1a202c; padding: 4px 18px; border-radius: 30px; font-size:0.8rem;">📡 IoT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 9. ADVANTAGES & CHALLENGES ===== -->
+    <div class="info-box orange">
+        <h4 style="color: #dd6b20;"><i class="fas fa-thumbs-up"></i> المزايا والتحديات</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 10px;">
+            <div style="background: #f0fff4; border-radius: 14px; padding: 14px; border-right: 4px solid #38a169;">
+                <h5 style="color:#38a169; margin:0;"><i class="fas fa-check-circle"></i> المزايا</h5>
+                <ul style="font-size:0.85rem; padding-right:18px; margin:6px 0;">
+                    <li>مراقبة فورية (آنية)</li>
+                    <li>خفض تكاليف التشغيل والصيانة</li>
+                    <li>تحسين كفاءة المياه والطاقة</li>
+                    <li>صيانة تنبؤية (توقع الأعطال)</li>
+                    <li>دعم القرار المبني على البيانات</li>
+                    <li>استدامة الموارد الطبيعية</li>
+                </ul>
+            </div>
+            <div style="background: #fffbeb; border-radius: 14px; padding: 14px; border-right: 4px solid #dd6b20;">
+                <h5 style="color:#dd6b20; margin:0;"><i class="fas fa-exclamation-triangle"></i> التحديات</h5>
+                <ul style="font-size:0.85rem; padding-right:18px; margin:6px 0;">
+                    <li>ارتفاع تكاليف الإنشاء الأولية</li>
+                    <li>الحاجة إلى بيانات دقيقة ومستمرة</li>
+                    <li>دمج مصادر بيانات متعددة</li>
+                    <li>أمن المعلومات والخصوصية</li>
+                    <li>خبرات متعددة التخصصات</li>
+                    <li>بنية تحتية للحوسبة السحابية</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 10. APPLICATION EXAMPLE: UOT ===== -->
+    <div class="info-box green">
+        <h4 style="color: #2f855a;"><i class="fas fa-university"></i> مثال تطبيقي في كلية الزراعة – جامعة طرابلس</h4>
+        <div style="background: #f0fff4; border-radius: 14px; padding: 16px; border-right: 4px solid #38a169; margin-top: 8px;">
+            <p style="font-weight:700; font-size:1.1rem;">🌾 توأم رقمي للمزرعة التعليمية</p>
+            <ul style="font-size:0.95rem; padding-right:20px; line-height:2;">
+                <li><i class="fas fa-map" style="color:#2b6cb0;"></i> خريطة GIS للمزرعة بكل تفاصيلها</li>
+                <li><i class="fas fa-microchip" style="color:#2b6cb0;"></i> شبكة مجسات: رطوبة، ملوحة، حرارة التربة، ومياه جوفية</li>
+                <li><i class="fas fa-cloud-sun" style="color:#2b6cb0;"></i> محطة أرصاد جوية مصغرة</li>
+                <li><i class="fas fa-drone" style="color:#2b6cb0;"></i> صور دورية من طائرة بدون طيار وأقمار صناعية (NDVI)</li>
+                <li><i class="fas fa-brain" style="color:#2b6cb0;"></i> منصة تحليل ذكاء اصطناعي للتنبؤ بالري، التسميد، وتقييم تدهور التربة</li>
+                <li><i class="fas fa-chart-pie" style="color:#2b6cb0;"></i> لوحة تحكم تفاعلية (Dashboard) للطلاب والباحثين</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== 11. FUTURE TRENDS ===== -->
+    <div class="info-box purple">
+        <h4 style="color: #6b46c1;"><i class="fas fa-rocket"></i> الاتجاهات المستقبلية</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+            <span style="background:#6b46c1; color:white; padding:4px 18px; border-radius:30px; font-size:0.85rem;">🧠 الذكاء الاصطناعي التوليدي</span>
+            <span style="background:#6b46c1; color:white; padding:4px 18px; border-radius:30px; font-size:0.85rem;">🤖 الروبوتات الزراعية</span>
+            <span style="background:#6b46c1; color:white; padding:4px 18px; border-radius:30px; font-size:0.85rem;">⚡ الحوسبة الطرفية (Edge)</span>
+            <span style="background:#6b46c1; color:white; padding:4px 18px; border-radius:30px; font-size:0.85rem;">📶 5G / 6G</span>
+            <span style="background:#6b46c1; color:white; padding:4px 18px; border-radius:30px; font-size:0.85rem;">🥽 الواقع المعزز والافتراضي</span>
+            <span style="background:#6b46c1; color:white; padding:4px 18px; border-radius:30px; font-size:0.85rem;">🌍 التوائم الرقمية الجيومكانية</span>
+        </div>
+    </div>
+
+    <!-- ===== 12. CONCLUSION ===== -->
+    <div class="info-box blue">
+        <h4 style="color: #2b6cb0;"><i class="fas fa-graduation-cap"></i> 🎓 الخلاصة</h4>
+        <p style="font-size: 1rem; line-height: 1.9;">
+            <strong>التوأم الرقمي ليس مجرد نموذج ثلاثي الأبعاد</strong>، بل هو منظومة رقمية ذكية تربط العالم الحقيقي بالعالم الافتراضي من خلال البيانات الحية والتحليلات المتقدمة، مما يمكّن من المراقبة المستمرة، والمحاكاة، والتنبؤ، واتخاذ قرارات أكثر دقة في مجالات الزراعة، وعلوم التربة، والموارد المائية، والبيئة، والمدن الذكية.
+        </p>
+        <p style="font-size: 1rem; line-height: 1.9; margin-top: 10px;">
+            ومع تطور <strong>GeoAI</strong> و <strong>إنترنت الأشياء</strong>، أصبح الاتجاه الحديث هو دمج: <strong>GIS + Remote Sensing + Geostatistics + Machine Learning + IoT</strong> لإنشاء نماذج مكانية ذكية قادرة على التنبؤ وإدارة الموارد الطبيعية بكفاءة عالية، مما يجعله أداة لا غنى عنها لكلية الزراعة بجامعة طرابلس لمواكبة ثورة الزراعة الذكية 4.0.
+        </p>
+    </div>
+
+</section>
+<!-- ===== END SECTION 33 ===== -->
 
 <!-- ============================================================ -->
 <!-- ===== SECTION: RESOURCES (EXPANDED - NO DIAGRAM) ===== -->
