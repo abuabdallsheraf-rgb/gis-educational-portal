@@ -1534,7 +1534,7 @@
         <div style="margin-top: 20px;">
             <h5 style="color: #dd6b20; font-size: 1.1rem;">📋 أنواع البيانات المكانية</h5>
             
-            <!-- بيانات المتجهات -->
+            <!-- البيانات الخطية -->
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 10px;">
                 <div style="background: #ebf8ff; border-radius: 12px; padding: 15px; text-align: center; border: 2px solid #2b6cb0;">
                     <div style="font-size: 2.5rem;">📍</div>
@@ -1641,7 +1641,7 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
             <div style="background: #ebf8ff; border-radius: 12px; padding: 18px; border: 2px solid #2b6cb0;">
                 <div style="font-size: 2.5rem; text-align: center;">📊</div>
-                <h5 style="color: #2b6cb0; text-align: center; font-size: 1.1rem;">نموذج البيانات المتجهة (Vector Model)</h5>
+                <h5 style="color: #2b6cb0; text-align: center; font-size: 1.1rem;">نموذج البيانات الخطية (Vector Model)</h5>
                 <p style="font-size: 0.9rem; line-height: 1.8;">
                     يمثل البيانات كمعالم منفصلة مع إحداثيات محددة. يستخدم النقاط والخطوط والمضلعات لتمثيل الظواهر الجغرافية.
                 </p>
@@ -1661,7 +1661,7 @@
                     </ul>
                 </div>
                 <div style="background: #f7fafc; padding: 6px; border-radius: 6px; margin-top: 6px; font-size: 0.7rem; text-align: center;">
-                    <strong>مثال في ليبيا:</strong> طبقة حدود الحقول الزراعية في وادي المجنين
+                    <strong>مثال في ليبيا:</strong> طبقة حدود الحقول الزراعية في سهل الجفارة
                 </div>
             </div>
             <div style="background: #f0fff4; border-radius: 12px; padding: 18px; border: 2px solid #2f855a;">
@@ -2096,60 +2096,61 @@
             </p>
         </div>
 
-        <!-- ===== دورة عمل GIS (Workflow) ===== -->
-        <div class="info-box green" style="margin-top: 20px;">
-            <h4 style="color: #2f855a;">🔄 دورة عمل GIS (GIS Workflow)</h4>
-            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem 0.8rem; padding: 0.5rem 0;">
-                <span style="background: #2b6cb0; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">تحديد المشكلة</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #2f855a; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">تخطيط المشروع</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #dd6b20; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">جمع البيانات</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #6b46c1; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">إدخال البيانات</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #3182ce; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">إدارة البيانات</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #e53e3e; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">تحليل البيانات</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #805ad5; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">عرض النتائج</span>
-                <i class="fas fa-arrow-right" style="color: #2b6cb0;"></i>
-                <span style="background: #e53e3e; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">اتخاذ القرار</span>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 1rem; font-size:0.85rem;">
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>1. تحديد المشكلة</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">تعريف الأهداف، تحديد المتطلبات، تحديد الجمهور المستهدف</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>2. التخطيط</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">تحديد الموارد، وضع الجدول الزمني، تحديد الميزانية</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>3. جمع البيانات</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">مصادر داخلية/خارجية، جمع بيانات ميدانية، استشعار عن بعد</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>4. الإدخال</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">رقمنة الخرائط، استيراد بيانات رقمية، تصحيح الأخطاء</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>5. الإدارة</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">تنظيم البيانات، إنشاء قاعدة بيانات، تحديث البيانات</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>6. التحليل</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">تحليل مكاني، نمذجة مكانية، إحصاء مكاني</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>7. العرض</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">إنتاج خرائط، تقارير، تصور ثلاثي الأبعاد، لوحات معلومات</div>
-                </div>
-                <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
-                    <strong>8. القرار</strong>
-                    <div style="font-size:0.75rem; color:#4a5568;">تقييم النتائج، تطبيق الحلول، متابعة التوصيات</div>
-                </div>
-            </div>
+       <!-- ===== دورة عمل GIS (Workflow) ===== -->
+<div class="info-box green" style="margin-top: 20px;">
+    <h4 style="color: #2f855a;">🔄 دورة عمل GIS (GIS Workflow)</h4>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem 0.8rem; padding: 0.5rem 0; direction: rtl;">
+        <span style="background: #2b6cb0; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">تحديد المشكلة</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #2f855a; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">تخطيط المشروع</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #dd6b20; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">جمع البيانات</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #6b46c1; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">إدخال البيانات</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #3182ce; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">إدارة البيانات</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #e53e3e; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">تحليل البيانات</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #805ad5; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">عرض النتائج</span>
+        <i class="fas fa-arrow-left" style="color: #2b6cb0;"></i>
+        <span style="background: #e53e3e; color: white; padding: 6px 16px; border-radius: 30px; font-weight: 600;">اتخاذ القرار</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 1rem; font-size:0.85rem;">
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>1. تحديد المشكلة</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">تعريف الأهداف، تحديد المتطلبات، تحديد الجمهور المستهدف</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>2. التخطيط</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">تحديد الموارد، وضع الجدول الزمني، تحديد الميزانية</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>3. جمع البيانات</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">مصادر داخلية/خارجية، جمع بيانات ميدانية، استشعار عن بعد</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>4. الإدخال</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">رقمنة الخرائط، استيراد بيانات رقمية، تصحيح الأخطاء</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>5. الإدارة</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">تنظيم البيانات، إنشاء قاعدة بيانات، تحديث البيانات</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>6. التحليل</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">تحليل مكاني، نمذجة مكانية، إحصاء مكاني</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>7. العرض</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">إنتاج خرائط، تقارير، تصور ثلاثي الأبعاد، لوحات معلومات</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:0.6rem; text-align:center; border:1px solid #c6e0d0;">
+            <strong>8. القرار</strong>
+            <div style="font-size:0.75rem; color:#4a5568;">تقييم النتائج، تطبيق الحلول، متابعة التوصيات</div>
+        </div>
+    </div>
+</div>
             <!-- تفاصيل إضافية لكل مرحلة -->
             <div style="margin-top: 1rem; background: #f0faf0; border-radius: 16px; padding: 0.8rem 1.2rem; border: 1px solid #c6e0d0; font-size:0.9rem;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.5rem;">
