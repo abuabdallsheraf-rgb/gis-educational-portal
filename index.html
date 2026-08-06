@@ -23,113 +23,6 @@
             --text-main: #1A202C;
             --arabic-font: 'Alexandria', 'Cairo', sans-serif;
             --english-font: 'Poppins', 'Inter', sans-serif;
-        }        /* ===== LOGO STYLES ===== */
-        .hero-top-logos {
-            position: absolute;
-            top: 30px;
-            left: 50px;
-            right: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: calc(100% - 100px);
-            z-index: 5;
-            gap: 15px;
-        }
-        .logo-item-box {
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(12px);
-            padding: 10px 20px;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-        .logo-item-box:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        }
-        .logo-item-box .logo-img {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-        }
-        .logo-item-box .logo-icon {
-            font-size: 1.8rem;
-            color: var(--satellite-cyan);
-        }
-        .logo-item-box .logo-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            line-height: 1.3;
-        }
-        .logo-item-box .logo-text .title-ar {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        .logo-item-box .logo-text .title-en {
-            font-size: 0.7rem;
-            font-weight: 400;
-            color: #bee3f8;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        }
-
-        /* ===== RESPONSIVE LOGO STYLES ===== */
-        @media (max-width: 768px) {
-            .hero-top-logos {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 8px;
-                top: 15px;
-                left: 15px;
-                right: 15px;
-                width: calc(100% - 30px);
-            }
-            .logo-item-box {
-                padding: 8px 14px;
-                justify-content: center;
-            }
-            .logo-item-box .logo-img {
-                height: 35px;
-            }
-            .logo-item-box .logo-text .title-ar {
-                font-size: 0.8rem;
-            }
-            .logo-item-box .logo-text .title-en {
-                font-size: 0.6rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-top-logos {
-                gap: 5px;
-                top: 10px;
-                left: 10px;
-                right: 10px;
-                width: calc(100% - 20px);
-            }
-            .logo-item-box {
-                padding: 6px 10px;
-                gap: 8px;
-                border-radius: 10px;
-            }
-            .logo-item-box .logo-img {
-                height: 28px;
-            }
-            .logo-item-box .logo-text .title-ar {
-                font-size: 0.7rem;
-            }
-            .logo-item-box .logo-text .title-en {
-                font-size: 0.5rem;
-            }
         }
 
         /* ===== GLOBAL SETTINGS ===== */
@@ -616,27 +509,10 @@
         <div class="particle" style="width:4px; height:4px; left:45%; animation-delay:2s;"></div>
         <div class="particle" style="width:8px; height:8px; left:75%; animation-delay:4s;"></div>
     </div>
-        <!-- ===== UNIVERSITY AND FACULTY LOGOS ===== -->
     <div class="hero-top-logos">
-        <!-- University Logo -->
-        <div class="logo-item-box">
-            <img src="/images/UNI_LOGO.png" alt="University of Tripoli Logo" class="logo-img" onerror="this.style.display='none'">
-            <i class="fas fa-university logo-icon" style="display:none;"></i>
-            <div class="logo-text">
-                <span class="title-ar">جامعة طرابلس</span>
-                <span class="title-en">University of Tripoli</span>
-            </div>
-        </div>
-        
-        <!-- Faculty Logo -->
-        <div class="logo-item-box">
-            <img src="/images/AGRI_LOGO.png" alt="Faculty of Agriculture Logo" class="logo-img" onerror="this.style.display='none'">
-            <i class="fas fa-seedling logo-icon" style="display:none; color: var(--vegetation-green);"></i>
-            <div class="logo-text">
-                <span class="title-ar">كلية الزراعة</span>
-                <span class="title-en">Faculty of Agriculture</span>
-            </div>
-        </div>
+        <div class="logo-item-box"><i class="fas fa-university" style="color:var(--satellite-cyan);"></i> University of Tripoli جامعة طرابلس </div>
+        <div class="logo-item-box">Faculty of Agriculture كلية الزراعة <i class="fas fa-seedling" style="color:var(--vegetation-green);"></i></div>
+    </div>
     <div class="earth-container-3d"></div>
     <div class="hero-content">
         <h1>منصة التقنيات الجيومكانية الذكية وتطبيقاتها <span class="en-title">Advanced Geospatial Technologies Platform</span></h1>
@@ -22286,19 +22162,7 @@
             <a href="https://un-spider.org/" target="_blank">UN-SPIDER</a>
         </div>
         <div>
-                   <div>
             <h4>📞 تواصل</h4>
-            <!-- University Logo in Footer -->
-            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
-                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px;">
-                    <img src="/images/UNI_LOGO.png" alt="University Logo" style="height: 35px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
-                    <span style="color: #bee3f8; font-size: 0.8rem;">جامعة طرابلس</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px;">
-                    <img src="/images/AGRI_LOGO.png" alt="Faculty Logo" style="height: 35px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
-                    <span style="color: #bee3f8; font-size: 0.8rem;">كلية الزراعة</span>
-                </div>
-            </div>
             <p style="color: #bee3f8; font-weight: 700; font-size: 1.05rem;">Dr, A. S. Sherif</p>
             <p style="color: #bee3f8; font-size: 0.9rem;">قسم التربة والمياه</p>
             <p style="color: #bee3f8; font-size: 0.9rem;">كلية الزراعة - جامعة طرابلس</p>
@@ -22309,7 +22173,7 @@
                     <span style="direction: ltr; unicode-bidi: embed;">Ab.sherif@uot.edu.ly</span>
                 </p>
             </div>
-           
+        </div>
     </div>
     <div class="footer-bottom">
         <p><i class="fas fa-copyright"></i> 2026 المنصة التعليمية للتقنيات الجيومكانية و تطبيقاتها</p>
@@ -22408,7 +22272,6 @@
 
     console.log('🌍 GIS Educational Portal loaded successfully!');
     console.log('📚 جامعة طرابلس - كلية الزراعة - قسم التربة والمياه');
- console.log('✅ University and Faculty logos added successfully!');
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
